@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <title>(modal)knoah</title>
+    <meta charset="UTF-8">
+    <meta http-equiv="x-ua-Compatible" content="IE=edge">
+    <title>knoah</title>
+    <meta name="format-detection" content="telephone=no">
+
+    <link rel="icon" type="image/png" href="../assets/images/favicon-16x16.png" sizes="16x16">
+    <link rel="icon" type="image/png" href="../assets/images/favicon-32x32.png" sizes="32x32">
+
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons+Outlined" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="../assets/lib/jquery-ui/jquery-ui.min.css">
+    <link rel="stylesheet" href="../assets/lib/swiper/css/swiper-bundle.min.css">
+    <link rel="stylesheet" href="../assets/lib/mCustomScrollbar/jquery.mCustomScrollbar.min.css">
+
+    <link rel="stylesheet" href="../assets/css/bootstrap.css">
+    <link rel="stylesheet" href="../assets/css/style.css">
+
+    <script src="../assets/lib/jquery/jquery.min.js"></script>
+    <script src="../assets/lib/jquery-ui/jquery-ui.min.js"></script>
+    <script src="../assets/lib/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script src="../assets/lib/swiper/js/swiper-bundle.min.js"></script>
+    <script src="../assets/lib/mCustomScrollbar/jquery.mCustomScrollbar.concat.min.js"></script>
+
+    <script src="../assets/js/ui.js" defer></script>
+    <style>
+        body {
+            padding: 30px;
+        }
+
+        .modal {
+            display: block !important;
+            position: static !important;
+        }
+
+        .modal-dialog {
+            margin-top: .5rem;
+            margin-bottom: .5rem;
+        }
+    </style>
+</head>
+
+<body>
+    <div>
+
+        <!-- modal : 메모 작성 -->
+        <div class="modal" tabindex="-1" id="modal-memo-add" data-backdrop="static">
+            <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable modal-sm">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title">메모 작성</h5>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                    <div class="modal-body">
+                        <div class="mb-3">
+                            <textarea name="" id="" cols="" rows="5" class="form-control"></textarea>
+                        </div>
+                        <table class="table table-bordered table-fixed">
+                            <colgroup>
+                                <col style="width:70px">
+                                <col>
+                            </colgroup>
+                            <tbody>
+                                <tr>
+                                    <th>대상</th>
+                                    <td>
+                                        <input type="checkbox" name="memoRange" id="area1">
+                                        <label for="area1">대치</label>
+                                        <input type="checkbox" name="memoRange" id="area2">
+                                        <label for="area2">목동</label>
+                                        <div class="mt-2 pt-2 border-top">
+                                            <input type="checkbox" name="memoRange2" id="area1-1">
+                                            <label for="area1-1">관명</label>
+                                            <input type="checkbox" name="memoRange2" id="area1-2">
+                                            <label for="area1-2">관명</label>
+                                            <input type="checkbox" name="memoRange2" id="area1-3">
+                                            <label for="area1-3">관명</label>
+                                            <input type="checkbox" name="memoRange2" id="area1-4">
+                                            <label for="area1-4">관명</label>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th>강조</th>
+                                    <td>
+                                        <input type="radio" name="pointUse" id="pointUseY">
+                                        <label for="pointUseY">사용</label>
+                                        <input type="radio" name="pointUse" id="pointUseN">
+                                        <label for="pointUseN">미사용</label>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div class="modal-footer justify-content-center">
+                        <button type="button" class="btn btn-dark">저장</button>
+                        <button type="button" class="btn btn-lightgray" data-dismiss="modal">취소</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

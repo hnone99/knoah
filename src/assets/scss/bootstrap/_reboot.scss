@@ -311,6 +311,7 @@ label {
 button {
   // stylelint-disable-next-line property-disallowed-list
   border-radius: 0;
+  border: 0;padding: 0;margin: 0;background: transparent;vertical-align: middle;
 }
 
 // Explicitly remove focus outline in Chromium when it shouldn't be
@@ -333,6 +334,8 @@ textarea {
   line-height: inherit;
   letter-spacing: inherit;
 }
+
+button{line-height: 1;}
 
 button,
 input {

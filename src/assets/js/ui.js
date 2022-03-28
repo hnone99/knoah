@@ -19,40 +19,24 @@ var Header = {
 
 var Aside = {
 	init : function(){
-		this.quickmenu();
-		this.lnb();
+		this.gnb();
 	},
-	quickmenu : function(){
-		$(".btn-quick-expand, .quick-menu > strong").on("click", function (e) {
-		e.preventDefault();
-			$(".quick-menu").toggleClass("active");
-		});
-	},
-	lnb: function () {
+	gnb: function () {
 		//페이지 타이틀명과 비교하여 활성화
-		if ($('.sidebar').length > 0) {
+		if ($('.gnb').length > 0) {
 			let title = $('h2.title').text();
 			let $active = '';
-			let $activeDep1 = '';
-			$('.sidebar a').each(function () {
+			$('.gnb a').each(function () {
 				if ($(this).text() == title) {
 					$active = $(this);
-					$activeDep1 = $(this).closest('.dep1');
 				}
 			})
-			$activeDep1.show();
-
-			$('.gnb a').each(function () {
-				if ($(this).attr('data-gnb-code') == $activeDep1.attr('data-gnb-code')) {
-					$(this).parent('li').addClass('active');
-				}
-			});
 
 			$active.parents('li').addClass('active');
-			$active.parents('.has-treeview').addClass('open');
-			$('.dep1').css('opacity', '1');
+			//$active.parents('.has-treeview').addClass('open');
+			//$('.dep1').css('opacity', '1');
 
-			$('.sidebar .has-treeview > a').on('click', function (e) {
+			$('.gnb .has-treeview > a').on('click', function (e) {
 				e.preventDefault();
 				$(this).closest('li').toggleClass('open');
 			});
@@ -63,8 +47,6 @@ var Aside = {
 var Common = {
 	init: function () {
 		this.scrolling();
-		this.datePicker();
-		this.timePicker();
 		this.event();
 		window.addEventListener('mousewheel', Common.scrolling);
 		window.addEventListener('touchmove', Common.scrolling);

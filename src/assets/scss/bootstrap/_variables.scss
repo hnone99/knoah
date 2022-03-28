@@ -78,7 +78,7 @@ $theme-colors: map-merge(
     "danger":     $danger,
     "info":     $info,
     "light":      $light,
-    "dark":       $dark,
+    "dark":       $black,
     "white":      $white,
     "lightgray":      $lightgray,
   ),
@@ -194,10 +194,11 @@ $paragraph-margin-bottom:   1rem !default;
 // adapting to different screen sizes, for use in media queries.
 
 $grid-breakpoints: (
-  sm: 0,
-  md: 1px,
-  lg: 1px,
-  xl: 1600px
+  xs: 0,
+  sm: 576px,
+  md: 768px,
+  lg: 992px,
+  xl: 1200px
 ) !default;
 
 @include _assert-ascending($grid-breakpoints, "$grid-breakpoints");
@@ -209,9 +210,10 @@ $grid-breakpoints: (
 // Define the maximum width of `.container` for different screen sizes.
 
 $container-max-widths: (
-  md: 1600px,
-  lg: 1600px,
-  xl: 1600px
+  sm: 540px,
+  md: 720px,
+  lg: 960px,
+  xl: 1140px
 ) !default;
 
 @include _assert-ascending($container-max-widths, "$container-max-widths");
@@ -280,7 +282,7 @@ $font-family-monospace:       SFMono-Regular, Menlo, Monaco, Consolas, "Liberati
 $font-family-base:            $font-family-sans-serif !default;
 // stylelint-enable value-keyword-case
 
-$font-size-base:              .8125rem !default; // Assumes the browser default, typically `16px`
+$font-size-base:              1rem !default; // Assumes the browser default, typically `16px`
 $font-size-xl:                $font-size-base * 1.25 !default;
 $font-size-lg:                $font-size-base * 1.25 !default;
 $font-size-sm:                $font-size-base * .875 !default;
@@ -391,7 +393,7 @@ $input-btn-padding-y:         .3442rem !default;
 $input-btn-padding-x:         .5rem !default;
 $input-btn-font-family:       null !default;
 $input-btn-font-size:         $font-size-base !default;
-$input-btn-line-height:       1.5 !default;
+$input-btn-line-height:       1.1 !default;
 
 $input-btn-focus-width:       .2rem !default;
 $input-btn-focus-color:       rgba($component-active-bg, .25) !default;

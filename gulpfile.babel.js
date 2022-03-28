@@ -77,7 +77,7 @@ function server(done) {
     connect.server({
         root : './dist/',
         livereload : true,
-        port : 9000
+        port : 9009
     });
 
     done();
