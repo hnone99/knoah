@@ -6,16 +6,55 @@ var html = document.querySelector('html');
 var body = document.querySelector('body');
 var Header = {
   init: function init() {
+    this.collapse();
     this.menu();
+    this.alarm();
 
     if ($('h2.title').length > 0) {
-      $('title').text($('h2.title').text() + ' | 시대인재N 관리자');
+      $('title').text($('h2.title').text() + ' | knoah');
     }
   },
-  menu: function menu(e) {
+  collapse: function collapse(e) {
     $('.btn-hamburger').on('click', function (e) {
       e.preventDefault();
       $('html').toggleClass('is-collapsed');
+    });
+  },
+  menu: function menu() {
+    $('.btn-my, .btn-more').on('click', function () {
+      $('.menu-layer').addClass('active');
+    });
+    $('.menu-layer .dep1 > li > a').on('click', function (e) {
+      if ($(this).parent('li').hasClass('has-sub')) {
+        e.preventDefault();
+        $(this).parent('li').siblings().hide();
+        $(this).parent('li').addClass('open');
+      }
+    });
+    $('.menu-layer .back > a').on('click', function (e) {
+      e.preventDefault();
+      $(this).closest('.has-sub').removeClass('open');
+      $('.menu-layer .dep1 > li').show();
+    });
+    $(document).on('click', function (e) {
+      e.preventDefault();
+
+      if ($('.btn-my').has(e.target).length === 0 && $('.btn-more').has(e.target).length === 0 && $('.menu-layer').has(e.target).length === 0) {
+        $('.menu-layer').removeClass('active');
+        $('.menu-layer .dep1 > li').show().removeClass('open');
+      }
+    });
+  },
+  alarm: function alarm() {
+    $('.btn-alarm').on('click', function () {
+      $('.alarm-layer').addClass('active');
+    });
+    $(document).on('click', function (e) {
+      e.preventDefault();
+
+      if ($('.btn-alarm').has(e.target).length === 0 && $('.alarm-layer').has(e.target).length === 0) {
+        $('.alarm-layer').removeClass('active');
+      }
     });
   }
 };

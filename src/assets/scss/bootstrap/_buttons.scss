@@ -16,19 +16,20 @@
   user-select: none;
   background-color: transparent;
   border: $btn-border-width solid transparent;
+  text-decoration: none;
   @include button-size($btn-padding-y, $btn-padding-x, $btn-font-size, $btn-line-height, $btn-border-radius);
   @include transition($btn-transition);
 
   @include hover() {
-    color: $body-color;
+    /* color: inherit; */
     text-decoration: none;
   }
 
-  &:focus,
+/*   &:focus,
   &.focus {
     outline: 0;
     box-shadow: $btn-focus-box-shadow;
-  }
+  } */
 
   // Disabled comes first so active can properly restyle
   &.disabled,
@@ -37,7 +38,7 @@
     @include box-shadow(none);
   }
 
-  &:not(:disabled):not(.disabled) {
+  /* &:not(:disabled):not(.disabled) {
     cursor: if($enable-pointer-cursor-for-buttons, pointer, null);
 
     &:active,
@@ -48,7 +49,7 @@
         @include box-shadow($btn-focus-box-shadow, $btn-active-box-shadow);
       }
     }
-  }
+  } */
 }
 
 // Future-proof disabling of clicks on `<a>` elements

@@ -1,23 +1,97 @@
 <header id="header">
-    <button type="button" class="btn-hamburger" aria-label="메뉴 접기/닫기"><i class="material-icons-outlined">menu</i></button>
+    <button type="button" class="btn-hamburger" aria-label="메뉴 접기/닫기"><i class="icon-hamburger"></i></button>
     <h1 class="logo">
-        <a href=""><img src="../assets/logo.svg" alt="knosh"></a>
+        <a href=""><img src="../assets/images/logo.svg" alt="knosh"></a>
     </h1>
     <form action="">
         <fieldset>
             <legend>검색</legend>
             <div class="header-search">
                 <input type="text" class="form-control" placeholder="키워드를 입력해 주세요.">
-                <button type="button" class="btn-search">
-                    <i class="material-icons-outlined">search</i>
+                <button type="button" class="btn-search" aria-label="검색">
+                    <i class="icon-search"></i>
                 </button>
             </div>
         </fieldset>
     </form>
     <div class="header-menu">
-        <button type="button" class="btn-more">
-            <i class="material-icons-outlined">more_vert</i>
-        </button>
-        <a href="" class="btn btn-outline-dark"><i class="material-icons-outlined mr-1">account_circle</i><span class="align-middle">로그인</span></a>
+        <!-- 로그인유도 -->
+        <a href="#modal-alert-login" data-toggle="modal"><small>alert(확인용)</small></a>
+
+        <div class="position-relative">
+            <!-- 프로필 -->
+            <button type="button" class="btn-my" aria-label="프로필" style="background: #000000">
+                <span>W</span>
+            </button>
+            <!-- 더보기 -->
+            <button type="button" class="btn-more" aria-label="더보기"><i class="icon-more"></i></button>
+            <div class="menu-layer active">
+                <div class="inner">
+                    <ul class="dep1">
+                        <li><a href="">마이페이지</a></li>
+                        <li class="has-sub active">
+                            <a href="javascript:;">언어(한국어)</a>
+                            <div class="dep2">
+                                <div class="back"><a href="javascript:;">언어</a></div>
+                                <ul>
+                                    <li class="active"><a href="javascript:;">한국어</a></li>
+                                    <li><a href="">English</a></li>
+                                </ul>
+                            </div>
+                        </li>
+                        <li class="has-sub">
+                            <a href="javascript:;">테마(추후)</a>
+                            <div class="dep2">
+                                <div class="back"><a href="javascript:;">테마</a></div>
+                                <ul>
+                                    <li class="active"><a href="javascript:;">밝음</a></li>
+                                    <li><a href="">어두움</a></li>
+                                </ul>
+                            </div>
+                        </li>
+                        <li><a href="">멤버십 안내</a></li>
+                        <li><a href="">로그아웃</a></li>
+                        <li class="has-sub">
+                            <a href="javascript:;">육성 채널 변경</a>
+                            <div class="dep2">
+                                <div class="back"><a href="javascript:;">육성 채널 변경</a></div>
+                                <ul>
+                                    <li class="active"><a href="javascript:;">채널A</a></li>
+                                    <li><a href="javascript:;">채널B</a></li>
+                                    <li><a href="#modal-channel-add" data-toggle="modal">채널 추가</a></li>
+                                </ul>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <!-- 알림 -->
+        <div class="position-relative">
+            <button type="button" class="btn-alarm" aria-label="알림">
+                <!-- 새 알림 있을때 span.new 추가 -->
+                <i class="icon-bell"><span class="new"></span></i>
+            </button>
+            <div class="alarm-layer">
+                <div class="alarm-layer-head">
+                    <div class="tit">알림</div>
+                    <button type="button" aria-label="알림 설정" class="btn-alarm-setting"><i class="icon-gear"></i></button>
+                </div>
+                <div class="alarm-layer-body">
+                    <!-- 구독 채널 없는 경우 -->
+                    <div class="channel-empty">
+                        <div class="d-flex flex-column align-items-center justify-content-center h-100">
+                            <img src="../assets/images/bg-bell.svg" alt="">
+                            <p>여기에 알림이 표시됩니다.</p>
+                            <span>즐겨찾는 채널을 구독하여 최신 동영상의 알림을 받아보세요.</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+         <!-- 로그인 -->
+         <a href="" class="btn btn-outline-dark btn-login"><i class="icon-account"></i><span class="align-middle ml-1">로그인</span></a>
     </div>
 </header>

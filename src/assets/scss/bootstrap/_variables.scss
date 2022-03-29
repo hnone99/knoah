@@ -37,7 +37,7 @@ $blue:    #0074FF !default;
 $sky:  #1cbfcb !default;
 $purple:  #534f8c !default;
 $pink:    #e83e8c !default;
-$red:     #fc5162 !default;
+$red:     #ff0000 !default;
 $orange:  #fd7e14 !default;
 $yellow:  #ffa807 !default;
 $green:   #28a745 !default;
@@ -389,10 +389,10 @@ $table-border-level:          -6 !default;
 //
 // Shared variables that are reassigned to `$input-` and `$btn-` specific variables.
 
-$input-btn-padding-y:         .3442rem !default;
-$input-btn-padding-x:         .5rem !default;
+$input-btn-padding-y:         .58203rem !default;
+$input-btn-padding-x:         .625rem !default;
 $input-btn-font-family:       null !default;
-$input-btn-font-size:         $font-size-base !default;
+$input-btn-font-size:         .875rem !default;
 $input-btn-line-height:       1.1 !default;
 
 $input-btn-focus-width:       .2rem !default;
@@ -422,7 +422,7 @@ $input-btn-border-width:      $border-width !default;
 // For each of Bootstrap's buttons, define text, background, and border color.
 
 $btn-padding-y:               $input-btn-padding-y !default;
-$btn-padding-x:               .75rem !default;
+$btn-padding-x:               $input-btn-padding-x !default;
 $btn-font-family:             $input-btn-font-family !default;
 $btn-font-size:               $input-btn-font-size !default;
 $btn-line-height:             $input-btn-line-height !default;
@@ -977,8 +977,8 @@ $modal-content-inner-border-radius: subtract($modal-content-border-radius, $moda
 $modal-content-box-shadow-xs:       0 .25rem .5rem rgba($black, .5) !default;
 $modal-content-box-shadow-sm-up:    0 .5rem 1rem rgba($black, .5) !default;
 
-$modal-backdrop-bg:                 $black !default;
-$modal-backdrop-opacity:            .5 !default;
+$modal-backdrop-bg:                 $white !default;
+$modal-backdrop-opacity:            .7 !default;
 $modal-header-border-color:         $border-color !default;
 $modal-footer-border-color:         $modal-header-border-color !default;
 $modal-header-border-width:         $modal-content-border-width !default;
