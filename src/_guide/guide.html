@@ -16,35 +16,34 @@
 
 <body>
     <div class="row">
-        <section class="col-4">
+        <section class="col-6">
             <h1>text</h1>
             <div>
+                <span class="font-weight-normal">font-weigh medium(400)</span>
                 <span class="font-weight-medium">font-weigh medium(500)</span>
                 <span class="font-weight-bold">font-weigh bold(700)</span>
             </div>
             <div>
-                <span class="text-primary">color pimary</span>
-                <span class="text-dark">color dark</span>
-                <span class="text-secondary">color secondary</span>
-                <span class="text-danger">color danger</span>
-                <span class="bg-dark"><span class="text-white">color white</span></span>
+                <del class="discount">월 49,000원</del>
             </div>
-        </section>
-        <section class="col-4">
-            <h1>title</h1>
             <div>
-                <div class="table-title">강사 정보</div>
-                <div class="row justify-content-between align-items-end mb-2">
-                    <div class="col-auto">
-                        <div class="table-title mb-0">컨텐츠 신청 내역</div>
-                    </div>
-                    <div class="col-auto">
-                        <button type="button" class="btn btn-dark btn-sm" data-toggle="modal" data-target="#modal-contents-apply">등록</button>
-                    </div>
+                <div class="keyword">
+                    <a href="#none">다이어트</a>
+                    <button type="text" aria-label="삭제"><i class="icon-x"></i></button>
+                </div>
+                <div class="keyword">
+                    <a href="#none">닭가슴살 레시피</a>
+                    <button type="text" aria-label="삭제"><i class="icon-x"></i></button>
                 </div>
             </div>
         </section>
-        <section class="col-4">
+        <section class="col-6">
+            <h1>title</h1>
+            <div>
+                <h2 class="title">분석 키워드 <i class="bar"></i> 등근육</h2>
+            </div>
+        </section>
+        <section class="col-6">
             <h1>grid &amp; margin/padding</h1>
             <p>
                 .row 의 gutter는 .row.row-10 .row.row-20 형태로 변경 가능합니다. <br>
@@ -52,60 +51,32 @@
                 margin : ex) .m-l-10 .m-r-10 .m-t-10 .m-b-10
             </p>
         </section>
-        <section class="col-4">
+        <section class="col-6">
             <h1>form</h1>
             <div>
-                <select name="" id="" class="custom-select w-auto mr-2">
-                    <option value="">구분</option>
-                </select>
-                <select name="" id="" class="custom-select custom-select-sm w-auto">
-                    <option value="">대치</option>
-                </select>
-            </div>
-            <div>
-                <div class="row row-5 align-items-center">
-                    <div class="col">
-                        <input type="text" class="form-control form-datepicker">
-                    </div>
-                    <div class="col-auto">~</div>
-                    <div class="col">
-                        <div class="input-group bootstrap-timepicker timepicker">
-                            <input type="text" class="form-control form-timepicker">
-                            <a hre="javascript:;" class="input-group-addon"><i class="far fa-clock"></i></a>
+                <div class="dropdown">
+                    <div class="dropdown-value">일별 검색 이력</div>
+                    <div class="dropdown-box">
+                        <div class="dropdown-list">
+                            @@for (var i = 1; i < 10; i++) {
+                            <div><a href="javascript:;">2022.03.0`+i+`</a></div>
+                            }
                         </div>
                     </div>
                 </div>
             </div>
             <div>
-                <div class="row row-5 align-items-center">
-                    <div class="col">
-                        <input type="text" class="form-control form-control-sm form-datepicker">
+                <div class="row row-50">
+                    <div class="col-12 col-md">
+                        <input type="text" class="form-control form-datepicker" readonly>
                     </div>
-                    <div class="col-auto">~</div>
-                    <div class="col">
-                        <div class="input-group bootstrap-timepicker timepicker">
-                            <input type="text" class="form-control form-control-sm form-timepicker">
-                            <a hre="javascript:;" class="input-group-addon"><i class="far fa-clock"></i></a>
-                        </div>
+                    <div class="col-12 col-md mt-1 mt-md-0">
+                        <input type="text" class="form-control form-datepicker" readonly>
                     </div>
                 </div>
-            </div>
-            <div class="row row-5">
-                <div class="col">
-                    <input type="text" class="form-control">
-                </div>
-                <div class="col-auto">
-                    <button type="button" class="btn btn-secondary" data-toggle="modal" data-target="#modal-staff-search">검색</button>
-                </div>
-            </div>
-            <div>
-                <input type="radio" name="AuthorUse" id="AuthorUseY">
-                <label for="AuthorUseY">사용</label>
-                <input type="radio" name="AuthorUse" id="AuthorUseN">
-                <label for="AuthorUseN">미사용</label>
             </div>
         </section>
-        <section class="col-4">
+        <section class="col-6">
             <h1>button</h1>
             <div>
                 <a href="" class="btn btn-outline-dark">키워드 포함</a>
@@ -114,67 +85,7 @@
                 <button type="button" class="btn btn-dark" style="min-width: 216px">결제하기</button>
             </div>
         </section>
-        <section class="col-4">
-            <h1>table</h1>
-            <div>
-                <p>.table-center 추가하면 전체 가운데 정렬</p>
-                <table class="table table-bordered table-center">
-                    <thead>
-                        <tr>
-                            <th>기간</th>
-                            <th>과목</th>
-                            <th>컨텐츠명</th>
-                            <th>회차</th>
-                            <th>수령/배부</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr>
-                            <td rowspan="2">3월1주 <br>~ 3월4주</td>
-                            <td rowspan="2">국어</td>
-                            <td>이감 모의고사</td>
-                            <td>3</td>
-                            <td>2/3</td>
-                        </tr>
-                        <tr>
-                            <td>서바이벌</td>
-                            <td>6</td>
-                            <td>5/6</td>
-                        </tr>
-                    </tbody>
-                </table>
-            </div>
-        </section>
-        <section class="col-4">
-            <h1>TAB</h1>
-            <div>
-                <nav class="tab-custom border-bottom-0">
-                    <ul class="nav nav-tabs" role="tablist">
-                        <li class="nav-item" role="presentation">
-                            <a class="nav-link active" data-toggle="tab" href="#tab1" role="tab">전체(##)</a>
-                        </li>
-                        <li class="nav-item" role="presentation">
-                            <a class="nav-link" data-toggle="tab" href="#tab2" role="tab">출석(##)</a>
-                        </li>
-                        <li class="nav-item" role="presentation">
-                            <a class="nav-link" data-toggle="tab" href="#tab3" role="tab">급식(##)</a>
-                        </li>
-                    </ul>
-                </nav>
-                <div class="tab-content">
-                    <div class="tab-pane show active" id="tab1" role="tabpanel">1
-                    </div>
-                    <div class="tab-pane" id="tab2" role="tabpanel">2
-                    </div>
-                    <div class="tab-pane" id="tab3" role="tabpanel">3
-                    </div>
-                </div>
-            </div>
-        </section>
-        <section class="col-4">
-
-        </section>
-        <section class="col-4">
+        <section class="col-6">
             <h1>pagination</h1>
             <div>
                 <nav aria-label="Page navigation">
@@ -215,6 +126,12 @@
                         </li>
                     </ul>
                 </nav>
+            </div>
+        </section>
+        <section class="col-6">
+            <h1>loading</h1>
+            <div>
+                <span class="loading"></span>
             </div>
         </section>
     </div>

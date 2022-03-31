@@ -237,7 +237,7 @@ $line-height-lg:              1.5 !default;
 $line-height-sm:              1.5 !default;
 
 $border-width:                1px !default;
-$border-color:                #e6e6e6 !default;
+$border-color:                #e0e0e0 !default;
 
 $border-radius:               0 !default;
 $border-radius-xl:            0 !default;
@@ -353,14 +353,14 @@ $hr-margin-y:                 $spacer !default;
 //
 // Customizes the `.table` component with basic values, each used across all table variations.
 
-$table-cell-padding:          .4rem !default;
+$table-cell-padding:          .75rem 1.25rem !default;
 $table-cell-padding-sm:       .3rem !default;
 
 $table-color:                 $body-color !default;
 $table-bg:                    null !default;
 $table-accent-bg:             rgba($black, .05) !default;
 $table-hover-color:           $table-color !default;
-$table-hover-bg:              rgba($black, .03) !default;
+$table-hover-bg:              rgba($danger, .05) !default;
 $table-active-bg:             $table-hover-bg !default;
 
 $table-border-width:          $border-width !default;
@@ -977,7 +977,7 @@ $modal-content-inner-border-radius: subtract($modal-content-border-radius, $moda
 $modal-content-box-shadow-xs:       0 .25rem .5rem rgba($black, .5) !default;
 $modal-content-box-shadow-sm-up:    0 .5rem 1rem rgba($black, .5) !default;
 
-$modal-backdrop-bg:                 $white !default;
+$modal-backdrop-bg:                 #c7c7c7 !default;
 $modal-backdrop-opacity:            .7 !default;
 $modal-header-border-color:         $border-color !default;
 $modal-footer-border-color:         $modal-header-border-color !default;

@@ -16,6 +16,7 @@
     <link rel="stylesheet" href="../assets/lib/jquery-ui/jquery-ui.min.css">
     <link rel="stylesheet" href="../assets/lib/swiper/css/swiper-bundle.min.css">
     <link rel="stylesheet" href="../assets/lib/mCustomScrollbar/jquery.mCustomScrollbar.min.css">
+    <link rel="stylesheet" href="../assets/lib/datatables/css/dataTables.bootstrap4.css">
 
     <link rel="stylesheet" href="../assets/css/bootstrap.css">
     <link rel="stylesheet" href="../assets/css/style.css">
@@ -25,6 +26,9 @@
     <script src="../assets/lib/bootstrap/js/bootstrap.bundle.min.js"></script>
     <script src="../assets/lib/swiper/js/swiper-bundle.min.js"></script>
     <script src="../assets/lib/mCustomScrollbar/jquery.mCustomScrollbar.concat.min.js"></script>
+    <script src="../assets/lib/chartjs/Chart.min.js"></script>
+    <script src="../assets/lib/datatables/js/jquery.dataTables.min.js"></script>
+    <script src="../assets/lib/datatables/js/dataTables.bootstrap4.js"></script>
 
     <script src="../assets/js/ui.js" defer></script>
 </head>
@@ -60,8 +64,9 @@
                     </button>
                     <!-- 더보기 -->
                     <button type="button" class="btn-more" aria-label="더보기"><i class="icon-more"></i></button>
-                    <div class="menu-layer active">
+                    <div class="menu-layer">
                         <div class="inner">
+                            <button type="button" class="btn-close d-lg-none" aria-label="메뉴 닫기"><i class="icon-x"></i></button>
                             <ul class="dep1">
                                 <li><a href="">마이페이지</a></li>
                                 <li class="has-sub active">
@@ -110,10 +115,14 @@
                     </button>
                     <div class="alarm-layer">
                         <div class="alarm-layer-head">
-                            <div class="tit">알림</div>
+                            <div class="tit d-none d-lg-block">알림</div>
+                            <div class="back d-lg-none">
+                                <a href="javascript:;" role="button" aria-label="뒤로"><i class="icon-angle-left"></i></a>
+                            </div>
                             <button type="button" aria-label="알림 설정" class="btn-alarm-setting"><i class="icon-gear"></i></button>
                         </div>
                         <div class="alarm-layer-body">
+                            <div class="tit d-lg-none">알림</div>
                             <!-- 구독 채널 없는 경우 -->
                             <div class="channel-empty">
                                 <div class="d-flex flex-column align-items-center justify-content-center h-100">
@@ -134,24 +143,386 @@
         <div id="container-block">
 
             <aside id="aside">
-                <div class="inner">
-                    <nav class="gnb">
-                        <ul class="dep1">
-                            <li><a href="../webtrend/webtrend.html">웹 <br>트렌드</a></li>
-                            <li><a href="">채널 <br>판독기</a></li>
-                            <li><a href="">조회수 <br>폭발기</a></li>
-                            <li><a href="">수집한 <br>영상</a></li>
-                            <li><a href="">제거한 <br>영상</a></li>
-                            <li><a href="">제거한 <br>채널</a></li>
-                        </ul>
-                    </nav>
-                </div>
+                <div class="dim"></div>
+                <nav class="gnb">
+                    <ul class="dep1">
+                        <li><a href="../webtrend/webtrend.html">웹 <br>트렌드</a></li>
+                        <li><a href="">채널 <br>판독기</a></li>
+                        <li><a href="">조회수 <br>폭발기</a></li>
+                        <li><a href="">수집한 <br>영상</a></li>
+                        <li><a href="">제거한 <br>영상</a></li>
+                        <li><a href="">제거한 <br>채널</a></li>
+                    </ul>
+                </nav>
             </aside>
 
             <main id="content" role="main">
 
                 <!-- 컨텐츠 시작 -->
-                <h2 class="title">웹 트렌드</h2>
+                <h2 class="page-title">웹 트렌드</h2>
+                <div class="filter">
+                    <div class="filter-head">
+                        <i class="icon-filter m-r-10"></i>
+                        <h3>필터</h3>
+                    </div>
+                    <div class="filter-body">
+                        <div class="row row-50 align-items-center">
+                            <div class="col-12 col-xl-auto condition">
+                                <div class="row row-50">
+                                    <div class="col-12 col-md">
+                                        <div class="dropdown">
+                                            <div class="dropdown-value">일별 검색 이력</div>
+                                            <div class="dropdown-box">
+                                                <div class="dropdown-list">
+
+                                                    <div><a href="javascript:;">2022.03.01</a></div>
+
+                                                    <div><a href="javascript:;">2022.03.02</a></div>
+
+                                                    <div><a href="javascript:;">2022.03.03</a></div>
+
+                                                    <div><a href="javascript:;">2022.03.04</a></div>
+
+                                                    <div><a href="javascript:;">2022.03.05</a></div>
+
+                                                    <div><a href="javascript:;">2022.03.06</a></div>
+
+                                                    <div><a href="javascript:;">2022.03.07</a></div>
+
+                                                    <div><a href="javascript:;">2022.03.08</a></div>
+
+                                                    <div><a href="javascript:;">2022.03.09</a></div>
+
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-12 col-md mt-1 mt-md-0">
+                                        <div class="dropdown">
+                                            <div class="dropdown-value">키워드 검색 이력</div>
+                                            <div class="dropdown-box">
+                                                <div class="dropdown-list">
+
+                                                    <div><a href="javascript:;">근육량 늘리는 방법</a></div>
+                                                    <div><a href="javascript:;">홈트레이닝 추천</a></div>
+
+                                                    <div><a href="javascript:;">근육량 늘리는 방법</a></div>
+                                                    <div><a href="javascript:;">홈트레이닝 추천</a></div>
+
+                                                    <div><a href="javascript:;">근육량 늘리는 방법</a></div>
+                                                    <div><a href="javascript:;">홈트레이닝 추천</a></div>
+
+                                                    <div><a href="javascript:;">근육량 늘리는 방법</a></div>
+                                                    <div><a href="javascript:;">홈트레이닝 추천</a></div>
+
+                                                    <div><a href="javascript:;">근육량 늘리는 방법</a></div>
+                                                    <div><a href="javascript:;">홈트레이닝 추천</a></div>
+
+                                                    <div><a href="javascript:;">근육량 늘리는 방법</a></div>
+                                                    <div><a href="javascript:;">홈트레이닝 추천</a></div>
+
+                                                    <div><a href="javascript:;">근육량 늘리는 방법</a></div>
+                                                    <div><a href="javascript:;">홈트레이닝 추천</a></div>
+
+                                                    <div><a href="javascript:;">근육량 늘리는 방법</a></div>
+                                                    <div><a href="javascript:;">홈트레이닝 추천</a></div>
+
+                                                    <div><a href="javascript:;">근육량 늘리는 방법</a></div>
+                                                    <div><a href="javascript:;">홈트레이닝 추천</a></div>
+
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-12 col-xl recently mt-4 mt-xl-0">
+                                <div class="row row-15 align-items-center">
+                                    <div class="col-12 col-lg-auto">
+                                        <label>최근 검색 키워드</label>
+                                    </div>
+                                    <div class="col mt-3 mt-lg-0">
+                                        <div class="keyword-wrap">
+
+                                            <div class="keyword">
+                                                <a href="#none">다이어트</a>
+                                                <button type="text" aria-label="삭제"><i class="icon-x"></i></button>
+                                            </div>
+                                            <div class="keyword">
+                                                <a href="#none">닭가슴살 레시피</a>
+                                                <button type="text" aria-label="삭제"><i class="icon-x"></i></button>
+                                            </div>
+
+                                            <div class="keyword">
+                                                <a href="#none">다이어트</a>
+                                                <button type="text" aria-label="삭제"><i class="icon-x"></i></button>
+                                            </div>
+                                            <div class="keyword">
+                                                <a href="#none">닭가슴살 레시피</a>
+                                                <button type="text" aria-label="삭제"><i class="icon-x"></i></button>
+                                            </div>
+
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row align-items-center justify-content-between m-b-20">
+                    <div class="col-auto">
+                        <h2 class="title">분석 키워드 <i class="bar"></i> 등근육</h2>
+                    </div>
+                    <div class="col-auto">
+                        <div class="row row-10">
+                            <div class="col-auto">
+                                <button type="button" class="btn btn-outline-dark">키워드 포함</button>
+                            </div>
+                            <div class="col-auto d-none d-lg-block">
+                                <button type="button" class="btn btn-outline-danger">엑셀 다운로드</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <table class="table table-hover responsive table-data" id="datatable">
+                    <thead>
+                        <tr>
+                            <th class="text-center no-sort">제목</th>
+                            <th class="text-center">조회수</th>
+                            <th class="text-center">게시자</th>
+                            <th class="text-center">게시일</th>
+                            <th class="text-center">플랫폼</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+
+                        <tr>
+                            <td class="text-left">
+                                <a href="#none" class="text-truncate" style="max-width:477px">당신이 알고 있어야 할 일상생활에 유용한 히트 아이디어템</a>
+                            </td>
+                            <td class="text-center">
+                                4,472,309
+                            </td>
+                            <td class="text-center">코하루</td>
+                            <td class="text-center">2022.01.01</td>
+                            <td class="text-center"></td>
+                        </tr>
+
+                        <tr>
+                            <td class="text-left">
+                                <a href="#none" class="text-truncate" style="max-width:477px">당신이 알고 있어야 할 일상생활에 유용한 히트 아이디어템</a>
+                            </td>
+                            <td class="text-center">
+                                4,472,309
+                            </td>
+                            <td class="text-center">코하루</td>
+                            <td class="text-center">2022.01.01</td>
+                            <td class="text-center"></td>
+                        </tr>
+
+                        <tr>
+                            <td class="text-left">
+                                <a href="#none" class="text-truncate" style="max-width:477px">당신이 알고 있어야 할 일상생활에 유용한 히트 아이디어템</a>
+                            </td>
+                            <td class="text-center">
+                                4,472,309
+                            </td>
+                            <td class="text-center">코하루</td>
+                            <td class="text-center">2022.01.01</td>
+                            <td class="text-center"></td>
+                        </tr>
+
+                        <tr>
+                            <td class="text-left">
+                                <a href="#none" class="text-truncate" style="max-width:477px">당신이 알고 있어야 할 일상생활에 유용한 히트 아이디어템</a>
+                            </td>
+                            <td class="text-center">
+                                4,472,309
+                            </td>
+                            <td class="text-center">코하루</td>
+                            <td class="text-center">2022.01.01</td>
+                            <td class="text-center"></td>
+                        </tr>
+
+                        <tr>
+                            <td class="text-left">
+                                <a href="#none" class="text-truncate" style="max-width:477px">당신이 알고 있어야 할 일상생활에 유용한 히트 아이디어템</a>
+                            </td>
+                            <td class="text-center">
+                                4,472,309
+                            </td>
+                            <td class="text-center">코하루</td>
+                            <td class="text-center">2022.01.01</td>
+                            <td class="text-center"></td>
+                        </tr>
+
+                        <tr>
+                            <td class="text-left">
+                                <a href="#none" class="text-truncate" style="max-width:477px">당신이 알고 있어야 할 일상생활에 유용한 히트 아이디어템</a>
+                            </td>
+                            <td class="text-center">
+                                4,472,309
+                            </td>
+                            <td class="text-center">코하루</td>
+                            <td class="text-center">2022.01.01</td>
+                            <td class="text-center"></td>
+                        </tr>
+
+                        <tr>
+                            <td class="text-left">
+                                <a href="#none" class="text-truncate" style="max-width:477px">당신이 알고 있어야 할 일상생활에 유용한 히트 아이디어템</a>
+                            </td>
+                            <td class="text-center">
+                                4,472,309
+                            </td>
+                            <td class="text-center">코하루</td>
+                            <td class="text-center">2022.01.01</td>
+                            <td class="text-center"></td>
+                        </tr>
+
+                        <tr>
+                            <td class="text-left">
+                                <a href="#none" class="text-truncate" style="max-width:477px">당신이 알고 있어야 할 일상생활에 유용한 히트 아이디어템</a>
+                            </td>
+                            <td class="text-center">
+                                4,472,309
+                            </td>
+                            <td class="text-center">코하루</td>
+                            <td class="text-center">2022.01.01</td>
+                            <td class="text-center"></td>
+                        </tr>
+
+                        <tr>
+                            <td class="text-left">
+                                <a href="#none" class="text-truncate" style="max-width:477px">당신이 알고 있어야 할 일상생활에 유용한 히트 아이디어템</a>
+                            </td>
+                            <td class="text-center">
+                                4,472,309
+                            </td>
+                            <td class="text-center">코하루</td>
+                            <td class="text-center">2022.01.01</td>
+                            <td class="text-center"></td>
+                        </tr>
+
+                        <tr>
+                            <td class="text-left">
+                                <a href="#none" class="text-truncate" style="max-width:477px">당신이 알고 있어야 할 일상생활에 유용한 히트 아이디어템</a>
+                            </td>
+                            <td class="text-center">
+                                4,472,309
+                            </td>
+                            <td class="text-center">코하루</td>
+                            <td class="text-center">2022.01.01</td>
+                            <td class="text-center"></td>
+                        </tr>
+
+                        <tr>
+                            <td class="text-left">
+                                <a href="#none" class="text-truncate" style="max-width:477px">당신이 알고 있어야 할 일상생활에 유용한 히트 아이디어템</a>
+                            </td>
+                            <td class="text-center">
+                                4,472,309
+                            </td>
+                            <td class="text-center">코하루</td>
+                            <td class="text-center">2022.01.01</td>
+                            <td class="text-center"></td>
+                        </tr>
+
+                        <tr>
+                            <td class="text-left">
+                                <a href="#none" class="text-truncate" style="max-width:477px">당신이 알고 있어야 할 일상생활에 유용한 히트 아이디어템</a>
+                            </td>
+                            <td class="text-center">
+                                4,472,309
+                            </td>
+                            <td class="text-center">코하루</td>
+                            <td class="text-center">2022.01.01</td>
+                            <td class="text-center"></td>
+                        </tr>
+
+                        <tr>
+                            <td class="text-left">
+                                <a href="#none" class="text-truncate" style="max-width:477px">당신이 알고 있어야 할 일상생활에 유용한 히트 아이디어템</a>
+                            </td>
+                            <td class="text-center">
+                                4,472,309
+                            </td>
+                            <td class="text-center">코하루</td>
+                            <td class="text-center">2022.01.01</td>
+                            <td class="text-center"></td>
+                        </tr>
+
+                        <tr>
+                            <td class="text-left">
+                                <a href="#none" class="text-truncate" style="max-width:477px">당신이 알고 있어야 할 일상생활에 유용한 히트 아이디어템</a>
+                            </td>
+                            <td class="text-center">
+                                4,472,309
+                            </td>
+                            <td class="text-center">코하루</td>
+                            <td class="text-center">2022.01.01</td>
+                            <td class="text-center"></td>
+                        </tr>
+
+                        <tr>
+                            <td class="text-left">
+                                <a href="#none" class="text-truncate" style="max-width:477px">당신이 알고 있어야 할 일상생활에 유용한 히트 아이디어템</a>
+                            </td>
+                            <td class="text-center">
+                                4,472,309
+                            </td>
+                            <td class="text-center">코하루</td>
+                            <td class="text-center">2022.01.01</td>
+                            <td class="text-center"></td>
+                        </tr>
+
+                    </tbody>
+                </table>
+                <!-- pagination -->
+                <nav class="pagination-wrap">
+                    <ul class="pagination">
+                        <li class="page-item mr-2 disabled">
+                            <a class="page-link" href="#"><i class="icon-angle-left"><span class="sr-only">이전</span></i></a>
+                        </li>
+                        <li class="page-item active"><a class="page-link" href="#">1</a></li>
+
+                        <li class="page-item"><a class="page-link" href="#">2</a></li>
+
+                        <li class="page-item"><a class="page-link" href="#">3</a></li>
+
+                        <li class="page-item"><a class="page-link" href="#">4</a></li>
+
+                        <li class="page-item"><a class="page-link" href="#">5</a></li>
+
+                        <li class="page-item"><a class="page-link" href="#">6</a></li>
+
+                        <li class="page-item"><a class="page-link" href="#">7</a></li>
+
+                        <li class="page-item"><a class="page-link" href="#">8</a></li>
+
+                        <li class="page-item"><a class="page-link" href="#">9</a></li>
+
+                        <li class="page-item ml-2">
+                            <a class="page-link" href="#"><i class="icon-angle-right"><span class="sr-only">다음</span></i></a>
+                        </li>
+                    </ul>
+                </nav>
+                <!-- //pagination -->
+
+                <div class="row align-items-center justify-content-sm-between m-b-20 m-t-50">
+                    <div class="col-auto">
+                        <h2 class="title">분석 키워드 구글 트렌드 관심도</h2>
+                    </div>
+                </div>
+                <div class="chart">
+                    <div class="text-right">
+                        <div class="chart-legend">
+                            <span class="dot bg-danger"></span> 연간 관심도 추이
+                        </div>
+                    </div>
+                    <canvas id="chart-trend"></canvas>
+                </div>
+
                 <!-- 컨텐츠 끝 -->
 
             </main>
@@ -197,7 +568,7 @@
                                 <small>*채널추가 1개당</small>
                             </div>
                             <div class="price">
-                                <del>월 49,000원</del>
+                                <del class="discount">월 49,000원</del>
                                 <strong>월 19,000원</strong>
                             </div>
                         </div>
@@ -209,10 +580,135 @@
                 </div>
             </div>
         </div>
+
+        <!-- modal : 로딩중 -->
+        <div class="modal modal-loading" tabindex="-1" id="modal-loading" data-backdrop="static">
+            <div class="modal-dialog modal-dialog-centered modal-sm" style="max-width: 630px">
+                <div class="modal-content">
+                    <div class="modal-body">
+                        <div class="d-flex flex-column justify-content-center align-items-center">
+                            <span class="loading"></span>
+                            <p class="loading-text">키워드를 분석 중입니다.</p>
+                            <div class="loading-timer">
+                                <i class="icon-hourglass mr-2"></i>
+                                <span>20:00</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
     </div>
 
     <script>
+        $(document).ready(function() {
+            //datatable
+            var datatable = $('#datatable').DataTable({
+                'responsive': true,
+                'searching': false,
+                'info': false,
+                'paging': false,
+                'details': false,
+                'fixedColumns': true,
+                'ordering': true,
+                "columnDefs": [{
+                        "width": "40%",
+                        "targets": 0
+                    },
+                    {
+                        "width": "14%",
+                        "targets": 1
+                    },
+                    {
+                        "width": "16%",
+                        "targets": 2
+                    },
+                    {
+                        "width": "14%",
+                        "targets": 3
+                    }
+                ]
+            });
 
+            //chartjs - 한 눈에 그래프로 보기
+            var config = {
+                type: 'line',
+                data: {
+                    labels: ["1", "2", "3", "4", "5", "6", "7", "8", "9", "10", "11", "12"],
+                    datasets: [{
+                        backgroundColor: "#ff2d00",
+                        borderColor: '#ff2d00',
+                        borderWidth: 2,
+                        pointRadius: 2,
+                        pointHoverRadius: 4,
+                        data: [90, 20, 40, 50, 60, 70, 50, 85, 90, 52, 94, 76, 90],
+                        fill: false,
+                    }],
+                },
+                options: {
+                    responsive: true,
+                    legend: {
+                        display: false,
+                    },
+                    tooltips: {
+                        mode: 'index',
+                        intersect: false,
+                        displayColors: false,
+                        position: 'average',
+                        backgroundColor: '#ff2d00',
+                        bodyFontFamily: 'Noto Sans KR',
+                        cornerRadius: 12,
+                        caretSize: 0,
+                        xPadding: 10,
+                        callbacks: {
+                            title: function(tooltipItem, data) {
+                                return "";
+                            },
+                            label: function(tooltipItem) {
+                                return Number(tooltipItem.yLabel);
+                            }
+                        }
+                    },
+                    hover: {
+                        mode: 'nearest',
+                        intersect: true
+                    },
+                    scales: {
+                        xAxes: [{
+                            gridLines: {
+                                //display: false,
+                            },
+                            scaleLabel: {
+                                display: false,
+                            },
+                            ticks: {
+                                fontColor: '#989da0',
+                                fontSize: 15,
+                                fontFamily: 'Noto Sans KR',
+                                padding: 10,
+                            },
+                        }],
+                        yAxes: [{
+                            scaleLabel: {
+                                drawBorder: false,
+                            },
+                            ticks: {
+                                fontColor: '#989da0',
+                                fontSize: 15,
+                                fontFamily: 'Noto Sans KR',
+                                stepSize: 10,
+                                beginAtZero: true,
+                                padding: 10,
+                            },
+                        }]
+                    }
+                }
+            };
+            window.onload = function() {
+                var ctx = document.getElementById('chart-trend').getContext('2d');
+                window.myLine = new Chart(ctx, config);
+            };
+        })
     </script>
 
 </body>

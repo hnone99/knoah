@@ -25,8 +25,9 @@
             </button>
             <!-- 더보기 -->
             <button type="button" class="btn-more" aria-label="더보기"><i class="icon-more"></i></button>
-            <div class="menu-layer active">
+            <div class="menu-layer">
                 <div class="inner">
+                    <button type="button" class="btn-close d-lg-none" aria-label="메뉴 닫기"><i class="icon-x"></i></button>
                     <ul class="dep1">
                         <li><a href="">마이페이지</a></li>
                         <li class="has-sub active">
@@ -75,10 +76,14 @@
             </button>
             <div class="alarm-layer">
                 <div class="alarm-layer-head">
-                    <div class="tit">알림</div>
+                    <div class="tit d-none d-lg-block">알림</div>
+                    <div class="back d-lg-none">
+                        <a href="javascript:;" role="button" aria-label="뒤로"><i class="icon-angle-left"></i></a>
+                    </div>
                     <button type="button" aria-label="알림 설정" class="btn-alarm-setting"><i class="icon-gear"></i></button>
                 </div>
                 <div class="alarm-layer-body">
+                    <div class="tit d-lg-none">알림</div>
                     <!-- 구독 채널 없는 경우 -->
                     <div class="channel-empty">
                         <div class="d-flex flex-column align-items-center justify-content-center h-100">

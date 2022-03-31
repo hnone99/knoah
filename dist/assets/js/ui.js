@@ -10,8 +10,8 @@ var Header = {
     this.menu();
     this.alarm();
 
-    if ($('h2.title').length > 0) {
-      $('title').text($('h2.title').text() + ' | knoah');
+    if ($('.page-title').length > 0) {
+      $('title').text($('.page-title').text() + ' | knoah');
     }
   },
   collapse: function collapse(e) {
@@ -19,9 +19,13 @@ var Header = {
       e.preventDefault();
       $('html').toggleClass('is-collapsed');
     });
+    $('aside .dim').on('click', function (e) {
+      $('html').toggleClass('is-collapsed');
+    });
   },
   menu: function menu() {
     $('.btn-my, .btn-more').on('click', function () {
+      $('html').removeClass('is-collapsed');
       $('.menu-layer').addClass('active');
     });
     $('.menu-layer .dep1 > li > a').on('click', function (e) {
@@ -44,9 +48,15 @@ var Header = {
         $('.menu-layer .dep1 > li').show().removeClass('open');
       }
     });
+    $('.menu-layer .btn-close').on('click', function (e) {
+      e.preventDefault();
+      $('.menu-layer').removeClass('active');
+      $('.menu-layer .dep1 > li').show().removeClass('open');
+    });
   },
   alarm: function alarm() {
     $('.btn-alarm').on('click', function () {
+      $('html').removeClass('is-collapsed');
       $('.alarm-layer').addClass('active');
     });
     $(document).on('click', function (e) {
@@ -56,6 +66,10 @@ var Header = {
         $('.alarm-layer').removeClass('active');
       }
     });
+    $('.alarm-layer .back a').on('click', function (e) {
+      e.preventDefault();
+      $('.alarm-layer').removeClass('active');
+    });
   }
 };
 var Aside = {
@@ -64,27 +78,22 @@ var Aside = {
   },
   gnb: function gnb() {
     //페이지 타이틀명과 비교하여 활성화
-    if ($('.gnb').length > 0) {
-      var title = $('h2.title').text();
+    if ($('.page-title').length > 0) {
+      var title = $('.page-title').text();
       var $active = '';
-      $('.gnb a').each(function () {
+      $('.gnb .dep1 > li > a').each(function () {
         if ($(this).text() == title) {
           $active = $(this);
         }
       });
-      $active.parents('li').addClass('active'); //$active.parents('.has-treeview').addClass('open');
-      //$('.dep1').css('opacity', '1');
-
-      $('.gnb .has-treeview > a').on('click', function (e) {
-        e.preventDefault();
-        $(this).closest('li').toggleClass('open');
-      });
+      $active.parents('li').addClass('active');
     }
   }
 };
 var Common = {
   init: function init() {
     this.scrolling();
+    this.datePicker();
     this.event();
     window.addEventListener('mousewheel', Common.scrolling);
     window.addEventListener('touchmove', Common.scrolling);
@@ -121,10 +130,7 @@ var Common = {
       defaultDate: +7,
       changeMonth: true,
       changeYear: true,
-      monthNames: ["01", "02", "03", "04", "05", "06", "07", "08", "09", "10", "11", "12"],
-      monthNamesShort: ["01", "02", "03", "04", "05", "06", "07", "08", "09", "10", "11", "12"],
-      dayNamesMin: ["일", "월", "화", "수", "목", "금", "토"],
-      showMonthAfterYear: true,
+      dayNamesMin: ["S", "M", "T", "W", "T", "F", "S"],
       showOtherMonths: true
     }, _defineProperty(_$$datepicker, "changeMonth", true), _defineProperty(_$$datepicker, "changeYear", true), _defineProperty(_$$datepicker, "dateFormat", "yy-mm-dd"), _defineProperty(_$$datepicker, "gotoCurrent", true), _defineProperty(_$$datepicker, "beforeShow", function beforeShow(input, inst) {
       $('#ui-datepicker-div').addClass('datepicker-box');
@@ -161,6 +167,52 @@ var Common = {
     });
   }
 };
+var Dropdown = {
+  init: function init() {
+    Dropdown.active(); //드롭박스 디폴트 텍스트
+
+    $('.dropdown').each(function (e) {
+      $(this).attr('data-default', $(this).find('.dropdown-value').text());
+    });
+  },
+  active: function active() {
+    $('.dropdown').on('click', function (e) {
+      var $target = $(this).closest(".dropdown");
+
+      if ($target.hasClass('active')) {
+        $(this).removeClass('active');
+        $('html').removeClass('open-dropdown');
+      } else {
+        $(".dropdown.active").removeClass('active');
+        $(this).addClass('active');
+        $('html').addClass('open-dropdown');
+      }
+    });
+    $('.dropdown-list > div').on('click', function (e) {
+      if (!$(this).closest('.dropdown').hasClass('ellipsis')) {
+        $(this).closest('.dropdown').find('.dropdown-value').text($(this).text());
+      }
+
+      if ($(this).text() !== $(this).closest('.dropdown').attr('data-default')) {
+        $(this).closest('.dropdown').find('.dropdown-value').addClass('filled');
+        $(this).siblings().removeClass('text-primary');
+
+        if (!$(this).find("a").hasClass('change-num')) {
+          $(this).addClass('text-primary');
+        }
+      } else {
+        $(this).closest('.dropdown').find('.dropdown-value').removeClass('filled');
+      }
+    });
+    $(document).click(function (e) {
+      if (!$('.dropdown').has(e.target).length) {
+        $(".dropdown.active").removeClass('active');
+        $('html').removeClass('open-dropdown');
+      }
+    });
+  }
+};
 Header.init();
 Aside.init();
 Common.init();
+Dropdown.init();

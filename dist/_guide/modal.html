@@ -17,6 +17,7 @@
     <link rel="stylesheet" href="../assets/lib/jquery-ui/jquery-ui.min.css">
     <link rel="stylesheet" href="../assets/lib/swiper/css/swiper-bundle.min.css">
     <link rel="stylesheet" href="../assets/lib/mCustomScrollbar/jquery.mCustomScrollbar.min.css">
+    <link rel="stylesheet" href="../assets/lib/datatables/css/dataTables.bootstrap4.css">
 
     <link rel="stylesheet" href="../assets/css/bootstrap.css">
     <link rel="stylesheet" href="../assets/css/style.css">
@@ -26,6 +27,9 @@
     <script src="../assets/lib/bootstrap/js/bootstrap.bundle.min.js"></script>
     <script src="../assets/lib/swiper/js/swiper-bundle.min.js"></script>
     <script src="../assets/lib/mCustomScrollbar/jquery.mCustomScrollbar.concat.min.js"></script>
+    <script src="../assets/lib/chartjs/Chart.min.js"></script>
+    <script src="../assets/lib/datatables/js/jquery.dataTables.min.js"></script>
+    <script src="../assets/lib/datatables/js/dataTables.bootstrap4.js"></script>
 
     <script src="../assets/js/ui.js" defer></script>
     <style>
@@ -80,13 +84,31 @@
                                 <small>*채널추가 1개당</small>
                             </div>
                             <div class="price">
-                                <del>월 49,000원</del>
+                                <del class="discount">월 49,000원</del>
                                 <strong>월 19,000원</strong>
                             </div>
                         </div>
                         <p class="channel-add-desc">채널추가설명채널추가설명채널추가설명채널추가설명. </p>
                         <div class="text-center m-t-30">
                             <button type="button" class="btn btn-dark" style="min-width: 216px">결제하기</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- modal : 로딩중 -->
+        <div class="modal modal-loading" tabindex="-1" id="modal-loading" data-backdrop="static">
+            <div class="modal-dialog modal-dialog-centered modal-sm" style="max-width: 630px">
+                <div class="modal-content">
+                    <div class="modal-body">
+                        <div class="d-flex flex-column justify-content-center align-items-center">
+                            <span class="loading"></span>
+                            <p class="loading-text">키워드를 분석 중입니다.</p>
+                            <div class="loading-timer">
+                                <i class="icon-hourglass mr-2"></i>
+                                <span>20:00</span>
+                            </div>
                         </div>
                     </div>
                 </div>
