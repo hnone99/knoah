@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    @@include('@@webRoot/_include/_head.html')
+</head>
+
+<body>
+
+    <div id="wrap">
+
+        @@include('@@webRoot/_include/_header.html')
+
+        <div id="container-block">
+
+            @@include('@@webRoot/_include/_aside.html')
+
+            <main id="content" role="main">
+
+                <!-- 컨텐츠 시작 -->
+                <h2 class="page-title">제거한 채널</h2>
+                <div class="row align-items-center justify-content-between m-b-10 mb-lg-4">
+                    <div class="col-auto">
+                        <h2 class="title">제거한 채널 리스트</h2>
+                    </div>
+                </div>
+                
+                    <div class="border-dark border-top p-t-30 pt-lg-8 px-2 px-lg-3">
+                        <div class="row row-cols-lg-3 row-25">
+                            @@for (var i=0; i < 12; i++){
+                            <div class="col-12">
+                                <div class="card remove-channel">
+                                    <button type="text" aria-label="삭제"><i class="icon-x"></i></button>
+                                    <div class="row row-20 align-items-center">
+                                        <div class="col-auto"><img src="../assets/images/@portrait.jpg" alt="채널 이미지" class="channel-img"></div>
+                                        <div class="col">
+                                            <div class="channel-name text-truncate">스튜디오 와플 - STUDIO WAFFle story</div>
+                                            <div class="subscriber">구독자 174만명</div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            }
+                        </div>
+                    </div>
+
+                <!-- 컨텐츠 끝 -->
+
+            </main>
+        </div>
+
+        @@include('@@webRoot/_include/_footer.html')
+
+    </div>
+
+    @@include('@@webRoot/_include/_modal.html')
+
+    <script>
+        $(document).ready(function(){
+         
+        })
+    </script>
+
+</body>
+
+</html>

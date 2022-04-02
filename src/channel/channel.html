@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    @@include('@@webRoot/_include/_head.html')
+</head>
+
+<body>
+
+    <div id="wrap">
+
+        @@include('@@webRoot/_include/_header.html')
+
+        <div id="container-block">
+
+            @@include('@@webRoot/_include/_aside.html')
+
+            <main id="content" role="main">
+
+                <!-- 컨텐츠 시작 -->
+                <h2 class="page-title">채널 판독기</h2>
+                <div class="filter">
+                    <div class="filter-head">
+                        <i class="icon-filter m-r-10"></i><h3>필터</h3>
+                    </div>
+                    <div class="filter-body">
+                        <div class="row row-50 align-items-center">
+                            <div class="col-12 col-xl-auto condition">
+                                <div class="row row-50">
+                                    <div class="col-12 col-md">
+                                        <div class="dropdown">
+                                            <div class="dropdown-value">일별 검색 이력</div>
+                                            <div class="dropdown-box">
+                                                <div class="dropdown-list">
+                                                    @@for (var i = 1; i < 10; i++) {
+                                                    <div><a href="javascript:;">2022.03.0`+i+`</a></div>
+                                                    }
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-12 col-md mt-1 mt-md-0">
+                                        <div class="dropdown">
+                                            <div class="dropdown-value">키워드 검색 이력</div>
+                                            <div class="dropdown-box">
+                                                <div class="dropdown-list">
+                                                    @@for (var i = 1; i < 10; i++) {
+                                                    <div><a href="javascript:;">근육량 늘리는 방법</a></div>
+                                                    <div><a href="javascript:;">홈트레이닝 추천</a></div>
+                                                    }
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-12 col-xl recently mt-4 mt-xl-0">
+                                <div class="row row-15 align-items-center">
+                                    <div class="col-12 col-lg-auto">
+                                        <label>최근 검색 키워드</label>
+                                    </div>
+                                    <div class="col mt-3 mt-lg-0">
+                                        <div class="keyword-wrap">
+                                            @@for (var i = 1; i < 3; i++) {
+                                            <div class="keyword">
+                                                <a href="#none">다이어트</a>
+                                                <button type="text" aria-label="삭제"><i class="icon-x"></i></button>
+                                            </div>
+                                            <div class="keyword">
+                                                <a href="#none">닭가슴살 레시피</a>
+                                                <button type="text" aria-label="삭제"><i class="icon-x"></i></button>
+                                            </div>
+                                            }
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row align-items-center justify-content-between m-b-20">
+                    <div class="col-auto">
+                        <h2 class="title">분석 키워드 <i class="bar"></i> 등근육</h2>
+                    </div>
+                    <div class="col-auto">
+                        <div class="row row-10">
+                            <div class="col-auto">
+                                <button type="button" class="btn btn-outline-dark">키워드 포함</button>
+                            </div>
+                            <div class="col-auto d-none d-lg-block">
+                                <button type="button" class="btn btn-outline-danger">엑셀 다운로드</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <table class="table table-hover responsive table-data" id="datatable">
+                    <thead>
+                        <tr>
+                            <th class="text-center no-sort">제목</th>
+                            <th class="text-center">조회수</th>
+                            <th class="text-center">게시자</th>
+                            <th class="text-center">게시일</th>
+                            <th class="text-center">플랫폼</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        @@for (var i = 1; i < 16; i++) {
+                        <tr>
+                            <td class="text-left">
+                                <a href="#none" class="text-truncate" style="max-width:477px">당신이 알고 있어야 할 일상생활에 유용한 히트 아이디어템</a>
+                            </td>
+                            <td class="text-center">
+                                4,472,309
+                            </td>
+                            <td class="text-center">코하루</td>
+                            <td class="text-center">2022.01.01</td>
+                            <td class="text-center"></td>
+                        </tr>
+                        }
+                    </tbody>
+                </table>
+                @@include('@@webRoot/_include/_pagination.html')
+
+                <div class="row align-items-center justify-content-sm-between m-b-20 m-t-50">
+                    <div class="col-auto">
+                        <h2 class="title">분석 키워드 구글 트렌드 관심도</h2>
+                    </div>
+                </div>
+                <div class="chart">
+                    <div class="text-right">
+                        <div class="chart-legend">
+                            <span class="dot bg-danger"></span> 연간 관심도 추이
+                        </div>
+                    </div>
+                    <canvas id="chart-trend"></canvas>
+                </div>
+
+                <!-- 컨텐츠 끝 -->
+
+            </main>
+        </div>
+
+        @@include('@@webRoot/_include/_footer.html')
+
+    </div>
+
+    @@include('@@webRoot/_include/_modal.html')
+
+    <script>
+        $(document).ready(function(){
+            //datatable
+            var datatable = $('#datatable').DataTable({
+                'responsive': true,
+                'searching': false,
+                'info': false,
+                'paging': false,
+                'details': false,
+                'fixedColumns': true,
+                'ordering': true,
+                "columnDefs": [
+                    { "width": "40%", "targets": 0 },
+                    { "width": "14%", "targets": 1 },
+                    { "width": "16%", "targets": 2 },
+                    { "width": "14%", "targets": 3 }
+                ]
+            });
+
+            //chartjs - 한 눈에 그래프로 보기
+        var config= {
+			type: 'line',
+			data: {
+				labels: ["1", "2", "3", "4", "5", "6", "7", "8", "9", "10", "11", "12"],
+				datasets: [{
+                    backgroundColor: "#ff2d00",
+                    borderColor: '#ff2d00',
+                    borderWidth: 2,
+                    pointRadius: 2,
+                    pointHoverRadius: 4,
+					data: [90, 20, 40, 50, 60, 70, 50, 85, 90, 52, 94, 76, 90],
+					fill: false,
+				}],
+			},
+			options: {
+                responsive: true,
+                legend: {
+                    display: false,
+                },
+				tooltips: {
+					mode: 'index',
+                    intersect: false,
+                    displayColors: false,
+                    position: 'average',
+                    backgroundColor: '#ff2d00',
+                    bodyFontFamily: 'Noto Sans KR',
+                    cornerRadius: 12,
+                    caretSize: 0,
+                    xPadding: 10,
+                    callbacks: {
+                        title: function(tooltipItem, data) {
+                            return "";
+                        },
+                        label: function(tooltipItem) {
+                            return Number(tooltipItem.yLabel);
+                        }
+                    }
+				},
+				hover: {
+					mode: 'nearest',
+					intersect: true
+				},
+				scales: {
+                    xAxes: [{
+                        gridLines: {
+                            //display: false,
+                        },
+                        scaleLabel: {
+                            display: false,
+                        },
+                        ticks:{
+                            fontColor : '#989da0',
+                            fontSize : 15,
+                            fontFamily : 'Noto Sans KR',
+                            padding:10,
+                        },
+                    }],
+                    yAxes: [{
+                        scaleLabel: {
+                            drawBorder: false,
+                        },
+                        ticks: {
+                            fontColor : '#989da0',
+                            fontSize : 15,
+                            fontFamily : 'Noto Sans KR',
+                            stepSize: 10,
+                            beginAtZero: true,
+                            padding:10,
+                        },
+                    }]
+                }
+			}
+		};
+		window.onload = function() {
+			var ctx = document.getElementById('chart-trend').getContext('2d');
+			window.myLine = new Chart(ctx, config);
+		};
+        })
+    </script>
+
+</body>
+
+</html>
