@@ -582,12 +582,26 @@
         </div>
 
         <!-- modal : 로딩중 -->
-        <div class="modal modal-loading" tabindex="-1" id="modal-loading" data-backdrop="static">
+        <div class="modal modal-loading modal-square" tabindex="-1" id="modal-loading" data-backdrop="static">
             <div class="modal-dialog modal-dialog-centered modal-sm" style="max-width: 630px">
                 <div class="modal-content">
+                    <div class="modal-close">
+                        <button type="modal" aria-label="모달 닫기" data-dismiss="modal"><i class="icon-x"></i></button>
+                    </div>
                     <div class="modal-body">
                         <div class="d-flex flex-column justify-content-center align-items-center">
-                            <span class="loading"></span>
+                            <div class="loading-desc">
+                                <ul>
+                                    <li>let channels = getVideoData();</li>
+                                    <li>let videos = getVideoData(channels);</li>
+                                    <li>let channels = getVideoData();</li>
+                                    <li>let videos = getVideoData(channels);</li>
+                                    <li>let channels = getVideoData();</li>
+                                    <li>let videos = getVideoData(channels);</li>
+                                    <li>let channels = getVideoData();</li>
+                                    <li>let videos = getVideoData(channels);</li>
+                                </ul>
+                            </div>
                             <p class="loading-text">키워드를 분석 중입니다.</p>
                             <div class="loading-timer">
                                 <i class="icon-hourglass mr-2"></i>
@@ -598,6 +612,7 @@
                 </div>
             </div>
         </div>
+
     </div>
 
     <script>

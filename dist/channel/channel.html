@@ -160,108 +160,83 @@
 
                 <!-- 컨텐츠 시작 -->
                 <h2 class="page-title">채널 판독기</h2>
-                <div class="filter">
-                    <div class="filter-head">
-                        <i class="icon-filter m-r-10"></i>
-                        <h3>필터</h3>
+                <div class="filter has-collapsed">
+                    <div class="filter-head-container row row-0 justify-content-between">
+                        <div class="col-auto">
+                            <a href="#collapse-channel" class="filter-head" data-toggle="collapse" role="button" aria-expanded="false" aria-controls="collapse-channel">
+                                <i class="icon-filter m-r-10"></i>
+                                <h3>필터</h3>
+                            </a>
+                        </div>
+                        <div class="col-auto">
+                            <div class="d-flex align-items-center">
+                                <i class="icon-check-circle m-r-5"></i>
+                                <span class="font-size-14px m-r-15">이용횟수</span>
+                                <ul class="frequency-use">
+                                    <i class="bar"></i>
+                                    <li>13/30</li>
+                                    <li>23/60</li>
+                                </ul>
+                            </div>
+                        </div>
                     </div>
-                    <div class="filter-body">
-                        <div class="row row-50 align-items-center">
-                            <div class="col-12 col-xl-auto condition">
-                                <div class="row row-50">
-                                    <div class="col-12 col-md">
-                                        <div class="dropdown">
-                                            <div class="dropdown-value">일별 검색 이력</div>
-                                            <div class="dropdown-box">
-                                                <div class="dropdown-list">
-
-                                                    <div><a href="javascript:;">2022.03.01</a></div>
-
-                                                    <div><a href="javascript:;">2022.03.02</a></div>
-
-                                                    <div><a href="javascript:;">2022.03.03</a></div>
-
-                                                    <div><a href="javascript:;">2022.03.04</a></div>
-
-                                                    <div><a href="javascript:;">2022.03.05</a></div>
-
-                                                    <div><a href="javascript:;">2022.03.06</a></div>
-
-                                                    <div><a href="javascript:;">2022.03.07</a></div>
-
-                                                    <div><a href="javascript:;">2022.03.08</a></div>
-
-                                                    <div><a href="javascript:;">2022.03.09</a></div>
-
+                    <div class="collapse show" id="collapse-channel">
+                        <div class="filter-body channel">
+                            <div class="row row-50 align-items-center justify-content-between">
+                                <div class="col-xl col-12">
+                                    <div class="row">
+                                        <div class="col-12 col-xl-auto condition">
+                                            <div class="row row-50">
+                                                <div class="col-12 col-md mt-1 mt-md-0">
+                                                    <div class="dropdown">
+                                                        <input type="text" class="form-control form-datepicker" placeholder="시작날짜">
+                                                    </div>
                                                 </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="col-12 col-md mt-1 mt-md-0">
-                                        <div class="dropdown">
-                                            <div class="dropdown-value">키워드 검색 이력</div>
-                                            <div class="dropdown-box">
-                                                <div class="dropdown-list">
+                                                <div class="col-12 col-md mt-1 mt-md-0">
+                                                    <div class="dropdown">
+                                                        <input type="text" class="form-control form-datepicker" placeholder="종료날짜">
+                                                    </div>
+                                                </div>
+                                                <div class="col-12 col-md mt-1 mt-md-0">
+                                                    <div class="dropdown">
+                                                        <div class="dropdown-value">일별 검색 이력</div>
+                                                        <div class="dropdown-box">
+                                                            <div class="dropdown-list">
 
-                                                    <div><a href="javascript:;">근육량 늘리는 방법</a></div>
-                                                    <div><a href="javascript:;">홈트레이닝 추천</a></div>
+                                                                <div><a href="javascript:;">2022.03.01</a></div>
 
-                                                    <div><a href="javascript:;">근육량 늘리는 방법</a></div>
-                                                    <div><a href="javascript:;">홈트레이닝 추천</a></div>
+                                                                <div><a href="javascript:;">2022.03.02</a></div>
 
-                                                    <div><a href="javascript:;">근육량 늘리는 방법</a></div>
-                                                    <div><a href="javascript:;">홈트레이닝 추천</a></div>
+                                                                <div><a href="javascript:;">2022.03.03</a></div>
 
-                                                    <div><a href="javascript:;">근육량 늘리는 방법</a></div>
-                                                    <div><a href="javascript:;">홈트레이닝 추천</a></div>
+                                                                <div><a href="javascript:;">2022.03.04</a></div>
 
-                                                    <div><a href="javascript:;">근육량 늘리는 방법</a></div>
-                                                    <div><a href="javascript:;">홈트레이닝 추천</a></div>
+                                                                <div><a href="javascript:;">2022.03.05</a></div>
 
-                                                    <div><a href="javascript:;">근육량 늘리는 방법</a></div>
-                                                    <div><a href="javascript:;">홈트레이닝 추천</a></div>
+                                                                <div><a href="javascript:;">2022.03.06</a></div>
 
-                                                    <div><a href="javascript:;">근육량 늘리는 방법</a></div>
-                                                    <div><a href="javascript:;">홈트레이닝 추천</a></div>
+                                                                <div><a href="javascript:;">2022.03.07</a></div>
 
-                                                    <div><a href="javascript:;">근육량 늘리는 방법</a></div>
-                                                    <div><a href="javascript:;">홈트레이닝 추천</a></div>
+                                                                <div><a href="javascript:;">2022.03.08</a></div>
 
-                                                    <div><a href="javascript:;">근육량 늘리는 방법</a></div>
-                                                    <div><a href="javascript:;">홈트레이닝 추천</a></div>
+                                                                <div><a href="javascript:;">2022.03.09</a></div>
 
+                                                            </div>
+                                                        </div>
+                                                    </div>
                                                 </div>
                                             </div>
                                         </div>
                                     </div>
                                 </div>
-                            </div>
-                            <div class="col-12 col-xl recently mt-4 mt-xl-0">
-                                <div class="row row-15 align-items-center">
-                                    <div class="col-12 col-lg-auto">
-                                        <label>최근 검색 키워드</label>
-                                    </div>
-                                    <div class="col mt-3 mt-lg-0">
-                                        <div class="keyword-wrap">
-
-                                            <div class="keyword">
-                                                <a href="#none">다이어트</a>
-                                                <button type="text" aria-label="삭제"><i class="icon-x"></i></button>
-                                            </div>
-                                            <div class="keyword">
-                                                <a href="#none">닭가슴살 레시피</a>
-                                                <button type="text" aria-label="삭제"><i class="icon-x"></i></button>
-                                            </div>
-
-                                            <div class="keyword">
-                                                <a href="#none">다이어트</a>
-                                                <button type="text" aria-label="삭제"><i class="icon-x"></i></button>
-                                            </div>
-                                            <div class="keyword">
-                                                <a href="#none">닭가슴살 레시피</a>
-                                                <button type="text" aria-label="삭제"><i class="icon-x"></i></button>
-                                            </div>
-
+                                <div class="col-xl-auto col-12">
+                                    <div class="row row-10 justify-content-end">
+                                        <div class="col-lg-auto mt-6 mt-lg-3 mt-xl-0">
+                                            <button type="button" class="btn btn-dark min-width-153px btn-block 
+                                            analyze-btn">분석 시작</button>
+                                        </div>
+                                        <div class="col-auto  mt-6 mt-lg-3 mt-xl-0  d-none d-lg-block">
+                                            <a href="" class="btn btn-outline-dark">엑셀 다운로드</a>
                                         </div>
                                     </div>
                                 </div>
@@ -269,215 +244,379 @@
                         </div>
                     </div>
                 </div>
-                <div class="row align-items-center justify-content-between m-b-20">
-                    <div class="col-auto">
-                        <h2 class="title">분석 키워드 <i class="bar"></i> 등근육</h2>
+
+                <div class="row row-10 m-b-15">
+                    <div class="col-lg-auto pt-lg-3">
+                        <a href="#channel-list-keyword" class="text-underline min-width-75px font-size-16px" data-toggle="collapse" role="button" aria-expanded="false" aria-controls="channel-list-keyword">
+                            등록된 채널
+                        </a>
                     </div>
-                    <div class="col-auto">
-                        <div class="row row-10">
-                            <div class="col-auto">
-                                <button type="button" class="btn btn-outline-dark">키워드 포함</button>
-                            </div>
-                            <div class="col-auto d-none d-lg-block">
-                                <button type="button" class="btn btn-outline-danger">엑셀 다운로드</button>
+                    <div class="col-lg">
+                        <div class="collapse show" id="channel-list-keyword">
+                            <div class="overflow-y-scroll m-t-10 mt-lg-0" style="max-height:104px;">
+
+                                <div class="keyword">
+                                    <a href="#none">입짧은 햇님</a>
+                                    <button type="text" aria-label="삭제"><i class="icon-x"></i></button>
+                                </div>
+                                <div class="keyword">
+                                    <a href="#none">보통사람들을 위한 운동채널</a>
+                                    <button type="text" aria-label="삭제"><i class="icon-x"></i></button>
+                                </div>
+                                <div class="keyword">
+                                    <a href="#none">헬창극장</a>
+                                    <button type="text" aria-label="삭제"><i class="icon-x"></i></button>
+                                </div>
+                                <div class="keyword">
+                                    <a href="#none">3분 돈꿀팁</a>
+                                    <button type="text" aria-label="삭제"><i class="icon-x"></i></button>
+                                </div>
+                                <div class="keyword">
+                                    <a href="#none">찐부자</a>
+                                    <button type="text" aria-label="삭제"><i class="icon-x"></i></button>
+                                </div>
+
+                                <div class="keyword">
+                                    <a href="#none">입짧은 햇님</a>
+                                    <button type="text" aria-label="삭제"><i class="icon-x"></i></button>
+                                </div>
+                                <div class="keyword">
+                                    <a href="#none">보통사람들을 위한 운동채널</a>
+                                    <button type="text" aria-label="삭제"><i class="icon-x"></i></button>
+                                </div>
+                                <div class="keyword">
+                                    <a href="#none">헬창극장</a>
+                                    <button type="text" aria-label="삭제"><i class="icon-x"></i></button>
+                                </div>
+                                <div class="keyword">
+                                    <a href="#none">3분 돈꿀팁</a>
+                                    <button type="text" aria-label="삭제"><i class="icon-x"></i></button>
+                                </div>
+                                <div class="keyword">
+                                    <a href="#none">찐부자</a>
+                                    <button type="text" aria-label="삭제"><i class="icon-x"></i></button>
+                                </div>
+
                             </div>
                         </div>
                     </div>
                 </div>
-                <table class="table table-hover responsive table-data" id="datatable">
-                    <thead>
-                        <tr>
-                            <th class="text-center no-sort">제목</th>
-                            <th class="text-center">조회수</th>
-                            <th class="text-center">게시자</th>
-                            <th class="text-center">게시일</th>
-                            <th class="text-center">플랫폼</th>
-                        </tr>
-                    </thead>
-                    <tbody>
 
-                        <tr>
-                            <td class="text-left">
-                                <a href="#none" class="text-truncate" style="max-width:477px">당신이 알고 있어야 할 일상생활에 유용한 히트 아이디어템</a>
-                            </td>
-                            <td class="text-center">
-                                4,472,309
-                            </td>
-                            <td class="text-center">코하루</td>
-                            <td class="text-center">2022.01.01</td>
-                            <td class="text-center"></td>
-                        </tr>
+                <div class="d-flex justify-content-end">
+                    <ul class="sort">
+                        <li class="active"><a href="">최신순 <i class="icon-sort"></i></a></i></li>
+                        <i class="bar"></i>
+                        <li><a href="">인기순 <i class="icon-sort"></i></a></li>
+                    </ul>
+                </div>
 
-                        <tr>
-                            <td class="text-left">
-                                <a href="#none" class="text-truncate" style="max-width:477px">당신이 알고 있어야 할 일상생활에 유용한 히트 아이디어템</a>
-                            </td>
-                            <td class="text-center">
-                                4,472,309
-                            </td>
-                            <td class="text-center">코하루</td>
-                            <td class="text-center">2022.01.01</td>
-                            <td class="text-center"></td>
-                        </tr>
+                <a href="" class="card channel-list mt-3 mt-lg-4 w-100">
+                    <div class="row row-60">
+                        <div class="col-xl-auto">
+                            <div class="thumbnail">
+                                <img src="https://img.youtube.com/vi/oClFVDs3b74/mqdefault.jpg" alt="동영상 이미지">
+                            </div>
+                        </div>
+                        <div class="col-xl mt-3 mt-xl-0">
+                            <div class="d-flex align-items-center">
+                                <img src="../assets/images/@profile.jpg" alt="채널이미지" class="channel-img">
+                                <div class="channel-name">신사임당</div>
+                                <div class="channel-subscriber">구독자 174만명</div>
+                            </div>
+                            <div class="channel-title m-t-10 mt-lg-3 text-truncate">주식 초보가 담아도 큰 실패 없는 종목 (정재호 3부, 부자아빠)주식</div>
+                            <div class="channel-desc m-t-15 mt-lg-3">
+                                <ul>
+                                    <li class="mb-2">
+                                        <div class="row row-0 align-items-center">
+                                            <div class="col-5 col-lg-auto m-t-5 mt-lg-0"><span>|&emsp;조회수 : 234회</span></div>
+                                            <div class="col-7 col-lg-auto m-t-5 mt-lg-0"><span>|&emsp;채널 평균 조회수 : 5만회</span></div>
+                                            <div class="col-5 col-lg-auto m-t-5 mt-lg-0"><span>|&emsp;성과도 : 10% </span></div>
+                                            <div class="col-7 col-lg-auto m-t-5 mt-lg-0"><span>|&emsp;게시일 : 2022.03.23</span></div>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <span>|&emsp;영상 설명 : *출연신청 & 제휴 및 광고문의 : ssid@dpnstud.io</span>
+                                    </li>
+                                </ul>
 
-                        <tr>
-                            <td class="text-left">
-                                <a href="#none" class="text-truncate" style="max-width:477px">당신이 알고 있어야 할 일상생활에 유용한 히트 아이디어템</a>
-                            </td>
-                            <td class="text-center">
-                                4,472,309
-                            </td>
-                            <td class="text-center">코하루</td>
-                            <td class="text-center">2022.01.01</td>
-                            <td class="text-center"></td>
-                        </tr>
+                            </div>
+                        </div>
+                    </div>
+                </a>
 
-                        <tr>
-                            <td class="text-left">
-                                <a href="#none" class="text-truncate" style="max-width:477px">당신이 알고 있어야 할 일상생활에 유용한 히트 아이디어템</a>
-                            </td>
-                            <td class="text-center">
-                                4,472,309
-                            </td>
-                            <td class="text-center">코하루</td>
-                            <td class="text-center">2022.01.01</td>
-                            <td class="text-center"></td>
-                        </tr>
+                <a href="" class="card channel-list mt-3 mt-lg-4 w-100">
+                    <div class="row row-60">
+                        <div class="col-xl-auto">
+                            <div class="thumbnail">
+                                <img src="https://img.youtube.com/vi/oClFVDs3b74/mqdefault.jpg" alt="동영상 이미지">
+                            </div>
+                        </div>
+                        <div class="col-xl mt-3 mt-xl-0">
+                            <div class="d-flex align-items-center">
+                                <img src="../assets/images/@profile.jpg" alt="채널이미지" class="channel-img">
+                                <div class="channel-name">신사임당</div>
+                                <div class="channel-subscriber">구독자 174만명</div>
+                            </div>
+                            <div class="channel-title m-t-10 mt-lg-3 text-truncate">주식 초보가 담아도 큰 실패 없는 종목 (정재호 3부, 부자아빠)주식</div>
+                            <div class="channel-desc m-t-15 mt-lg-3">
+                                <ul>
+                                    <li class="mb-2">
+                                        <div class="row row-0 align-items-center">
+                                            <div class="col-5 col-lg-auto m-t-5 mt-lg-0"><span>|&emsp;조회수 : 234회</span></div>
+                                            <div class="col-7 col-lg-auto m-t-5 mt-lg-0"><span>|&emsp;채널 평균 조회수 : 5만회</span></div>
+                                            <div class="col-5 col-lg-auto m-t-5 mt-lg-0"><span>|&emsp;성과도 : 10% </span></div>
+                                            <div class="col-7 col-lg-auto m-t-5 mt-lg-0"><span>|&emsp;게시일 : 2022.03.23</span></div>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <span>|&emsp;영상 설명 : *출연신청 & 제휴 및 광고문의 : ssid@dpnstud.io</span>
+                                    </li>
+                                </ul>
 
-                        <tr>
-                            <td class="text-left">
-                                <a href="#none" class="text-truncate" style="max-width:477px">당신이 알고 있어야 할 일상생활에 유용한 히트 아이디어템</a>
-                            </td>
-                            <td class="text-center">
-                                4,472,309
-                            </td>
-                            <td class="text-center">코하루</td>
-                            <td class="text-center">2022.01.01</td>
-                            <td class="text-center"></td>
-                        </tr>
+                            </div>
+                        </div>
+                    </div>
+                </a>
 
-                        <tr>
-                            <td class="text-left">
-                                <a href="#none" class="text-truncate" style="max-width:477px">당신이 알고 있어야 할 일상생활에 유용한 히트 아이디어템</a>
-                            </td>
-                            <td class="text-center">
-                                4,472,309
-                            </td>
-                            <td class="text-center">코하루</td>
-                            <td class="text-center">2022.01.01</td>
-                            <td class="text-center"></td>
-                        </tr>
+                <a href="" class="card channel-list mt-3 mt-lg-4 w-100">
+                    <div class="row row-60">
+                        <div class="col-xl-auto">
+                            <div class="thumbnail">
+                                <img src="https://img.youtube.com/vi/oClFVDs3b74/mqdefault.jpg" alt="동영상 이미지">
+                            </div>
+                        </div>
+                        <div class="col-xl mt-3 mt-xl-0">
+                            <div class="d-flex align-items-center">
+                                <img src="../assets/images/@profile.jpg" alt="채널이미지" class="channel-img">
+                                <div class="channel-name">신사임당</div>
+                                <div class="channel-subscriber">구독자 174만명</div>
+                            </div>
+                            <div class="channel-title m-t-10 mt-lg-3 text-truncate">주식 초보가 담아도 큰 실패 없는 종목 (정재호 3부, 부자아빠)주식</div>
+                            <div class="channel-desc m-t-15 mt-lg-3">
+                                <ul>
+                                    <li class="mb-2">
+                                        <div class="row row-0 align-items-center">
+                                            <div class="col-5 col-lg-auto m-t-5 mt-lg-0"><span>|&emsp;조회수 : 234회</span></div>
+                                            <div class="col-7 col-lg-auto m-t-5 mt-lg-0"><span>|&emsp;채널 평균 조회수 : 5만회</span></div>
+                                            <div class="col-5 col-lg-auto m-t-5 mt-lg-0"><span>|&emsp;성과도 : 10% </span></div>
+                                            <div class="col-7 col-lg-auto m-t-5 mt-lg-0"><span>|&emsp;게시일 : 2022.03.23</span></div>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <span>|&emsp;영상 설명 : *출연신청 & 제휴 및 광고문의 : ssid@dpnstud.io</span>
+                                    </li>
+                                </ul>
 
-                        <tr>
-                            <td class="text-left">
-                                <a href="#none" class="text-truncate" style="max-width:477px">당신이 알고 있어야 할 일상생활에 유용한 히트 아이디어템</a>
-                            </td>
-                            <td class="text-center">
-                                4,472,309
-                            </td>
-                            <td class="text-center">코하루</td>
-                            <td class="text-center">2022.01.01</td>
-                            <td class="text-center"></td>
-                        </tr>
+                            </div>
+                        </div>
+                    </div>
+                </a>
 
-                        <tr>
-                            <td class="text-left">
-                                <a href="#none" class="text-truncate" style="max-width:477px">당신이 알고 있어야 할 일상생활에 유용한 히트 아이디어템</a>
-                            </td>
-                            <td class="text-center">
-                                4,472,309
-                            </td>
-                            <td class="text-center">코하루</td>
-                            <td class="text-center">2022.01.01</td>
-                            <td class="text-center"></td>
-                        </tr>
+                <a href="" class="card channel-list mt-3 mt-lg-4 w-100">
+                    <div class="row row-60">
+                        <div class="col-xl-auto">
+                            <div class="thumbnail">
+                                <img src="https://img.youtube.com/vi/oClFVDs3b74/mqdefault.jpg" alt="동영상 이미지">
+                            </div>
+                        </div>
+                        <div class="col-xl mt-3 mt-xl-0">
+                            <div class="d-flex align-items-center">
+                                <img src="../assets/images/@profile.jpg" alt="채널이미지" class="channel-img">
+                                <div class="channel-name">신사임당</div>
+                                <div class="channel-subscriber">구독자 174만명</div>
+                            </div>
+                            <div class="channel-title m-t-10 mt-lg-3 text-truncate">주식 초보가 담아도 큰 실패 없는 종목 (정재호 3부, 부자아빠)주식</div>
+                            <div class="channel-desc m-t-15 mt-lg-3">
+                                <ul>
+                                    <li class="mb-2">
+                                        <div class="row row-0 align-items-center">
+                                            <div class="col-5 col-lg-auto m-t-5 mt-lg-0"><span>|&emsp;조회수 : 234회</span></div>
+                                            <div class="col-7 col-lg-auto m-t-5 mt-lg-0"><span>|&emsp;채널 평균 조회수 : 5만회</span></div>
+                                            <div class="col-5 col-lg-auto m-t-5 mt-lg-0"><span>|&emsp;성과도 : 10% </span></div>
+                                            <div class="col-7 col-lg-auto m-t-5 mt-lg-0"><span>|&emsp;게시일 : 2022.03.23</span></div>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <span>|&emsp;영상 설명 : *출연신청 & 제휴 및 광고문의 : ssid@dpnstud.io</span>
+                                    </li>
+                                </ul>
 
-                        <tr>
-                            <td class="text-left">
-                                <a href="#none" class="text-truncate" style="max-width:477px">당신이 알고 있어야 할 일상생활에 유용한 히트 아이디어템</a>
-                            </td>
-                            <td class="text-center">
-                                4,472,309
-                            </td>
-                            <td class="text-center">코하루</td>
-                            <td class="text-center">2022.01.01</td>
-                            <td class="text-center"></td>
-                        </tr>
+                            </div>
+                        </div>
+                    </div>
+                </a>
 
-                        <tr>
-                            <td class="text-left">
-                                <a href="#none" class="text-truncate" style="max-width:477px">당신이 알고 있어야 할 일상생활에 유용한 히트 아이디어템</a>
-                            </td>
-                            <td class="text-center">
-                                4,472,309
-                            </td>
-                            <td class="text-center">코하루</td>
-                            <td class="text-center">2022.01.01</td>
-                            <td class="text-center"></td>
-                        </tr>
+                <a href="" class="card channel-list mt-3 mt-lg-4 w-100">
+                    <div class="row row-60">
+                        <div class="col-xl-auto">
+                            <div class="thumbnail">
+                                <img src="https://img.youtube.com/vi/oClFVDs3b74/mqdefault.jpg" alt="동영상 이미지">
+                            </div>
+                        </div>
+                        <div class="col-xl mt-3 mt-xl-0">
+                            <div class="d-flex align-items-center">
+                                <img src="../assets/images/@profile.jpg" alt="채널이미지" class="channel-img">
+                                <div class="channel-name">신사임당</div>
+                                <div class="channel-subscriber">구독자 174만명</div>
+                            </div>
+                            <div class="channel-title m-t-10 mt-lg-3 text-truncate">주식 초보가 담아도 큰 실패 없는 종목 (정재호 3부, 부자아빠)주식</div>
+                            <div class="channel-desc m-t-15 mt-lg-3">
+                                <ul>
+                                    <li class="mb-2">
+                                        <div class="row row-0 align-items-center">
+                                            <div class="col-5 col-lg-auto m-t-5 mt-lg-0"><span>|&emsp;조회수 : 234회</span></div>
+                                            <div class="col-7 col-lg-auto m-t-5 mt-lg-0"><span>|&emsp;채널 평균 조회수 : 5만회</span></div>
+                                            <div class="col-5 col-lg-auto m-t-5 mt-lg-0"><span>|&emsp;성과도 : 10% </span></div>
+                                            <div class="col-7 col-lg-auto m-t-5 mt-lg-0"><span>|&emsp;게시일 : 2022.03.23</span></div>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <span>|&emsp;영상 설명 : *출연신청 & 제휴 및 광고문의 : ssid@dpnstud.io</span>
+                                    </li>
+                                </ul>
 
-                        <tr>
-                            <td class="text-left">
-                                <a href="#none" class="text-truncate" style="max-width:477px">당신이 알고 있어야 할 일상생활에 유용한 히트 아이디어템</a>
-                            </td>
-                            <td class="text-center">
-                                4,472,309
-                            </td>
-                            <td class="text-center">코하루</td>
-                            <td class="text-center">2022.01.01</td>
-                            <td class="text-center"></td>
-                        </tr>
+                            </div>
+                        </div>
+                    </div>
+                </a>
 
-                        <tr>
-                            <td class="text-left">
-                                <a href="#none" class="text-truncate" style="max-width:477px">당신이 알고 있어야 할 일상생활에 유용한 히트 아이디어템</a>
-                            </td>
-                            <td class="text-center">
-                                4,472,309
-                            </td>
-                            <td class="text-center">코하루</td>
-                            <td class="text-center">2022.01.01</td>
-                            <td class="text-center"></td>
-                        </tr>
+                <a href="" class="card channel-list mt-3 mt-lg-4 w-100">
+                    <div class="row row-60">
+                        <div class="col-xl-auto">
+                            <div class="thumbnail">
+                                <img src="https://img.youtube.com/vi/oClFVDs3b74/mqdefault.jpg" alt="동영상 이미지">
+                            </div>
+                        </div>
+                        <div class="col-xl mt-3 mt-xl-0">
+                            <div class="d-flex align-items-center">
+                                <img src="../assets/images/@profile.jpg" alt="채널이미지" class="channel-img">
+                                <div class="channel-name">신사임당</div>
+                                <div class="channel-subscriber">구독자 174만명</div>
+                            </div>
+                            <div class="channel-title m-t-10 mt-lg-3 text-truncate">주식 초보가 담아도 큰 실패 없는 종목 (정재호 3부, 부자아빠)주식</div>
+                            <div class="channel-desc m-t-15 mt-lg-3">
+                                <ul>
+                                    <li class="mb-2">
+                                        <div class="row row-0 align-items-center">
+                                            <div class="col-5 col-lg-auto m-t-5 mt-lg-0"><span>|&emsp;조회수 : 234회</span></div>
+                                            <div class="col-7 col-lg-auto m-t-5 mt-lg-0"><span>|&emsp;채널 평균 조회수 : 5만회</span></div>
+                                            <div class="col-5 col-lg-auto m-t-5 mt-lg-0"><span>|&emsp;성과도 : 10% </span></div>
+                                            <div class="col-7 col-lg-auto m-t-5 mt-lg-0"><span>|&emsp;게시일 : 2022.03.23</span></div>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <span>|&emsp;영상 설명 : *출연신청 & 제휴 및 광고문의 : ssid@dpnstud.io</span>
+                                    </li>
+                                </ul>
 
-                        <tr>
-                            <td class="text-left">
-                                <a href="#none" class="text-truncate" style="max-width:477px">당신이 알고 있어야 할 일상생활에 유용한 히트 아이디어템</a>
-                            </td>
-                            <td class="text-center">
-                                4,472,309
-                            </td>
-                            <td class="text-center">코하루</td>
-                            <td class="text-center">2022.01.01</td>
-                            <td class="text-center"></td>
-                        </tr>
+                            </div>
+                        </div>
+                    </div>
+                </a>
 
-                        <tr>
-                            <td class="text-left">
-                                <a href="#none" class="text-truncate" style="max-width:477px">당신이 알고 있어야 할 일상생활에 유용한 히트 아이디어템</a>
-                            </td>
-                            <td class="text-center">
-                                4,472,309
-                            </td>
-                            <td class="text-center">코하루</td>
-                            <td class="text-center">2022.01.01</td>
-                            <td class="text-center"></td>
-                        </tr>
+                <a href="" class="card channel-list mt-3 mt-lg-4 w-100">
+                    <div class="row row-60">
+                        <div class="col-xl-auto">
+                            <div class="thumbnail">
+                                <img src="https://img.youtube.com/vi/oClFVDs3b74/mqdefault.jpg" alt="동영상 이미지">
+                            </div>
+                        </div>
+                        <div class="col-xl mt-3 mt-xl-0">
+                            <div class="d-flex align-items-center">
+                                <img src="../assets/images/@profile.jpg" alt="채널이미지" class="channel-img">
+                                <div class="channel-name">신사임당</div>
+                                <div class="channel-subscriber">구독자 174만명</div>
+                            </div>
+                            <div class="channel-title m-t-10 mt-lg-3 text-truncate">주식 초보가 담아도 큰 실패 없는 종목 (정재호 3부, 부자아빠)주식</div>
+                            <div class="channel-desc m-t-15 mt-lg-3">
+                                <ul>
+                                    <li class="mb-2">
+                                        <div class="row row-0 align-items-center">
+                                            <div class="col-5 col-lg-auto m-t-5 mt-lg-0"><span>|&emsp;조회수 : 234회</span></div>
+                                            <div class="col-7 col-lg-auto m-t-5 mt-lg-0"><span>|&emsp;채널 평균 조회수 : 5만회</span></div>
+                                            <div class="col-5 col-lg-auto m-t-5 mt-lg-0"><span>|&emsp;성과도 : 10% </span></div>
+                                            <div class="col-7 col-lg-auto m-t-5 mt-lg-0"><span>|&emsp;게시일 : 2022.03.23</span></div>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <span>|&emsp;영상 설명 : *출연신청 & 제휴 및 광고문의 : ssid@dpnstud.io</span>
+                                    </li>
+                                </ul>
 
-                        <tr>
-                            <td class="text-left">
-                                <a href="#none" class="text-truncate" style="max-width:477px">당신이 알고 있어야 할 일상생활에 유용한 히트 아이디어템</a>
-                            </td>
-                            <td class="text-center">
-                                4,472,309
-                            </td>
-                            <td class="text-center">코하루</td>
-                            <td class="text-center">2022.01.01</td>
-                            <td class="text-center"></td>
-                        </tr>
+                            </div>
+                        </div>
+                    </div>
+                </a>
 
-                    </tbody>
-                </table>
+                <a href="" class="card channel-list mt-3 mt-lg-4 w-100">
+                    <div class="row row-60">
+                        <div class="col-xl-auto">
+                            <div class="thumbnail">
+                                <img src="https://img.youtube.com/vi/oClFVDs3b74/mqdefault.jpg" alt="동영상 이미지">
+                            </div>
+                        </div>
+                        <div class="col-xl mt-3 mt-xl-0">
+                            <div class="d-flex align-items-center">
+                                <img src="../assets/images/@profile.jpg" alt="채널이미지" class="channel-img">
+                                <div class="channel-name">신사임당</div>
+                                <div class="channel-subscriber">구독자 174만명</div>
+                            </div>
+                            <div class="channel-title m-t-10 mt-lg-3 text-truncate">주식 초보가 담아도 큰 실패 없는 종목 (정재호 3부, 부자아빠)주식</div>
+                            <div class="channel-desc m-t-15 mt-lg-3">
+                                <ul>
+                                    <li class="mb-2">
+                                        <div class="row row-0 align-items-center">
+                                            <div class="col-5 col-lg-auto m-t-5 mt-lg-0"><span>|&emsp;조회수 : 234회</span></div>
+                                            <div class="col-7 col-lg-auto m-t-5 mt-lg-0"><span>|&emsp;채널 평균 조회수 : 5만회</span></div>
+                                            <div class="col-5 col-lg-auto m-t-5 mt-lg-0"><span>|&emsp;성과도 : 10% </span></div>
+                                            <div class="col-7 col-lg-auto m-t-5 mt-lg-0"><span>|&emsp;게시일 : 2022.03.23</span></div>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <span>|&emsp;영상 설명 : *출연신청 & 제휴 및 광고문의 : ssid@dpnstud.io</span>
+                                    </li>
+                                </ul>
+
+                            </div>
+                        </div>
+                    </div>
+                </a>
+
+                <a href="" class="card channel-list mt-3 mt-lg-4 w-100">
+                    <div class="row row-60">
+                        <div class="col-xl-auto">
+                            <div class="thumbnail">
+                                <img src="https://img.youtube.com/vi/oClFVDs3b74/mqdefault.jpg" alt="동영상 이미지">
+                            </div>
+                        </div>
+                        <div class="col-xl mt-3 mt-xl-0">
+                            <div class="d-flex align-items-center">
+                                <img src="../assets/images/@profile.jpg" alt="채널이미지" class="channel-img">
+                                <div class="channel-name">신사임당</div>
+                                <div class="channel-subscriber">구독자 174만명</div>
+                            </div>
+                            <div class="channel-title m-t-10 mt-lg-3 text-truncate">주식 초보가 담아도 큰 실패 없는 종목 (정재호 3부, 부자아빠)주식</div>
+                            <div class="channel-desc m-t-15 mt-lg-3">
+                                <ul>
+                                    <li class="mb-2">
+                                        <div class="row row-0 align-items-center">
+                                            <div class="col-5 col-lg-auto m-t-5 mt-lg-0"><span>|&emsp;조회수 : 234회</span></div>
+                                            <div class="col-7 col-lg-auto m-t-5 mt-lg-0"><span>|&emsp;채널 평균 조회수 : 5만회</span></div>
+                                            <div class="col-5 col-lg-auto m-t-5 mt-lg-0"><span>|&emsp;성과도 : 10% </span></div>
+                                            <div class="col-7 col-lg-auto m-t-5 mt-lg-0"><span>|&emsp;게시일 : 2022.03.23</span></div>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <span>|&emsp;영상 설명 : *출연신청 & 제휴 및 광고문의 : ssid@dpnstud.io</span>
+                                    </li>
+                                </ul>
+
+                            </div>
+                        </div>
+                    </div>
+                </a>
+
+
                 <!-- pagination -->
                 <nav class="pagination-wrap">
                     <ul class="pagination">
@@ -508,20 +647,6 @@
                     </ul>
                 </nav>
                 <!-- //pagination -->
-
-                <div class="row align-items-center justify-content-sm-between m-b-20 m-t-50">
-                    <div class="col-auto">
-                        <h2 class="title">분석 키워드 구글 트렌드 관심도</h2>
-                    </div>
-                </div>
-                <div class="chart">
-                    <div class="text-right">
-                        <div class="chart-legend">
-                            <span class="dot bg-danger"></span> 연간 관심도 추이
-                        </div>
-                    </div>
-                    <canvas id="chart-trend"></canvas>
-                </div>
 
                 <!-- 컨텐츠 끝 -->
 
@@ -582,12 +707,26 @@
         </div>
 
         <!-- modal : 로딩중 -->
-        <div class="modal modal-loading" tabindex="-1" id="modal-loading" data-backdrop="static">
+        <div class="modal modal-loading modal-square" tabindex="-1" id="modal-loading" data-backdrop="static">
             <div class="modal-dialog modal-dialog-centered modal-sm" style="max-width: 630px">
                 <div class="modal-content">
+                    <div class="modal-close">
+                        <button type="modal" aria-label="모달 닫기" data-dismiss="modal"><i class="icon-x"></i></button>
+                    </div>
                     <div class="modal-body">
                         <div class="d-flex flex-column justify-content-center align-items-center">
-                            <span class="loading"></span>
+                            <div class="loading-desc">
+                                <ul>
+                                    <li>let channels = getVideoData();</li>
+                                    <li>let videos = getVideoData(channels);</li>
+                                    <li>let channels = getVideoData();</li>
+                                    <li>let videos = getVideoData(channels);</li>
+                                    <li>let channels = getVideoData();</li>
+                                    <li>let videos = getVideoData(channels);</li>
+                                    <li>let channels = getVideoData();</li>
+                                    <li>let videos = getVideoData(channels);</li>
+                                </ul>
+                            </div>
                             <p class="loading-text">키워드를 분석 중입니다.</p>
                             <div class="loading-timer">
                                 <i class="icon-hourglass mr-2"></i>
@@ -598,116 +737,23 @@
                 </div>
             </div>
         </div>
+
     </div>
 
     <script>
         $(document).ready(function() {
-            //datatable
-            var datatable = $('#datatable').DataTable({
-                'responsive': true,
-                'searching': false,
-                'info': false,
-                'paging': false,
-                'details': false,
-                'fixedColumns': true,
-                'ordering': true,
-                "columnDefs": [{
-                        "width": "40%",
-                        "targets": 0
-                    },
-                    {
-                        "width": "14%",
-                        "targets": 1
-                    },
-                    {
-                        "width": "16%",
-                        "targets": 2
-                    },
-                    {
-                        "width": "14%",
-                        "targets": 3
-                    }
-                ]
+            $(".sort li").on("click", function() {
+                $(this).toggleClass("active");
+                if ($(this).hasClass("active")) {
+                    $(".sort li").not(this).removeClass("active");
+                }
             });
 
-            //chartjs - 한 눈에 그래프로 보기
-            var config = {
-                type: 'line',
-                data: {
-                    labels: ["1", "2", "3", "4", "5", "6", "7", "8", "9", "10", "11", "12"],
-                    datasets: [{
-                        backgroundColor: "#ff2d00",
-                        borderColor: '#ff2d00',
-                        borderWidth: 2,
-                        pointRadius: 2,
-                        pointHoverRadius: 4,
-                        data: [90, 20, 40, 50, 60, 70, 50, 85, 90, 52, 94, 76, 90],
-                        fill: false,
-                    }],
-                },
-                options: {
-                    responsive: true,
-                    legend: {
-                        display: false,
-                    },
-                    tooltips: {
-                        mode: 'index',
-                        intersect: false,
-                        displayColors: false,
-                        position: 'average',
-                        backgroundColor: '#ff2d00',
-                        bodyFontFamily: 'Noto Sans KR',
-                        cornerRadius: 12,
-                        caretSize: 0,
-                        xPadding: 10,
-                        callbacks: {
-                            title: function(tooltipItem, data) {
-                                return "";
-                            },
-                            label: function(tooltipItem) {
-                                return Number(tooltipItem.yLabel);
-                            }
-                        }
-                    },
-                    hover: {
-                        mode: 'nearest',
-                        intersect: true
-                    },
-                    scales: {
-                        xAxes: [{
-                            gridLines: {
-                                //display: false,
-                            },
-                            scaleLabel: {
-                                display: false,
-                            },
-                            ticks: {
-                                fontColor: '#989da0',
-                                fontSize: 15,
-                                fontFamily: 'Noto Sans KR',
-                                padding: 10,
-                            },
-                        }],
-                        yAxes: [{
-                            scaleLabel: {
-                                drawBorder: false,
-                            },
-                            ticks: {
-                                fontColor: '#989da0',
-                                fontSize: 15,
-                                fontFamily: 'Noto Sans KR',
-                                stepSize: 10,
-                                beginAtZero: true,
-                                padding: 10,
-                            },
-                        }]
-                    }
-                }
-            };
-            window.onload = function() {
-                var ctx = document.getElementById('chart-trend').getContext('2d');
-                window.myLine = new Chart(ctx, config);
-            };
+            $(".analyze-btn").on("click", function() {
+                $(this).attr("class", "btn btn-outline-danger min-width-153px btn-block");
+            });
+
+            $(".modal-loading").modal("show");
         })
     </script>
 

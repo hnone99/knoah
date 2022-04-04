@@ -10,6 +10,8 @@
 .icon-angle-right{width: 6px;height: 10px;background-image: url('../images/icon-angle-right.svg');}
 .icon-filter{width: 22px;height: 24px;background-image: url('../images/icon-filter.svg');}
 .icon-hourglass{width: 16px;height: 23px;background-image: url('../images/icon-hourglass.svg');}
+.icon-sort{width:18px; height:18px; background-image: url('../images/icon-sort.svg');}
+.icon-check-circle{width:14px; height:14px; background-image: url('../images/icon-check-circle.svg');}
 
 .bar{display: inline-block;width: 1px;height: 22px;background: #8c8c8c;}
 
@@ -19,7 +21,10 @@
 .font-size-18px{font-size: 18px !important;}
 .font-size-30px{font-size: 30px !important;}
 
+.min-width-75px{min-width: 75px;}
 .min-width-100px{min-width: 100px;}
+.min-width-153px{min-width: 153px;}
+.min-width-270px{min-width: 270px;}
 
 .cursor-pointer{cursor: pointer;}
 
@@ -72,11 +77,15 @@ textarea{resize: none!important;}
 }
 
 .form-datepicker{
-    border: 0;border-bottom: 1px solid #000;text-align: center;font-weight: 500;font-size: 16px;height: 46px;width: 220px;padding: 11px 20px;transition: color 0.3s;
+    border: 0;border-bottom: 1px solid #000;text-align: center;font-weight: 500;font-size: 16px;height: 46px; min-width: 220px;padding: 11px 20px;transition: color 0.3s;
     background: url('../images/icon-calendar.svg') no-repeat 100% 50%;
+    &::placeholder{
+        color:#000;
+    }
     &.hasDatepicker{
         border-color: $danger; background-image: url('../images/icon-calendar-red.svg');
     }
+
 }
 
 .ui-widget.ui-datepicker{
@@ -181,11 +190,17 @@ textarea.form-control{resize: none;}
     }
     .modal-body{padding: 40px 69px;}
     .modal-title{font-size: 20px;font-weight: 700;line-height: 1.4;text-align: center;margin-bottom: 1rem;}
+    &.modal-square{
+        .modal-close{right: -30px; top: -3px;}
+    }
     @include media-breakpoint-down(md){
         .modal-dialog{margin-left: 10%;margin-right: 10%;}
         .modal-content{border-radius: 20px;}
         .modal-sm{max-width: 240px}
         .modal-body{padding: 30px 24px;}
+        &.modal-square{
+            .modal-close{right: -20px;}
+        }
     }
 }
 
@@ -290,14 +305,32 @@ textarea.form-control{resize: none;}
 
 .modal-loading{
     .modal-content{border-radius: 0;border: 1px solid #000;}
-    .loading-text{font-size: 24px;font-weight: 700;margin: 1rem 0;}
+    .loading-text{font-size: 24px;font-weight: 700;margin: 1rem 0; margin-top: 47px;}
     .loading-timer{
         display: flex;align-items: center;
         span{font-weight: 500;}
     }
+    .loading-desc{
+        max-height: 48px; overflow: hidden; position: relative;
+        ul{
+            animation: textAutoMovement 16s linear;
+            max-height: 48px; 
+        }
+    }    
+    @keyframes textAutoMovement {
+        to {
+            transform: translateY(-100%);
+          }
+    }
     @include media-breakpoint-down(md){
-        .loading-text{font-size: 16px}
+        .loading-text{font-size: 16px; margin-top: 30px;}
         .icon-hourglass{width: 10.7px;height: 14.8px;}
+        .loading-desc{
+            max-height: 36px; 
+            ul{
+                max-height: 36px; 
+            }
+        }    
     }
 }
 

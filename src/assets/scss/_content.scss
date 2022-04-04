@@ -30,6 +30,13 @@
         h3{font-weight: 500;font-size: 16px;}
     }
     .filter-body{border-bottom: 1px solid #8c8c8c;padding: 20px 0;}
+    &.has-collapsed{
+        margin-bottom: 25px;
+        .filter-head-container {border-bottom: 1px solid #000;}
+        .filter-head{border-bottom:0;}
+        a{text-decoration: none;}
+    }
+    
     @include media-breakpoint-down(lg){
         .condition{
             .dropdown{width: 100%;}
@@ -37,6 +44,10 @@
         .recently{
             > .d-flex{margin-top: 20px;padding-top: 20px;border-top: 1px solid #8c8c8c;}
         }
+        .filter-body{
+            border-bottom:0;
+        }
+        // &.has-collapse{margin-bottom: 25px;}
     }
 }
 
@@ -97,4 +108,115 @@
             }
         }
     }
+
+    &.channel-list{
+        padding:43px 60px;
+        text-decoration: none;
+        .thumbnail{
+            min-width: 320px;
+            position: relative;
+            padding-top: 56%;
+            width: 100%;
+            height: 0;
+            img{
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100%;
+            }
+        }
+        .channel-img{
+            border-radius: 50%;
+            width: 60px; height: 60px; object-fit: cover; object-position: center;
+        }
+        .channel-name{
+            font-size: 20px; font-weight: 500; margin-right: 10px; margin-left: 20px;
+        }
+        .channel-title{
+            font-size: 20px; font-weight: 500;
+        }
+        .channel-desc{
+            span{
+                padding-right:30px;
+                vertical-align: middle;
+            }
+        }
+        @include media-breakpoint-down(lg){
+            padding:30px 10px;
+            .thumbnail{min-width: auto;}
+            .channel-img{width: 42px; height:42px;}
+            .channel-name{
+                font-size: 16px;
+                margin-right: 7px;
+                margin-left: 10px;
+            }
+            .channel-subscriber{font-size: 12px;}
+            .channel-title{
+                font-size: 20px; font-weight: 500;
+                white-space: initial;
+            }
+            .channel-desc{
+                span{
+                   line-height: 18px; font-size: 12px;
+                }
+            }
+        }
+    }
 }
+
+.sort{
+    display: flex;
+    align-items: center;
+    margin-right:-11px;
+    .bar{
+        height:18px;
+        background: #000;
+    }
+    li{
+        a{
+            display: flex;
+            align-items: center;
+            margin:0 11px;
+            text-decoration: none;
+        }
+        &.active{
+            a{
+                color:$danger;
+                i{
+                    background-image: url('../images/icon-sort-active.svg');
+                }
+            }
+        }
+    }
+    @include media-breakpoint-down(md){
+        margin-right: -6px;
+        .bar{
+            height:16px;
+        }
+        li{
+            a{margin:0 6px;}
+        }
+    }
+}
+
+.frequency-use{
+    display: flex;
+    align-items: center;
+    .bar{
+        height:14px;
+        background: #000;
+    }
+    li{
+        font-size: 14px;
+        &:first-of-type{
+            margin-left: 15px;
+        }
+        + li{
+            &::before{
+                content: ',';
+            }
+        }
+    }
+}
+
