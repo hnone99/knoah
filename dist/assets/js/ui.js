@@ -136,7 +136,6 @@ var Common = {
       $('#ui-datepicker-div').addClass('datepicker-box');
     }), _$$datepicker)).datepicker('setDate', 'today');
   },
-
   event: function event() {
     $('[data-toggle="tooltip"]').tooltip(); //custom scroll
 

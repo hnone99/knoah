@@ -58,7 +58,9 @@ textarea{resize: none!important;}
 
 .btn-outline-danger{background-color: rgba(255, 0, 0, 0.05);}
 
+.table-wrap{margin: 0 -4px;position: relative;}
 .table{
+    position: relative;
     > thead > tr > th{white-space: nowrap;}
     th,
     td{
@@ -68,6 +70,19 @@ textarea{resize: none!important;}
     @include media-breakpoint-down(md){
         th,
         td{font-size: 12px;padding: .75rem .5625rem;}
+    }
+    &.table-data{
+        border-collapse: collapse !important;
+        > thead,
+        > tbody{
+            > tr{
+                > th,
+                > td{border-left: 4px solid #fff;border-right: 4px solid #fff;}
+            }
+        }
+        @include media-breakpoint-down(md){
+            table-layout: fixed;
+        }
     }
 }
 .table-fixed{table-layout: fixed;}
@@ -151,8 +166,14 @@ textarea{resize: none!important;}
     .ui-datepicker{width: 100% !important;}
     .ui-datepicker-group{padding: 1rem;}
     @include media-breakpoint-down(md){
-        position: fixed;min-width: 0;max-height: 80vh;overflow-y: auto;overflow-x: hidden;
-        .ui-datepicker-group{float: none;}
+        position: fixed;min-width: 0;left: 50%;top: 50%;transform: translate(-50%, -50%);
+        .ui-datepicker-group{float: none;width: auto;}
+        .ui-datepicker{
+            max-height: 75vh;overflow-y: auto;overflow-x: hidden;margin-top: 0;
+            .ui-datepicker-title{font-size: 15px;}
+            .ui-datepicker-prev,
+            .ui-datepicker-next{display: none;}
+        }
     }
 }
 
@@ -342,9 +363,9 @@ textarea.form-control{resize: none;}
         max-height: 48px; overflow: hidden; position: relative;
         ul{
             // animation: textAutoMovement 16s linear;
-            max-height: 48px; 
+            max-height: 48px;
         }
-    }    
+    }
     // @keyframes textAutoMovement {
     //     to {
     //         transform: translateY(-100%);
@@ -369,3 +390,67 @@ textarea.form-control{resize: none;}
 }
 
 .transition-none{transition: none;}
+
+.ratio-progress-bar{
+    padding: 10px 0 35px;
+    .ui-slider{
+        border: 0;background: transparent;height: 1px;
+        .ui-slider-handle{width: 5px;height: 15px;margin-left: -2.5px;top:-6.5px;border-radius: 5px;border: 0 !important;background: $danger;}
+        .ui-slider-range-min{background: $danger;left: 1px;top: 0}
+    }
+    .bar-area{
+        position: relative;
+        .line{width: 100%;height: 1px;background: #000;position: absolute;left: 0;top: 50%;}
+        &::before,
+        &::after{content: '';width: 1px;height: 5px;background: #000;position: absolute;left: 0;top: 50%;margin-top: -2px;}
+        &::after{left: auto;right: 0;}
+        p{
+            position: absolute;top: 10px;display: inline-block;font-size: 12px;color: #000;
+            i{font-style: normal;}
+            &.female{left: 0;transform: translateX(-50%);}
+            &.male{right: 0;transform: translateX(50%);}
+        }
+    }
+    .ratio{
+        display: flex;position: absolute;left: 0;top: 50%;right: 0;transform: translateY(-50%);
+        span{
+            flex: 1;position: relative;
+            &::before{
+                content: '';display: inline-block;vertical-align: top;width: 5px;height: 5px;border-radius: 50%;background: $danger;position: absolute;right: 0;top: -2px;margin-right: -2.5px;
+            }
+            &:last-of-type{
+                &::before{display: none;}
+            }
+            &.active,
+            &.active ~ span{
+                &::before{background: #000;}
+            }
+        }
+    }
+}
+
+.select-progress-bar{
+    padding: 5px 0 28px;
+    .bar-area{
+        position: relative;
+        .line{width: 100%;height: 1px;background: #000;position: absolute;left: 0;top: 50%;}
+        &::before,
+        &::after{content: '';width: 1px;height: 5px;background: #000;position: absolute;left: 0;top: 50%;margin-top: -2px;}
+        &::after{left: auto;right: 0;}
+    }
+    .labels{
+        display: flex;justify-content: space-around;
+        .label{
+            position: relative;
+            a{
+                padding: 5px;font-size: 0;line-height: 1;position: absolute;left: 50%;top: 50%;transform: translate(-50%,-50%);
+                &::before{content: '';display: block;width: 5px;height: 5px;background: #000;border-radius: 50%;}
+                &.active{
+                    &::before{background: $danger;}
+                    span{color: $danger;font-weight: 700;}
+                }
+            }
+            span{position: absolute;left: 50%;top: 19px;font-size: 12px;white-space: nowrap;transform: translateX(-50%);}
+        }
+    }
+}

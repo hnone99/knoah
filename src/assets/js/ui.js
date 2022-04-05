@@ -137,15 +137,6 @@ var Common = {
 			},
 		}).datepicker('setDate', 'today');
 	},
-	timePicker: function () {
-		//timepicker
-		$('.form-timepicker').each(function () {
-			$(this).timepicker({
-				showMeridian: false,
-				defaultTime: '00:00'
-			});
-		})
-	},
 	event: function () {
 		$('[data-toggle="tooltip"]').tooltip();
 

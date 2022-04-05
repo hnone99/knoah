@@ -54,6 +54,67 @@
         <section class="col-6">
             <h1>form</h1>
             <div>
+                <div class="ratio-progress-bar">
+                    <div class="bar-area">
+                        <div class="line">
+                            <p class="female">여성 <i>50</i></p>
+                            <p class="male">남성 <i>50</i></p>
+                        </div>
+                        <div id="slider"></div>
+                        <div class="ratio">
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                            <span class="active"></span>
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                        </div>
+                    </div>
+                    <script>
+                        var sliderIdx;
+                        $("#slider").slider({
+                            range: "min",
+                            value: 50,
+                            min: 0,
+                            max: 100,
+                            step: 10,
+                            slide: function(event, ui) {
+                                $(".female i").text( ui.value );
+                                $(".male i").text( 100 - ui.value );
+                                //선택된 값의 뒷자리 자른 후 .active 로 제어 요청!! (현재 5로 설정)
+                                $(".ratio-progress-bar .ratio span").eq(5).siblings().removeClass('active');
+                                $(".ratio-progress-bar .ratio span").eq(5).addClass('active');
+                            }
+                        });
+                    </script>
+                </div>
+                <div class="select-progress-bar">
+                    <div class="bar-area">
+                        <div class="line"></div>
+                        <div class="labels">
+                            @@for (var i = 1; i < 7; i++) {
+                            <div class="label">
+                                <a href="javascript:;" role="button">
+                                    <span>`+i+`0대</span>
+                                </a>
+                            </div>
+                            }
+                        </div>
+                    </div>
+                    <script>
+                        $('.select-progress-bar a').on('click',function(e){
+                            e.preventDefault();
+                            $(this).parent().siblings().find('a').removeClass('active');
+                            $(this).addClass('active');
+                        })
+                    </script>
+                </div>
+            </div>
+            <div>
                 <div class="dropdown">
                     <div class="dropdown-value">일별 검색 이력</div>
                     <div class="dropdown-box">
@@ -85,14 +146,17 @@
                         $(document).on('mouseup',function(e){
                             if ($ingInput.has(e.target).length === 0 && $('.datepicker-group').has(e.target).length === 0) {
                                 $ingInput.removeClass('hasDatepicker');
-                                console.log(2)
                             }
                         });
                         //datepicker
-                        var numMonth;
                         var datepickerLoad = {
                             init: function(){
-                                numMonth = 2;
+                                var numMonth;
+                                if($(window).width() < 992) {
+                                    numMonth = 9
+                                }else{
+                                    numMonth = 2
+                                }
                                 $('.datepicker-group .load').datepicker({
                                     showButtonPanel: false,
                                     numberOfMonths: numMonth,
