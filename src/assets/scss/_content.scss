@@ -158,7 +158,7 @@
             }
             .channel-desc{
                 span{
-                   line-height: 18px; font-size: 12px;
+                    line-height: 18px; font-size: 12px;
                 }
             }
         }
@@ -221,3 +221,10 @@
     }
 }
 
+.subscribe-channel-list{
+    max-height: 104px;
+    overflow-y: auto;
+    @include media-breakpoint-down(md){
+        max-height: 95px;
+    }
+}
