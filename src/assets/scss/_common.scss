@@ -399,7 +399,6 @@ textarea.form-control{resize: none;}
 }
 
 .transition-none{transition: none;}
-<<<<<<< HEAD
 
 .ratio-progress-bar{
     padding: 10px 0 35px;
@@ -462,10 +461,5 @@ textarea.form-control{resize: none;}
             }
             span{position: absolute;left: 50%;top: 19px;font-size: 12px;white-space: nowrap;transform: translateX(-50%);}
         }
-=======
-.pc-hidden{
-    @include media-breakpoint-up(lg){
-        display: none;
->>>>>>> jang
     }
 }

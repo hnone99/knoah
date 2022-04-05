@@ -85,8 +85,30 @@ aside{
         padding-top: 40px;
     }
     a{text-decoration: none;}
-    .overflow-y-scroll{height: calc(100vh - 65px);}
-    .mCSB_inside>.mCSB_container{margin-right: 0;}
+    .dep1{
+        > li{
+            > a{
+                display: block;padding: .6rem 1rem .6rem 70px;position: relative;font-weight: 700;font-size: 15px;
+                &::before{content: '';display: block;width: 22px;height: 22px;background-position: 50% 50%;background-repeat: no-repeat;position: absolute;left: 29px;top: 50%;transform: translateY(-50%);}
+                br{display: none;}
+            }
+            &.active{background: #efefef;}
+        }
+        > li:nth-child(1) > a::before{background-image: url(../images/gnb-icon-1.svg);}
+        > li:nth-child(2) > a::before{background-image: url(../images/gnb-icon-2.svg);}
+        > li:nth-child(3) > a::before{background-image: url(../images/gnb-icon-3.svg);}
+        > li:nth-child(4) > a::before{background-image: url(../images/gnb-icon-4.svg);}
+        > li:nth-child(5) > a::before{background-image: url(../images/gnb-icon-5.svg);}
+        > li:nth-child(6) > a::before{background-image: url(../images/gnb-icon-6.svg);}
+    }
+}
+
+.gnb-bar{
+    white-space: nowrap;height: 100%;transition: opacity .2s;border-right: 1px solid #e0e0e0;padding-top: 20px;background: #fff;position: relative;
+    @include media-breakpoint-down(md){
+        padding-top: 40px;
+    }
+    a{text-decoration: none;}
     .dep1{
         > li{
             > a{
@@ -110,8 +132,9 @@ aside{
     .form-control{border: 0;background: transparent;height: 100%;border-radius: 50rem;padding-left: 30px;padding-right: 30px;}
     .btn-search{position: absolute;right: 30px;top: 50%;transform: translateY(-50%);font-size: 15px;}
     i{color: #8c8c8c;}
-    @include media-breakpoint-down(md){
-        display: none;
+
+    main &{
+        position: relative; width: auto; transform: none; left: auto; top: auto;
     }
 }
 
