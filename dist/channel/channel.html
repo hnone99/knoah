@@ -188,15 +188,56 @@
                                         <div class="col-12 col-xl-auto condition">
                                             <div class="row row-50">
                                                 <div class="col-12 col-md mt-1 mt-md-0">
-                                                    <div class="dropdown">
-                                                        <input type="text" class="form-control form-datepicker" placeholder="시작날짜">
+                                                    <div class="position-relative">
+                                                        <input type="text" class="form-control form-datepicker form-datepicker-multi" readonly>
+                                                        <div class="datepicker-group" style="display: none">
+                                                            <!-- 시작일 td에 클래스 'startDay' -->
+                                                            <!-- 종료일 td에 클래스 'endDay' -->
+                                                            <!-- 시작일~종료일 선택 날짜 구간 td에 클래스 'ui-datepicker-day-range' 추가 -->
+                                                            <div class="load"></div>
+                                                        </div>
                                                     </div>
+                                                    <script>
+                                                        $(document).ready(function() {
+                                                            var $ingInput;
+                                                            $('.form-datepicker-multi').on('click', function(e) {
+                                                                $ingInput = $(this);
+                                                                $ingInput.addClass('hasDatepicker');
+                                                            });
+                                                            $(document).on('mouseup', function(e) {
+                                                                if ($ingInput.has(e.target).length === 0 && $('.datepicker-group').has(e.target).length === 0) {
+                                                                    $ingInput.removeClass('hasDatepicker');
+                                                                    console.log(2)
+                                                                }
+                                                            });
+                                                            //datepicker
+                                                            var numMonth;
+                                                            var datepickerLoad = {
+                                                                init: function() {
+                                                                    numMonth = 2;
+                                                                    $('.datepicker-group .load').datepicker({
+                                                                        showButtonPanel: false,
+                                                                        numberOfMonths: numMonth,
+                                                                        //minDate: toDate,
+                                                                        //maxDate: "+0m",
+                                                                        dateFormat: "yy-mm-dd",
+                                                                        monthNames: ["01", "02", "03", "04", "05", "06", "07", "08", "09", "10", "11", "12"],
+                                                                        monthNamesShort: ["1", "2", "3", "4", "5", "6", "7", "8", "9", "10", "11", "12"],
+                                                                        dayNamesMin: ["S", "M", "T", "W", "T", "F", "S"],
+                                                                        //gotoCurrent: true,
+                                                                        yearSuffix: ".",
+                                                                        dateFormat: "y.mm.dd D",
+                                                                        showMonthAfterYear: true,
+                                                                        isRTL: false
+                                                                    });
+                                                                }
+                                                            }
+                                                            datepickerLoad.init();
+                                                        });
+                                                    </script>
                                                 </div>
-                                                <div class="col-12 col-md mt-1 mt-md-0">
-                                                    <div class="dropdown">
-                                                        <input type="text" class="form-control form-datepicker" placeholder="종료날짜">
-                                                    </div>
-                                                </div>
+
+
                                                 <div class="col-12 col-md mt-1 mt-md-0">
                                                     <div class="dropdown">
                                                         <div class="dropdown-value">일별 검색 이력</div>
@@ -357,6 +398,7 @@
                         <div class="col-xl-auto">
                             <div class="thumbnail">
                                 <img src="https://img.youtube.com/vi/oClFVDs3b74/mqdefault.jpg" alt="동영상 이미지">
+                                <!-- <iframe src="https://www.youtube.com/embed/PX1oAtwlSzk" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe> -->
                             </div>
                         </div>
                         <div class="col-xl mt-3 mt-xl-0">
@@ -366,7 +408,7 @@
                                 <div class="channel-subscriber">구독자 174만명</div>
                             </div>
                             <div class="channel-title m-t-10 mt-lg-3 text-truncate">주식 초보가 담아도 큰 실패 없는 종목 (정재호 3부, 부자아빠)주식</div>
-                            <div class="channel-desc m-t-15 mt-lg-3">
+                            <div class="channel-desc m-t-10 mt-lg-3">
                                 <ul>
                                     <li class="mb-2">
                                         <div class="row row-0 align-items-center">
@@ -377,7 +419,7 @@
                                         </div>
                                     </li>
                                     <li>
-                                        <span>|&emsp;영상 설명 : *출연신청 & 제휴 및 광고문의 : ssid@dpnstud.io</span>
+                                        <span>|&emsp;영상설명 : *출연신청 & 제휴 및 광고문의 : ssid@dpnstud.io</span>
                                     </li>
                                 </ul>
                             </div>
@@ -390,6 +432,7 @@
                         <div class="col-xl-auto">
                             <div class="thumbnail">
                                 <img src="https://img.youtube.com/vi/oClFVDs3b74/mqdefault.jpg" alt="동영상 이미지">
+                                <!-- <iframe src="https://www.youtube.com/embed/PX1oAtwlSzk" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe> -->
                             </div>
                         </div>
                         <div class="col-xl mt-3 mt-xl-0">
@@ -399,7 +442,7 @@
                                 <div class="channel-subscriber">구독자 174만명</div>
                             </div>
                             <div class="channel-title m-t-10 mt-lg-3 text-truncate">주식 초보가 담아도 큰 실패 없는 종목 (정재호 3부, 부자아빠)주식</div>
-                            <div class="channel-desc m-t-15 mt-lg-3">
+                            <div class="channel-desc m-t-10 mt-lg-3">
                                 <ul>
                                     <li class="mb-2">
                                         <div class="row row-0 align-items-center">
@@ -410,7 +453,7 @@
                                         </div>
                                     </li>
                                     <li>
-                                        <span>|&emsp;영상 설명 : *출연신청 & 제휴 및 광고문의 : ssid@dpnstud.io</span>
+                                        <span>|&emsp;영상설명 : *출연신청 & 제휴 및 광고문의 : ssid@dpnstud.io</span>
                                     </li>
                                 </ul>
                             </div>
@@ -423,6 +466,7 @@
                         <div class="col-xl-auto">
                             <div class="thumbnail">
                                 <img src="https://img.youtube.com/vi/oClFVDs3b74/mqdefault.jpg" alt="동영상 이미지">
+                                <!-- <iframe src="https://www.youtube.com/embed/PX1oAtwlSzk" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe> -->
                             </div>
                         </div>
                         <div class="col-xl mt-3 mt-xl-0">
@@ -432,7 +476,7 @@
                                 <div class="channel-subscriber">구독자 174만명</div>
                             </div>
                             <div class="channel-title m-t-10 mt-lg-3 text-truncate">주식 초보가 담아도 큰 실패 없는 종목 (정재호 3부, 부자아빠)주식</div>
-                            <div class="channel-desc m-t-15 mt-lg-3">
+                            <div class="channel-desc m-t-10 mt-lg-3">
                                 <ul>
                                     <li class="mb-2">
                                         <div class="row row-0 align-items-center">
@@ -443,7 +487,7 @@
                                         </div>
                                     </li>
                                     <li>
-                                        <span>|&emsp;영상 설명 : *출연신청 & 제휴 및 광고문의 : ssid@dpnstud.io</span>
+                                        <span>|&emsp;영상설명 : *출연신청 & 제휴 및 광고문의 : ssid@dpnstud.io</span>
                                     </li>
                                 </ul>
                             </div>
@@ -456,6 +500,7 @@
                         <div class="col-xl-auto">
                             <div class="thumbnail">
                                 <img src="https://img.youtube.com/vi/oClFVDs3b74/mqdefault.jpg" alt="동영상 이미지">
+                                <!-- <iframe src="https://www.youtube.com/embed/PX1oAtwlSzk" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe> -->
                             </div>
                         </div>
                         <div class="col-xl mt-3 mt-xl-0">
@@ -465,7 +510,7 @@
                                 <div class="channel-subscriber">구독자 174만명</div>
                             </div>
                             <div class="channel-title m-t-10 mt-lg-3 text-truncate">주식 초보가 담아도 큰 실패 없는 종목 (정재호 3부, 부자아빠)주식</div>
-                            <div class="channel-desc m-t-15 mt-lg-3">
+                            <div class="channel-desc m-t-10 mt-lg-3">
                                 <ul>
                                     <li class="mb-2">
                                         <div class="row row-0 align-items-center">
@@ -476,7 +521,7 @@
                                         </div>
                                     </li>
                                     <li>
-                                        <span>|&emsp;영상 설명 : *출연신청 & 제휴 및 광고문의 : ssid@dpnstud.io</span>
+                                        <span>|&emsp;영상설명 : *출연신청 & 제휴 및 광고문의 : ssid@dpnstud.io</span>
                                     </li>
                                 </ul>
                             </div>
@@ -489,6 +534,7 @@
                         <div class="col-xl-auto">
                             <div class="thumbnail">
                                 <img src="https://img.youtube.com/vi/oClFVDs3b74/mqdefault.jpg" alt="동영상 이미지">
+                                <!-- <iframe src="https://www.youtube.com/embed/PX1oAtwlSzk" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe> -->
                             </div>
                         </div>
                         <div class="col-xl mt-3 mt-xl-0">
@@ -498,7 +544,7 @@
                                 <div class="channel-subscriber">구독자 174만명</div>
                             </div>
                             <div class="channel-title m-t-10 mt-lg-3 text-truncate">주식 초보가 담아도 큰 실패 없는 종목 (정재호 3부, 부자아빠)주식</div>
-                            <div class="channel-desc m-t-15 mt-lg-3">
+                            <div class="channel-desc m-t-10 mt-lg-3">
                                 <ul>
                                     <li class="mb-2">
                                         <div class="row row-0 align-items-center">
@@ -509,7 +555,7 @@
                                         </div>
                                     </li>
                                     <li>
-                                        <span>|&emsp;영상 설명 : *출연신청 & 제휴 및 광고문의 : ssid@dpnstud.io</span>
+                                        <span>|&emsp;영상설명 : *출연신청 & 제휴 및 광고문의 : ssid@dpnstud.io</span>
                                     </li>
                                 </ul>
                             </div>
@@ -522,6 +568,7 @@
                         <div class="col-xl-auto">
                             <div class="thumbnail">
                                 <img src="https://img.youtube.com/vi/oClFVDs3b74/mqdefault.jpg" alt="동영상 이미지">
+                                <!-- <iframe src="https://www.youtube.com/embed/PX1oAtwlSzk" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe> -->
                             </div>
                         </div>
                         <div class="col-xl mt-3 mt-xl-0">
@@ -531,7 +578,7 @@
                                 <div class="channel-subscriber">구독자 174만명</div>
                             </div>
                             <div class="channel-title m-t-10 mt-lg-3 text-truncate">주식 초보가 담아도 큰 실패 없는 종목 (정재호 3부, 부자아빠)주식</div>
-                            <div class="channel-desc m-t-15 mt-lg-3">
+                            <div class="channel-desc m-t-10 mt-lg-3">
                                 <ul>
                                     <li class="mb-2">
                                         <div class="row row-0 align-items-center">
@@ -542,7 +589,7 @@
                                         </div>
                                     </li>
                                     <li>
-                                        <span>|&emsp;영상 설명 : *출연신청 & 제휴 및 광고문의 : ssid@dpnstud.io</span>
+                                        <span>|&emsp;영상설명 : *출연신청 & 제휴 및 광고문의 : ssid@dpnstud.io</span>
                                     </li>
                                 </ul>
                             </div>
@@ -555,6 +602,7 @@
                         <div class="col-xl-auto">
                             <div class="thumbnail">
                                 <img src="https://img.youtube.com/vi/oClFVDs3b74/mqdefault.jpg" alt="동영상 이미지">
+                                <!-- <iframe src="https://www.youtube.com/embed/PX1oAtwlSzk" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe> -->
                             </div>
                         </div>
                         <div class="col-xl mt-3 mt-xl-0">
@@ -564,7 +612,7 @@
                                 <div class="channel-subscriber">구독자 174만명</div>
                             </div>
                             <div class="channel-title m-t-10 mt-lg-3 text-truncate">주식 초보가 담아도 큰 실패 없는 종목 (정재호 3부, 부자아빠)주식</div>
-                            <div class="channel-desc m-t-15 mt-lg-3">
+                            <div class="channel-desc m-t-10 mt-lg-3">
                                 <ul>
                                     <li class="mb-2">
                                         <div class="row row-0 align-items-center">
@@ -575,7 +623,7 @@
                                         </div>
                                     </li>
                                     <li>
-                                        <span>|&emsp;영상 설명 : *출연신청 & 제휴 및 광고문의 : ssid@dpnstud.io</span>
+                                        <span>|&emsp;영상설명 : *출연신청 & 제휴 및 광고문의 : ssid@dpnstud.io</span>
                                     </li>
                                 </ul>
                             </div>
@@ -588,6 +636,7 @@
                         <div class="col-xl-auto">
                             <div class="thumbnail">
                                 <img src="https://img.youtube.com/vi/oClFVDs3b74/mqdefault.jpg" alt="동영상 이미지">
+                                <!-- <iframe src="https://www.youtube.com/embed/PX1oAtwlSzk" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe> -->
                             </div>
                         </div>
                         <div class="col-xl mt-3 mt-xl-0">
@@ -597,7 +646,7 @@
                                 <div class="channel-subscriber">구독자 174만명</div>
                             </div>
                             <div class="channel-title m-t-10 mt-lg-3 text-truncate">주식 초보가 담아도 큰 실패 없는 종목 (정재호 3부, 부자아빠)주식</div>
-                            <div class="channel-desc m-t-15 mt-lg-3">
+                            <div class="channel-desc m-t-10 mt-lg-3">
                                 <ul>
                                     <li class="mb-2">
                                         <div class="row row-0 align-items-center">
@@ -608,7 +657,7 @@
                                         </div>
                                     </li>
                                     <li>
-                                        <span>|&emsp;영상 설명 : *출연신청 & 제휴 및 광고문의 : ssid@dpnstud.io</span>
+                                        <span>|&emsp;영상설명 : *출연신청 & 제휴 및 광고문의 : ssid@dpnstud.io</span>
                                     </li>
                                 </ul>
                             </div>
@@ -621,6 +670,7 @@
                         <div class="col-xl-auto">
                             <div class="thumbnail">
                                 <img src="https://img.youtube.com/vi/oClFVDs3b74/mqdefault.jpg" alt="동영상 이미지">
+                                <!-- <iframe src="https://www.youtube.com/embed/PX1oAtwlSzk" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe> -->
                             </div>
                         </div>
                         <div class="col-xl mt-3 mt-xl-0">
@@ -630,7 +680,7 @@
                                 <div class="channel-subscriber">구독자 174만명</div>
                             </div>
                             <div class="channel-title m-t-10 mt-lg-3 text-truncate">주식 초보가 담아도 큰 실패 없는 종목 (정재호 3부, 부자아빠)주식</div>
-                            <div class="channel-desc m-t-15 mt-lg-3">
+                            <div class="channel-desc m-t-10 mt-lg-3">
                                 <ul>
                                     <li class="mb-2">
                                         <div class="row row-0 align-items-center">
@@ -641,7 +691,7 @@
                                         </div>
                                     </li>
                                     <li>
-                                        <span>|&emsp;영상 설명 : *출연신청 & 제휴 및 광고문의 : ssid@dpnstud.io</span>
+                                        <span>|&emsp;영상설명 : *출연신청 & 제휴 및 광고문의 : ssid@dpnstud.io</span>
                                     </li>
                                 </ul>
                             </div>
@@ -751,8 +801,8 @@
                             <div class="loading-desc">
                                 <div class="swiper-container">
                                     <ul class="swiper-wrapper">
-                                        <li class="swiper-slide">let channels = getVideoData();</li>
                                         <li class="swiper-slide">let videos = getVideoData(channels);</li>
+                                        <li class="swiper-slide">let channels = getVideoData();</li>
                                         <li class="swiper-slide">let channels = getVideoData();</li>
                                         <li class="swiper-slide">let videos = getVideoData(channels);</li>
                                         <li class="swiper-slide">let channels = getVideoData();</li>
@@ -798,7 +848,7 @@
                     rows: 2,
                 },
                 autoplay: {
-                    delay: 400,
+                    delay: 1000,
                 },
                 loop: true,
                 direction: "vertical",

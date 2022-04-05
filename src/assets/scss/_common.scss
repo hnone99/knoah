@@ -11,7 +11,12 @@
 .icon-filter{width: 22px;height: 24px;background-image: url('../images/icon-filter.svg');}
 .icon-hourglass{width: 16px;height: 23px;background-image: url('../images/icon-hourglass.svg');}
 .icon-sort{width:18px; height:18px; background-image: url('../images/icon-sort.svg');}
-.icon-check-circle{width:14px; height:14px; background-image: url('../images/icon-check-circle.svg');}
+.icon-addChannel{width:18px; height:18px; background-image: url('../images/gnb-icon-2.svg');}
+.icon-addVideo{width:18px; height:18px; background-image: url('../images/gnb-icon-4.svg');}
+.icon-notRecomendVideo{width:18px; height:18px; background-image: url('../images/gnb-icon-5.svg');}
+.icon-notRecomendChannel{width:18px; height:18px; background-image: url('../images/gnb-icon-6.svg');}
+.icon-heart-collect{width:18px; height:18px; background-image: url('../images/icon-heart-collet.svg');}
+.icon-heart-remove{width:18px; height:18px; background-image: url('../images/icon-heart-remove.svg');}
 
 .bar{display: inline-block;width: 1px;height: 22px;background: #8c8c8c;}
 
@@ -25,6 +30,8 @@
 .min-width-100px{min-width: 100px;}
 .min-width-153px{min-width: 153px;}
 .min-width-270px{min-width: 270px;}
+
+.height-36px{height:36px;}
 
 .cursor-pointer{cursor: pointer;}
 
@@ -372,12 +379,14 @@ textarea.form-control{resize: none;}
     //       }
     // }
     @include media-breakpoint-down(md){
-        .loading-text{font-size: 16px; margin-top: 30px;}
+        .loading-text{font-size: 16px; margin-top: 30px; text-align: center;}
         .icon-hourglass{width: 10.7px;height: 14.8px;}
         .loading-desc{
-            max-height: 36px;
+            max-height: 50px;
+            font-size: 12px;
             ul{
-                max-height: 36px;
+                max-height: 50px;
+                li{width:100%;}
             }
         }
     }
@@ -390,6 +399,7 @@ textarea.form-control{resize: none;}
 }
 
 .transition-none{transition: none;}
+<<<<<<< HEAD
 
 .ratio-progress-bar{
     padding: 10px 0 35px;
@@ -452,5 +462,10 @@ textarea.form-control{resize: none;}
             }
             span{position: absolute;left: 50%;top: 19px;font-size: 12px;white-space: nowrap;transform: translateX(-50%);}
         }
+=======
+.pc-hidden{
+    @include media-breakpoint-up(lg){
+        display: none;
+>>>>>>> jang
     }
 }
