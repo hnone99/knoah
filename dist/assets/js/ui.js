@@ -136,18 +136,6 @@ var Common = {
       $('#ui-datepicker-div').addClass('datepicker-box');
     }), _$$datepicker)).datepicker('setDate', 'today');
   },
-<<<<<<< HEAD
-=======
-  timePicker: function timePicker() {
-    //timepicker
-    $('.form-timepicker').each(function () {
-      $(this).timepicker({
-        showMeridian: false,
-        defaultTime: '00:00'
-      });
-    });
-  },
->>>>>>> jang
   event: function event() {
     $('[data-toggle="tooltip"]').tooltip(); //custom scroll
 
