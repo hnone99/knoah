@@ -89,30 +89,32 @@ textarea{resize: none!important;}
 }
 
 .ui-widget.ui-datepicker{
-    width: 220px;padding: 1rem 14px;border-radius: 0;border-color: #e0e0e0 !important;border-radius: 10px;box-shadow: 0 1px 10px 0 rgba(119, 119, 119, 0.2);margin-top: 9px;
+    padding: 1rem 14px;border-radius: 0;border-color: #e0e0e0 !important;border-radius: 10px;box-shadow: 0 1px 10px 0 rgba(119, 119, 119, 0.2);margin-top: 9px;
     .ui-widget-header{background: #fff;border: 0;}
     .ui-state-default{border: 0;}
     td span,
-    td a{text-align: center;border-radius: 50px;padding: 3px 2px 0;margin: 0 2px;width: 22px;height: 22px;background: none;}
+    td a{text-align: center;border-radius: 50px;display: block;width: 100%;height: 100%;background: none;padding: 0;}
     .ui-state-highlight{background: $light;color: #000;}
     .ui-state-active{background: #ff6060;color: #fff !important;}
     .ui-datepicker-calendar{
-        font-size: 12px;margin-bottom: 0;
+        font-size: 12px;margin-bottom: 0;width: auto;
         > thead th{padding-bottom: 0;color: #8c8c8c;font-weight: 400; /* border-top: 1px solid #ececea;border-bottom: 1px solid #ececea; */}
         //> thead th.ui-datepicker-week-end:first-child,
         //> tbody td.ui-datepicker-week-end:first-child a{color: $danger;}
         > tbody tr:first-child a,
         > tbody tr:first-child span{margin-top: 8px;}
-        > tbody tr td{padding: 8px 0;}
+        > tbody tr td{padding: 0;
+            a{width: 36px;height: 36px;display: flex;align-items: center;justify-content: center;}
+        }
     }
     .ui-datepicker-prev{
-        cursor: pointer;width: 20px;height: 20px;left: auto;right: 26px;top: 6px;
+        cursor: pointer;width: 20px;height: 20px;left: 2px;top: 6px;
         .ui-icon{display: none;}
         &::before{content: '';display: inline-block;width: 20px;height: 20px;
             background: url('../images/calendar-prev.svg') no-repeat 50% 50%;
             position: absolute;left: 50%;top: 50%;transform: translate(-50%, -50%);}
         &.ui-state-hover{background: inherit;border: 0;}
-        &.ui.datepicker-prev-hover{right: 26px;top: 6px;}
+        &.ui.datepicker-prev-hover{right: 2px;top: 6px;}
     }
     .ui-datepicker-next{
         cursor: pointer;width: 20px;height: 20px;right: 2px;top: 6px;
@@ -122,10 +124,36 @@ textarea{resize: none!important;}
         &.ui-state-hover{background: inherit;border: 0;}
         &.ui-datepicker-next-hover{right: 2px;top: 6px;}
     }
-    .ui-datepicker-title{text-align: left;margin: 0;padding-bottom: 5px;}
+    .ui-datepicker-title{margin: 0;padding-bottom: 5px;}
     select.ui-datepicker-month,
     select.ui-datepicker-year{width: auto;border: 0;font-size: 16px;}
     select.ui-datepicker-month{margin-right: 3px;}
+    .ui-datepicker-day-range{
+        background-color: rgba(255, 96, 96, 0.3);
+        .ui-state-default{color: #fff;}
+    }
+    .startDay,
+    .endDay{
+        background-color: rgba(255, 96, 96, 0.3);
+        .ui-state-default{background: #ff6060;color: #fff !important;}
+    }
+    .startDay{border-top-left-radius: 50%;border-bottom-left-radius: 50%;}
+    .endDay{border-top-right-radius: 50%;border-bottom-right-radius: 50%;}
+}
+
+.form-datepicker-multi{
+    &.hasDatepicker{
+        & ~ .datepicker-group{display: block !important;}
+    }
+}
+.datepicker-group{
+    position: absolute;left: 50%;top: 45px;z-index: 1;transform: translateX(-50%);min-width: 600px;
+    .ui-datepicker{width: 100% !important;}
+    .ui-datepicker-group{padding: 1rem;}
+    @include media-breakpoint-down(md){
+        position: fixed;min-width: 0;max-height: 80vh;overflow-y: auto;overflow-x: hidden;
+        .ui-datepicker-group{float: none;}
+    }
 }
 
 .custom-checkbox.without-label{
@@ -314,9 +342,9 @@ textarea.form-control{resize: none;}
         max-height: 48px; overflow: hidden; position: relative;
         ul{
             animation: textAutoMovement 16s linear;
-            max-height: 48px; 
+            max-height: 48px;
         }
-    }    
+    }
     @keyframes textAutoMovement {
         to {
             transform: translateY(-100%);
@@ -326,11 +354,11 @@ textarea.form-control{resize: none;}
         .loading-text{font-size: 16px; margin-top: 30px;}
         .icon-hourglass{width: 10.7px;height: 14.8px;}
         .loading-desc{
-            max-height: 36px; 
+            max-height: 36px;
             ul{
-                max-height: 36px; 
+                max-height: 36px;
             }
-        }    
+        }
     }
 }
 

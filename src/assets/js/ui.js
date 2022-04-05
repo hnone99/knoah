@@ -37,7 +37,7 @@ var Header = {
 			$(this).closest('.has-sub').removeClass('open')
 			$('.menu-layer .dep1 > li').show();
 		});
-		$(document).on('click',function(e){
+		$(document).on('mouseup',function(e){
 			e.preventDefault();
 			if ($('.btn-my').has(e.target).length === 0 && $('.btn-more').has(e.target).length === 0 && $('.menu-layer').has(e.target).length === 0) {
 				$('.menu-layer').removeClass('active');
@@ -55,7 +55,7 @@ var Header = {
 			$('html').removeClass('is-collapsed');
 			$('.alarm-layer').addClass('active');
 		});
-		$(document).on('click',function(e){
+		$(document).on('mouseup',function(e){
 			e.preventDefault();
 			if ($('.btn-alarm').has(e.target).length === 0 && $('.alarm-layer').has(e.target).length === 0) {
 				$('.alarm-layer').removeClass('active');
@@ -122,7 +122,7 @@ var Common = {
 	datePicker: function () {
 		//datepicker
 		var currentDate = new Date();
-		$('.form-datepicker').datepicker({
+		$('.form-datepicker:not(.form-datepicker-multi)').datepicker({
 			defaultDate: +7,
 			changeMonth: true,
 			changeYear: true,
@@ -135,17 +135,7 @@ var Common = {
 			beforeShow: function(input, inst) {
 				$('#ui-datepicker-div').addClass('datepicker-box');
 			},
-		})
-		// .datepicker('setDate', 'today');
-	},
-	timePicker: function () {
-		//timepicker
-		$('.form-timepicker').each(function () {
-			$(this).timepicker({
-				showMeridian: false,
-				defaultTime: '00:00'
-			});
-		})
+		}).datepicker('setDate', 'today');
 	},
 	event: function () {
 		$('[data-toggle="tooltip"]').tooltip();
