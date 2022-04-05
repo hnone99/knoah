@@ -135,8 +135,7 @@ var Common = {
 			beforeShow: function(input, inst) {
 				$('#ui-datepicker-div').addClass('datepicker-box');
 			},
-		})
-		// .datepicker('setDate', 'today');
+		}).datepicker('setDate', 'today');
 	},
 	timePicker: function () {
 		//timepicker

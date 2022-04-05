@@ -134,7 +134,7 @@ var Common = {
       showOtherMonths: true
     }, _defineProperty(_$$datepicker, "changeMonth", true), _defineProperty(_$$datepicker, "changeYear", true), _defineProperty(_$$datepicker, "dateFormat", "yy-mm-dd"), _defineProperty(_$$datepicker, "gotoCurrent", true), _defineProperty(_$$datepicker, "beforeShow", function beforeShow(input, inst) {
       $('#ui-datepicker-div').addClass('datepicker-box');
-    }), _$$datepicker)); // .datepicker('setDate', 'today');
+    }), _$$datepicker)).datepicker('setDate', 'today');
   },
   timePicker: function timePicker() {
     //timepicker
