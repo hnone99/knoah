@@ -208,7 +208,28 @@ var Dropdown = {
 	}
 };
 
+var Footer = {
+	init : function(){
+		this.bottom();
+	},
+	bottom: function () {
+		//페이지 타이틀명과 비교하여 활성화
+		if ($('.page-title').length > 0) {
+			let title = $('.page-title').text();
+			let $active = '';
+			$('.gnb-bar .dep1 > li > a').each(function () {
+				if ($(this).text() == title) {
+					$active = $(this);
+				}
+			});
+
+			$active.parents('li').addClass('active');
+		}
+	}
+}
+
 Header.init();
 Aside.init();
 Common.init();
 Dropdown.init();
+Footer.init();

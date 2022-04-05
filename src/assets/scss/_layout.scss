@@ -104,19 +104,33 @@ aside{
 }
 
 .gnb-bar{
-    white-space: nowrap;height: 100%;transition: opacity .2s;border-right: 1px solid #e0e0e0;padding-top: 20px;background: #fff;position: relative;
-    @include media-breakpoint-down(md){
-        padding-top: 40px;
-    }
+    white-space: nowrap;height: 100%;transition: opacity .2s;border-top: 1px solid #e0e0e0;padding: 12px 0 10px 0;background: #fff;position: relative;
     a{text-decoration: none;}
     .dep1{
+        display:table;
+        width:100%;
+        table-layout:fixed;
         > li{
+            display:table-cell;
+            vertical-align:middle;
+            opacity: 0.5; transition: opacity 0.35s ease;
             > a{
-                display: block;padding: .6rem 1rem .6rem 70px;position: relative;font-weight: 700;font-size: 15px;
-                &::before{content: '';display: block;width: 22px;height: 22px;background-position: 50% 50%;background-repeat: no-repeat;position: absolute;left: 29px;top: 50%;transform: translateY(-50%);}
-                br{display: none;}
+                display: block; padding-top: 25px; position: relative;font-weight: 500;font-size: 9px; text-align: center;line-height: 1.2; 
+                &::before{content: '';
+                    display: block;
+                    width: 18px;
+                    height: 18px;
+                    background-position: 50% 50%;
+                    background-repeat: no-repeat;
+                    position: absolute;
+                    left: 50%;
+                    top: 0;
+                    transform: translate(-50%);
+                    background-size: contain;
+                    
+                }
             }
-            &.active{background: #efefef;}
+            &.active{opacity: 1;}
         }
         > li:nth-child(1) > a::before{background-image: url(../images/gnb-icon-1.svg);}
         > li:nth-child(2) > a::before{background-image: url(../images/gnb-icon-2.svg);}
@@ -134,7 +148,7 @@ aside{
     i{color: #8c8c8c;}
 
     main &{
-        position: relative; width: auto; transform: none; left: auto; top: auto;
+        position: relative; width: auto; transform: none; left: auto; top: auto; margin:20px 0 38px 0;
     }
 }
 
@@ -235,7 +249,7 @@ aside{
     padding: 50px 30px 50px 230px;transition: .5s;
     min-height: 100%;max-width: 1560px;margin: 0 auto;
     @include media-breakpoint-down(md){
-        padding: 20px;
+        padding: 20px 20px 100px 20px;
     }
 }
 
@@ -268,4 +282,7 @@ html.is-collapsed{
 footer{
     .inner{margin-left: $asideWidth;padding: 0 1rem;border-top: 1px solid #ddd;height: 40px;display: flex;align-items: center;justify-content: center;}
     p{text-align: center;color: #999;}
+   
+    position:fixed;
+    bottom:0; 
 }

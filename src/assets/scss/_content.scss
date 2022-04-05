@@ -169,13 +169,29 @@
             }
             .channel-desc{
                 span{
-                    line-height: 18px; font-size: 12px; 
+                    line-height: 18px; font-size: 12px; letter-spacing: -0.6px;
                 }
             }
         }
         @include media-breakpoint-down(md){
             .channel-desc{
                 span{padding-right: 0;}
+            }
+        }
+    }
+
+    &.join{
+        padding:72px 70px;
+        width:500px;
+        margin: auto;
+        .certification-container{
+            display: none;
+        }
+        @include media-breakpoint-down(md){
+            width: 100%;
+            padding:40px 20px;
+            .btn{
+                width: 100%;
             }
         }
     }
@@ -299,3 +315,4 @@
         font-size: 12px;
     }
 }
+

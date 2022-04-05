@@ -26,6 +26,7 @@
 .font-size-18px{font-size: 18px !important;}
 .font-size-30px{font-size: 30px !important;}
 
+.min-width-66px{min-width: 66px;}
 .min-width-75px{min-width: 75px;}
 .min-width-100px{min-width: 100px;}
 .min-width-153px{min-width: 153px;}
@@ -43,6 +44,10 @@ button,
 }
 @include media-breakpoint-down(md){
     .btn{font-size: 13px;}
+}
+
+.btn-lg{
+    padding: 0.625rem 1rem;
 }
 
 textarea{resize: none!important;}
@@ -461,5 +466,75 @@ textarea.form-control{resize: none;}
             }
             span{position: absolute;left: 50%;top: 19px;font-size: 12px;white-space: nowrap;transform: translateX(-50%);}
         }
+    }
+}
+
+
+.form-group{
+    line-height: 24px;
+    margin-bottom:50px;
+    .form-label{
+        margin-bottom: 10px;
+        font-weight: 500;
+        font-size: 16px;
+    }
+    .join &{
+        margin-bottom:0;
+        padding-bottom:20px;
+    }
+    .certification-number{
+        font-size: 16px;
+        color:#8c8c8c;
+        position: absolute;
+        right: 10px;
+        line-height: 24px;
+        top:0.5rem;
+        @include media-breakpoint-down(md){
+            top:0.85rem;
+        }
+    }
+}
+
+.form-control{
+    border:0;
+    border-bottom: 1px solid #000;
+    padding:0.5rem 0;
+
+    &:focus{
+        outline: 0;
+        border: 0;
+        box-shadow: none;
+        border-bottom:1px solid #000;
+    }
+    &::placeholder{color:#8c8c8c;}
+    &.has-validation{
+        margin-bottom: 32px;
+    }
+    &.is-invalid{
+        margin-bottom: 0;
+        border-color: #000;
+        &:focus{
+            border-color: #000;
+            box-shadow: none;
+        }
+    }
+}
+
+.invalid-feedback{
+    margin-top: 8px; font-size: 14px;
+    .is-invalid &{
+        margin-bottom:0;
+        border-color: #000;
+        color:#000;
+    }
+}
+
+.custom-control-label{
+    font-size: 14px;
+    line-height: 21px;
+    &::before, &::after{
+        width:14px;
+        height:14px;
+        top:4px;
     }
 }

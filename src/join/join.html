@@ -18,17 +18,70 @@
             <main id="content" role="main">
 
                 <!-- 컨텐츠 시작 -->
-                <h2 class="page-title">제거한 채널</h2>
-              
-                <h2 class="title border-bottom p-b-10 pb-lg-4 border-dark">회원가입</h2>
+                <h2 class="page-title">회원가입</h2>
+
+                <h2 class="title border-bottom mt-lg-0 m-t-15 p-b-10 pb-lg-4 border-dark">회원가입</h2>
                 
-                <div class="m-t-20 mt-lg-9 pt-lg-3 px-2 px-lg-3">
+                <div class="m-t-20 mt-lg-9 pt-lg-3 px-0 px-lg-3">
                     <div class="card join">
-                        <form action="">
+                        <form action="" autocomplete="off">
                             <fieldset>
-                                회원가입
+                                <legend>회원가입</legend>
+                                <div class="form-group">
+                                    <label for="nickname" class="form-label">닉네임(2~15자)</label>
+                                    <!-- is-invalid 클래스 추가  -->
+                                    <input type="text" class="form-control has-validation is-invalid" id="nickname" placeholder="닉네임(2~15자)">
+                                    <div class="invalid-feedback">
+                                        닉네임을 다시 확인해 주세요.
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label for="email" class="form-label">이메일</label>
+                                    <!-- is-invalid 클래스 추가  -->
+                                    <div class="row row-20">
+                                        <div class="col-md">
+                                            <input type="text" class="form-control" id="email" placeholder="이메일을 입력 해주세요.">
+                                        </div>
+                                        <div class="col-md-auto">
+                                            <button type="button" class="btn btn-outline-dark min-width-66px cert-btn m-t-10 mt-md-0">인증</button>
+                                        </div>
+                                        <div class="col-12 m-t-10 mt-lg-3 certification-container">
+                                            <div class="row row-20 align-items-start">
+                                                <div class="col position-relative">
+                                                    <input type="text" class="form-control has-validation is-invalid m-t-10 mt-lg-0" id="email" placeholder="인증번호">
+                                                    <span class="certification-number">5:00</span>
+                                                    <div class="invalid-feedback">
+                                                        인증번호가 일치하지 않습니다.
+                                                    </div>
+                                                </div>
+                                                <div class="col-auto">
+                                                    <button type="button" class="btn btn-outline-dark min-width-66px m-t-10 mt-lg-0">확인</button>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="custom-control custom-checkbox m-t-20 mt-lg-3">
+                                    <input type="checkbox" class="custom-control-input select-primary" id="all-agree" name="">
+                                    <label class="custom-control-label" for="all-agree">전체 동의</label>
+                                </div>
+
+                                <div class="custom-control custom-checkbox m-t-20 mt-lg-2">
+                                    <input type="checkbox" class="custom-control-input select-primary" id="privacy-agree" name="" required>
+                                    <label class="custom-control-label" for="privacy-agree">
+                                        <div class="d-flex align-items-center">
+                                            <a href="" class="text-underline">이용약관</a>&ensp;및&ensp; <a href="" class="text-underline">개인정보처리방침</a>&ensp;동의(필수)
+                                        </div>
+                                    </label>
+                                </div>
+                                <div class="custom-control custom-checkbox mt-lg-1">
+                                    <input type="checkbox" class="custom-control-input select-primary" id="marketing-agree" name="">
+                                    <label class="custom-control-label" for="marketing-agree">마케팅 수신 동의(선택)</label>
+                                </div>
                             </fieldset>
-                            <div class="form-group"></div>
+
+                            <button class="btn btn-block btn-dark btn-lg mt-6">가입하기</button>
                         </form>
                     </div>
                 </div>
@@ -46,7 +99,10 @@
 
     <script>
         $(document).ready(function(){
-         
+            $(".cert-btn").on("click", function(){
+                $(this).attr("class", "btn btn-dark min-width-66px cert-btn m-t-10 mt-md-0");
+                $(this).parent().siblings(".certification-container").show();
+            });
         })
     </script>
 
