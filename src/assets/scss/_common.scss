@@ -341,17 +341,6 @@ textarea.form-control{resize: none;}
     .loading-desc{
         max-height: 48px; overflow: hidden; position: relative;
         ul{
-<<<<<<< HEAD
-            animation: textAutoMovement 16s linear;
-            max-height: 48px;
-        }
-    }
-    @keyframes textAutoMovement {
-        to {
-            transform: translateY(-100%);
-          }
-    }
-=======
             // animation: textAutoMovement 16s linear;
             max-height: 48px; 
         }
@@ -361,7 +350,6 @@ textarea.form-control{resize: none;}
     //         transform: translateY(-100%);
     //       }
     // }
->>>>>>> jang
     @include media-breakpoint-down(md){
         .loading-text{font-size: 16px; margin-top: 30px;}
         .icon-hourglass{width: 10.7px;height: 14.8px;}

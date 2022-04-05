@@ -136,8 +136,6 @@ var Common = {
 				$('#ui-datepicker-div').addClass('datepicker-box');
 			},
 		}).datepicker('setDate', 'today');
-<<<<<<< HEAD
-=======
 	},
 	timePicker: function () {
 		//timepicker
@@ -147,7 +145,6 @@ var Common = {
 				defaultTime: '00:00'
 			});
 		})
->>>>>>> jang
 	},
 	event: function () {
 		$('[data-toggle="tooltip"]').tooltip();
