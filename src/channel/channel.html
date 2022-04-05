@@ -160,7 +160,6 @@
                                         <span>|&emsp;영상 설명 : *출연신청 & 제휴 및 광고문의 : ssid@dpnstud.io</span>
                                     </li>
                                 </ul>
-
                             </div>
                         </div>
                     </div>
@@ -193,8 +192,23 @@
                 $(this).attr("class","btn btn-outline-danger min-width-153px btn-block");
             });
 
-            // $(".modal-loading").modal("show");
+            $(".modal-loading").modal("show");
+
+            var noticeRollingBanner = new Swiper(".loading-desc .swiper-container", {
+            // spaceBetween: 30,
+            slidesPerView: 2,
+            grid:{
+                rows:2,
+            },
+            autoplay: {
+                delay: 400,
+            },
+            loop: true,
+            direction: "vertical",
+            });
         })
+
+        
     </script>
 
 </body>

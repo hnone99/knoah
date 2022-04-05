@@ -151,7 +151,7 @@
                         <li><a href="">조회수 <br>폭발기</a></li>
                         <li><a href="">수집한 <br>영상</a></li>
                         <li><a href="">제거한 <br>영상</a></li>
-                        <li><a href="">제거한 <br>채널</a></li>
+                        <li><a href="../remove_channel/remove_channel.html">제거한 <br>채널</a></li>
                     </ul>
                 </nav>
             </aside>
@@ -396,16 +396,18 @@
                     <div class="modal-body">
                         <div class="d-flex flex-column justify-content-center align-items-center">
                             <div class="loading-desc">
-                                <ul>
-                                    <li>let channels = getVideoData();</li>
-                                    <li>let videos = getVideoData(channels);</li>
-                                    <li>let channels = getVideoData();</li>
-                                    <li>let videos = getVideoData(channels);</li>
-                                    <li>let channels = getVideoData();</li>
-                                    <li>let videos = getVideoData(channels);</li>
-                                    <li>let channels = getVideoData();</li>
-                                    <li>let videos = getVideoData(channels);</li>
-                                </ul>
+                                <div class="swiper-container">
+                                    <ul class="swiper-wrapper">
+                                        <li class="swiper-slide">let channels = getVideoData();</li>
+                                        <li class="swiper-slide">let videos = getVideoData(channels);</li>
+                                        <li class="swiper-slide">let channels = getVideoData();</li>
+                                        <li class="swiper-slide">let videos = getVideoData(channels);</li>
+                                        <li class="swiper-slide">let channels = getVideoData();</li>
+                                        <li class="swiper-slide">let videos = getVideoData(channels);</li>
+                                        <li class="swiper-slide">let channels = getVideoData();</li>
+                                        <li class="swiper-slide">let videos = getVideoData(channels);</li>
+                                    </ul>
+                                </div>
                             </div>
                             <p class="loading-text">키워드를 분석 중입니다.</p>
                             <div class="loading-timer">
@@ -417,6 +419,7 @@
                 </div>
             </div>
         </div>
+
 
     </div>
 
