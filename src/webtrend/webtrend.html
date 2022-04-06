@@ -37,7 +37,7 @@
                         <i class="icon-filter m-r-10"></i>
                         <h3>필터</h3>
                     </a>
-                    <div class="collase show transition-none" id="collapse-webtrend">
+                    <div class="collapse show transition-none" id="collapse-webtrend">
                         <div class="filter-body">
                             <div class="row row-50 align-items-center">
                                 <div class="col-12 col-xl-auto condition">
@@ -72,20 +72,22 @@
                                 <div class="col-12 col-xl recently mt-4 mt-xl-0">
                                     <div class="row row-15 align-items-center">
                                         <div class="col-12 col-lg-auto">
-                                            <label>최근 검색 키워드</label>
+                                            <label class="font-size-16px font-weight-medium">최근 검색 키워드</label>
                                         </div>
                                         <div class="col mt-3 mt-lg-0">
-                                            <div class="keyword-wrap">
-                                                @@for (var i = 1; i < 10; i++) { 
-                                                    <div class="keyword">
-                                                        <a href="#none">다이어트</a>
-                                                        <button type="text" aria-label="삭제"><i class="icon-x"></i></button>
-                                                    </div>
-                                                    <div class="keyword">
-                                                        <a href="#none">닭가슴살 레시피</a>
-                                                        <button type="text" aria-label="삭제"><i class="icon-x"></i></button>
-                                                    </div>
-                                                }
+                                            <div class="collapse show">
+                                                <div class="keyword-wrap">
+                                                    @@for (var i = 1; i < 10; i++) {
+                                                        <div class="keyword">
+                                                            <a href="#none">다이어트</a>
+                                                            <button type="text" aria-label="삭제"><i class="icon-x"></i></button>
+                                                        </div>
+                                                        <div class="keyword">
+                                                            <a href="#none">닭가슴살 레시피</a>
+                                                            <button type="text" aria-label="삭제"><i class="icon-x"></i></button>
+                                                        </div>
+                                                    }
+                                                </div>
                                             </div>
                                         </div>
                                     </div>
