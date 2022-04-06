@@ -32,7 +32,6 @@
     .filter-body{border-bottom: 1px solid #8c8c8c;padding: 20px 0;}
     &.has-collapsed{
         margin-bottom: 25px;
-        .filter-head-container {border-bottom: 1px solid #000;}
         .filter-head{border-bottom:0;}
         a{text-decoration: none;}
     }
@@ -253,7 +252,7 @@
     }
 }
 
-.subscribe-channel-list{
+.keyword-wrap{
     max-height: 104px;
     overflow-y: auto;
     @include media-breakpoint-down(md){
