@@ -262,8 +262,10 @@
 
 .collapse.show{
     &:not(.transition-none){
-        border-bottom:1px solid #8c8c8c;
-        padding-bottom: 28px;
+        @include media-breakpoint-down(md){
+            border-bottom:1px solid #8c8c8c;
+            padding-bottom: 28px;
+        }
     }
 }
 
