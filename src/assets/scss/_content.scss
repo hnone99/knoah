@@ -267,6 +267,11 @@
             padding-bottom: 28px;
         }
     }
+    &.transition-none{
+        .filter-body{
+            padding-top:0!important;
+        }
+    }
 }
 
 
