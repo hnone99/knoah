@@ -1369,34 +1369,6 @@
 
     <script>
         $(document).ready(function() {
-            //datatable
-            var datatable = $('#datatable').DataTable({
-                'responsive': true,
-                'searching': false,
-                'info': false,
-                'paging': false,
-                'details': false,
-                'fixedColumns': true,
-                'ordering': true,
-                "columnDefs": [{
-                        "width": "40%",
-                        "targets": 0
-                    },
-                    {
-                        "width": "14%",
-                        "targets": 1
-                    },
-                    {
-                        "width": "16%",
-                        "targets": 2
-                    },
-                    {
-                        "width": "14%",
-                        "targets": 3
-                    }
-                ]
-            });
-
             //chartjs - 한 눈에 그래프로 보기
             var config = {
                 type: 'line',
