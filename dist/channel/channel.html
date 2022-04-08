@@ -1531,6 +1531,9 @@
 
     <script>
         $(document).ready(function() {
+            Dropdown.init();
+
+
             $(".sort li").on("click", function() {
                 $(this).toggleClass("active");
                 if ($(this).hasClass("active")) {
