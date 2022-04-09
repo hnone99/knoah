@@ -813,172 +813,190 @@
                 </nav>
             </aside>
 
+            <div class="banner-area">
+                <div class="banner bg-dark text-white">
+                    <p class="title">멤버십 결제 2개월 연속 시 10%, 그 이후 매달 1%씩 최대 50%까지 할인됩니다.</p>
+                </div>
+                <div class="banner bg-yellow">
+                    <p class="title">멤버십 결제에 실패하셨습니다. 4월 7일까지 결제되지 않으면 멤버십이 해지됩니다.</p>
+                </div>
+            </div>
+
             <main id="content" role="main">
 
                 <!-- 컨텐츠 시작 -->
-                <h2 class="page-title">제거한 채널</h2>
+                <h2 class="page-title">마이페이지</h2>
 
-                <h2 class="title border-bottom m-t-15 mt-lg-0 p-b-10 pb-lg-4 border-dark">제거한 채널 리스트</h2>
+                <h2 class="title border-bottom m-t-15 mt-lg-0 p-b-10 pb-lg-4 border-dark">마이페이지</h2>
 
-                <div class="m-t-20 mt-lg-7 px-2 px-lg-3">
-                    <div class="row row-cols-lg-3 row-25">
-
-                        <div class="col-12">
-                            <div class="card remove-channel">
-                                <button type="text" aria-label="삭제"><i class="icon-x"></i></button>
-                                <div class="row row-20 align-items-center">
-                                    <div class="col-auto"><img src="../assets/images/@portrait.jpg" alt="채널 이미지" class="channel-img"></div>
+                <div class="row row-120 align-items-stretch justify-content-center mypage-container">
+                    <div class="col-5">
+                        <div class="row row-20 align-items-center">
+                            <div class="col-auto ">
+                                <div class="min-width-75px font-size-16px font-weight-medium">닉네임</div>
+                            </div>
+                            <div class="col">
+                                <div class="row row-20">
                                     <div class="col">
-                                        <div class="channel-name text-truncate">스튜디오 와플 - STUDIO WAFFle story</div>
-                                        <div class="subscriber">구독자 174만명</div>
+                                        <input type="text" class="form-control min-width-220px">
+                                    </div>
+                                    <div class="col-auto">
+                                        <button type="button" data-toggle="modal" data-target="#modal-change-name" class="btn btn-outline-dark min-width-70px">
+                                            변경
+                                        </button>
                                     </div>
                                 </div>
                             </div>
                         </div>
-
-                        <div class="col-12">
-                            <div class="card remove-channel">
-                                <button type="text" aria-label="삭제"><i class="icon-x"></i></button>
-                                <div class="row row-20 align-items-center">
-                                    <div class="col-auto"><img src="../assets/images/@portrait.jpg" alt="채널 이미지" class="channel-img"></div>
+                    </div>
+                    <div class="col-5">
+                        <div class="row row-5 align-items-center">
+                            <div class="col-auto">
+                                <div class="min-width-75px font-size-16px font-weight-medium">이메일</div>
+                            </div>
+                            <div class="col">
+                                <input type="text" class="form-control min-width-220px">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-5 mt-lg-8">
+                        <div class="row row-20 align-items-center">
+                            <div class="col-auto">
+                                <div class="min-width-75px font-size-16px font-weight-medium">유튜브 채널</div>
+                            </div>
+                            <div class="col">
+                                <div class="row row-20">
                                     <div class="col">
-                                        <div class="channel-name text-truncate">스튜디오 와플 - STUDIO WAFFle story</div>
-                                        <div class="subscriber">구독자 174만명</div>
+                                        <input type="text" class="form-control">
+                                    </div>
+                                    <div class="col-auto">
+                                        <div class="row row-10">
+                                            <div class="col-auto">
+                                                <button type="button" data-toggle="modal" data-target="#modal-change-name" class="btn btn-outline-dark min-width-70px">
+                                                    수정
+                                                </button>
+                                            </div>
+                                            <div class="col-auto">
+                                                <button type="button" data-toggle="modal" data-target="#modal-change-name" class="btn btn-outline-dark min-width-70px">
+                                                    추가
+                                                </button>
+                                            </div>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
                         </div>
+                    </div>
+                    <div class="col-5 mt-lg-8 align-self-center text-right">
+                        <a href="" class="text-underline text-gray">회원탈퇴</a>
+                    </div>
+                </div>
 
-                        <div class="col-12">
-                            <div class="card remove-channel">
-                                <button type="text" aria-label="삭제"><i class="icon-x"></i></button>
-                                <div class="row row-20 align-items-center">
-                                    <div class="col-auto"><img src="../assets/images/@portrait.jpg" alt="채널 이미지" class="channel-img"></div>
-                                    <div class="col">
-                                        <div class="channel-name text-truncate">스튜디오 와플 - STUDIO WAFFle story</div>
-                                        <div class="subscriber">구독자 174만명</div>
+
+                <h2 class="title border-bottom m-t-15 mt-lg-0 p-b-10 pb-lg-4 border-dark">멤버십 관리</h2>
+
+                <div class="row row-120 align-items-end justify-content-center mypage-container">
+                    <div class="col-5">
+                        <div class="row row-20 align-items-center">
+                            <div class="col-auto min-width-75px">
+                                <div class="membership-grade notice">
+                                    <div class="membership-img" style="background-image:url(../assets/images/icon-member-diamond.svg)"></div>
+                                    <span class="membership-alram">13</span>
+                                </div>
+                            </div>
+                            <div class="col">
+                                <div class="membership-info">주PD님 안녕하세요.<br><span class="font-weight-bold">Diamond</span> 회원이 되어 주셔서 감사합니다.</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-5">
+                        <div class="row row-5 align-items-center">
+                            <div class="col-auto">
+                                <div class="min-width-75px font-size-16px font-weight-medium">멤버십</div>
+                            </div>
+                            <div class="col">
+                                <div class="border-bottom border-dark pb-1 w-100">
+                                    <div class="d-flex align-items-end justify-content-between">
+                                        <span class="font-weight-bold label">Diamond</span>
+                                        <div>
+                                            <span class="price">￦ 159,000 /</span>
+                                            <span class="month"> 월</span>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
                         </div>
-
-                        <div class="col-12">
-                            <div class="card remove-channel">
-                                <button type="text" aria-label="삭제"><i class="icon-x"></i></button>
-                                <div class="row row-20 align-items-center">
-                                    <div class="col-auto"><img src="../assets/images/@portrait.jpg" alt="채널 이미지" class="channel-img"></div>
+                    </div>
+                    <div class="col-5 mt-lg-8">
+                        <div class="row row-20 align-items-center">
+                            <div class="col-auto min-width-75px font-size-16px font-weight-medium">
+                                다음 결제일
+                            </div>
+                            <div class="col">
+                                <div class="row row-20">
                                     <div class="col">
-                                        <div class="channel-name text-truncate">스튜디오 와플 - STUDIO WAFFle story</div>
-                                        <div class="subscriber">구독자 174만명</div>
+                                        <input type="text" class="form-control">
+                                    </div>
+                                    <div class="col-auto">
+                                        <button type="button" data-toggle="modal" data-target="#modal-change-name" class="btn btn-outline-dark min-width-100px">
+                                            비활성화
+                                        </button>
                                     </div>
                                 </div>
                             </div>
                         </div>
-
-                        <div class="col-12">
-                            <div class="card remove-channel">
-                                <button type="text" aria-label="삭제"><i class="icon-x"></i></button>
-                                <div class="row row-20 align-items-center">
-                                    <div class="col-auto"><img src="../assets/images/@portrait.jpg" alt="채널 이미지" class="channel-img"></div>
+                    </div>
+                    <div class="col-5 mt-lg-8">
+                        <div class="row row-20 align-items-center">
+                            <div class="col-auto min-width-75px font-size-16px font-weight-medium">
+                                결제 수단
+                            </div>
+                            <div class="col">
+                                <div class="row row-20">
                                     <div class="col">
-                                        <div class="channel-name text-truncate">스튜디오 와플 - STUDIO WAFFle story</div>
-                                        <div class="subscriber">구독자 174만명</div>
+                                        <input type="text" class="form-control">
+                                    </div>
+                                    <div class="col-auto">
+                                        <button type="button" data-toggle="modal" data-target="#modal-change-name" class="btn btn-outline-dark min-width-70px">
+                                            변경
+                                        </button>
                                     </div>
                                 </div>
                             </div>
                         </div>
-
-                        <div class="col-12">
-                            <div class="card remove-channel">
-                                <button type="text" aria-label="삭제"><i class="icon-x"></i></button>
-                                <div class="row row-20 align-items-center">
-                                    <div class="col-auto"><img src="../assets/images/@portrait.jpg" alt="채널 이미지" class="channel-img"></div>
+                    </div>
+                    <div class="col-10 mt-lg-8">
+                        <div class="row row-35 align-items-center">
+                            <div class="col-auto min-width-75px font-size-16px font-weight-medium">
+                                이용 횟수
+                            </div>
+                            <div class="col">
+                                <div class="row row-60">
+                                    <div class="col ">
+                                        <div class="d-flex justify-content-between align-items-end border-bottom border-dark pb-1">
+                                            <div class="label">웹 트렌드</div>
+                                            <div class="label-desc">46/300</div>
+                                        </div>
+                                    </div>
+                                    <div class="col-auto">
+                                        <div class="d-flex justify-content-between align-items-end border-bottom border-dark min-width-350px pb-1">
+                                            <div class="label">채널 판독기</div>
+                                            <div class="label-desc">
+                                                78 / 200 <i class="icon-bar"></i> 123 / 1500
+                                            </div>
+                                        </div>
+                                    </div>
                                     <div class="col">
-                                        <div class="channel-name text-truncate">스튜디오 와플 - STUDIO WAFFle story</div>
-                                        <div class="subscriber">구독자 174만명</div>
+                                        <div class="d-flex justify-content-between align-items-end  border-bottom border-dark pb-1">
+                                            <div class="label">조회수 폭발기</div>
+                                            <div class="label-desc">
+                                                13 / 30
+                                            </div>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
                         </div>
-
-                        <div class="col-12">
-                            <div class="card remove-channel">
-                                <button type="text" aria-label="삭제"><i class="icon-x"></i></button>
-                                <div class="row row-20 align-items-center">
-                                    <div class="col-auto"><img src="../assets/images/@portrait.jpg" alt="채널 이미지" class="channel-img"></div>
-                                    <div class="col">
-                                        <div class="channel-name text-truncate">스튜디오 와플 - STUDIO WAFFle story</div>
-                                        <div class="subscriber">구독자 174만명</div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="col-12">
-                            <div class="card remove-channel">
-                                <button type="text" aria-label="삭제"><i class="icon-x"></i></button>
-                                <div class="row row-20 align-items-center">
-                                    <div class="col-auto"><img src="../assets/images/@portrait.jpg" alt="채널 이미지" class="channel-img"></div>
-                                    <div class="col">
-                                        <div class="channel-name text-truncate">스튜디오 와플 - STUDIO WAFFle story</div>
-                                        <div class="subscriber">구독자 174만명</div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="col-12">
-                            <div class="card remove-channel">
-                                <button type="text" aria-label="삭제"><i class="icon-x"></i></button>
-                                <div class="row row-20 align-items-center">
-                                    <div class="col-auto"><img src="../assets/images/@portrait.jpg" alt="채널 이미지" class="channel-img"></div>
-                                    <div class="col">
-                                        <div class="channel-name text-truncate">스튜디오 와플 - STUDIO WAFFle story</div>
-                                        <div class="subscriber">구독자 174만명</div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="col-12">
-                            <div class="card remove-channel">
-                                <button type="text" aria-label="삭제"><i class="icon-x"></i></button>
-                                <div class="row row-20 align-items-center">
-                                    <div class="col-auto"><img src="../assets/images/@portrait.jpg" alt="채널 이미지" class="channel-img"></div>
-                                    <div class="col">
-                                        <div class="channel-name text-truncate">스튜디오 와플 - STUDIO WAFFle story</div>
-                                        <div class="subscriber">구독자 174만명</div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="col-12">
-                            <div class="card remove-channel">
-                                <button type="text" aria-label="삭제"><i class="icon-x"></i></button>
-                                <div class="row row-20 align-items-center">
-                                    <div class="col-auto"><img src="../assets/images/@portrait.jpg" alt="채널 이미지" class="channel-img"></div>
-                                    <div class="col">
-                                        <div class="channel-name text-truncate">스튜디오 와플 - STUDIO WAFFle story</div>
-                                        <div class="subscriber">구독자 174만명</div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="col-12">
-                            <div class="card remove-channel">
-                                <button type="text" aria-label="삭제"><i class="icon-x"></i></button>
-                                <div class="row row-20 align-items-center">
-                                    <div class="col-auto"><img src="../assets/images/@portrait.jpg" alt="채널 이미지" class="channel-img"></div>
-                                    <div class="col">
-                                        <div class="channel-name text-truncate">스튜디오 와플 - STUDIO WAFFle story</div>
-                                        <div class="subscriber">구독자 174만명</div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-
                     </div>
                 </div>
 
@@ -1125,7 +1143,11 @@
 
     <script>
         $(document).ready(function() {
-
+            // Dropdown.init();
+            $(".dropdown-value").on("click", function() {
+                $(this).parent(".dropdown").toggleClass("active");
+                $(this).parent().parent(".faq").toggleClass("active");
+            });
         })
     </script>
 

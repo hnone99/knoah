@@ -22,6 +22,7 @@
 .icon-member-diamond{width:30px; height:30px; background-image: url('../images/icon-member-diamond.svg');}
 .icon-member-gold{width:30px; height:30px; background-image: url('../images/icon-member-gold.svg');}
 .icon-check-circle{width:14px; height:14px; background-image: url('../images/icon-check-circle.svg');}
+.icon-check{width:13px; height:9px; background-image: url('../images/icon-check.svg');}
 
 
 .bar{display: inline-block;width: 1px;height: 22px;background: #8c8c8c;}
@@ -33,12 +34,17 @@
 .font-size-30px{font-size: 30px !important;}
 
 .min-width-66px{min-width: 66px;}
+.min-width-70px{min-width: 70px;}
 .min-width-75px{min-width: 75px;}
 .min-width-100px{min-width: 100px;}
 .min-width-153px{min-width: 153px;}
+.min-width-220px{min-width: 220px;}
+.min-width-250px{min-width: 250px;}
 .min-width-270px{min-width: 270px;}
+.min-width-350px{min-width: 350px;}
 
 .height-36px{height:36px;}
+.min-height-500px{min-height: 500px;}
 
 .cursor-pointer{cursor: pointer;}
 
@@ -543,4 +549,16 @@ textarea.form-control{resize: none;}
         height:14px;
         top:4px;
     }
+}
+
+
+.title-style{
+    text-transform: uppercase;
+    position:relative;
+    font-weight: bold;
+    font-size: 24px;
+    height:34px;
+    line-height: 33.6px;
+    letter-spacing: -0.12px;
+    width: auto;
 }

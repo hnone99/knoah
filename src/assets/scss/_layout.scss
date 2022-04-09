@@ -54,6 +54,9 @@ body{overflow-x: hidden;width: 100%;padding-top: 80px;
         position: absolute;left: 50%;top: 50%;transform: translate(-50%, -50%);
         img{height: 25px;}
     }
+    .main &{
+        display: none;
+    }
 }
 
 
@@ -149,6 +152,10 @@ aside{
 
     main &{
         position: relative; width: auto; transform: none; left: auto; top: auto; margin:20px 0 38px 0;
+    }
+    .main main &{width:462px;}
+    .main #header &{
+        display:none!important;
     }
 }
 
@@ -288,10 +295,35 @@ aside{
 }
 
 
+.banner-area{
+    padding: 0 0 0 $asideWidth; transition: .5s;
+    .banner{
+        display: flex;
+        justify-content: center;
+        width: 100%;
+        padding:8px 20px;
+        .title{
+            font-size: 16px;
+        }
+    }
+    @include media-breakpoint-down(md){
+        padding:0;
+        .banner{
+            justify-content: flex-start;
+            .title{
+                font-size: 9px;
+            }
+        }
+    }
+}
+
+
+
 html.is-collapsed{
     @include media-breakpoint-up(lg){
         aside{width: 80px;}
         #content, footer .inner{padding-left: 110px;}
+        .banner-area{padding-left: 80px;}
         .gnb .dep1>li>a{padding: 9.5px;text-align: center;font-size: 10px;line-height: 1.2;}
         .gnb .dep1>li>a::before{position: static;margin: 0 auto 10.5px;transform: none;}
         .gnb .dep1>li>a br{display: block;}

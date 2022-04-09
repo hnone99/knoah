@@ -40,7 +40,7 @@
         <header id="header">
             <button type="button" class="btn-hamburger" aria-label="메뉴 접기/닫기"><i class="icon-hamburger"></i></button>
             <h1 class="logo">
-                <a href=""><img src="../assets/images/logo.svg" alt="knosh"></a>
+                <a href="../main/main.html"><img src="../assets/images/logo.svg" alt="knosh"></a>
             </h1>
             <form action="">
                 <fieldset>
@@ -869,7 +869,7 @@
                                     <input type="checkbox" class="custom-control-input select-primary" id="privacy-agree" name="" required>
                                     <label class="custom-control-label" for="privacy-agree">
                                         <div class="d-flex align-items-center">
-                                            <a href="" class="text-underline">이용약관</a>&ensp;및&ensp; <a href="" class="text-underline">개인정보처리방침</a>&ensp;동의(필수)
+                                            <a href="terms.html" class="text-underline">이용약관</a>&ensp;및&ensp; <a href="" class="text-underline">개인정보처리방침</a>&ensp;동의(필수)
                                         </div>
                                     </label>
                                 </div>
@@ -1006,6 +1006,22 @@
             </div>
         </div>
 
+        <!-- modal : 닉네임 변경 -->
+        <div class="modal" tabindex="-1" id="modal-change-name" data-backdrop="static">
+            <div class="modal-dialog modal-dialog-centered modal-sm">
+                <div class="modal-content">
+                    <div class="modal-close">
+                        <button type="modal" aria-label="모달 닫기" data-dismiss="modal"><i class="icon-x"></i></button>
+                    </div>
+                    <div class="modal-body">
+                        <div class="text-center">
+                            <p class="alert-text m-b-35">로그인을 해주세요.</p>
+                            <button type="button" class="btn btn-dark" style="min-width: 100px" data-dismiss="modal">확인</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
 
     </div>
 

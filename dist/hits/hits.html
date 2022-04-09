@@ -40,7 +40,7 @@
         <header id="header">
             <button type="button" class="btn-hamburger" aria-label="메뉴 접기/닫기"><i class="icon-hamburger"></i></button>
             <h1 class="logo">
-                <a href=""><img src="../assets/images/logo.svg" alt="knosh"></a>
+                <a href="../main/main.html"><img src="../assets/images/logo.svg" alt="knosh"></a>
             </h1>
             <form action="">
                 <fieldset>
@@ -890,9 +890,9 @@
 
                 <div class="d-flex justify-content-end">
                     <ul class="sort">
-                        <li class="active"><a href="">최신순 <i class="icon-sort"></i></a></i></li>
+                        <li class="active"><a href="javascript:;">최신순 <i class="icon-sort"></i></a></i></li>
                         <i class="bar"></i>
-                        <li><a href="">인기순 <i class="icon-sort"></i></a></li>
+                        <li><a href="javascript:;">인기순 <i class="icon-sort"></i></a></li>
                     </ul>
                 </div>
                 <div class="card channel-list hits mt-3 mt-lg-4 w-100">
@@ -1111,6 +1111,22 @@
             </div>
         </div>
 
+        <!-- modal : 닉네임 변경 -->
+        <div class="modal" tabindex="-1" id="modal-change-name" data-backdrop="static">
+            <div class="modal-dialog modal-dialog-centered modal-sm">
+                <div class="modal-content">
+                    <div class="modal-close">
+                        <button type="modal" aria-label="모달 닫기" data-dismiss="modal"><i class="icon-x"></i></button>
+                    </div>
+                    <div class="modal-body">
+                        <div class="text-center">
+                            <p class="alert-text m-b-35">로그인을 해주세요.</p>
+                            <button type="button" class="btn btn-dark" style="min-width: 100px" data-dismiss="modal">확인</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
 
     </div>
 

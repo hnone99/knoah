@@ -169,6 +169,7 @@ m-t-1 : { margin-top : 1px; }
 @include generate($nameMap, $position, 40);
 @include generate($nameMap, $position, 45);
 @include generate($nameMap, $position, 50);
+@include generate($nameMap, $position, 55);
 @include generate($nameMap, $position, 60);
 @include generate($nameMap, $position, 70);
 @include generate($nameMap, $position, 80);

@@ -331,3 +331,144 @@
     }
 }
 
+#membership-more-content{
+    .membership-contents{
+        padding:36px 0;
+        max-width: 200px;
+        margin: auto;
+        ul{
+            li{
+                font-size: 12px;
+                height:30px;
+                margin-top:5px;
+                display:flex;
+                align-items: center;
+                justify-content: center;
+            }
+            &.info{
+                li{
+                    justify-content: flex-start;
+                }
+            }
+        }
+    }
+    @include media-breakpoint-down(md){
+        >.row-20{
+            >[class^=col]{
+                padding:0 4px;
+            }
+        }
+        .membership-contents{
+            padding:10px 0;
+            min-width: auto;
+            max-width: 100%;
+            ul{
+                li{
+                    font-size: 10px;
+                }
+            }
+        }
+        .title-style{
+            font-size:10px;
+        }
+    }
+}
+
+.membership-container{
+    padding:60px 40px 100px 40px;
+    .dropdown{
+        white-space:inherit;
+        height: auto;
+        min-height: 46px;
+        .dropdown-value{
+            position:relative;
+        }
+        &.active{
+            .dropdown-value{
+                border-color: #000;
+                &::before{
+                    border-color: black transparent transparent transparent;
+                    transform: rotate(180deg);
+                }
+            }
+        }
+    }
+    .faq.active{
+        .dropdown-value{
+            &::before{
+                transform: rotate(180deg);
+            }
+        }
+    }
+    @include media-breakpoint-down(md){
+        padding:40px 20px;
+    }
+}
+
+.faq{
+    padding:0 35px;
+    .faq-content{
+        padding:40px 20px;
+    }
+    .dropdown-value.collapsed{
+        border:0;
+    }
+   
+    & + .faq{
+        margin-top:-1px;
+    }
+    &.active{
+        border:1px solid #000;
+
+        & + .faq{
+            margin-top:0;
+        }
+    }
+    @include media-breakpoint-down(md){
+        padding:0 11px;
+        font-size: 12px!important;
+        .dropdown .dropdown-value{
+            font-size: 12px;
+            line-height: 18px;
+            padding-left: 0;
+        }
+        .faq-content{
+            padding:20px 0;
+        }
+        
+    }
+}
+
+
+
+.mypage-container{
+    padding:110px 0;
+}
+
+
+.membership-grade{
+    position:relative;
+    min-width: 75px;
+    .membership-img{
+        width:68px;
+        height:68px;
+        background-repeat: no-repeat;
+        background-size: contain;
+    }
+    .membership-alram{
+        position: absolute;
+        font-size: 14px;
+        font-weight: bold;
+        color:#fff;
+        width:28px;
+        height:28px;
+        border-radius: 50%;
+        background:$danger;
+        border: 3px solid #fff;
+        right:0;
+        top:-10px;
+        display: block;
+        text-align: center;
+    }
+    
+}
