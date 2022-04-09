@@ -94,107 +94,378 @@
                     </div>
                 </div>
 
-
-                <h2 class="title border-bottom m-t-15 mt-lg-0 p-b-10 pb-lg-4 border-dark">멤버십 관리</h2>
-
-                <div class="row row-120 align-items-end justify-content-center mypage-container">
-                    <div class="col-5">
-                        <div class="row row-20 align-items-center">
-                            <div class="col-auto min-width-75px">
-                                <div class="membership-grade notice">
-                                    <div class="membership-img" style="background-image:url(../assets/images/icon-member-diamond.svg)"></div>
-                                    <span class="membership-alram">13</span>
-                                </div>
-                            </div>
-                            <div class="col">
-                                <div class="membership-info">주PD님 안녕하세요.<br><span class="font-weight-bold">Diamond</span> 회원이 되어 주셔서 감사합니다.</div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-5">
-                        <div class="row row-5 align-items-center">
-                            <div class="col-auto">
-                                <div class="min-width-75px font-size-16px font-weight-medium">멤버십</div>
-                            </div>
-                            <div class="col">
-                                <div class="border-bottom border-dark pb-1 w-100">
-                                    <div class="d-flex align-items-end justify-content-between">
-                                        <span class="font-weight-bold label">Diamond</span>
-                                        <div>
-                                            <span class="price">￦ 159,000 /</span>
-                                            <span class="month"> 월</span>
-                                        </div>
+                <!-- 회원일때 -->
+                <div style="display:none;">
+                    <h2 class="title border-bottom m-t-15 mt-lg-0 p-b-10 pb-lg-4 border-dark">멤버십 관리</h2>
+                    <div class="row row-120 align-items-end justify-content-center mypage-container">
+                        <div class="col-5">
+                            <div class="row row-20 align-items-center">
+                                <div class="col-auto min-width-75px">
+                                    <div class="membership-grade notice">
+                                        <div class="membership-img" style="background-image:url(../assets/images/icon-member-diamond.svg)"></div>
+                                        <span class="membership-alram">13</span>
                                     </div>
+                                </div>
+                                <div class="col">
+                                    <div class="membership-info">주PD님 안녕하세요.<br><span class="font-weight-bold">Diamond</span> 회원이 되어 주셔서 감사합니다.</div>
                                 </div>
                             </div>
                         </div>
-                    </div>
-                    <div class="col-5 mt-lg-8">
-                        <div class="row row-20 align-items-center">
-                            <div class="col-auto min-width-75px font-size-16px font-weight-medium">
-                                다음 결제일
-                            </div>
-                            <div class="col">
-                                <div class="row row-20">
-                                    <div class="col">
-                                        <input type="text" class="form-control">
-                                    </div>
-                                    <div class="col-auto">
-                                        <button type="button" data-toggle="modal" data-target="#modal-change-name" class="btn btn-outline-dark min-width-100px">
-                                            비활성화
-                                        </button>
-                                    </div>
+                        <div class="col-5">
+                            <div class="row row-5 align-items-center">
+                                <div class="col-auto">
+                                    <div class="min-width-75px font-size-16px font-weight-medium">멤버십</div>
                                 </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-5 mt-lg-8">
-                        <div class="row row-20 align-items-center">
-                            <div class="col-auto min-width-75px font-size-16px font-weight-medium">
-                                결제 수단
-                            </div>
-                            <div class="col">
-                                <div class="row row-20">
-                                    <div class="col">
-                                        <input type="text" class="form-control">
-                                    </div>
-                                    <div class="col-auto">
-                                        <button type="button" data-toggle="modal" data-target="#modal-change-name" class="btn btn-outline-dark min-width-70px">
-                                            변경
-                                        </button>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-10 mt-lg-8">
-                        <div class="row row-35 align-items-center">
-                            <div class="col-auto min-width-75px font-size-16px font-weight-medium">
-                                이용 횟수
-                            </div>
-                            <div class="col">
-                                <div class="row row-60">
-                                    <div class="col ">
-                                        <div class="d-flex justify-content-between align-items-end border-bottom border-dark pb-1">
-                                            <div class="label">웹 트렌드</div>
-                                            <div class="label-desc">46/300</div>
-                                        </div>
-                                    </div>
-                                    <div class="col-auto">
-                                        <div class="d-flex justify-content-between align-items-end border-bottom border-dark min-width-350px pb-1">
-                                            <div class="label">채널 판독기</div>
-                                            <div class="label-desc">
-                                                78 / 200 <i class="icon-bar"></i>  123 / 1500
+                                <div class="col">
+                                    <div class="border-bottom border-dark pb-1 w-100">
+                                        <div class="d-flex align-items-end justify-content-between">
+                                            <span class="font-weight-bold label">Diamond</span>
+                                            <div>
+                                                <span class="price">￦ 159,000 /</span>
+                                                <span class="month"> 월</span>
                                             </div>
                                         </div>
                                     </div>
-                                    <div class="col">
-                                        <div class="d-flex justify-content-between align-items-end  border-bottom border-dark pb-1">
-                                            <div class="label">조회수 폭발기</div>
-                                            <div class="label-desc">
-                                                13 / 30
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-5 mt-lg-8">
+                            <div class="row row-20 align-items-center">
+                                <div class="col-auto min-width-75px font-size-16px font-weight-medium">
+                                    다음 결제일
+                                </div>
+                                <div class="col">
+                                    <div class="row row-20">
+                                        <div class="col">
+                                            <input type="text" class="form-control">
+                                        </div>
+                                        <div class="col-auto">
+                                            <button type="button" data-toggle="modal" data-target="#modal-change-name" class="btn btn-outline-dark min-width-100px">
+                                                비활성화
+                                            </button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-5 mt-lg-8">
+                            <div class="row row-20 align-items-center">
+                                <div class="col-auto min-width-75px font-size-16px font-weight-medium">
+                                    결제 수단
+                                </div>
+                                <div class="col">
+                                    <div class="row row-20">
+                                        <div class="col">
+                                            <input type="text" class="form-control">
+                                        </div>
+                                        <div class="col-auto">
+                                            <button type="button" data-toggle="modal" data-target="#modal-change-name" class="btn btn-outline-dark min-width-70px">
+                                                변경
+                                            </button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-10 mt-lg-8">
+                            <div class="row row-35 align-items-center">
+                                <div class="col-auto min-width-75px font-size-16px font-weight-medium">
+                                    이용 횟수
+                                </div>
+                                <div class="col">
+                                    <div class="row row-60">
+                                        <div class="col ">
+                                            <div class="d-flex justify-content-between align-items-end border-bottom border-dark pb-1">
+                                                <div class="label">웹 트렌드</div>
+                                                <div class="label-desc">46/300</div>
                                             </div>
                                         </div>
+                                        <div class="col-auto">
+                                            <div class="d-flex justify-content-between align-items-end border-bottom border-dark min-width-350px pb-1">
+                                                <div class="label">채널 판독기</div>
+                                                <div class="label-desc">
+                                                    78 / 200 <i class="icon-bar"></i>  123 / 1500
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col">
+                                            <div class="d-flex justify-content-between align-items-end  border-bottom border-dark pb-1">
+                                                <div class="label">조회수 폭발기</div>
+                                                <div class="label-desc">
+                                                    13 / 30
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 비회원일때 -->
+                <div>
+                    <h2 class="title border-bottom m-t-15 mt-lg-0 p-b-10 pb-lg-4 border-dark">멤버십 안내</h2>
+
+                    <div class="row row-20 align-items-stretch justify-content-center membership-container pb-lg-8">
+                        <div class="col-md-6 col-xl m-b-20 mb-xl-0">
+                            <div class="card justify-content-between min-height-500px shadow p-4 border-0">
+                                <div class="d-flex justify-content-center mt-2 mb-4">
+                                    <div class="title-style">free<span class="text-danger">.</span></div>
+                                </div>
+    
+                                <div class="border-top border-dark px-4 py-7">
+                                    <div>
+                                        <p class="font-size-16px font-weight-bold">웹 트렌드</p>
+                                        <p class="font-size-12px m-t-10">30회/월</p>
+                                    </div>
+                                    <div class="mt-4">
+                                        <p class="font-size-16px font-weight-bold">채널 판독기</p>
+                                        <p class="font-size-12px m-t-10">1개 채널 등록 & 30회/월</p>
+                                    </div>
+                                    <div class="mt-4">
+                                        <p class="font-size-16px font-weight-bold">조회수 폭발기</p>
+                                        <p class="font-size-12px m-t-10">1회/월</p>
+                                    </div>
+                                </div>
+    
+                                <div class="d-flex justify-content-center pt-4 pb-1 font-size-18px border-top border-dark">
+                                    ￦ 0
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-6 col-xl m-b-20 mb-xl-0">
+                            <div class="card justify-content-between min-height-500px shadow p-4 border-0">
+                                <div class="d-flex justify-content-center mt-2 mb-4">
+                                    <div class="title-style">Silver<span class="text-danger">.</span></div>
+                                </div>
+    
+                                <div class="border-top border-dark px-4 py-7">
+                                    <div>
+                                        <p class="font-size-16px font-weight-bold">웹 트렌드</p>
+                                        <p class="font-size-12px m-t-10">300회/월</p>
+                                    </div>
+                                    <div class="mt-4">
+                                        <p class="font-size-16px font-weight-bold">채널 판독기</p>
+                                        <p class="font-size-12px m-t-10">30개 채널 등록 & 300회/월</p>
+                                    </div>
+                                    <div class="mt-4">
+                                        <p class="font-size-16px font-weight-bold">조회수 폭발기</p>
+                                        <p class="font-size-12px m-t-10">30회/월</p>
+                                    </div>
+                                </div>
+    
+                                <div class="d-flex justify-content-center pt-4 pb-1 font-size-18px  border-top border-dark">
+                                    ￦ 49,000
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-6 col-xl m-b-20 mb-xl-0">
+                            <div class="card justify-content-between min-height-500px shadow p-4 border-0">
+                                <div class="d-flex justify-content-center mt-2 mb-4">
+                                    <div class="title-style">GOLD<span class="text-danger">.</span></div>
+                                </div>
+    
+                                <div class="border-top border-dark px-4 py-7">
+                                    <div>
+                                        <p class="font-size-16px font-weight-bold">웹 트렌드</p>
+                                        <p class="font-size-12px m-t-10">300회/월</p>
+                                    </div>
+                                    <div class="mt-4">
+                                        <p class="font-size-16px font-weight-bold">채널 판독기</p>
+                                        <p class="font-size-12px m-t-10">100개 채널 등록 & 300회/월</p>
+                                    </div>
+                                    <div class="mt-4">
+                                        <p class="font-size-16px font-weight-bold">조회수 폭발기</p>
+                                        <p class="font-size-12px m-t-10">30회/월</p>
+                                    </div>
+                                </div>
+    
+                                <div class="d-flex justify-content-center pt-4 pb-1 font-size-18px  border-top border-dark">
+                                    ￦ 79,000
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-6 col-xl m-b-20 mb-xl-0">
+                            <div class="card justify-content-between min-height-500px shadow p-4 border-0">
+                                <div class="d-flex justify-content-center mt-2 mb-4">
+                                    <div class="title-style">DIAMOND<span class="text-danger">.</span></div>
+                                </div>
+    
+                                <div class="border-top border-dark px-4 py-7">
+                                    <div>
+                                        <p class="font-size-16px font-weight-bold">웹 트렌드</p>
+                                        <p class="font-size-12px m-t-10">30회/월</p>
+                                    </div>
+                                    <div class="mt-4">
+                                        <p class="font-size-16px font-weight-bold">채널 판독기</p>
+                                        <p class="font-size-12px m-t-10">200개 채널 등록 & 1500회/월</p>
+                                    </div>
+                                    <div class="mt-4">
+                                        <p class="font-size-16px font-weight-bold">조회수 폭발기</p>
+                                        <p class="font-size-12px m-t-10">30회/월</p>
+                                    </div>
+                                </div>
+    
+                                <div class="d-flex justify-content-center pt-4 pb-1 font-size-18px border-top border-dark">
+                                    ￦ 159,000
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="membership-container py-0">
+                        <div class="d-flex algin-items-center justify-content-center w-100">
+                            <div class="dropdown min-width-153px w-auto">
+                                <div class="dropdown-value border-0 position-relative" id="membership-more-header" type="button" data-toggle="collapse" data-target="#membership-more-content" aria-expanded="true" aria-controls="membership-more-content">자세히 알아보기</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div id="membership-more-content" class="collapse transition-none border-top border-dark" aria-labelledby="membership-more-header" data-parent="#membership-more-header">
+                        <div class="row row-20 membership-container pb-0 px-2 px-lg-7">
+                            <div class="col-auto col-md-3 col-lg mr-1 mr-lg-0">
+                                <div class="d-flex align-items-center justify-content-center mb-0 mb-lg-3">
+                                    <p class="height-36px"></p>
+                                </div>
+                                <div class="membership-contents  m-0">
+                                    <ul class="info">
+                                        <li class="font-weight-bold">필터</li>
+                                        <li>직접 입력</li>
+                                        <br>
+                                        <li class="font-weight-bold">상세 정보</li>
+                                        <li>채널 분석</li>
+                                        <li>시청자 분석</li>
+                                        <li>관련 채널 분석</li>
+                                        <li>광고 단가</li>
+                                        <li>채널 뉴스</li>
+                                        <br>
+                                        <li class="font-weight-bold">채널 분석 도구</li>
+                                        <li>유튜버 비교</li>
+                                        <li>광고 수익 계산기</li>
+                                        <li>트렌드 키워드</li>
+                                        <br>
+                                        <li class="font-weight-bold">즐겨찾기</li>
+                                        <li>즐겨찾기 폴더  수</li>
+                                        <li>맞춤 페이지 제작</li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="col">
+                                <div class="d-flex align-items-center justify-content-center  mb-0 mb-lg-3">
+                                    <p class="title-style">free<span class="text-danger">.</span></p>
+                                </div>
+                                <div class="card shadow membership-contents border-0">
+                                    <div class="d-flex algin-items-center justify-content-center flex-column">
+                                        <ul>
+                                            <li></li>
+                                            <li>-</li>
+                                            <br>
+                                            <li></li>
+                                            <li><i class="icon-check"></i></li>
+                                            <li>-</li>
+                                            <li><i class="icon-check"></i></li>
+                                            <li><i class="icon-check"></i></li>
+                                            <li>-</li>
+                                            <br>
+                                            <li></li>
+                                            <li>△</li>
+                                            <li><i class="icon-check"></i></li>
+                                            <li><i class="icon-check"></i></li>
+                                            <br>
+                                            <li></li>
+                                            <li>3</li>
+                                            <li>5</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col">
+                                <div class="d-flex align-items-center justify-content-center  mb-0 mb-lg-3">
+                                    <p class="title-style">SILVER<span class="text-danger">.</span></p>
+                                </div>
+                                <div class="card shadow membership-contents border-0">
+                                    <div class="d-flex algin-items-center justify-content-center flex-column">
+                                        
+                                        <ul>
+                                            <li></li>
+                                            <li>-</li>
+                                            <br>
+                                            <li></li>
+                                            <li><i class="icon-check"></i></li>
+                                            <li>20</li>
+                                            <li><i class="icon-check"></i></li>
+                                            <li>20</li>
+                                            <li>-</li>
+                                            <br>
+                                            <li></li>
+                                            <li>△</li>
+                                            <li><i class="icon-check"></i></li>
+                                            <li><i class="icon-check"></i></li>
+                                            <br>
+                                            <li></li>
+                                            <li>5</li>
+                                            <li>10</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col">
+                                <div class="d-flex align-items-center justify-content-center  mb-0 mb-lg-3">
+                                    <p class="title-style">gold<span class="text-danger">.</span></p>
+                                </div>
+                                <div class="card shadow membership-contents border-0">
+                                    <div class="d-flex algin-items-center justify-content-center flex-column">
+                                        <ul>
+                                            <li></li>
+                                            <li><i class="icon-check"></i></li>
+    
+                                            <br>
+                                            <li></li>
+                                            <li><i class="icon-check"></i></li>
+                                            <li>100</li>
+                                            <li><i class="icon-check"></i></li>
+                                            <li>100</li>
+                                            <li>-</li>
+                                            <br>
+                                            <li></li>
+                                            <li>△</li>
+                                            <li><i class="icon-check"></i></li>
+                                            <li><i class="icon-check"></i></li>
+                                            <br>
+                                            <li></li>
+                                            <li>5</li>
+                                            <li>20</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col">
+                                <div class="d-flex align-items-center justify-content-center  mb-0 mb-lg-3">
+                                    <p class="title-style">diamond<span class="text-danger">.</span></p>
+                                </div>
+                                <div class="card shadow membership-contents border-0">
+                                    <div class="d-flex algin-items-center justify-content-center flex-column">
+                                        <ul>
+                                            <li></li>
+                                            <li><i class="icon-check"></i></li>
+    
+                                            <br>
+                                            <li></li>
+                                            <li><i class="icon-check"></i></li>
+                                            <li>무제한</li>
+                                            <li><i class="icon-check"></i></li>
+                                            <li>무제한</li>
+                                            <li>-</li>
+                                            <br>
+                                            <li></li>
+                                            <li><i class="icon-check"></i></li>
+                                            <li><i class="icon-check"></i></li>
+                                            <li><i class="icon-check"></i></li>
+                                            <br>
+                                            <li></li>
+                                            <li>10</li>
+                                            <li>50</li>
+                                        </ul>
                                     </div>
                                 </div>
                             </div>
