@@ -1121,7 +1121,7 @@
 
         <!-- modal : 채널 추가 이용 안내 -->
         <div class="modal" tabindex="-1" id="modal-channel-add" data-backdrop="static">
-            <div class="modal-dialog modal-dialog-centered modal-sm" style="max-width: 460px">
+            <div class="modal-dialog modal-dialog-centered modal" style="max-width: 460px">
                 <div class="modal-content">
                     <div class="modal-close">
                         <button type="modal" aria-label="모달 닫기" data-dismiss="modal"><i class="icon-x"></i></button>
@@ -1130,7 +1130,9 @@
                         <h2 class="modal-title">채널 추가 이용 안내</h2>
                         <div class="channel-add-info">
                             <div class="plan">
-                                <strong>Basic</strong>
+                                <div class="title-style">
+                                    Basic<span class="text-danger">.</span>
+                                </div>
                                 <small>*채널추가 1개당</small>
                             </div>
                             <div class="price">
@@ -1189,9 +1191,355 @@
                         <button type="modal" aria-label="모달 닫기" data-dismiss="modal"><i class="icon-x"></i></button>
                     </div>
                     <div class="modal-body">
-                        <div class="text-center">
-                            <p class="alert-text m-b-35">로그인을 해주세요.</p>
-                            <button type="button" class="btn btn-dark" style="min-width: 100px" data-dismiss="modal">확인</button>
+                        <h2 class="modal-title">닉네임 변경</h2>
+                        <div class="row row-20 m-t-30">
+                            <div class="col-lg">
+                                <input type="text" class="form-control" placeholder="닉네임 2~15자">
+                            </div>
+                            <div class="col-lg-auto m-t-20 mt-lg-0">
+                                <button type="button" class="btn btn-dark min-width-70px btn-block">변경</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- modal : 채널 등록/수정 -->
+        <div class="modal" tabindex="-1" id="modal-modify-channel" data-backdrop="static">
+            <div class="modal-dialog modal-dialog-centered modal-sm">
+                <div class="modal-content">
+                    <div class="modal-close">
+                        <button type="modal" aria-label="모달 닫기" data-dismiss="modal"><i class="icon-x"></i></button>
+                    </div>
+                    <div class="modal-body">
+                        <h2 class="modal-title">유튜브 채널 수정
+                            <button type="button" data-toggle="modal" data-target="#modal-modify-channel-info" class="mt-n6">
+                                <i class="icon-info-circle"></i>
+                            </button>
+                        </h2>
+                        <input type="text" class="form-control  m-t-30" placeholder="채널 URL을 입력해 주세요.">
+                        <p class="font-size-14px mt-5 text-center">시청자 성비를 선택 해주세요.</p>
+                        <div class="ratio-progress-bar mt-4">
+                            <div class="bar-area">
+                                <div class="line">
+                                    <p class="female">여성 <i>50</i></p>
+                                    <p class="male">남성 <i>50</i></p>
+                                </div>
+                                <div id="slider"></div>
+                                <div class="ratio">
+                                    <span></span>
+                                    <span></span>
+                                    <span></span>
+                                    <span></span>
+                                    <span class="active"></span>
+                                    <span></span>
+                                    <span></span>
+                                    <span></span>
+                                    <span></span>
+                                    <span></span>
+                                </div>
+                            </div>
+                            <script>
+                                var sliderIdx;
+                                $("#slider").slider({
+                                    range: "min",
+                                    value: 50,
+                                    min: 0,
+                                    max: 100,
+                                    step: 10,
+                                    slide: function(event, ui) {
+                                        $(".female i").text(ui.value);
+                                        $(".male i").text(100 - ui.value);
+                                        //선택된 값의 뒷자리 자른 후 .active 로 제어 요청!! (현재 5로 설정)
+                                        $(".ratio-progress-bar .ratio span").eq(5).siblings().removeClass('active');
+                                        $(".ratio-progress-bar .ratio span").eq(5).addClass('active');
+                                    }
+                                });
+                            </script>
+                        </div>
+                        <p class="font-size-14px mt-4 text-center">시청자 나이대를 선택 해주세요.</p>
+                        <div class="select-progress-bar mt-5">
+                            <div class="bar-area">
+                                <div class="line"></div>
+                                <div class="labels">
+
+                                    <div class="label">
+                                        <a href="javascript:;" role="button">
+                                            <span>10대</span>
+                                        </a>
+                                    </div>
+
+                                    <div class="label">
+                                        <a href="javascript:;" role="button">
+                                            <span>20대</span>
+                                        </a>
+                                    </div>
+
+                                    <div class="label">
+                                        <a href="javascript:;" role="button">
+                                            <span>30대</span>
+                                        </a>
+                                    </div>
+
+                                    <div class="label">
+                                        <a href="javascript:;" role="button">
+                                            <span>40대</span>
+                                        </a>
+                                    </div>
+
+                                    <div class="label">
+                                        <a href="javascript:;" role="button">
+                                            <span>50대</span>
+                                        </a>
+                                    </div>
+
+                                    <div class="label">
+                                        <a href="javascript:;" role="button">
+                                            <span>60대</span>
+                                        </a>
+                                    </div>
+
+                                </div>
+                            </div>
+                            <script>
+                                $('.select-progress-bar a').on('click', function(e) {
+                                    e.preventDefault();
+                                    $(this).parent().siblings().find('a').removeClass('active');
+                                    $(this).addClass('active');
+                                })
+                            </script>
+                        </div>
+                        <input type="text" class="form-control mt-5" placeholder="노출량을 입력 해주세요.">
+                        <input type="text" class="form-control mt-5" placeholder="클릭률을 입력 해주세요.">
+                        <input type="text" class="form-control mt-5" placeholder="시청지속시간(분)을 입력 해주세요.">
+
+                        <button class="btn btn-dark btn-block btn-lg mt-5">수정</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- modal : 채널 등록/수정 > 정보 (타이틀 클릭시) -->
+        <div class="modal" tabindex="-1" id="modal-modify-channel-info" data-backdrop="static" style=" margin-left:-2px">
+            <div class="modal-dialog modal-dialog-centered modal-sm">
+                <div class="modal-content">
+                    <div class="modal-close">
+                        <button type="modal" aria-label="모달 닫기" data-dismiss="modal"><i class="icon-x"></i></button>
+                    </div>
+                    <div class="modal-body">
+                        <div class="">
+                            <p class="font-size-14px mb-4">1.유튜브에 접속.</p>
+                            <div style="background:#ededed; width:100%; height:285px"></div>
+                            <p class="font-size-14px mt-5 mb-4">2. 유튜브 스튜디오 클릭.</p>
+                            <div style="background:#ededed; width:100%; height:200px"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- modal : 회원 탈퇴(멤버쉽) -->
+        <div class="modal" tabindex="-1" id="modal-withdrawal-membership" data-backdrop="static">
+            <div class="modal-dialog modal-dialog-centered">
+                <div class="modal-content">
+                    <div class="modal-close">
+                        <button type="modal" aria-label="모달 닫기" data-dismiss="modal"><i class="icon-x"></i></button>
+                    </div>
+                    <div class="modal-body">
+                        <h2 class="modal-title">회원 탈퇴</h2>
+
+                        <div class="text-center font-weight-medium  m-t-30">
+                            회원님은 현재 멤버십 기간이 남아 있습니다.<br class="d-block d-lg-none"> 회원 탈퇴 시<br class="d-none d-lg-block">
+                            <span class="text-danger text-underline">자동으로 멤버십이 해지되며 모든 데이터가 삭제</span>되며 복구 불가합니다.<br><br>
+                            그래도 회원 탈퇴를 하시겠습니까?
+                        </div>
+
+                        <div class="text-center"><button type="button" class="m-t-25 mt-lg-6 btn btn-dark btn-lg min-width-350px">회원 유지</button></div>
+                        <div class="text-center m-t-15"><a href="" class="text-gray text-underline">회원탈퇴</a></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- modal : 회원 탈퇴(일반) -->
+        <div class="modal" tabindex="-1" id="modal-withdrawal-general" data-backdrop="static">
+            <div class="modal-dialog modal-dialog-centered">
+                <div class="modal-content">
+                    <div class="modal-close">
+                        <button type="modal" aria-label="모달 닫기" data-dismiss="modal"><i class="icon-x"></i></button>
+                    </div>
+                    <div class="modal-body">
+                        <h2 class="modal-title">회원 탈퇴</h2>
+
+                        <div class="text-center font-weight-medium  m-t-30">
+                            회원 탈퇴 시<br class="d-block d-lg-none">
+                            <span class="text-danger text-underline">모든 데이터가 삭제되며 복구 불가</span>합니다.<br class="d-block">
+                            그래도 회원 탈퇴를 하시겠습니까?
+                        </div>
+
+                        <div class="text-center"><button type="button" class="m-t-25 mt-lg-6 btn btn-dark btn-lg min-width-350px">회원 유지</button></div>
+                        <div class="text-center m-t-15"><a href="" class="text-gray text-underline">회원탈퇴</a></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- modal : 멤버십 비활성화 -->
+        <div class="modal" tabindex="-1" id="modal-membership-disabled" data-backdrop="static">
+            <div class="modal-dialog modal-dialog-centered">
+                <div class="modal-content">
+                    <div class="modal-close">
+                        <button type="modal" aria-label="모달 닫기" data-dismiss="modal"><i class="icon-x"></i></button>
+                    </div>
+                    <div class="modal-body">
+                        <h2 class="modal-title">멤버십 비활성화</h2>
+
+                        <div class="text-center font-weight-medium m-t-30">
+                            멤버십 비활성화를 하시면 다음 결제일까지<br class="d-block d-lg-none">멤버십이 유지되며,<br class="d-none d-lg-block">
+                            이용하시던 기능과 데이터는<br class="d-block d-lg-none"> Free멤버십 기준으로 초기화됩니다.
+                        </div>
+
+                        <div class="row row-10 m-t-25 mt-lg-6 justify-content-center">
+                            <div class="col-12 col-lg-auto">
+                                <button type="button" class="btn btn-dark btn-lg min-width-153px btn-block">유지하기</button>
+                            </div>
+                            <div class="col-12 col-lg-auto m-t-10 mt-lg-0">
+                                <button type="button" class="btn btn-gray btn-lg min-width-153px btn-block">비활성화</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- modal : 결제수단 변경 -->
+        <div class="modal" tabindex="-1" id="modal-change-payment" data-backdrop="static">
+            <div class="modal-dialog modal-dialog-centered">
+                <div class="modal-content">
+                    <div class="modal-close">
+                        <button type="modal" aria-label="모달 닫기" data-dismiss="modal"><i class="icon-x"></i></button>
+                    </div>
+                    <div class="modal-body">
+                        <h2 class="modal-title">결제 수단</h2>
+
+                        <div class="row row-10 m-t-30">
+                            <div class="col">
+                                <div class="border-bottom border-dark">
+                                    <div class="custom-control custom-radio pb-2 pt-1">
+                                        <input type="radio" class="custom-control-input select-primary" id="pamentMethod" name="pamentMethod">
+                                        <label class="custom-control-label font-size-16px" for="pamentMethod">삼성카드 4015-****-****-3106</label>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-auto">
+                                <button type="button" class="btn btn-dark min-width-70px">삭제</button>
+                            </div>
+
+                            <div class="col-12 mt-5  w-100">
+                                <a href="" class="d-flex align-items-center border-bottom border-dark  w-100 pb-2 font-size-16px text-decoration-none">
+                                    <i class="icon-add mr-3"></i>
+                                    결제 카드 추가 등록하기
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- modal : 조회수 폭발기 팝업 -->
+        <div class="modal modal-hits modal-square" tabindex="-1" id="modal-hits" data-backdrop="static">
+            <div class="modal-dialog modal-dialog-centered modal-lg" style="max-width: 880px;">
+                <div class="modal-content">
+                    <div class="modal-close">
+                        <button type="modal" aria-label="모달 닫기" data-dismiss="modal"><i class="icon-x"></i></button>
+                    </div>
+                    <div class="modal-body">
+                        <div class="card channel-list hits border-0 p-0">
+                            <div class="thumbnail">
+                                <iframe src="https://www.youtube.com/embed/PX1oAtwlSzk" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                            </div>
+                            <div class="hits-btn-container m-0  px-0">
+                                <div class="row row-0 hits-btns justify-content-between px-0">
+                                    <div class="col-3 col-xl-auto p-r-0 pr-lg-3">
+                                        <a href="javascript:;" class="hits-btn border-0 flex-column justify-content-lg-center flex-lg-row">
+                                            <i class="icon-addChannel"></i>
+                                            채널 판독기에<br class="d-block d-lg-none"> 추가하기
+                                        </a>
+                                    </div>
+                                    <div class="col-3 col-xl">
+                                        <a href="javascript:;" class="hits-btn flex-column flex-lg-row">
+                                            <i class="icon-addVideo"></i>
+                                            영상<br class="d-block d-lg-none"> 수집하기
+                                        </a>
+                                    </div>
+                                    <div class="col-3 col-xl">
+                                        <a href="javascript:;" class="hits-btn flex-column flex-lg-row">
+                                            <i class="icon-notRecomendVideo"></i>
+                                            영상<br class="d-block d-lg-none"> 추천 안하기
+                                        </a>
+                                    </div>
+                                    <div class="col-3 col-xl m-r-0 mr-n3">
+                                        <a href="javascript:;" class="hits-btn flex-column flex-lg-row">
+                                            <i class="icon-notRecomendChannel"></i>
+                                            채널<br class="d-block d-lg-none"> 추천 안하기
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row row-20 py-5 border-top border-bottom border-dark align-items-center">
+                                <div class="col-xl-auto">
+                                    <img src="../assets/images/@profile.jpg" alt="채널이미지" class="channel-img">
+                                </div>
+                                <div class="col-xl mt-3 mt-xl-0">
+                                    <div class="d-flex flex-column">
+                                        <div class="channel-name m-0">신사임당</div>
+                                        <div class="channel-desc m-t-5">
+                                            <ul>
+                                                <li class="mb-2">
+                                                    <div class="row row-0 align-items-center font-size-14px">
+                                                        <div class="col-5 col-lg-auto m-t-5 mt-lg-0"><span>|&emsp;구독자 : 170만</span></div>
+                                                        <div class="col-7 col-lg-auto m-t-5 mt-lg-0"><span>|&emsp;동영상 : 223개</span></div>
+                                                        <div class="col-5 col-lg-auto m-t-5 mt-lg-0"><span>|&emsp;누적조회수 : 2억 5천만</span></div>
+                                                        <div class="col-7 col-lg-auto m-t-5 mt-lg-0"><span>|&emsp;오픈일 : 2022.03.01</span></div>
+                                                    </div>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </div>
+
+                                </div>
+                            </div>
+                            <div class="row row-0 py-3 border-bottom border-dark">
+                                <div class="col-4 border-right border-dark">
+                                    <div class="d-flex justify-content-center flex-column align-items-center py-lg-5">
+                                        <p class="font-size-16px mb-lg-2">조회수</p>
+                                        <div class="hits-count">1,740,000</div>
+                                    </div>
+                                </div>
+                                <div class="col-4 border-right border-dark">
+                                    <div class="d-flex justify-content-center flex-column align-items-center py-lg-5">
+                                        <p class="font-size-16px mb-lg-2">동영상 예상 수익</p>
+                                        <div class="hits-count">￦ 35,000</div>
+                                    </div>
+                                </div>
+                                <div class="col-4">
+                                    <div class="d-flex justify-content-center flex-column align-items-center py-lg-5">
+                                        <p class="font-size-16px mb-lg-2">내 채널 예상 조회수</p>
+                                        <div class="hits-count">
+                                            2억 5천만
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <br>
+                            <br>
+                            <br>
+                            <br>
+                            <br>
+                            <br>
                         </div>
                     </div>
                 </div>

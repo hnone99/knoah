@@ -32,15 +32,15 @@
                 <h2 class="title border-bottom m-t-15 mt-lg-0 p-b-10 pb-lg-4 border-dark">마이페이지</h2>
 
                 <div class="row row-120 align-items-stretch justify-content-center mypage-container">
-                    <div class="col-5">
+                    <div class="col-xl-5">
                         <div class="row row-20 align-items-center">
-                            <div class="col-auto ">
+                            <div class="col-lg-auto">
                                 <div class="min-width-75px font-size-16px font-weight-medium">닉네임</div>
                             </div>
-                            <div class="col">
+                            <div class="col-lg m-t-15 mt-lg-0">
                                 <div class="row row-20">
                                     <div class="col">
-                                        <input type="text" class="form-control min-width-220px">
+                                        <input type="text" class="form-control">
                                     </div>
                                     <div class="col-auto">
                                         <button type="button" data-toggle="modal" data-target="#modal-change-name" class="btn btn-outline-dark min-width-70px">
@@ -51,35 +51,35 @@
                             </div>
                         </div>
                     </div>
-                    <div class="col-5">
-                        <div class="row row-5 align-items-center">
-                            <div class="col-auto">
+                    <div class="col-xl-5 m-t-40 mt-xl-0">
+                        <div class="row row-15 align-items-center">
+                            <div class="col-lg-auto">
                                 <div class="min-width-75px font-size-16px font-weight-medium">이메일</div>
                             </div>
-                            <div class="col">
+                            <div class="col-lg p-l-0 pl-lg-2 m-t-15 mt-lg-0">
                                 <input type="text" class="form-control min-width-220px">
                             </div>
                         </div>
                     </div>
-                    <div class="col-5 mt-lg-8">
+                    <div class="col-xl-5 m-t-40 mt-xl-8">
                         <div class="row row-20 align-items-center">
-                            <div class="col-auto">
+                            <div class="col-lg-auto">
                                 <div class="min-width-75px font-size-16px font-weight-medium">유튜브 채널</div>
                             </div>
-                            <div class="col">
+                            <div class="col-lg m-t-15 mt-lg-0">
                                 <div class="row row-20">
                                     <div class="col">
                                         <input type="text" class="form-control">
                                     </div>
-                                    <div class="col-auto">
+                                    <div class="col-md-auto m-t-15 mt-md-0">
                                         <div class="row row-10">
-                                            <div class="col-auto">
-                                                <button type="button" data-toggle="modal" data-target="#modal-change-name" class="btn btn-outline-dark min-width-70px">
+                                            <div class="col col-md-auto">
+                                                <button type="button" data-toggle="modal" data-target="#modal-modify-channel" class="btn btn-outline-dark min-width-70px btn-block">
                                                     수정
                                                 </button>
                                             </div>
-                                            <div class="col-auto">
-                                                <button type="button" data-toggle="modal" data-target="#modal-change-name" class="btn btn-outline-dark min-width-70px">
+                                            <div class="col col-md-auto">
+                                                <button type="button" data-toggle="modal" data-target="#modal-modify-channelmodal-modify-channel" class="btn btn-outline-dark min-width-70px btn-block">
                                                     추가
                                                 </button>
                                             </div>
@@ -89,16 +89,16 @@
                             </div>
                         </div>
                     </div>
-                    <div class="col-5 mt-lg-8 align-self-center text-right">
-                        <a href="" class="text-underline text-gray">회원탈퇴</a>
+                    <div class="col-xl-5 m-t-25 mt-xl-8 align-self-center text-right">
+                        <a href="#modal-withdrawal-membership" data-toggle="modal" class="text-underline text-gray font-size-14px">회원탈퇴</a>
                     </div>
                 </div>
 
                 <!-- 회원일때 -->
-                <div style="display:none;">
+                <div style="">
                     <h2 class="title border-bottom m-t-15 mt-lg-0 p-b-10 pb-lg-4 border-dark">멤버십 관리</h2>
                     <div class="row row-120 align-items-end justify-content-center mypage-container">
-                        <div class="col-5">
+                        <div class="col-xl-5 m-t-30 mt-lg-0">
                             <div class="row row-20 align-items-center">
                                 <div class="col-auto min-width-75px">
                                     <div class="membership-grade notice">
@@ -111,16 +111,16 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="col-5">
+                        <div class="col-xl-5 m-t-50 mt-lg-8 mt-xl-0">
                             <div class="row row-5 align-items-center">
-                                <div class="col-auto">
+                                <div class="col-3 col-lg-auto">
                                     <div class="min-width-75px font-size-16px font-weight-medium">멤버십</div>
                                 </div>
-                                <div class="col">
+                                <div class="col ml-1 ml-lg-0">
                                     <div class="border-bottom border-dark pb-1 w-100">
                                         <div class="d-flex align-items-end justify-content-between">
-                                            <span class="font-weight-bold label">Diamond</span>
-                                            <div>
+                                            <span class="label">Diamond</span>
+                                            <div class="label-desc">
                                                 <span class="price">￦ 159,000 /</span>
                                                 <span class="month"> 월</span>
                                             </div>
@@ -129,9 +129,9 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="col-5 mt-lg-8">
+                        <div class="col-xl-5 m-t-50 mt-lg-8">
                             <div class="row row-20 align-items-center">
-                                <div class="col-auto min-width-75px font-size-16px font-weight-medium">
+                                <div class="col-3 col-lg-auto min-width-75px font-size-16px font-weight-medium">
                                     다음 결제일
                                 </div>
                                 <div class="col">
@@ -140,7 +140,7 @@
                                             <input type="text" class="form-control">
                                         </div>
                                         <div class="col-auto">
-                                            <button type="button" data-toggle="modal" data-target="#modal-change-name" class="btn btn-outline-dark min-width-100px">
+                                            <button type="button" data-toggle="modal" data-target="#modal-membership-disabled" class="btn btn-outline-dark min-width-70px">
                                                 비활성화
                                             </button>
                                         </div>
@@ -148,9 +148,9 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="col-5 mt-lg-8">
+                        <div class="col-xl-5 m-t-50 mt-lg-8">
                             <div class="row row-20 align-items-center">
-                                <div class="col-auto min-width-75px font-size-16px font-weight-medium">
+                                <div class="col-3 col-lg-auto min-width-75px font-size-16px font-weight-medium">
                                     결제 수단
                                 </div>
                                 <div class="col">
@@ -159,7 +159,7 @@
                                             <input type="text" class="form-control">
                                         </div>
                                         <div class="col-auto">
-                                            <button type="button" data-toggle="modal" data-target="#modal-change-name" class="btn btn-outline-dark min-width-70px">
+                                            <button type="button" data-toggle="modal" data-target="#modal-change-payment" class="btn btn-outline-dark min-width-70px">
                                                 변경
                                             </button>
                                         </div>
@@ -167,28 +167,28 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="col-10 mt-lg-8">
+                        <div class="col-xl-10 m-t-50 mt-lg-8 m-b-50 mb-lg-0">
                             <div class="row row-35 align-items-center">
-                                <div class="col-auto min-width-75px font-size-16px font-weight-medium">
+                                <div class="col-xl-auto min-width-75px font-size-16px font-weight-medium">
                                     이용 횟수
                                 </div>
-                                <div class="col">
-                                    <div class="row row-60">
-                                        <div class="col ">
+                                <div class="col-xl">
+                                    <div class="row row-">
+                                        <div class="col m-t-30 mt-xl-0">
                                             <div class="d-flex justify-content-between align-items-end border-bottom border-dark pb-1">
                                                 <div class="label">웹 트렌드</div>
                                                 <div class="label-desc">46/300</div>
                                             </div>
                                         </div>
-                                        <div class="col-auto">
-                                            <div class="d-flex justify-content-between align-items-end border-bottom border-dark min-width-350px pb-1">
+                                        <div class="col-lg-5  m-t-30 mt-xl-0">
+                                            <div class="d-flex justify-content-between align-items-end border-bottom border-dark pb-1">
                                                 <div class="label">채널 판독기</div>
                                                 <div class="label-desc">
-                                                    78 / 200 <i class="icon-bar"></i>  123 / 1500
+                                                    78 / 200 <i class="bar mx-4"></i>  123 / 1500
                                                 </div>
                                             </div>
                                         </div>
-                                        <div class="col">
+                                        <div class="col-lg m-t-30 mt-xl-0">
                                             <div class="d-flex justify-content-between align-items-end  border-bottom border-dark pb-1">
                                                 <div class="label">조회수 폭발기</div>
                                                 <div class="label-desc">
@@ -202,7 +202,6 @@
                         </div>
                     </div>
                 </div>
-
                 <!-- 비회원일때 -->
                 <div>
                     <h2 class="title border-bottom m-t-15 mt-lg-0 p-b-10 pb-lg-4 border-dark">멤버십 안내</h2>
@@ -473,6 +472,7 @@
                     </div>
                 </div>
 
+
                 <!-- 컨텐츠 끝 -->
 
             </main>
@@ -485,7 +485,6 @@
     @@include('@@webRoot/_include/_modal.html')
 
     <script>
-       
         $(document).ready(function(){
             // Dropdown.init();
             $(".dropdown-value").on("click", function(){

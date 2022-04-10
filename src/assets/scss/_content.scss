@@ -112,7 +112,7 @@
         padding:43px 60px;
         text-decoration: none;
         a{text-decoration: none;}
-        .thumbnail{
+        @at-root .thumbnail{
             min-width: 320px;
             position: relative;
             padding-top: 56%;
@@ -448,6 +448,23 @@
 
 .mypage-container{
     padding:110px 0;
+    .label{
+        font-size: 20px;
+        font-weight: bold;
+    }
+    .label-desc{
+        font-size: 20px;
+    }
+    .bar{
+        height: 18px;
+        vertical-align: middle;
+    }
+    @include media-breakpoint-down(lg){
+        padding: 30px 0;
+        .label, .label-desc{
+            font-size: 16px;
+        }
+    }
 }
 
 
@@ -476,4 +493,12 @@
         text-align: center;
     }
     
+}
+
+
+.membership-info{
+    font-size: 20px;
+    @include media-breakpoint-down(md){
+        font-size: 14px;
+    }
 }

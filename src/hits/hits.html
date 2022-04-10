@@ -82,7 +82,7 @@
                     </ul>
                 </div>
                 <div class="card channel-list hits mt-3 mt-lg-4 w-100">
-                    <a href="" class="">
+                    <a href="#modal-hits" data-toggle="modal" class="">
                         <div class="row row-60 p-b-30">
                             <div class="col-xl-auto">
                                 <div class="thumbnail">
@@ -161,7 +161,7 @@
         $(document).ready(function () {
             Dropdown.init();
 
-
+            $("#modal-hits").modal("show");
             $(".sort li").on("click", function () {
                 $(this).toggleClass("active");
                 if ($(this).hasClass("active")) {
