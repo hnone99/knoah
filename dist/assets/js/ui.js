@@ -179,15 +179,13 @@ var Dropdown = {
   },
   active: function active() {
     $('.dropdown').on('click', function (e) {
-      var $target = $(this).closest(".dropdown");
+      var $target = $(this);
 
       if ($target.hasClass('active')) {
         $(this).removeClass('active');
-        $('html').removeClass('open-dropdown');
       } else {
         $(".dropdown.active").removeClass('active');
         $(this).addClass('active');
-        $('html').addClass('open-dropdown');
       }
     });
     $('.dropdown-list > div').on('click', function (e) {
@@ -209,7 +207,6 @@ var Dropdown = {
     $(document).click(function (e) {
       if (!$('.dropdown').has(e.target).length) {
         $(".dropdown.active").removeClass('active');
-        $('html').removeClass('open-dropdown');
       }
     });
   }

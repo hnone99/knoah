@@ -111,7 +111,7 @@
                     <button type="modal" aria-label="모달 닫기" data-dismiss="modal"><i class="icon-x"></i></button>
                 </div>
                 <div class="modal-body">
-                    <h2 class="modal-title">유튜브 채널 수정 
+                    <h2 class="modal-title">유튜브 채널 수정
                         <button type="button" data-toggle="modal" data-target="#modal-modify-channel-info" class="mt-n6">
                             <i class="icon-info-circle"></i>
                         </button>
@@ -376,7 +376,7 @@
                                         </ul>
                                     </div>
                                 </div>
-                        
+
                             </div>
                         </div>
                         <div class="row row-0 py-3 border-bottom border-dark">
@@ -399,45 +399,45 @@
                                     <p class="font-size-16px mb-lg-2">내 채널 예상 조회수</p>
                                     <div class="hits-count"></div>
                                     <div class="typing-txt d-none" data-hitsCount="3">2억 5천만</div>
-                                </div> 
+                                </div>
                             </div>
                         </div>
 
                         <script>
-                            var typingBool = false; 
-                            var typingIdx=0; 
+                            var typingBool = false;
+                            var typingIdx=0;
                             // var hitsCount = 1++;
                             $(".typing-txt").each(function(){
                                 var $this = $(this);
-                                // 타이핑될 텍스트를 가져온다 
-                                var typingTxt = $this.text(); 
+                                // 타이핑될 텍스트를 가져온다
+                                var typingTxt = $this.text();
 
-                                typingTxt=typingTxt.split(""); // 한글자씩 자른다. 
+                                typingTxt=typingTxt.split(""); // 한글자씩 자른다.
                                 typingLengh = $(typingTxt).length;
                                 console.log(typingLengh);
 
-                                if(typingBool==false){ 
-                                // 타이핑이 진행되지 않았다면 
-                                typingBool=true;     
-                                var tyInt = setInterval(typing,100); // 반복동작 
-                                } 
-                                    
-                                function typing(){ 
-                                    if(typingIdx<typingTxt.length){ 
-                                        // 타이핑될 텍스트 길이만큼 반복 
+                                if(typingBool==false){
+                                // 타이핑이 진행되지 않았다면
+                                typingBool=true;
+                                var tyInt = setInterval(typing,100); // 반복동작
+                                }
+
+                                function typing(){
+                                    if(typingIdx<typingTxt.length){
+                                        // 타이핑될 텍스트 길이만큼 반복
                                         for (var i = 0; i < typingLengh; i++ ){
                                             var typingNumber = i++;
                                             console.log(typingNumber);
                                         }
                                         var textNumber = $(typingLengh).eq(i);
                                         $this.siblings(".hits-count").append("<span class='slot-animation' data-count='typing-"+ typingNumber +"'>" + typingTxt[typingIdx] + "</span>");
-                                        // 한글자씩 이어준다. 
-                                        typingIdx++; 
-                                    } else{ 
-                                        //끝나면 반복종료 
-                                        clearInterval(tyInt); 
-                                    } 
-                            }  
+                                        // 한글자씩 이어준다.
+                                        typingIdx++;
+                                    } else{
+                                        //끝나면 반복종료
+                                        clearInterval(tyInt);
+                                    }
+                                }
 
                             });
 
@@ -456,5 +456,5 @@
             </div>
         </div>
     </div>
-    
+
 </div>

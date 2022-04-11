@@ -413,7 +413,7 @@
     .dropdown-value.collapsed{
         border:0;
     }
-   
+
     & + .faq{
         margin-top:-1px;
     }
@@ -435,7 +435,7 @@
         .faq-content{
             padding:20px 0;
         }
-        
+
     }
 }
 
@@ -492,7 +492,7 @@
         display: block;
         text-align: center;
     }
-    
+
 }
 
 
@@ -515,13 +515,13 @@
     overflow: hidden;
 }
 
-// .slot-animation {  
-// /*position: absolute;*/ 
+// .slot-animation {
+// /*position: absolute;*/
 // display: inline-block;
 // animation: slot-machine 0.3s ease-in-out;
 // vertical-align: middle;
 // vertical-align: -webkit-baseline-middle;
-// } 
+// }
 // @keyframes slot-machine {
 //     0% {
 //         transform: translate(0, -100%) scale(1) skew(4deg, 3deg);
@@ -547,14 +547,14 @@
     $typing-second : 0.2 * $name + 's';
 
     [data-count='typing-#{name}']{
-        &.slot-animation {  
-            /*position: absolute;*/ 
+        &.slot-animation {
+            /*position: absolute;*/
             display: inline-block;
             // animation: slot-machine 0.3s ease-in-out;
             animation: slot-machine #{typing-second} ease-in-out;
             vertical-align: middle;
             vertical-align: -webkit-baseline-middle;
-            } 
+            }
             @keyframes slot-machine {
                 0% {
                     transform: translate(0, -100%) scale(1) skew(4deg, 3deg);
@@ -578,4 +578,4 @@
     }
 }
 
-@include typing-slot()
+//@include typing-slot()

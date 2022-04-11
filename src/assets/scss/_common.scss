@@ -194,7 +194,7 @@ textarea{resize: none!important;}
     }
 }
 .datepicker-group{
-    position: absolute;left: 50%;top: 45px;z-index: 1;transform: translateX(-50%);min-width: 600px;
+    position: absolute;left: 0;top: 45px;z-index: 1;min-width: 600px;
     .ui-datepicker{width: 100% !important;}
     .ui-datepicker-group{padding: 1rem;}
     @include media-breakpoint-down(md){
@@ -393,7 +393,7 @@ textarea.form-control{resize: none;}
 }
 
 .modal-loading{
-   
+
     .loading-text{font-size: 24px;font-weight: 700;margin: 1rem 0; margin-top: 47px;}
     .loading-timer{
         display: flex;align-items: center;
