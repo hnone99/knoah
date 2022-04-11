@@ -8,7 +8,7 @@
 .icon-x{width: 15px;height: 15px;background-image: url('../images/icon-x.svg');}
 .icon-angle-left{width: 6px;height: 10px;background-image: url('../images/icon-angle-left.svg');}
 .icon-angle-right{width: 6px;height: 10px;background-image: url('../images/icon-angle-right.svg');}
-.icon-filter{width: 22px;height: 24px;background-image: url('../images/icon-filter.svg');}
+.icon-filter{width: 18px;height: 20px;background-image: url('../images/icon-filter.svg');}
 .icon-hourglass{width: 16px;height: 23px;background-image: url('../images/icon-hourglass.svg');}
 .icon-sort{width:18px; height:18px; background-image: url('../images/icon-sort.svg');}
 .icon-addChannel{width:18px; height:18px; background-image: url('../images/gnb-icon-2.svg');}
@@ -47,17 +47,29 @@
 .min-width-350px{min-width: 350px;}
 
 .height-36px{height:36px;}
-.min-height-480px{
-    min-height: 480px;
-    @include media-breakpoint-down(lg){
+.min-height-36px{
+    min-height:36px;
+    @include media-breakpoint-down(md){
         min-height: auto;
+    }
+}
+.height-500px{
+    height: 500px;
+    @include media-breakpoint-down(lg){
+       height: auto;
     }
 }
 
 .cursor-pointer{cursor: pointer;}
 
-input:focus{outline: none;}
-
+input:focus{outline: none; box-shadow: none;}
+.btn:focus, .btn:active:focus, .btn:active{
+    outline: none!important; box-shadow: none!important; 
+}
+[class^=btn-outline-]:active, [class^=btn-outline-]:active:focus, [class^=btn-outline-]{
+    color: inherit;
+    background-color: initial;
+}
 button,
 .btn{
     i{vertical-align: middle;}
@@ -68,6 +80,10 @@ button,
 
 .btn-lg{
     padding: 0.625rem 1rem;
+}
+
+.line-height{
+    line-height: 1.4!important;
 }
 
 textarea{resize: none!important;}
@@ -254,6 +270,9 @@ textarea.form-control{resize: none;}
     .page-link{
         width: 20px;height: 20px;padding: 0;display: flex;align-items: center;justify-content: center;border: 0;margin: 0 10px;
         &:hover{background: transparent;}
+        &:focus{
+            box-shadow: none;
+        }
     }
     .active .page-link{background: transparent;color: $danger;}
     .icon-angle-left{width: 8px;height: 14px;transform: translateY(1px);}
@@ -281,6 +300,9 @@ textarea.form-control{resize: none;}
             text-align: center;
         }
     }
+    .title-style{
+        font-size:20px;
+    }
     @include media-breakpoint-down(md){
         .modal-dialog{margin-left: 10%;margin-right: 10%;}
         .modal-content{border-radius: 20px;}
@@ -289,7 +311,9 @@ textarea.form-control{resize: none;}
         &.modal-square{
             .modal-close{right: -20px;}
         }
-
+        .title-style{
+            font-size:18px;
+        }
     }
 }
 
@@ -601,6 +625,6 @@ textarea.form-control{resize: none;}
     font-size: 24px;
     height:34px;
     line-height: 33.6px;
-    letter-spacing: -0.12px;
+    letter-spacing: -1.24px;
     width: auto;
 }

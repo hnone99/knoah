@@ -85,9 +85,9 @@
   &:not(:disabled):not(.disabled):active,
   &:not(:disabled):not(.disabled).active,
   .show > &.dropdown-toggle {
-    color: color-yiq($active-background);
-    background-color: $active-background;
-    border-color: $active-border;
+    _color: color-yiq($active-background);
+    _background-color: $active-background;
+    _border-color: $active-border;
 
     &:focus {
       @if $enable-shadows and $btn-active-box-shadow != none {
