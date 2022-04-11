@@ -47,7 +47,12 @@
 .min-width-350px{min-width: 350px;}
 
 .height-36px{height:36px;}
-.min-height-500px{min-height: 500px;}
+.min-height-480px{
+    min-height: 480px;
+    @include media-breakpoint-down(lg){
+        min-height: auto;
+    }
+}
 
 .cursor-pointer{cursor: pointer;}
 
