@@ -502,3 +502,80 @@
         font-size: 14px;
     }
 }
+
+
+.hits-count{
+    font-size:32px;
+    font-weight: 500;
+    min-height:48px;
+    line-height: 48px;
+    width: 100%;
+    white-space: nowrap;
+    text-overflow: initial;
+    overflow: hidden;
+}
+
+// .slot-animation {  
+// /*position: absolute;*/ 
+// display: inline-block;
+// animation: slot-machine 0.3s ease-in-out;
+// vertical-align: middle;
+// vertical-align: -webkit-baseline-middle;
+// } 
+// @keyframes slot-machine {
+//     0% {
+//         transform: translate(0, -100%) scale(1) skew(4deg, 3deg);
+//     }
+//     15% {
+//         transform: translate(0, 100%) scale(1) skew(4deg, 3deg);
+//     }
+//     25% {
+//         transform: translate(0, -50%) scale(1) skew(-4deg, -2deg);
+//     }
+//     50% {
+//         transform: translate(0, -20%) scale(1) skew(1deg, 1deg);
+//     }
+//     75% {
+//         transform: translate(0, 10%) scale(1) skew(-1deg, -1deg);
+//     }
+//     100% {
+//         transform: translate(0, 0%) scale(1) skew(0deg, 0deg);
+//     }
+// }
+
+@mixin typing-slot($name) {
+    $typing-second : 0.2 * $name + 's';
+
+    [data-count='typing-#{name}']{
+        &.slot-animation {  
+            /*position: absolute;*/ 
+            display: inline-block;
+            // animation: slot-machine 0.3s ease-in-out;
+            animation: slot-machine #{typing-second} ease-in-out;
+            vertical-align: middle;
+            vertical-align: -webkit-baseline-middle;
+            } 
+            @keyframes slot-machine {
+                0% {
+                    transform: translate(0, -100%) scale(1) skew(4deg, 3deg);
+                }
+                15% {
+                    transform: translate(0, 100%) scale(1) skew(4deg, 3deg);
+                }
+                25% {
+                    transform: translate(0, -50%) scale(1) skew(-4deg, -2deg);
+                }
+                50% {
+                    transform: translate(0, -20%) scale(1) skew(1deg, 1deg);
+                }
+                75% {
+                    transform: translate(0, 10%) scale(1) skew(-1deg, -1deg);
+                }
+                100% {
+                    transform: translate(0, 0%) scale(1) skew(0deg, 0deg);
+                }
+            }
+    }
+}
+
+@include typing-slot()
