@@ -26,7 +26,13 @@ var Header = {
   menu: function menu() {
     $('.btn-my, .btn-more').on('click', function () {
       $('html').removeClass('is-collapsed');
-      $('.menu-layer').addClass('active');
+
+      if (!$('.menu-layer').is(':visible')) {
+        $('.menu-layer').addClass('active');
+      } else {
+        $('.menu-layer').removeClass('active');
+        $('.menu-layer .dep1 > li').show().removeClass('open');
+      }
     });
     $('.menu-layer .dep1 > li > a').on('click', function (e) {
       if ($(this).parent('li').hasClass('has-sub')) {
@@ -43,7 +49,7 @@ var Header = {
     $(document).on('mouseup', function (e) {
       e.preventDefault();
 
-      if ($('.btn-my').has(e.target).length === 0 && $('.btn-more').has(e.target).length === 0 && $('.menu-layer').has(e.target).length === 0) {
+      if ($('.btn-my').closest('.position-relative').has(e.target).length === 0 && $('.menu-layer').has(e.target).length === 0) {
         $('.menu-layer').removeClass('active');
         $('.menu-layer .dep1 > li').show().removeClass('open');
       }
@@ -57,12 +63,17 @@ var Header = {
   alarm: function alarm() {
     $('.btn-alarm').on('click', function () {
       $('html').removeClass('is-collapsed');
-      $('.alarm-layer').addClass('active');
+
+      if (!$('.alarm-layer').is(':visible')) {
+        $('.alarm-layer').addClass('active');
+      } else {
+        $('.alarm-layer').removeClass('active');
+      }
     });
     $(document).on('mouseup', function (e) {
       e.preventDefault();
 
-      if ($('.btn-alarm').has(e.target).length === 0 && $('.alarm-layer').has(e.target).length === 0) {
+      if ($('.alarm-layer').has(e.target).length === 0) {
         $('.alarm-layer').removeClass('active');
       }
     });
