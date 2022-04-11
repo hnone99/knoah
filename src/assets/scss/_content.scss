@@ -532,7 +532,13 @@
         font-size: 14px;
     }
 }
-
+.pay-btn{
+    min-width: 216px;
+    @include media-breakpoint-down(md){
+        min-width: auto;
+        width:100%;
+    }
+}
 
 .hits-count{
     font-size:32px;
