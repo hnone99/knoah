@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700;900&display=swap');
+
 [class^=icon-]{display: inline-block;background-size: contain;background-repeat: no-repeat;background-position: 0 0;font-style: normal;font-size: 0;line-height: 1;}
 .icon-hamburger{width: 18px;height: 21px;background-image: url('../images/icon-hamburger.svg');}
 .icon-search{width: 22px;height: 22px;background-image: url('../images/icon-search.svg');}
@@ -37,6 +39,7 @@
 
 .min-width-66px{min-width: 66px;}
 .min-width-70px{min-width: 70px;}
+
 .min-width-75px{min-width: 75px;}
 .min-width-100px{min-width: 100px;}
 .min-width-153px{min-width: 153px;}
@@ -675,10 +678,10 @@ textarea.form-control{resize: none;}
 .title-style{
     text-transform: uppercase;
     position:relative;
-    font-weight: bold;
+    font-weight: 900;
     font-size: 24px;
     height:34px;
     line-height: 33.6px;
-    letter-spacing: -1.24px;
+    letter-spacing: -0.12px;
     width: auto;
 }

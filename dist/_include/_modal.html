@@ -147,8 +147,8 @@
                                 max: 100,
                                 step: 10,
                                 slide: function(event, ui) {
-                                    $(".female i").text( ui.value );
-                                    $(".male i").text( 100 - ui.value );
+                                    $(".female i").text(ui.value);
+                                    $(".male i").text(100 - ui.value);
                                     //선택된 값의 뒷자리 자른 후 .active 로 제어 요청!! (현재 5로 설정)
                                     $(".ratio-progress-bar .ratio span").eq(5).siblings().removeClass('active');
                                     $(".ratio-progress-bar .ratio span").eq(5).addClass('active');
@@ -161,17 +161,47 @@
                         <div class="bar-area">
                             <div class="line"></div>
                             <div class="labels">
-                                @@for (var i = 1; i < 7; i++) {
+
                                 <div class="label">
                                     <a href="javascript:;" role="button">
-                                        <span>`+i+`0대</span>
+                                        <span>10대</span>
                                     </a>
                                 </div>
-                                }
+
+                                <div class="label">
+                                    <a href="javascript:;" role="button">
+                                        <span>20대</span>
+                                    </a>
+                                </div>
+
+                                <div class="label">
+                                    <a href="javascript:;" role="button">
+                                        <span>30대</span>
+                                    </a>
+                                </div>
+
+                                <div class="label">
+                                    <a href="javascript:;" role="button">
+                                        <span>40대</span>
+                                    </a>
+                                </div>
+
+                                <div class="label">
+                                    <a href="javascript:;" role="button">
+                                        <span>50대</span>
+                                    </a>
+                                </div>
+
+                                <div class="label">
+                                    <a href="javascript:;" role="button">
+                                        <span>60대</span>
+                                    </a>
+                                </div>
+
                             </div>
                         </div>
                         <script>
-                            $('.select-progress-bar a').on('click',function(e){
+                            $('.select-progress-bar a').on('click', function(e) {
                                 e.preventDefault();
                                 $(this).parent().siblings().find('a').removeClass('active');
                                 $(this).addClass('active');
@@ -295,7 +325,7 @@
                         <div class="col">
                             <div class="border-bottom border-dark">
                                 <div class="custom-control custom-radio pb-2 pt-1">
-                                    <input type="radio" class="custom-control-input select-primary" id="pamentMethod" name="pamentMethod" >
+                                    <input type="radio" class="custom-control-input select-primary" id="pamentMethod" name="pamentMethod">
                                     <label class="custom-control-label" for="pamentMethod">삼성카드 4015-****-****-3106</label>
                                 </div>
                             </div>
@@ -404,51 +434,45 @@
                         </div>
 
                         <script>
-
-
-
-                            $(document).ready(function(){
+                            $(document).ready(function() {
                                 var typingBool = false;
-                                var typingIdx=0;
+                                var typingIdx = 0;
                                 // var hitsCount = 1++;
-                                $(".typing-txt").each(function(){
-                                var $this = $(this);
-                                // 타이핑될 텍스트를 가져온다
-                                var typingTxt = $this.text();
+                                $(".typing-txt").each(function() {
+                                    var $this = $(this);
+                                    // 타이핑될 텍스트를 가져온다
+                                    var typingTxt = $this.text();
 
-                                typingTxt=typingTxt.split(""); // 한글자씩 자른다.
-                                typingLengh = $(typingTxt).length;
-                                console.log(typingLengh);
+                                    typingTxt = typingTxt.split(""); // 한글자씩 자른다.
+                                    typingLengh = $(typingTxt).length;
+                                    console.log(typingLengh);
 
-                                if(typingBool==false){
-                                // 타이핑이 진행되지 않았다면
-                                typingBool=true;
-                                var tyInt = setInterval(typing,100); // 반복동작
-                                }
-
-                                function typing(){
-                                    if(typingIdx<typingTxt.length){
-                                        // 타이핑될 텍스트 길이만큼 반복
-                                        for (var i = 0; i < typingLengh; i++ ){
-                                            var typingNumber = i++;
-                                            console.log(typingNumber);
-                                        }
-                                        var textNumber = $(typingLengh).eq(i);
-                                        $this.siblings(".hits-count").append("<span class='slot-animation'>" + typingTxt[typingIdx] + "</span>");
-                                        // 한글자씩 이어준다.
-                                        typingIdx++;
-                                    } else{
-                                        //끝나면 반복종료
-                                        clearInterval(tyInt);
+                                    if (typingBool == false) {
+                                        // 타이핑이 진행되지 않았다면
+                                        typingBool = true;
+                                        var tyInt = setInterval(typing, 100); // 반복동작
                                     }
-                                }
+
+                                    function typing() {
+                                        if (typingIdx < typingTxt.length) {
+                                            // 타이핑될 텍스트 길이만큼 반복
+                                            for (var i = 0; i < typingLengh; i++) {
+                                                var typingNumber = i++;
+                                                console.log(typingNumber);
+                                            }
+                                            var textNumber = $(typingLengh).eq(i);
+                                            $this.siblings(".hits-count").append("<span class='slot-animation'>" + typingTxt[typingIdx] + "</span>");
+                                            // 한글자씩 이어준다.
+                                            typingIdx++;
+                                        } else {
+                                            //끝나면 반복종료
+                                            clearInterval(tyInt);
+                                        }
+                                    }
+
+                                });
 
                             });
-
-                            });
-                            
-
-
                         </script>
 
                         <br>
