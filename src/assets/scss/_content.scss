@@ -299,7 +299,7 @@
         position:relative;
         font-weight: 500;
         border-left:1px solid #000;
-        i{margin-right: 12px; transition: all 0.35s ease;}
+        i{margin-right: 12px; transition: all 0.35s ease; background-position: center;}
         &.on{
             .icon-addChannel{background-image: url('../images/icon-on-addChannel.svg');}
             .icon-addVideo{background-image: url('../images/icon-on-addVideo.svg');}
@@ -551,67 +551,67 @@
     overflow: hidden;
 }
 
-// .slot-animation {  
-// /*position: absolute;*/ 
-// display: inline-block;
-// animation: slot-machine 0.3s ease-in-out;
-// vertical-align: middle;
-// vertical-align: -webkit-baseline-middle;
-// } 
-// @keyframes slot-machine {
-//     0% {
-//         transform: translate(0, -100%) scale(1) skew(4deg, 3deg);
-//     }
-//     15% {
-//         transform: translate(0, 100%) scale(1) skew(4deg, 3deg);
-//     }
-//     25% {
-//         transform: translate(0, -50%) scale(1) skew(-4deg, -2deg);
-//     }
-//     50% {
-//         transform: translate(0, -20%) scale(1) skew(1deg, 1deg);
-//     }
-//     75% {
-//         transform: translate(0, 10%) scale(1) skew(-1deg, -1deg);
-//     }
-//     100% {
-//         transform: translate(0, 0%) scale(1) skew(0deg, 0deg);
-//     }
-// }
-
-@mixin typing-slot($name) {
-    $typing-second : 0.2 * $name + 's';
-
-    [data-count='typing-#{name}']{
-        &.slot-animation {  
-            /*position: absolute;*/ 
-            display: inline-block;
-            // animation: slot-machine 0.3s ease-in-out;
-            animation: slot-machine #{typing-second} ease-in-out;
-            vertical-align: middle;
-            vertical-align: -webkit-baseline-middle;
-            } 
-            @keyframes slot-machine {
-                0% {
-                    transform: translate(0, -100%) scale(1) skew(4deg, 3deg);
-                }
-                15% {
-                    transform: translate(0, 100%) scale(1) skew(4deg, 3deg);
-                }
-                25% {
-                    transform: translate(0, -50%) scale(1) skew(-4deg, -2deg);
-                }
-                50% {
-                    transform: translate(0, -20%) scale(1) skew(1deg, 1deg);
-                }
-                75% {
-                    transform: translate(0, 10%) scale(1) skew(-1deg, -1deg);
-                }
-                100% {
-                    transform: translate(0, 0%) scale(1) skew(0deg, 0deg);
-                }
-            }
+.slot-animation {  
+/*position: absolute;*/ 
+display: inline-block;
+animation: slot-machine 0.3s ease-in-out;
+vertical-align: middle;
+vertical-align: -webkit-baseline-middle;
+} 
+@keyframes slot-machine {
+    0% {
+        transform: translate(0, -100%) scale(1) skew(4deg, 3deg);
+    }
+    15% {
+        transform: translate(0, 100%) scale(1) skew(4deg, 3deg);
+    }
+    25% {
+        transform: translate(0, -50%) scale(1) skew(-4deg, -2deg);
+    }
+    50% {
+        transform: translate(0, -20%) scale(1) skew(1deg, 1deg);
+    }
+    75% {
+        transform: translate(0, 10%) scale(1) skew(-1deg, -1deg);
+    }
+    100% {
+        transform: translate(0, 0%) scale(1) skew(0deg, 0deg);
     }
 }
+
+// @mixin typing-slot($name) {
+//     $typing-second : 0.2 * $name + 's';
+
+//     [data-count='typing-#{name}']{
+//         &.slot-animation {  
+//             /*position: absolute;*/ 
+//             display: inline-block;
+//             // animation: slot-machine 0.3s ease-in-out;
+//             animation: slot-machine 0.2s ease-in-out;
+//             vertical-align: middle;
+//             vertical-align: -webkit-baseline-middle;
+//             } 
+//             @keyframes slot-machine {
+//                 0% {
+//                     transform: translate(0, -100%) scale(1) skew(4deg, 3deg);
+//                 }
+//                 15% {
+//                     transform: translate(0, 100%) scale(1) skew(4deg, 3deg);
+//                 }
+//                 25% {
+//                     transform: translate(0, -50%) scale(1) skew(-4deg, -2deg);
+//                 }
+//                 50% {
+//                     transform: translate(0, -20%) scale(1) skew(1deg, 1deg);
+//                 }
+//                 75% {
+//                     transform: translate(0, 10%) scale(1) skew(-1deg, -1deg);
+//                 }
+//                 100% {
+//                     transform: translate(0, 0%) scale(1) skew(0deg, 0deg);
+//                 }
+//             }
+//     }
+// }
 
 // @include typing-slot()

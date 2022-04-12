@@ -404,10 +404,14 @@
                         </div>
 
                         <script>
-                            var typingBool = false;
-                            var typingIdx=0;
-                            // var hitsCount = 1++;
-                            $(".typing-txt").each(function(){
+
+
+
+                            $(document).ready(function(){
+                                var typingBool = false;
+                                var typingIdx=0;
+                                // var hitsCount = 1++;
+                                $(".typing-txt").each(function(){
                                 var $this = $(this);
                                 // 타이핑될 텍스트를 가져온다
                                 var typingTxt = $this.text();
@@ -430,7 +434,7 @@
                                             console.log(typingNumber);
                                         }
                                         var textNumber = $(typingLengh).eq(i);
-                                        $this.siblings(".hits-count").append("<span class='slot-animation' data-count='typing-"+ typingNumber +"'>" + typingTxt[typingIdx] + "</span>");
+                                        $this.siblings(".hits-count").append("<span class='slot-animation'>" + typingTxt[typingIdx] + "</span>");
                                         // 한글자씩 이어준다.
                                         typingIdx++;
                                     } else{
@@ -441,6 +445,8 @@
 
                             });
 
+                            });
+                            
 
 
                         </script>
