@@ -21,7 +21,92 @@
                 <h2 class="page-title">메인</h2>
 
                 <div class="main-area">
-                    
+                    <div class="row row-0 flex-lg-row flex-colmun justify-content-lg center">
+                        <div class="col-lg">
+                            <h1>
+                                <img src="../assets/images/main-logo.svg" alt="knoah  로고" class="main-logo">
+                            </h1>
+                        </div>
+                        <div class="col-lg-auto">
+                                <div class="card main-card">
+                                    <div class="">
+                                        <div class="d-flex justify-centent-center">
+                                            <h2 class="title font-weight-bold m-auto">유튜브 채널 등록
+                                                <button type="button" data-toggle="modal" data-target="#modal-modify-channel-info" class="m-r-10 mr-lg-0 mt-n5 mt-lg-n6">
+                                                    <i class="icon-info-circle"></i>
+                                                </button>
+                                            </h2>
+                                        </div>
+                                        <input type="text" class="form-control m-t-20 mt-lg-5" placeholder="채널 URL을 입력해 주세요.">
+                                        <p class="font-size-14px m-t-20 mt-lg-5 text-center">시청자 성비를 선택 해주세요.</p>
+                                        <div class="ratio-progress-bar m-t-10 mt-lg-4">
+                                            <div class="bar-area">
+                                                <div class="line">
+                                                    <p class="female">여성 <i>50</i></p>
+                                                    <p class="male">남성 <i>50</i></p>
+                                                </div>
+                                                <div id="slider"></div>
+                                                <div class="ratio">
+                                                    <span></span>
+                                                    <span></span>
+                                                    <span></span>
+                                                    <span></span>
+                                                    <span class="active"></span>
+                                                    <span></span>
+                                                    <span></span>
+                                                    <span></span>
+                                                    <span></span>
+                                                    <span></span>
+                                                </div>
+                                            </div>
+                                            <script>
+                                                var sliderIdx;
+                                                $("#slider").slider({
+                                                    range: "min",
+                                                    value: 50,
+                                                    min: 0,
+                                                    max: 100,
+                                                    step: 10,
+                                                    slide: function(event, ui) {
+                                                        $(".female i").text( ui.value );
+                                                        $(".male i").text( 100 - ui.value );
+                                                        //선택된 값의 뒷자리 자른 후 .active 로 제어 요청!! (현재 5로 설정)
+                                                        $(".ratio-progress-bar .ratio span").eq(5).siblings().removeClass('active');
+                                                        $(".ratio-progress-bar .ratio span").eq(5).addClass('active');
+                                                    }
+                                                });
+                                            </script>
+                                        </div>
+                                        <p class="font-size-14px m-t-10 mt-lg-4 text-center">시청자 나이대를 선택 해주세요.</p>
+                                        <div class="select-progress-bar m-t-20 mt-lg-5 ">
+                                            <div class="bar-area">
+                                                <div class="line"></div>
+                                                <div class="labels">
+                                                    @@for (var i = 1; i < 7; i++) {
+                                                    <div class="label">
+                                                        <a href="javascript:;" role="button">
+                                                            <span>`+i+`0대</span>
+                                                        </a>
+                                                    </div>
+                                                    }
+                                                </div>
+                                            </div>
+                                            <script>
+                                                $('.select-progress-bar a').on('click',function(e){
+                                                    e.preventDefault();
+                                                    $(this).parent().siblings().find('a').removeClass('active');
+                                                    $(this).addClass('active');
+                                                })
+                                            </script>
+                                        </div>
+                                        <input type="text" class="form-control m-t-20 mt-lg-5" placeholder="노출량을 입력 해주세요.">
+                                        <input type="text" class="form-control m-t-20 mt-lg-5" placeholder="클릭률을 입력 해주세요.">
+                                        <input type="text" class="form-control m-t-20 mt-lg-5" placeholder="시청지속시간(분)을 입력 해주세요.">
+                                        <button class="btn btn-dark btn-block btn-lg  mt-5">등록</button>
+                                    </div>
+                                </div>
+                        </div>
+                    </div>
                 </div>
 
                 <!-- 컨텐츠 끝 -->
