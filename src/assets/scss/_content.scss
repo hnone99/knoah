@@ -206,6 +206,12 @@
             }
         }
     }
+
+    &.membership{
+        &:hover{
+            box-shadow: 0 1px 40px 0 rgba(119, 119, 119, 0.2)!important;
+        }
+    }
 }
 
 .sort{
