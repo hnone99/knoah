@@ -1828,7 +1828,7 @@
 
         <!-- modal : 조회수 폭발기 팝업 -->
         <div class="modal modal-hits modal-square" tabindex="-1" id="modal-hits">
-            <div class="modal-dialog modal-dialog-centered modal-lg" style="max-width: 880px;">
+            <div class="modal-dialog modal-dialog-centered modal-lg modal-dialog-scrollable" style="max-width: 880px;">
                 <div class="modal-content">
                     <div class="modal-close">
                         <button type="modal" aria-label="모달 닫기" data-dismiss="modal"><i class="icon-x"></i></button>
@@ -1838,27 +1838,28 @@
                             <div class="thumbnail">
                                 <iframe src="https://www.youtube.com/embed/PX1oAtwlSzk" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
                             </div>
+
                             <div class="hits-btn-container m-0  px-0">
-                                <div class="row row-0 hits-btns justify-content-between px-0">
-                                    <div class="col-3 col-xl-auto p-r-0 pr-lg-3">
+                                <div class="row row-0 hits-btns justify-content-lg-between justify-content-around px-0">
+                                    <div class="col-3 col-xl-auto p-r-0 pr-lg-3 ml-n2 ml-lg-0">
                                         <a href="javascript:;" class="hits-btn border-0 flex-column justify-content-lg-center flex-lg-row">
                                             <i class="icon-addChannel"></i>
                                             채널 판독기에<br class="d-block d-lg-none"> 추가하기
                                         </a>
                                     </div>
-                                    <div class="col-3 col-xl">
+                                    <div class="col-3 col-xl ml-n2  ml-lg-0">
                                         <a href="javascript:;" class="hits-btn flex-column flex-lg-row">
                                             <i class="icon-addVideo"></i>
                                             영상<br class="d-block d-lg-none"> 수집하기
                                         </a>
                                     </div>
-                                    <div class="col-3 col-xl">
+                                    <div class="col-3 col-xl ml-n2  ml-lg-0">
                                         <a href="javascript:;" class="hits-btn flex-column flex-lg-row">
                                             <i class="icon-notRecomendVideo"></i>
                                             영상<br class="d-block d-lg-none"> 추천 안하기
                                         </a>
                                     </div>
-                                    <div class="col-3 col-xl m-r-0 mr-n3">
+                                    <div class="col-3 col-xl mr-n3 ml-n2 ml-lg-0">
                                         <a href="javascript:;" class="hits-btn flex-column flex-lg-row">
                                             <i class="icon-notRecomendChannel"></i>
                                             채널<br class="d-block d-lg-none"> 추천 안하기
@@ -1866,93 +1867,116 @@
                                     </div>
                                 </div>
                             </div>
-                            <div class="row row-20 py-5 border-top border-bottom border-dark align-items-center">
-                                <div class="col-xl-auto">
-                                    <img src="../assets/images/@profile.jpg" alt="채널이미지" class="channel-img">
+                            <div class="row row-20 py-3 py-lg-5 channel-information-wrap align-items-center">
+                                <div class="col-auto">
+                                    <div class="row row-20 align-items-center">
+                                        <div class="col-auto">
+                                            <img src="../assets/images/@profile.jpg" alt="채널이미지" class="channel-img">
+                                        </div>
+                                        <div class="col">
+                                            <div class="d-block d-xl-none channel-name m-0">신사임당</div>
+                                        </div>
+                                    </div>
                                 </div>
-                                <div class="col-xl mt-3 mt-xl-0">
+                                <div class="col-xl">
                                     <div class="d-flex flex-column">
-                                        <div class="channel-name m-0">신사임당</div>
+                                        <div class="d-none d-xl-block channel-name m-0 mt-2">신사임당</div>
                                         <div class="channel-desc m-t-5">
                                             <ul>
                                                 <li class="mb-2">
                                                     <div class="row row-0 align-items-center font-size-14px">
-                                                        <div class="col-5 col-lg-auto m-t-5 mt-lg-0"><span>|&emsp;구독자 : 170만</span></div>
-                                                        <div class="col-7 col-lg-auto m-t-5 mt-lg-0"><span>|&emsp;동영상 : 223개</span></div>
-                                                        <div class="col-5 col-lg-auto m-t-5 mt-lg-0"><span>|&emsp;누적조회수 : 2억 5천만</span></div>
-                                                        <div class="col-7 col-lg-auto m-t-5 mt-lg-0"><span>|&emsp;오픈일 : 2022.03.01</span></div>
+                                                        <div class="col-5 col-lg-auto"><span><i class="bar mr-3 mr-lg-2"></i>구독자 : 170만</span></div>
+                                                        <div class="col-7 col-lg-auto"><span><i class="bar mr-3 mr-lg-2"></i>동영상 : 223개</span></div>
+                                                        <div class="col-5 col-lg-auto"><span><i class="bar mr-3 mr-lg-2"></i>누적조회수 : 2억 5천만</span></div>
+                                                        <div class="col-7 col-lg-auto"><span><i class="bar mr-3 mr-lg-2"></i>오픈일 : 2022.03.01</span></div>
                                                     </div>
                                                 </li>
                                             </ul>
                                         </div>
                                     </div>
-
                                 </div>
                             </div>
-                            <div class="row row-0 py-3 border-bottom border-dark">
-                                <div class="col-4 border-right border-dark">
-                                    <div class="d-flex justify-content-center flex-column align-items-center py-lg-5">
-                                        <p class="font-size-16px mb-lg-2">조회수</p>
-                                        <div class="hits-count"></div>
-                                        <div class="typing-txt d-none" data-hitsCount="1">1,740,000</div>
+                            <div class="row row-0 py-0 py-lg-3 count-list-wrap">
+                                <div class="col-lg-4 count-list">
+                                    <div class="row row-0 justify-content-center flex-lg-column align-items-center justify-content-lg-center py-lg-3">
+                                        <div class="col-6 col-lg-12">
+                                            <p class="m-l-10 ml-lg-0 mb-0 mb-lg-2">조회수</p>
+                                        </div>
+                                        <div class="col-6 col-lg-12">
+                                            <div class="hits-count text1">
+                                                <span>1,740,000</span>
+                                            </div>
+                                        </div>
                                     </div>
                                 </div>
-                                <div class="col-4 border-right border-dark">
-                                    <div class="d-flex justify-content-center flex-column align-items-center py-lg-5">
-                                        <p class="font-size-16px mb-lg-2">동영상 예상 수익</p>
-                                        <div class="hits-count"></div>
-                                        <div class="typing-txt d-none" data-hitsCount="2">￦ 35,000</div>
+                                <div class="col-lg-4 count-list">
+                                    <div class="row row-0 justify-content-center flex-lg-column align-items-center py-lg-3">
+                                        <div class="col-6 col-lg-12">
+                                            <p class="m-l-10 ml-lg-0 mb-0  mb-lg-2">동영상 예상 수익</p>
+                                        </div>
+                                        <div class="col-6 col-lg-12">
+                                            <div class="hits-count text2">
+                                                <span>₩ 35,000</span>
+                                            </div>
+                                        </div>
                                     </div>
                                 </div>
-                                <div class="col-4">
-                                    <div class="d-flex justify-content-center flex-column align-items-center py-lg-5">
-                                        <p class="font-size-16px mb-lg-2">내 채널 예상 조회수</p>
-                                        <div class="hits-count"></div>
-                                        <div class="typing-txt d-none" data-hitsCount="3">2억 5천만</div>
+                                <div class="col-lg-4 count-list">
+                                    <div class="row row-0 justify-content-center flex-lg-column align-items-center py-lg-3">
+                                        <div class="col-6 col-lg-12">
+                                            <p class="m-l-10 ml-lg-0 mb-0  mb-lg-2">내 채널 예상 조회수</p>
+                                        </div>
+                                        <div class="col-6 col-lg-12">
+                                            <div class="hits-count text3">
+                                                <span>2억 5천만</span>
+                                            </div>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
-
+                            <script src='https://cdnjs.cloudflare.com/ajax/libs/gsap/1.18.0/TweenMax.min.js'></script>
+                            <script src='https://cdnjs.cloudflare.com/ajax/libs/lettering.js/0.7.0/jquery.lettering.min.js'></script>
                             <script>
                                 $(document).ready(function() {
-                                    var typingBool = false;
-                                    var typingIdx = 0;
-                                    // var hitsCount = 1++;
-                                    $(".typing-txt").each(function() {
-                                        var $this = $(this);
-                                        // 타이핑될 텍스트를 가져온다
-                                        var typingTxt = $this.text();
-
-                                        typingTxt = typingTxt.split(""); // 한글자씩 자른다.
-                                        typingLengh = $(typingTxt).length;
-                                        console.log(typingLengh);
-
-                                        if (typingBool == false) {
-                                            // 타이핑이 진행되지 않았다면
-                                            typingBool = true;
-                                            var tyInt = setInterval(typing, 100); // 반복동작
-                                        }
-
-                                        function typing() {
-                                            if (typingIdx < typingTxt.length) {
-                                                // 타이핑될 텍스트 길이만큼 반복
-                                                for (var i = 0; i < typingLengh; i++) {
-                                                    var typingNumber = i++;
-                                                    console.log(typingNumber);
-                                                }
-                                                var textNumber = $(typingLengh).eq(i);
-                                                $this.siblings(".hits-count").append("<span class='slot-animation'>" + typingTxt[typingIdx] + "</span>");
-                                                // 한글자씩 이어준다.
-                                                typingIdx++;
-                                            } else {
-                                                //끝나면 반복종료
-                                                clearInterval(tyInt);
-                                            }
-                                        }
-
-                                    });
+                                    $(".hits-count").lettering();
 
                                 });
+                                $(document).ready(function() {
+                                    textAnimation();
+                                }, 100);
+
+                                function textAnimation() {
+                                    var text1 = new TimelineMax();
+                                    var text2 = new TimelineMax();
+                                    var text3 = new TimelineMax();
+                                    text1.staggerFromTo(".text1 span", 0.8, {
+                                        ease: Back.easeOut.config(1.7),
+                                        opacity: 0,
+                                        bottom: -50
+                                    }, {
+                                        ease: Back.easeOut.config(1.7),
+                                        opacity: 1,
+                                        bottom: 0
+                                    }, 0.02);
+                                    text2.staggerFromTo(".text2 span", 1, {
+                                        ease: Back.easeOut.config(1.7),
+                                        opacity: 0,
+                                        bottom: -60
+                                    }, {
+                                        ease: Back.easeOut.config(1.7),
+                                        opacity: 1,
+                                        bottom: 0
+                                    }, 0.02);
+                                    text3.staggerFromTo(".text3 span", 1.2, {
+                                        ease: Back.easeOut.config(1.7),
+                                        opacity: 0,
+                                        bottom: -70
+                                    }, {
+                                        ease: Back.easeOut.config(1.7),
+                                        opacity: 1,
+                                        bottom: 0
+                                    }, 0.02);
+                                }
                             </script>
 
                             <br>
