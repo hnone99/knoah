@@ -304,7 +304,7 @@ textarea.form-control{resize: none;}
  
 }
 .popover-body{
-    overflow: visible!important;
+    overflow-y: visible!important;
     .popover-content{
         max-height: 85vh;
         overflow: visible;
