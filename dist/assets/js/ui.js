@@ -73,11 +73,7 @@ var Header = {
     $(document).on('mouseup', function (e) {
       e.preventDefault();
 
-<<<<<<< HEAD
-      if ($('.alarm-layer').has(e.target).length === 0) {
-=======
       if ($('.btn-alarm').closest('.position-relative').has(e.target).length === 0 && $('.alarm-layer').has(e.target).length === 0) {
->>>>>>> 099788042e3d0db0b4317aece4e9b76d5a6d1c95
         $('.alarm-layer').removeClass('active');
       }
     });
