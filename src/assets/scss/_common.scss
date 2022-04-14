@@ -292,13 +292,14 @@ textarea.form-control{resize: none;}
 .modal[data-overlap=true]{
     z-index: 1052;
 }
+.modal-title{color:#000;}
 .modal{
     .modal-content{box-shadow: 0 1px 30px 0 rgba(119, 119, 119, 0.2);border: 0;border-radius: 36px;}
     .modal-close{position: absolute;right: -15px;top: -5px;line-height: 1;
         button{vertical-align: top;line-height: 1;}
     }
     .modal-body{padding: 40px 60px;}
-    .modal-title{font-size: 20px;font-weight: 700;line-height: 1.4;text-align: center;margin-bottom: 1rem; color:#000;}
+    .modal-title{font-size: 20px;font-weight: 700;line-height: 1.4;text-align: center;margin-bottom: 1rem; color: #000 !important;}
     &.modal-square{
         .modal-close{right: -30px; top: -3px;}
         .modal-content{border-radius: 0;border: 1px solid #000;}
@@ -417,8 +418,8 @@ textarea.form-control{resize: none;}
 
 .keyword-wrap{margin: -10px -7px;}
 .keyword{
-    background: #efefef;padding: 5px 1rem 6px;border-radius: 30px;position: relative;margin: 10px 7px;display: inline-flex;
-    a{color: #8c8c8c;font-size: 14px;text-decoration: none;}
+    background: #efefef;padding: 5px 1rem 6px;border-radius: 30px;position: relative;margin: 10px 7px;display: inline-flex; 
+    a{color: #8c8c8c;font-size: 14px;text-decoration: none; max-width: 80px;}
     button{position: absolute;right: -8px;top: -8px;line-height: 1;font-size: 0;}
     .icon-x{width: 9px;height: 9px;vertical-align: top;}
     @include media-breakpoint-down(md){

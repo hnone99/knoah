@@ -66,7 +66,7 @@ var Header = {
 		});
 		$(document).on('mouseup',function(e){
 			e.preventDefault();
-			if ($('.alarm-layer').has(e.target).length === 0) {
+			if ($('.btn-alarm').closest('.position-relative').has(e.target).length === 0 && $('.alarm-layer').has(e.target).length === 0) {
 				$('.alarm-layer').removeClass('active');
 			}
 		});
