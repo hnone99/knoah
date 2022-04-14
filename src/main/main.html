@@ -32,7 +32,12 @@
                                     <div class="">
                                         <div class="d-flex justify-centent-center">
                                             <h2 class="title font-weight-bold m-auto">유튜브 채널 등록
-                                                <button type="button" data-toggle="modal" data-target="#modal-modify-channel-info" class="m-r-10 mr-lg-0 mt-n5 mt-lg-n6">
+                                                <!-- pc에만 팝오버 형태로 보여지는 버튼입니다.  아래 스크립트 확인 필요-->
+                                                <button type="button" data-toggle="popover" class="d-none d-lg-block m-r-10 mr-lg-0 mt-n5 mt-lg-n6">
+                                                    <i class="icon-info-circle"></i>
+                                                </button>
+                                                <!-- 모바일에서만 모달 형태로 보여지는 버튼입니다.  -->
+                                                <button type="button" data-toggle="modal" data-target="#modal-modify-channel-info" class="d-block d-lg-none m-r-10 mr-lg-0 mt-n5 mt-lg-n6">
                                                     <i class="icon-info-circle"></i>
                                                 </button>
                                             </h2>
@@ -77,7 +82,7 @@
                                                 });
                                             </script>
                                         </div>
-                                        <p class="font-size-14px m-t-10 mt-lg-4 text-center">시청자 나이대를 선택 해주세요.</p>
+                                        <p class="font-size-14px m-t-10 mt-lg-3 text-center">시청자 나이대를 선택 해주세요.</p>
                                         <div class="select-progress-bar m-t-20 mt-lg-5 ">
                                             <div class="bar-area">
                                                 <div class="line"></div>
@@ -122,6 +127,15 @@
 
     <script>
         $(document).ready(function () {
+            $('[data-toggle="popover"]').popover({
+                placement : 'right',
+                html : true,
+                title : 'User Info <a href="#" class="close" data-dismiss="alert">&times;</a>',
+                content : '<div class="popover-content"><img src="/examples/images/avatar-tiny.jpg" class="mr-3" alt="Sample Image"><div class="media-body"><h5 class="media-heading">Jhon Carter</h5><p>Excellent Bootstrap popover! I really love it.</p></div></div>'
+            });
+            $(document).on("click", ".popover .close" , function(){
+                $(this).closest(".popover").popover('hide');
+            });
         })
     </script>
 

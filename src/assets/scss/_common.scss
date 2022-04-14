@@ -285,6 +285,36 @@ textarea.form-control{resize: none;}
         .page-link{font-size: 12px;margin: 0 4px;}
     }
 }
+.popover{box-shadow: 0 1px 30px 0 rgba(119, 119, 119, 0.2);border: 0;border-radius: 36px;
+    width: 400px; 
+    top: 215px!important;
+    left: 10px!important;
+    height: 650px;
+    margin: 37px 0;
+    padding: 10px 60px 0 60px;
+    background-color: #fff;
+    z-index: 2;
+}
+.popover-header{
+    font-size: 20px;font-weight: 700;line-height: 1.4;text-align: center;margin-bottom: 1rem; color: #000 !important; width: 100%; position:relative;
+    .close{position: absolute;
+        right: -90px;
+        top: -10px;
+    }
+ 
+}
+.popover-body{
+    overflow: visible!important;
+    .popover-content{
+        max-height: 85vh;
+        overflow: visible;
+        .popover-body{
+            margin: 37px 0;
+            padding: 10px 60px 0 60px;
+        }
+    }
+}
+
 .modal-backdrop ~ .modal-backdrop{
     z-index: 1051;
     ~ .modal-backdrop{z-index: 1053;}
