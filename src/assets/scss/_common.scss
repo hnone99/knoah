@@ -664,27 +664,41 @@ textarea.form-control{resize: none;}
 }
 
 .custom-radio{
+    padding-left:22px;
     .custom-control-label{
         font-size: 14px;
         line-height: 21px;
         &::before{
             width:14px;
             height:14px;
-            top:5px;
-            left:-20px;
+            top:4px;
+            left:-22px;
         }
         &::after{
             width: 12px;
             height: 12px;
             border-radius: 50%;
-            top: 5px;
+            top: 4px;
             border: 2px solid #fff;
             margin: 1px;
-            left:-20px;
+            left:-22px;
+        }
+    }
+    @include media-breakpoint-down(md){
+        padding-left: 20px;
+        .custom-contorl-label{
+            font-size: 14px;
+            &::before{
+                left:-20px;
+            }
+            &::after{
+                left:-20px;
+            }
         }
     }
 }
 .custom-checkbox{
+    padding-left:24px;
     .custom-control-label{
         font-size: 14px;
         line-height: 14px;
@@ -702,22 +716,13 @@ textarea.form-control{resize: none;}
         }
         @include media-breakpoint-down(md){
             font-size: 14px;
+            &::before{
+                top:0.9px;
+            }
         }
     }
 }
 
-
-.custom-radio{
-    padding-left:20px;
-    .custom-contorl-label{
-        font-size: 16px;
-        left:-10px;
-
-        @include media-breakpoint-down(md){
-            font-size: 14px;
-        }
-    }
-}
 .custom-radio .custom-control-input:checked~.custom-control-label::before{
     background-color: transparent;
 }
