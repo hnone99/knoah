@@ -308,7 +308,8 @@ textarea.form-control{resize: none;}
 .popover-body{
     overflow-y: auto!important;
     .popover-content{
-        max-height: 85vh;
+        max-height: 574px;
+        // max-height: 85vh;
         overflow: auto;
         .popover-body{
             // margin: 37px 0;
