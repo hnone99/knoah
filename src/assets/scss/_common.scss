@@ -290,8 +290,7 @@ textarea.form-control{resize: none;}
     top: 215px!important;
     left: 10px!important;
     height: 650px;
-    // padding: 37px 0;
-    padding: 47px 8px 47px 8px;
+    padding: 47px 0;
     background-color: #fff;
     z-index: 2;
 }
@@ -299,7 +298,7 @@ textarea.form-control{resize: none;}
     font-size: 20px;font-weight: 700;line-height: 1.4;text-align: center;color: #000 !important; width: 100%; position:relative;
     .close{
         position: absolute;
-        right: -24px;
+        right: -15px;
         top: -58px;
         opacity: 1;
     }
@@ -308,7 +307,7 @@ textarea.form-control{resize: none;}
 .popover-body{
     overflow-y: auto!important;
     height: 100%;
-    padding:0 30px;
+    padding:0 38px;
     .popover-content{
         overflow: auto;
     }
