@@ -108,13 +108,12 @@
                                         <input type="text" class="form-control m-t-20 mt-lg-5" placeholder="클릭률을 입력 해주세요.">
                                         <input type="text" class="form-control m-t-20 mt-lg-5" placeholder="시청지속시간(분)을 입력 해주세요.">
                                         <button class="btn btn-dark btn-block btn-lg  mt-5">등록</button>
+                                        
                                     </div>
                                 </div>
                         </div>
                     </div>
                 </div>
-
-                <!-- 컨텐츠 끝 -->
 
             </main>
         </div>
@@ -130,8 +129,8 @@
             $('[data-toggle="popover"]').popover({
                 placement : 'right',
                 html : true,
-                title : 'User Info <a href="#" class="close" data-dismiss="alert">&times;</a>',
-                content : '<div class="popover-content"><img src="/examples/images/avatar-tiny.jpg" class="mr-3" alt="Sample Image"><div class="media-body"><h5 class="media-heading">Jhon Carter</h5><p>Excellent Bootstrap popover! I really love it.</p></div></div>'
+                title : '<a href="#" class="close" data-dismiss="alert"><i class="icon-x"></i></a>',
+                content : '<div class="popover-content"> <p class="font-size-14px mb-4">1.유튜브에 접속.</p><img src="https://unsplash.it/800/600?image=59" alt="Sample Image"><p class="font-size-14px mt-5 mb-4">2. 유튜브 스튜디오 클릭.</p><img src="https://unsplash.it/800/600?image=59" alt="Sample Image"></div>'
             });
             $(document).on("click", ".popover .close" , function(){
                 $(this).closest(".popover").popover('hide');
