@@ -67,7 +67,7 @@
 
 input:focus{outline: none; box-shadow: none;}
 .btn:focus, .btn:active:focus, .btn:active{
-    outline: none!important; box-shadow: none!important; 
+    outline: none!important; box-shadow: none!important;
 }
 [class^=btn-outline-]:active, [class^=btn-outline-]:active:focus, [class^=btn-outline-]{
     color: inherit;
@@ -109,7 +109,14 @@ textarea{resize: none!important;}
 
 .btn-outline-danger{background-color: rgba(255, 0, 0, 0.05);}
 
-.table-wrap{margin: 0 -4px;position: relative;}
+.table-wrap{
+    margin: 0 -4px;position: relative;max-height: 50vh;overflow-y: auto;overflow-x: hidden;
+    &.is-scrolled{
+        .table.table-data{
+            border-collapse: separate !important;
+        }
+    }
+}
 .table{
     position: relative;
     > thead > tr > th{white-space: nowrap;}
@@ -123,12 +130,17 @@ textarea{resize: none!important;}
         td{font-size: 12px;padding: .75rem .5625rem;}
     }
     &.table-data{
-        border-collapse: collapse !important;
+        border-collapse: collapse !important;border-top: 0;
         > thead,
         > tbody{
             > tr{
                 > th,
                 > td{border-left: 4px solid #fff;border-right: 4px solid #fff;}
+            }
+        }
+        > thead{
+            > tr{
+                > th{position: sticky;top: 0;background: #fff;}
             }
         }
         @include media-breakpoint-down(md){
@@ -286,7 +298,7 @@ textarea.form-control{resize: none;}
     }
 }
 .popover{box-shadow: 0 1px 30px 0 rgba(119, 119, 119, 0.2);border: 0;border-radius: 36px;
-    width: 400px; 
+    width: 400px;
     top: 215px!important;
     left: 10px!important;
     height: 650px;
@@ -302,7 +314,7 @@ textarea.form-control{resize: none;}
         top: -58px;
         opacity: 1;
     }
- 
+
 }
 .popover-body{
     overflow-y: auto!important;
@@ -446,7 +458,7 @@ textarea.form-control{resize: none;}
 
 .keyword-wrap{margin: -10px -7px;}
 .keyword{
-    background: #efefef;padding: 5px 1rem 6px;border-radius: 30px;position: relative;margin: 10px 7px;display: inline-flex; 
+    background: #efefef;padding: 5px 1rem 6px;border-radius: 30px;position: relative;margin: 10px 7px;display: inline-flex;
     a{color: #8c8c8c;font-size: 14px;text-decoration: none; max-width: 80px;}
     button{position: absolute;right: -8px;top: -8px;line-height: 1;font-size: 0;}
     .icon-x{width: 9px;height: 9px;vertical-align: top;}
