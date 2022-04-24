@@ -606,6 +606,9 @@
             height: 14px;
         }
     }
+    .hits-channel-label{
+        border-right:1px solid $dark;
+    }
     @include media-breakpoint-down(md){
         .modal-body{
             padding-top:0!important;
@@ -620,6 +623,10 @@
             .bar{
                 height: 11px;
             }
+        }
+        .hits-channel-label{
+            border-right:0;
+            border-bottom:1px solid $dark;
         }
     }
 }
@@ -641,3 +648,4 @@
         }
     }
 }
+

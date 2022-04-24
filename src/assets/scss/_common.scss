@@ -49,6 +49,7 @@
 .min-width-270px{min-width: 270px;}
 .min-width-350px{min-width: 350px;}
 
+.height-14px{height:14px}
 .height-36px{height:36px;}
 .min-height-36px{
     min-height:36px;
@@ -363,6 +364,15 @@ textarea.form-control{resize: none;}
         }
     }
 
+    &.modal-hits{
+        .modal-dialog-scrollable{
+            .modal-body{
+                margin:40px 0;
+                padding:38px 78px;
+            }
+        }
+    }
+
     .form-control{
         &::placeholder{
             text-align: center;
@@ -536,14 +546,7 @@ textarea.form-control{resize: none;}
     }
 }
 
-.modal-hits{
-    .modal-dialog-scrollable{
-        .modal-body{
-            margin:90px 0;
-            padding:0 76px;
-        }
-    }
-}
+
 
 .card{
     border-radius: 0;
