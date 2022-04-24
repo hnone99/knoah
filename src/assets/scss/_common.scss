@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700;900&display=swap');
 
 [class^=icon-]{display: inline-block;background-size: contain;background-repeat: no-repeat;background-position: 0 0;font-style: normal;font-size: 0;line-height: 1;}
 .icon-hamburger{width: 18px;height: 21px;background-image: url('../images/icon-hamburger.svg');}
@@ -84,6 +84,7 @@ input:focus{outline: none; box-shadow: none;}
 button,
 .btn{
     i{vertical-align: middle;}
+    img{vertical-align: text-bottom;}
 }
 @include media-breakpoint-down(md){
     .btn{font-size: 13px;}
@@ -473,12 +474,23 @@ textarea.form-control{resize: none;}
 .dataTables_length,
 .dataTables_paginate{display: none;}
 
-.keyword-wrap{margin: -10px -7px;}
+.keyword-wrap{
+    max-height: 104px;
+    overflow-y: auto;
+    margin: -10px -7px;
+    @include media-breakpoint-down(md){
+        max-height: 95px;
+    }
+}
 .keyword{
     background: #efefef;padding: 5px 1rem 6px;border-radius: 30px;position: relative;margin: 10px 7px;display: inline-flex;
     a{color: #8c8c8c;font-size: 14px;text-decoration: none; max-width: 80px;}
     button{position: absolute;right: -8px;top: -8px;line-height: 1;font-size: 0;}
     .icon-x{width: 9px;height: 9px;vertical-align: top;}
+    &.on{
+        background: $dark;
+        a{ color:$white;}
+    }
     @include media-breakpoint-down(md){
         a{font-size: 12px;}
     }
@@ -764,3 +776,4 @@ textarea.form-control{resize: none;}
     width: auto;
     font-family: 'Roboto', sans-serif;
 }
+

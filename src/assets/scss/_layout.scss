@@ -141,18 +141,16 @@ aside{
 }
 
 .header-search{
-    border-radius: 50rem;background: #efefef;width: 462px;height: 42px;position: absolute;left: 50%;top: 50%;transform: translate(-50%, -50%);
-    .form-control{border: 0;background: transparent;height: 100%;border-radius: 50rem;padding-left: 30px;padding-right: 30px;}
+    border-radius: 50rem;background: #efefef;width: 462px;height: 42px;position: absolute;left: 50%;top: 50%;transform: translate(-50%, -50%); 
+    .form-control{border: 0;background: transparent;height: 100%;border-radius: 50rem;padding-left: 30px;padding-right: 60px;}
     .btn-search{position: absolute;right: 30px;top: 50%;transform: translateY(-50%);font-size: 15px;}
     i{color: #8c8c8c;}
 
     main &{
-        position: relative; width: auto; transform: none; left: auto; top: auto; margin:20px 0 38px 0;
+        position: relative; width: auto; transform: none; left: auto; top: auto; margin:20px 0 60px 0;
     }
     .main main &{width:462px;}
-    .main #header &{
-        display:none!important;
-    }
+
 }
 
 .header-menu{

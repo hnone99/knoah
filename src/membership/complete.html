@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    @@include('@@webRoot/_include/_head.html')
+</head>
+
+<body>
+
+    <div id="wrap">
+
+        @@include('@@webRoot/_include/_header.html')
+
+        <div id="container-block">
+
+            @@include('@@webRoot/_include/_aside.html')
+
+            <main id="content" role="main">
+
+                <!-- 컨텐츠 시작 -->
+                <h2 class="page-title">멤버십 안내</h2>
+
+                <div class="d-flex flex-column flex-wrap  membership-complete-container">
+                    <div class="membership-complete-header">
+                        <div class="top"><strong>신사임당님</strong> 축하합니다!</div>
+                        <div class="d-flex align-items-baseline justify-content-center bottom"><img src="../assets/images/logo.svg" alt="knoah 로고" class="logo-img"><strong>의 <span class="title-style">SILVER<span class="text-danger">.</span> </span>멤버십이 시작되었습니다.</strong></div>
+                    </div>
+                    <div class="membership-complete-body">
+                        <div class="body-top">
+                            <div class="d-flex justify-content-between">
+                                <div class="title font-weight-bold">멤버십 기간</div>
+                                <div class="font-weight-medium font-size-16px">2022. 04. 01 ~ 2022. 05. 01</div>
+                            </div>
+                            <div class="d-flex justify-content-between">
+                                <div class="title font-weight-bold">다음 결제일</div>
+                                <div class="font-weight-medium font-size-16px">2022. 05. 01</div>
+                            </div>
+                            <div class="d-flex justify-content-between">
+                                <div class="title font-weight-bold">결제 예정금액</div>
+                                <div class="font-weight-medium font-size-16px">
+                                    <del class="discount">
+                                        49,000
+                                        <div class="percent">10%</div>
+                                    </del>
+                                    <span class="ml-2  font-weight-medium">44,100</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="body-middle">
+                            <div class="row row-0 p-b-30 border-bottom align-items-center">
+                                <div class="col-lg-auto overflow-hidden">
+                                    <div class="d-flex align-items-center">
+                                        <div class="membership-img" style="background-image:url(../assets/images/icon-member-silver.svg)"></div>
+                                        <div class="title-style m-l-10 p-r-20">silver<span class="text-danger">.</span></div>
+                                    </div>
+                                </div>
+                                <div class="col-lg">
+                                    <div class="row row-20 member-sort-info">
+                                        <div class="col-lg-auto">
+                                            <div class="d-flex flex-lg-column">
+                                                <strong>웹 트렌드</strong>
+                                                <p>300회/월</p>
+                                            </div>
+                                        </div>
+                                        <div class="col-lg-auto">
+                                            <div class="d-flex flex-lg-column">
+                                                <strong>채널 판독기</strong>
+                                                <p>30개 채널 등록 & 300회/월</p>
+                                            </div>
+                                        </div>
+                                        <div class="col-lg-auto">
+                                            <div class="d-flex flex-lg-column">
+                                                <strong>조회수 폭발기</strong>
+                                                <p>30회/월</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="row row-25 gnb-info">
+                                <div class="col-lg-auto">
+                                    <div class="gnb-label webtrend">web trends</div>
+                                </div>
+                                <div class="col-lg-7">
+                                    <div class="gnb-label-desc">
+                                        키워드로 웹상에서의 트렌드를 확인
+                                    </div>
+                                </div>
+                                <div class="col-lg-auto m-t-15 mt-lg-2">
+                                    <div class="gnb-label channel-analysis">channel analysis</div>
+                                </div>
+                                <div class="col-lg-7 mt-0 mt-lg-2">
+                                    <div class="gnb-label-desc">
+                                        주목하는 채널의 데이터를 한눈에 확인
+                                    </div>
+                                </div>
+                                <div class="col-lg-auto m-t-15  mt-lg-2">
+                                    <div class="gnb-label topic-mining">topic mining</div>
+                                </div>
+                                <div class="col-lg-7 mt-0 mt-lg-2">
+                                    <div class="gnb-label-desc">
+                                        카테고리에 맞는 히트 할 수 있는 주제 추천
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="body-bottom">
+                            Knoah의 다양한 서비스를 누려보세요!
+                        </div>
+                    </div>
+                </div>
+                <!-- 컨텐츠 끝 -->
+
+            </main>
+        </div>
+
+        @@include('@@webRoot/_include/_footer.html')
+
+    </div>
+
+    @@include('@@webRoot/_include/_modal.html')
+
+    <script>
+        $(document).ready(function(){
+            $(".dropdown-value").on("click", function(){
+                $(this).parent(".dropdown").toggleClass("active");
+                $(this).parent().parent(".faq").toggleClass("active");
+            });
+        })
+    </script>
+
+</body>
+
+</html>

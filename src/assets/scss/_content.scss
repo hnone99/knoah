@@ -270,13 +270,7 @@
     }
 }
 
-.keyword-wrap{
-    max-height: 104px;
-    overflow-y: auto;
-    @include media-breakpoint-down(md){
-        max-height: 95px;
-    }
-}
+
 
 .collapse.show{
     &:not(.transition-none){
@@ -606,8 +600,8 @@
             height: 14px;
         }
     }
-    .hits-channel-label{
-        border-right:1px solid $dark;
+    .hits-channel-label-info{
+        border-left:1px solid $dark;
     }
     @include media-breakpoint-down(md){
         .modal-body{
@@ -625,8 +619,13 @@
             }
         }
         .hits-channel-label{
-            border-right:0;
             border-bottom:1px solid $dark;
+        }
+        .hits-channel-label-info{
+            border-left:0;
+        }
+        .bar.height-14px{
+            height:10px;
         }
     }
 }
@@ -649,3 +648,230 @@
     }
 }
 
+
+.membership-complete-container{
+    max-width: 600px;
+    margin:auto;
+    .membership-complete-header{
+        text-align: center;
+        font-size: 24px;
+        font-weight: 500;
+        .logo-img{width:113px; height:34.5px}
+    }
+    .membership-complete-body{
+        border-top: 1px solid #ff0000;
+        border-bottom: 1px solid #ff0000;
+        margin-top: 26px;
+        .body-top{
+            padding: 50px 115px;
+            .title{
+                &::before{
+                    width: 4px;
+                    height: 4px;
+                    top: 1px;
+                    left: -6px;
+                }
+            }
+            > div {
+                & + div{
+                    margin-top: 22px;
+                }
+            }
+            .discount{
+                position: relative;
+                color:#8c8c8c;
+                font-weight: bold;
+                padding-right:40px;
+                &::before{
+                    background: #ff0000;
+                }
+                &::after{
+                    background: #ff0000;
+                    width: 11px;
+                    right: -5px;
+                    top: 50%;
+                    transform: rotate(39deg) translate(-6px, 0);
+                }
+                .percent{
+                    position: absolute;
+                    font-size: 10px;
+                    color: #ff0000;
+                    top: -2px;
+                    right: 15px;
+                }
+            }
+        }
+
+        .body-middle{
+            padding:30px 33px;
+            border: 1px solid #e0e0e0;
+            background: #fafafa;
+            .membership-img{
+                width:30px;
+                height:30px;
+                background-size: contain;
+            }
+            .member-sort-info{
+                margin-left:20px;
+                border-left: 1px solid $dark;
+                padding-left:20px;
+                strong{
+                    font-size: 15px;
+                }
+                p{
+                    font-size: 12px;
+                    margin-top: 10px;
+                }
+            }
+            .gnb-info{
+                padding:33px 50px 0 50px;
+            }
+            .gnb-label{
+                font-family: 'Roboto', sans-serif;
+                padding-left:22px;
+                font-size: 15px;
+                font-weight: 500;
+                text-transform: uppercase;
+                position: relative;
+                min-width: 165px;
+                &::before{
+                    content: '';
+                    width: 15px;
+                    height: 15px;
+                    background-position: 50% 50%;
+                    background-repeat: no-repeat;
+                    position: absolute;
+                    left: 0;
+                    top: 50%;
+                    transform: translateY(-50%);
+                    background-size: contain;
+                }
+                &.webtrend{
+                    &::before{
+                        background-image: url(../images/gnb-icon-1.svg);
+                    }
+                }
+                &.channel-analysis{
+                    &::before{
+                        background-image: url(../images/gnb-icon-2.svg);
+                    }
+                }
+                &.topic-mining{
+                    &::before{
+                        background-image: url(../images/gnb-icon-3.svg);
+                    }
+                }
+            }
+            .gnb-label-desc{
+                font-size: 14px;
+                font-weight: 500;
+            }
+        }
+
+        .body-bottom{
+            padding:40px 0 50px 0;
+            font-size: 20px;
+            font-weight: 500;
+            text-align: center;
+        }
+    }
+    @include media-breakpoint-down(md){
+        .membership-complete-header{
+            .top{
+                font-size: 16px;
+            }
+            .bottom{
+                font-size: 14px;
+                .title-style{
+                    font-size: 17px;
+                }
+            }
+            .logo-img{width:63px; height:20px}
+        }
+        .membership-complete-body{
+            margin-top: 20px;
+            .body-top{
+                padding: 50px 0;
+                > div {
+                    & + div{
+                        margin-top: 15px;
+                    }
+                }
+            }
+            .title{
+                margin-left:8px;
+            }
+    
+            .body-middle{
+                padding:32px 22px 24px 22px;
+                .membership-img{
+                    width:27px;
+                    height:27px;
+                }
+                .title-style{
+                    position: relative;
+                    padding-right:8px!important;
+                    &::before{
+                        content: '';
+                        position: absolute;
+                        left:100%;
+                        top:50%;
+                        transform: translateY(-50%);
+                        width: 500%;
+                        display: inline-block;
+                        height: 1px;
+                        background-color: $border-color;
+                        vertical-align: middle;
+                    }
+                }
+                .member-sort-info{
+                    margin-left:0;
+                    border-left: 0;
+                    padding-left:0;
+                    margin-top: 5px;
+                    strong{
+                        font-size: 14px;
+                        width: 40%;
+                        margin-top: 13px;
+                    }
+                    p{
+                        font-size: 14px;
+                        margin-top: 13px;
+                    }
+                }
+                .gnb-info{
+                    padding:24px 0 0 0;
+                    &.row-25{
+                        margin-left: 0;
+                        margin-right: 0;
+                    }
+                    [class^=col]{
+                        border-left:1px solid $dark;
+                        >div{
+                            padding-left: 16px;
+                        }
+                    }
+                }
+                .gnb-label{
+                    font-size: 14px;
+                    min-width: auto;
+                    &::before{
+                        content: '';
+                        width: 12px;
+                        height: 12px;
+                    }
+                }
+                .gnb-label-desc{
+                    font-size: 12px;
+                    line-height: 2.2;
+                    padding-left: 0!important;
+                }
+            }
+    
+            .body-bottom{
+                padding:35px 0 40px 0;
+                font-size: 14px;
+            }
+        }
+    }
+}
