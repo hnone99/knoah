@@ -183,7 +183,7 @@ var Dropdown = {
 			if($target.hasClass('active')){
 				$(this).removeClass('active');
 			}else{
-				$(".dropdown.active").removeClass('active');
+				//$(".dropdown.active").removeClass('active');
 				$(this).addClass('active');
 			}
 		});
@@ -203,11 +203,11 @@ var Dropdown = {
 				$(this).closest('.dropdown').find('.dropdown-value').removeClass('filled');
 			}
 		});
-		$(document).click(function(e) {
+		/* $(document).click(function(e) {
 			if(!$('.dropdown').has(e.target).length){
 				$(".dropdown.active").removeClass('active');
 			}
-		});
+		}); */
 	}
 };
 

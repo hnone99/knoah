@@ -448,7 +448,7 @@
     .dropdown-value.collapsed{
         border:0;
     }
-   
+
     & + .faq{
         margin-top:-1px;
     }
@@ -470,7 +470,7 @@
         .faq-content{
             padding:20px 0;
         }
-        
+
     }
 }
 
@@ -538,7 +538,7 @@
         display: block;
         text-align: center;
     }
-    
+
 }
 
 
@@ -577,7 +577,7 @@
     @include media-breakpoint-down(md){
         border-left:1px solid $dark;
         width: 100%;
-     
+
         justify-content: end;
         padding-right:10px;
         span{
@@ -801,7 +801,7 @@
             .title{
                 margin-left:8px;
             }
-    
+
             .body-middle{
                 padding:32px 22px 24px 22px;
                 .membership-img{
@@ -867,7 +867,7 @@
                     padding-left: 0!important;
                 }
             }
-    
+
             .body-bottom{
                 padding:35px 0 40px 0;
                 font-size: 14px;
@@ -916,13 +916,14 @@
         }
     }
     .header-search{
+        transform: none;
         margin:0;
         height: 36px;
         width: 214px;
         background: transparent;
         .form-control{
             padding-left: 10px;
-            padding-right: 36px
+            padding-right: 36px;font-size: 16px;font-weight: 400;
         }
         .btn-search{
             right:13px;
