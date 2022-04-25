@@ -141,7 +141,7 @@ aside{
 }
 
 .header-search{
-    border-radius: 50rem;background: #efefef;width: 462px;height: 42px;position: relative;margin: 0 auto;
+    border-radius: 50rem;background: #efefef;width: 462px;height: 42px;position: relative;margin: 0 auto;transform: translateX(-115px);
     .form-control{border: 0;background: transparent;height: 100%;border-radius: 50rem;padding-left: 30px;padding-right: 60px;}
     .btn-search{position: absolute;right: 30px;top: 50%;transform: translateY(-50%);font-size: 15px;}
     i{color: #8c8c8c;}
@@ -151,7 +151,7 @@ aside{
     }
 
     @include media-breakpoint-down(md){
-        width: auto;
+        width: auto;transform: none;
     }
 }
 
@@ -319,6 +319,7 @@ aside{
 
 
 html.is-collapsed{
+    .header-search{transform: translateX(-40px);transition: none;}
     @include media-breakpoint-up(lg){
         aside{width: 80px;}
         #content, footer .inner{padding-left: 110px;}
