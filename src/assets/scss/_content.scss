@@ -97,10 +97,6 @@
             object-position: center;
             border-radius: 50%;
         }
-        .channel-name{
-            font-size: 20px;
-            font-weight: 500;
-        }
         .subscriber{
             font-size: 14px;
         }
@@ -110,9 +106,6 @@
             .channel-img{
                 width: 52px;
                 height: 52px;
-            }
-            .channel-name{
-                font-size: 18px;
             }
             .subscriber{
                 font-size: 12px;
@@ -142,18 +135,8 @@
             border-radius: 50%;
             width: 60px; height: 60px; object-fit: cover; object-position: center;
         }
-        .channel-name{
-            font-size: 20px; font-weight: 500; margin-right: 10px; margin-left: 20px;
-        }
         .channel-title{
             font-size: 20px; font-weight: 500;
-        }
-        .channel-desc{
-            span{
-                padding-right:30px;
-                vertical-align: middle;
-                word-break: break-all;
-            }
         }
 
         &.hits{
@@ -168,25 +151,10 @@
             &.video-list{padding: 30px 10px;}
             .thumbnail{min-width: auto;}
             .channel-img{width: 42px; height:42px;}
-            .channel-name{
-                font-size: 16px;
-                margin-right: 7px;
-                margin-left: 10px;
-            }
             .channel-subscriber{font-size: 12px;}
             .channel-title{
                 font-size: 14px;
                 white-space: initial;
-            }
-            .channel-desc{
-                span{
-                    line-height: 18px; font-size: 12px; letter-spacing: -0.6px;
-                }
-            }
-        }
-        @include media-breakpoint-down(md){
-            .channel-desc{
-                span{padding-right: 0;}
             }
         }
     }
@@ -340,9 +308,6 @@
                 line-height: 1.3;
                 i{margin-bottom:9px; margin-right:0;}
             }
-            .channel-desc{
-                background-color: #ededed;
-            }
         }
     }
 }
@@ -411,6 +376,9 @@
 
 .membership-container{
     padding:60px 40px 100px 40px;
+    .title-style{
+        img{transform: translateY(-2px);}
+    }
     .dropdown{
         white-space:inherit;
         height: auto;
@@ -595,11 +563,6 @@
     .count-list-wrap{
         border-bottom:1px solid $dark;
     }
-    .channel-desc{
-        .bar{
-            height: 14px;
-        }
-    }
     .hits-channel-label-info{
         border-left:1px solid $dark;
     }
@@ -612,11 +575,6 @@
         }
         .count-list-wrap{
             border-top:1px solid $dark;
-        }
-        .channel-desc{
-            .bar{
-                height: 11px;
-            }
         }
         .hits-channel-label{
             border-bottom:1px solid $dark;
@@ -950,8 +908,56 @@
 
 
 .collapse-btn{
-    text-decoration: underline;
+    text-decoration: underline;transform: translateY(-3px);display: inline-block;
     &.collapsed{
         text-decoration: none;
+    }
+}
+
+
+.channel-name{
+    font-size: 20px; font-weight: 500;
+    img ~ &{margin-left: 20px;}
+    @include media-breakpoint-down(md){
+        margin-left: -15px;font-size: 16px;
+        img ~ &{margin-left: 12px;}
+    }
+}
+.channel-subscriber{
+    font-size: 14px;
+    img ~ &{margin-left: 12px;}
+    @include media-breakpoint-down(md){
+        margin-left: -15px;
+        img ~ &{margin-left: 10px;}
+    }
+}
+.channel-desc{
+    margin-top: 1.5rem;
+    ul{
+        display: flex;flex-wrap: wrap;margin: -5px;
+        > li{
+            padding: 5px;font-size: 14px;
+            &::before{content: '';width: 1px;height: 14px;background: #333;display: inline-block;vertical-align: middle;transform: translateY(-2px);margin-right: .75rem;}
+        }
+    }
+    .modal &{
+        ul{
+            margin: -3px -6px;
+            > li{padding: 3px 6px;width: 25%;}
+        }
+    }
+    @include media-breakpoint-down(md){
+        margin-top: 1rem;
+        ul{
+            > li{
+                width: 50%;font-size: 12px;
+                &::before{margin-right: .5rem;height: 12px;}
+            }
+        }
+        .modal &{
+            ul{
+                > li{width: 50%;}
+            }
+        }
     }
 }
