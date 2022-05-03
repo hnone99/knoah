@@ -308,7 +308,6 @@ aside{
     @include media-breakpoint-down(md){
         padding:0;top: $mobileHeaderHeight;
         .banner{
-            justify-content: flex-start;
             .title{
                 font-size: 9px;
                 line-height: 15px;

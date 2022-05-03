@@ -385,7 +385,7 @@ textarea.form-control{resize: none;}
     @include media-breakpoint-down(md){
         .modal{padding-right: 0 !important;}
         .modal-title{font-size: 16px;}
-        .modal-dialog{margin-left: 25px;margin-right: 25px;}
+        .modal-dialog{ margin: auto;}
         .modal-content{border-radius: 20px;}
         .modal-sm{_max-width: 240px}
         .modal-body{padding: 30px 24px;}
@@ -396,7 +396,7 @@ textarea.form-control{resize: none;}
             .modal-content{
                 .modal-body{
                     margin: 27px 0;
-                    padding: 10px 24px 0 24px;
+                    padding: 20px 24px 0 24px;
                 }
             }
         }
@@ -413,6 +413,13 @@ textarea.form-control{resize: none;}
             padding-left:0;
             padding-right:0;
         }
+    }
+    @include media-breakpoint-down(sm){
+        .modal-dialog{
+            margin:auto;
+            max-width: 86%!important;
+        }
+      
     }
 }
 

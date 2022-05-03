@@ -1245,6 +1245,7 @@
                     <div class="modal-body">
                         <h2 class="modal-title">결제 수단</h2>
 
+                        <!-- 여기서부터 -->
                         <div class="row row-10 m-t-30">
                             <div class="col">
                                 <div class="border-bottom border-dark">
@@ -1257,8 +1258,25 @@
                             <div class="col-auto">
                                 <button type="button" class="btn btn-dark min-width-70px delete">삭제</button>
                             </div>
+                        </div>
+                        <!-- 여기까지 카드 추가 삭제 영역 -->
 
-                            <div class="col-12 mt-5  w-100">
+                        <div class="row row-10 m-t-30">
+                            <div class="col">
+                                <div class="border-bottom border-dark">
+                                    <div class="custom-control custom-radio pb-2 pt-1">
+                                        <input type="radio" class="custom-control-input select-primary" id="pamentMethod" name="pamentMethod">
+                                        <label class="custom-control-label" for="pamentMethod">삼성카드 4015-****-****-3106</label>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-auto">
+                                <button type="button" class="btn btn-dark min-width-70px delete">삭제</button>
+                            </div>
+                        </div>
+
+                        <div class="row row-0  m-t-30">
+                            <div class="col-12 w-100">
                                 <a href="" class="d-flex align-items-center border-bottom border-dark  w-100 pb-2 text-decoration-none  add-card">
                                     <i class="icon-add mr-2"></i>
                                     결제 카드 추가 등록하기
@@ -1272,7 +1290,7 @@
 
         <!-- modal : 조회수 폭발기 팝업 -->
         <div class="modal modal-hits modal-square" tabindex="-1" id="modal-hits">
-            <div class="modal-dialog modal-dialog-centered modal-lg modal-dialog-scrollable" style="max-width: 880px;">
+            <div class="modal-dialog modal-dialog-centered modal-lg modal-dialog-scrollable">
                 <div class="modal-content">
                     <div class="modal-close">
                         <button type="modal" aria-label="모달 닫기" data-dismiss="modal"><i class="icon-x"></i></button>
@@ -1285,28 +1303,28 @@
 
                             <div class="hits-btn-container m-0  px-0">
                                 <div class="row row-0 hits-btns justify-content-lg-between justify-content-around px-0">
-                                    <div class="col-3 col-xl-auto p-r-0 pr-lg-3 ml-n2 ml-lg-0">
-                                        <a href="javascript:;" class="hits-btn border-0 flex-column justify-content-lg-center flex-lg-row">
+                                    <div class="col-6 col-lg-auto p-r-0 pr-lg-3">
+                                        <a href="javascript:;" class="hits-btn">
                                             <i class="icon-addChannel"></i>
-                                            채널 판독기에<br class="d-block d-lg-none"> 추가하기
+                                            CHANNEL ANALYSIS에 추가
                                         </a>
                                     </div>
-                                    <div class="col-3 col-xl ml-n2  ml-lg-0">
-                                        <a href="javascript:;" class="hits-btn flex-column flex-lg-row">
+                                    <div class="col-6 col-lg">
+                                        <a href="javascript:;" class="hits-btn">
                                             <i class="icon-addVideo"></i>
-                                            영상<br class="d-block d-lg-none"> 수집하기
+                                            영상 수집
                                         </a>
                                     </div>
-                                    <div class="col-3 col-xl ml-n2  ml-lg-0">
-                                        <a href="javascript:;" class="hits-btn flex-column flex-lg-row">
+                                    <div class="col-6 col-lg">
+                                        <a href="javascript:;" class="hits-btn">
                                             <i class="icon-notRecomendVideo"></i>
-                                            영상<br class="d-block d-lg-none"> 추천 안하기
+                                            영상 관심 없음
                                         </a>
                                     </div>
-                                    <div class="col-3 col-xl mr-n3 ml-n2 ml-lg-0">
-                                        <a href="javascript:;" class="hits-btn flex-column flex-lg-row">
+                                    <div class="col-6 col-lg">
+                                        <a href="javascript:;" class="hits-btn">
                                             <i class="icon-notRecomendChannel"></i>
-                                            채널<br class="d-block d-lg-none"> 추천 안하기
+                                            채널 관심 없음
                                         </a>
                                     </div>
                                 </div>
@@ -1327,7 +1345,7 @@
                                 </div>
                                 <div class="channel-desc">
                                     <ul>
-                                        <li class="w-100"><span>제목 : <data class="content-title">세상에서 가장 비싼 호박?!</data></span></li>
+                                        <li class="w-100"><span>제목 : <data class="content-title">세상에서 가장 비싼 호박?!세상에서 가장 비싼 호박?!세상에서 가장 비싼 호박?!세상에서 가장 비싼 호박?!세상에서 가장 비싼 호박?!</data></span></li>
                                         <li><span>채널활성도 : <data class="activeRate">5,952.79</data></span></li>
                                         <li><span>기여도 : <data class="contributionRate">0.36%</data></span></li>
                                         <li><span>성과도 : <data class="performanceRate">0.54%</data></span></li>

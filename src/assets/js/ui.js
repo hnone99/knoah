@@ -89,6 +89,11 @@ var Aside = {
 				if ($(this).text() == title) {
 					$(this).parents('li').addClass('active');
 				}
+			});
+			$('.gnb-bar .dep1 > li > a').each(function () {
+				if ($(this).text() == title) {
+					$(this).parents('li').addClass('active');
+				}
             });
 		}
 	}
