@@ -311,6 +311,13 @@ aside{
             justify-content: flex-start;
             .title{
                 font-size: 9px;
+                line-height: 15px;
+                &::before{
+                    width: 3px;
+                    height: 3px;
+                    top:0;
+                    left:-4px;
+                }
             }
         }
     }
