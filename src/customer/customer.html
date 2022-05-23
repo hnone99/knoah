@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    @@include('@@webRoot/_include/_head.html')
+</head>
+
+<body>
+
+    <div id="wrap">
+
+        @@include('@@webRoot/_include/_header.html')
+
+        <div id="container-block">
+
+            @@include('@@webRoot/_include/_aside.html')
+
+            <main id="content" role="main">
+
+                <!-- 컨텐츠 시작 -->
+                <h2 class="page-title">고객센터</h2>
+                <h2 class="title border-bottom p-b-10 pb-lg-4 border-dark">고객센터</h2>
+                <div class="customer">
+                    <div class="row">
+                        <div class="col-lg">
+                            <div class="customer-item">
+                                <h3>전화로 상담하기</h3>
+                                <img src="../assets/images/icon-customer-phone.svg" alt="">
+                                <p>전화 상담 시간 <br>
+                                평일 11:00 ~ 17:00 점심 14:00 ~ 15:00 <br>
+                                <small>(주말, 공휴일 제외)</small></p>
+                                <button type="button" class="btn btn-dark btn-block btn-lg" data-toggle="modal" data-target="#modal-contact">전화번호 안내</button>
+                            </div>
+                        </div>
+                        <div class="col-lg">
+                            <div class="customer-item">
+                                <h3>메일로 문의하기</h3>
+                                <img src="../assets/images/icon-customer-mail.svg" alt="">
+                                <p>주말, 공휴일 제외 <br>
+                                순차적으로 답변드리도록 하겠습니다.</p>
+                                <button type="button" class="btn btn-dark btn-block btn-lg" data-toggle="modal" data-target="#modal-qna">메일 보내기</button>
+                            </div>
+                        </div>
+                        <div class="col-lg">
+                            <div class="customer-item">
+                                <h3>대표에게 바란다</h3>
+                                <img src="../assets/images/icon-customer-chat.svg" alt="">
+                                <p>대표에게 바라는 점을 보내주세요. <br>
+                                노아는 여러분의 의견에 귀 기울이겠습니다.</p>
+                                <button type="button" class="btn btn-dark btn-block btn-lg" data-toggle="modal" data-target="#modal-message">글 작성하기</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <h2 class="title border-bottom m-t-55 mt-lg-9 p-b-10 pb-lg-4 border-dark">자주 묻는 질문</h2>
+                <div class="membership-container px-0 px-lg-6">
+                    @@for(var i = 0; i < 10; i++){
+                    <div class="card faq">
+                        <div class="dropdown w-100">
+                            <div class="dropdown-value collapsed text-left" id="faq-header-`+i+`" role="button" data-toggle="collapse" data-target="#faq-content-`+i+`" aria-expanded="true" aria-controls="faq-content-`+i+`">
+                                <p>노아의 무료 서비스와 유료 서비스의 차이가 뭔가요?</p>
+                            </div>
+                        </div>
+
+                        <div class="collapse transition-none faq-content" id="faq-content-`+i+`" aria-labelledby="faq-header-0" data-parent="#faq-header-`+i+`">
+                            무료 서비스 유저에게는, 저희 아이템스카우트의 핵심 서비스 "아이템 발굴"과 "키워드 분석"의 기본적인 기능이 모두 제공됩니다.
+                            유료 서비스 구독자는 주제별 키워드, 종합 지표 차트, 연관 키워드 분석 등 아이템 발굴과 키워드 분석의 더 많은 기능을 사용할 수 있습니다. 또한, 상품의 판매, 광고 및 마케팅 전략 수립을 위한 강력한 기능인 "랭킹 추적" 서비스를 사용할 수 있습니다.
+                        </div>
+                    </div>
+                }
+                </div>
+                <!-- 컨텐츠 끝 -->
+
+            </main>
+        </div>
+
+        @@include('@@webRoot/_include/_footer.html')
+
+    </div>
+
+    @@include('@@webRoot/_include/_modal.html')
+
+    <script>
+        $(document).ready(function () {
+        })
+    </script>
+
+</body>
+
+</html>
