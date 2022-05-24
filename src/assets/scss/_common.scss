@@ -799,4 +799,7 @@ textarea.form-control{resize: none;}
             &.active{border-bottom: 2px solid $danger;color: $danger;padding-bottom: calc(1rem - 1px);}
         }
     }
+    @include media-breakpoint-down(md) {
+        margin-left: 0;margin-right: 0;
+    }
 }

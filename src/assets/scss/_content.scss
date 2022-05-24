@@ -1047,11 +1047,34 @@ body.body-only-logo{
     }
 }
 
+.chart-before{
+    position: relative;padding-top: 20px;padding-bottom: 20px;
+    &::after{content: '';width: 100%;height: 100%;background: rgba(245, 245, 245, 0.7);position: absolute;left: 0;top: 0;}
+}
+
 .chart-viewers{
-    margin-top: 20px;border-top: 1px solid #000;padding-top: 20px;
+    border-top: 1px solid #000;padding-top: 20px;border-bottom: 1px solid #000;padding-bottom: 40px;margin-bottom: 50px;
+    .border-left,
+    .border-right{border-color: #000 !important;}
     .tit{margin-bottom: 20px;}
     .subtit{font-size: 14px;margin-bottom: .5rem}
     canvas{
         width: 100%;
+    }
+}
+
+.chrome-browser{
+    margin-top: 150px;
+    .title{font-size: 35px;font-weight: 700;display: block;line-height: 1.5;
+        &::before{width: 8px;height: 8px;left: -8px;}
+    }
+    .text1{font-size: 28px;font-weight: 500;margin-top: 119px;margin-bottom: 50px;}
+    .text2{color: #8c8c8c;margin-top: 26px;}
+    .btn{height: 90px;font-size: 24px;font-weight: 700;padding-top: 1.5rem;max-width: 460px;}
+    @include media-breakpoint-down(lg) {
+        .title{font-size: 24px;}
+        .text1{font-size: 20px;margin-top: 50px;margin-bottom: 30px;}
+        .text2{font-size: 14px;}
+        .btn{height: 60px;padding-top: .75rem;font-size: 20px;}
     }
 }

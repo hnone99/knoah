@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    @@include('@@webRoot/_include/_head.html')
+</head>
+
+<body>
+
+    <div id="wrap">
+
+        @@include('@@webRoot/_include/_header.html')
+
+        <div id="container-block">
+
+            @@include('@@webRoot/_include/_aside.html')
+
+            <main id="content" role="main">
+
+                <!-- 컨텐츠 시작 -->
+                <div class="chrome-browser">
+                    <div class="row">
+                        <div class="col">
+                            <strong class="title">빠르고 안전한 <br>Chrome 브라우저를 이용해주세요.</strong>
+                            <p class="text1">노아는 최적화 된 서비스를 위해 <br>
+                            크롬 브라우저 이용을 권장하고 있습니다.</p>
+                            <a href="" class="btn btn-dark btn-block btn-lg">Chrome 다운로드</a>
+                            <p class="text2">익스플로러(IE), 엣지(Edge) 등의 다른 브라우저 이용 중 오류가 발생한 경우, <br>
+                            크롬 브라우저를 설치 또는 이용하여 다시 시도해주시기 바랍니다.</p>
+                        </div>
+                        <div class="col">
+                            <img src="../assets/images/img-browser-chrome.png" alt="">
+                        </div>
+                    </div>
+                </div>
+                <!-- 컨텐츠 끝 -->
+
+            </main>
+
+        </div>
+
+        @@include('@@webRoot/_include/_footer.html')
+
+        </div>
+
+    @@include('@@webRoot/_include/_modal.html')
+
+    <script>
+        $(document).ready(function () {
+        })
+    </script>
+
+</body>
+
+</html>
