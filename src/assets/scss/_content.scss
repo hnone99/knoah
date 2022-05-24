@@ -1046,3 +1046,12 @@ body.body-only-logo{
         }
     }
 }
+
+.chart-viewers{
+    margin-top: 20px;border-top: 1px solid #000;padding-top: 20px;
+    .tit{margin-bottom: 20px;}
+    .subtit{font-size: 14px;margin-bottom: .5rem}
+    canvas{
+        width: 100%;
+    }
+}
