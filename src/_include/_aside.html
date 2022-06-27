@@ -35,9 +35,10 @@
             $(".tooltip button").on("click", function () {
                 $(this).closest(".tooltip").removeClass("open");
             });
-        } 
+        } else {
+            $(".tooltip").removeClass("open");
+        }
     }
-    $(window).resize(function() {
-        open_tooltip();
-    });
+    open_tooltip();
+
 </script>
