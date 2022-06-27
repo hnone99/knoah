@@ -2,12 +2,42 @@
     <div class="dim"></div>
     <nav class="gnb">
         <ul class="dep1">
-            <li><a href="../webtrend/webtrend.html">WEB <br>TRENDS</a></li>
+            <li>
+                <a href="../webtrend/webtrend.html">WEB <br>TRENDS</a>
+                <div class="tooltip">
+                    <button><i class="icon-x"></i></button>
+                    <div>이용횟수가 부족하다면 멤버십을<br> 업그레이드 해보세요!💎👍🏻</div>
+                </div>
+            </li>
             <li><a href="../channel/channel.html">CHANNEL <br>ANALYSIS</a></li>
             <li><a href="../hits/hits.html">TOPIC <br>MINING</a></li>
             <li><a href="../collect_video/collect_video.html">수집한 <br>영상</a></li>
-            <li><a href="../remove_video/remove_video.html">제거한 <br>영상</a></li>
+            <li>
+                <a href="../remove_video/remove_video.html">제거한 <br>영상</a>
+                <div class="tooltip">
+                    <button><i class="icon-x"></i></button>
+                    <div>이용횟수가 부족하다면 멤버십을<br> 업그레이드 해보세요!💎👍🏻</div>
+                </div>
+            </li>
             <li><a href="../remove_channel/remove_channel.html">제거한 <br>채널</a></li>
         </ul>
     </nav>
 </aside>
+<script>
+
+    function open_tooltip() {
+        var windowWidth = $(window).width();
+        if (windowWidth > 768) { //창 가로 크기가 768이상일 경우
+            //창 가로 크기가 768보다 이하 경우 
+            $(".dep1 li>a").mouseenter(function () {
+                $(this).siblings('.tooltip').addClass("open");
+            });
+            $(".tooltip button").on("click", function () {
+                $(this).closest(".tooltip").removeClass("open");
+            });
+        } 
+    }
+    $(window).resize(function() {
+        open_tooltip();
+    });
+</script>
