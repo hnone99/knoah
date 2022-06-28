@@ -356,7 +356,7 @@ $hr-margin-y:                 $spacer !default;
 //
 // Customizes the `.table` component with basic values, each used across all table variations.
 
-$table-cell-padding:          .75rem 1.25rem !default;
+$table-cell-padding:          .5rem .2rem !default;
 $table-cell-padding-sm:       .3rem !default;
 
 $table-color:                 $body-color !default;
@@ -990,7 +990,7 @@ $modal-header-padding-y:            1rem !default;
 $modal-header-padding-x:            1rem !default;
 $modal-header-padding:              $modal-header-padding-y $modal-header-padding-x !default; // Keep this for backwards compatibility
 
-$modal-xl:                          1200px !default;
+$modal-xl:                          1100px !default;
 $modal-lg:                          900px !default;
 $modal-md:                          620px !default;
 $modal-sm:                          380px !default;
