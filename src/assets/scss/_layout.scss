@@ -224,7 +224,23 @@ aside{
 .btn-more{width: 18px;line-height: 1;vertical-align: middle;}
 .btn-alarm{
     line-height: 1;position: relative;vertical-align: middle;
-    span{display: inline-block;width: 7px;height: 7px;border: 1px solid #fff;border-radius: 50%;background: #ff0000;position: absolute;right: 1px;top: 1px;}
+    .new{display: inline-block;width: 7px;height: 7px;border: 1px solid #fff;border-radius: 50%;background: #ff0000;position: absolute;right: 1px;top: 1px;}
+    .new-alarm{
+        display: inline-block;
+        width: 21px;
+        height: 21px;
+        border: 2px solid #fff;
+        border-radius: 50%;
+        background: red;
+        position: absolute;
+        right: -12px;
+        top: -6px;
+        color: #fff;
+        line-height: 15px;
+        letter-spacing: -0.5px;
+        font-size: 10px;
+        font-weight: 500;
+    }
 }
 .btn-my{width: 30px;height: 30px;border-radius: 50%; background-repeat: no-repeat; background-size: cover; background-position: center;}
 
