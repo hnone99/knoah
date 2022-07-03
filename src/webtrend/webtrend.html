@@ -24,10 +24,40 @@
                     <fieldset>
                         <legend>검색</legend>
                         <div class="header-search">
-                            <input type="text" class="form-control" placeholder="키워드를 입력해 주세요.">
-                            <button type="button" class="btn-search" aria-label="검색">
-                                <i class="icon-search"></i>
-                            </button>
+                            <div class="position-relative h-100">
+                                <input type="text" class="form-control" placeholder="채널명 또는 채널 URL을 입력해 주세요.">
+                                <button type="button" class="btn-search" aria-label="검색">
+                                    <i class="icon-search"></i>
+                                </button>
+                            </div>
+                            <div class="dropdown search active">
+                                <div class="dropdown-box">
+                                    <div class="dropdown-list">
+                                        @@for (var i = 1; i < 10; i++) {
+                                            <div>
+                                                <a href="">
+                                                    <span class="channel-thumb">
+                                                        <img src="../assets/images/@profile.jpg" alt="채널 이미지">
+                                                    </span>
+                                                    <span class="channel-name">
+                                                        현승원 TV
+                                                    </span>
+                                                </a>
+                                            </div>
+                                            <div>
+                                                <a href="">
+                                                    <span class="channel-thumb">
+                                                        <img src="../assets/images/@profile.jpg" alt="채널 이미지">
+                                                    </span>
+                                                    <span class="channel-name">
+                                                        현승원 TV 채널이름 길어요
+                                                    </span>
+                                                </a>
+                                            </div>
+                                            }
+                                    </div>
+                                </div>
+                            </div>
                         </div>
                     </fieldset>
                 </form>
@@ -102,17 +132,32 @@
                     <div class="col-lg">
                         <div class="collapse show" id="recent-keyword">
                             <div class="keyword-wrap m-t-10 mt-lg-0">
-                                @@for (var i = 1; i < 30; i++) {
-                                    <div class="keyword">
-                                        <a href="#none" class="text-truncate d-block">다이어트</a>
-                                        <button type="text" aria-label="삭제"><i class="icon-x"></i></button>
-                                    </div>
+                                <div class="tooltip top open">
+                                    <button><i class="icon-x"></i></button>
+                                    <div>
+                                        <b class="d-block">Lv. 기능이 추가되었습니다!</b>
+                                        레벨은 동일한 키워드에 대한 분석 횟수로<br>
+                                        레벨이 올라갈수록 확인할 수 있는 영상이 쌓이게 됩니다.<br>
+                                        키워드를 레벨업시켜 키워드를 마스터해보세요!&ensp;🔥</div>
+                                </div>
+                                @@for (var i = 1; i < 20; i++) {
+                                        <div class="keyword-list">
+                                            <div class="keyword">
+                                                <a href="#none" class="text-truncate d-block">다이어트</a>
+                                                <button type="text" aria-label="삭제"><i class="icon-x"></i></button>
+                                            </div>
+                                        </div>
                                     <div class="keyword">
                                         <a href="#none" class="text-truncate d-block">닭가슴살 레시피</a>
                                         <button type="text" aria-label="삭제"><i class="icon-x"></i></button>
                                     </div>
                                 }
                             </div>
+                            <script>
+                                 $(".tooltip button").on("click", function () {
+                                    $(this).closest(".tooltip").removeClass("open");
+                                });
+                            </script>
                         </div>
                     </div>
                 </div>

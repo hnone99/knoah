@@ -494,6 +494,10 @@ textarea.form-control{resize: none;}
         max-height: 95px;
     }
 }
+.keyword-list{
+    position: relative;
+    display: inline-flex;
+}
 .keyword{
     background: #efefef;padding: 5px 1rem 6px;border-radius: 30px;position: relative;margin: 10px 7px;display: inline-flex;
     a{color: #8c8c8c;font-size: 14px;text-decoration: none; max-width: 80px;}
