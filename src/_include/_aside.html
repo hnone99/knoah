@@ -28,7 +28,6 @@
     function open_tooltip() {
         var windowWidth = $(window).width();
         if (windowWidth > 768) { //창 가로 크기가 768이상일 경우
-            //창 가로 크기가 768보다 이하 경우 
             $(".dep1 li>a").mouseenter(function () {
                 $(this).siblings('.tooltip').addClass("open");
             });

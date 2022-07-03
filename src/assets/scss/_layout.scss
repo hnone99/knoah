@@ -120,15 +120,16 @@ aside{
     inset: 0px auto auto 0px;
     margin: 0.25rem auto 0 auto;
     top: 100%;
-    left: 10%;
+    left: 7px;
     width: max-content;
     border-radius: 0.25rem;
+    letter-spacing: -0.5px;
     button{
         position: absolute;
         right: 4px;
         width: 8px;
         height: 8px;
-        top: 2px;
+        top: 0;
         i{
             width: 8px;
             height: 8px;
@@ -141,7 +142,7 @@ aside{
         top: -15px;
         border-style: solid;
         border-width: 6px 6px 10px 6px;
-        border-color: rgba(0,0,0,0) rgba(0,0,0,0) #fcf2b3 rgba(0,0,0,0);
+        border-color:rgba(0,0,0,0) rgba(0,0,0,0) #fcf2b3  rgba(0,0,0,0);
     }
     &.open{
         opacity: 1;
@@ -154,6 +155,19 @@ aside{
     }
     @include media-breakpoint-down(md){
         display: none!important;
+    }
+    &.top{
+        margin-top: 0;
+        margin-bottom: 4px;
+        transform: translateY(-110%);
+        top:0;
+        &::before{
+            top: auto;
+            bottom: -15px;
+            border-width: 10px 6px 6px 6px;
+            border-color: #fcf2b3 rgba(0,0,0,0) rgba(0,0,0,0) rgba(0,0,0,0);
+            left: 16px;
+        }
     }
 }
 .gnb-bar{
@@ -201,7 +215,7 @@ aside{
 }
 
 .header-search{
-    border-radius: 50rem;background: #efefef;width: 462px;height: 42px;position: relative;margin: 0 auto;transform: translateX(-115px);
+    border-radius: 50rem;background: #efefef;width: 462px;height: 42px;position: relative;margin: 0 auto;_transform: translateX(-115px);
     .form-control{border: 0;background: transparent;height: 100%;border-radius: 50rem;padding-left: 30px;padding-right: 60px;}
     .btn-search{position: absolute;right: 30px;top: 50%;transform: translateY(-50%);font-size: 15px;}
     i{color: #8c8c8c;}
@@ -401,7 +415,7 @@ aside{
 
 
 html.is-collapsed{
-    .header-search{transform: translateX(-40px);transition: none;}
+    .header-search{_transform: translateX(-40px);transition: none;}
     .rescan-search .header-search{transform: translateX(0);}
     @include media-breakpoint-up(lg){
         aside{width: 80px;}
