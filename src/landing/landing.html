@@ -33,16 +33,114 @@
                 <section class="landing-case-info">
                 </section>
                 <section class="landing-grade">
-                    <div class="grade-img-wrap">
-                        <div class="row row-8 justify-centent-center">
-                            @@for(var i =1; i < 5; i++){
-                            <div class="col">
-                                <img src="../assets/images/img-grade-0`+ i +`.png" alt="등급별 이미지">
+                    <div class="landing-grade-info">
+                        <div class="grade-img-wrap">
+                            <div class="d-flex justify-content-center">
+                                @@for(var i =1; i < 5; i++){ 
+
+                                <div class="pay-wrap">
+                                    <img src="../assets/images/img-grade-0`+ i +`.png" alt="등급별 이미지">
+                                    <button class="pay-btn"></button>
+                                </div>
+                                }
                             </div>
-                            }
+                        </div>
+                        <div class="grade-tab-area">
+                            <ul class="nav nav-tabs justify-content-between border-0" id="myTab" role="tablist">
+                                <li class="nav-item" role="presentation">
+                                    <a class="nav-link active" id="home-tab" data-toggle="tab" href="#knoah" role="tab" aria-controls="knoah" aria-selected="true">노아 100% 활용법</a>
+                                </li>
+                                <li class="nav-item" role="presentation">
+                                    <a class="nav-link" id="topic-tab" data-toggle="tab" href="#topic" role="tab" aria-controls="topic" aria-selected="false">토픽 마이닝</a>
+                                </li>
+                                <li class="nav-item" role="presentation">
+                                    <a class="nav-link" id="keyword-tab" data-toggle="tab" href="#keyword" role="tab" aria-controls="keyword" aria-selected="false">키워드 마이닝</a>
+                                </li>
+                                <li class="nav-item" role="presentation">
+                                    <a class="nav-link" id="channel-tab" data-toggle="tab" href="#channel" role="tab" aria-controls="channel" aria-selected="false">채널 분석</a>
+                                </li>
+                                <li class="nav-item" role="presentation">
+                                    <a class="nav-link" id="trend-tab" data-toggle="tab" href="#trend" role="tab" aria-controls="trend" aria-selected="false">웹 트렌드</a>
+                                </li>
+                            </ul>
+                            <div class="tab-content" id="myTabContent">
+                                <div class="tab-pane fade show active" id="knoah" role="tabpanel" aria-labelledby="knoah-tab">
+                                    <div class="thumbnail">
+                                        <iframe src="https://www.youtube.com/embed/PX1oAtwlSzk" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                                    </div>
+                                </div>
+                                <div class="tab-pane fade" id="topic" role="tabpanel" aria-labelledby="topic-tab">
+                                    <div class="thumbnail">
+                                        <iframe src="https://www.youtube.com/embed/PX1oAtwlSzk" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                                    </div>
+                                </div>
+                                <div class="tab-pane fade" id="keyword" role="tabpanel" aria-labelledby="keyword-tab">
+                                    <div class="thumbnail">
+                                        <iframe src="https://www.youtube.com/embed/PX1oAtwlSzk" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                                    </div>
+                                </div>
+                                <div class="tab-pane fade" id="channel" role="tabpanel" aria-labelledby="channel-tab">
+                                    <div class="thumbnail">
+                                        <iframe src="https://www.youtube.com/embed/PX1oAtwlSzk" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                                    </div>
+                                </div>
+                                <div class="tab-pane fade" id="trend" role="tabpanel" aria-labelledby="trend-tab">
+                                    <div class="thumbnail">
+                                        <iframe src="https://www.youtube.com/embed/PX1oAtwlSzk" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="d-flex algin-items-center justify-content-center w-100">
+                            <div class="dropdown min-width-153px w-auto active landing-grade-btn" data-default="자세히 알아보기">
+                                <div class="dropdown-value border-0 position-relative" id="landing-more-header" role="button" data-toggle="collapse" data-target="#landing-more-content" aria-expanded="true" aria-controls="landing-more-content">자세히 알아보기</div>
+                            </div>
                         </div>
                     </div>
+                    <div id="landing-more-content" class="transition-none collapse show" aria-labelledby="landing-more-header" data-parent="#landing-more-header">
+                    </div>
                 </section>
+                <section class="landing-footer"></section>
+                <section class="landing-bottom-banner-area">
+                    <h2>노아 멤버십 선착순 1,000개&ensp;<b>한정 10% 할인!</b></h2>
+                    <div class="stock-wrap">
+                        남은수량
+                        <div class="stocks">
+                            <span class="num">0</span>
+                            <span class="num">9</span>
+                            <span class="num">9</span>
+                            <span class="num">7</span>
+                        </div>
+                        개
+                    </div>
+                    <button class="membership-payment-btn"></button>
+                </section>
+                <!-- <section class="landing-bottom-banner-area">
+                    <h2>노아 멤버십 기간 한정&ensp;<b>10% 할인!</b></h2>
+                    <div class="stock-wrap period">
+                        <div class="stocks">
+                            <span class="num">0</span>
+                            <span class="num">9</span>
+                        </div>
+                        일
+                        <div class="stocks">
+                            <span class="num">0</span>
+                            <span class="num">9</span>
+                        </div>
+                        시간
+                        <div class="stocks">
+                            <span class="num">0</span>
+                            <span class="num">9</span>
+                        </div>
+                        분
+                        <div class="stocks">
+                            <span class="num">9</span>
+                            <span class="num">9</span>
+                        </div>
+                        초
+                    </div>
+                    <button class="membership-payment-btn"></button>
+                </section> -->
 
                 <!-- 컨텐츠 끝 -->
 
