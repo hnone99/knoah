@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    @@include('@@webRoot/_include/_head.html')
+</head>
+
+<body>
+
+    <div id="wrap">
+        @@include('@@webRoot/_include/_header.html')
+
+        <div id="container-block">
+            <main role="main" class="landing">
+
+                <!-- 컨텐츠 시작 -->
+
+                <section class="landing-visual">
+                    <div class="landing-swiper-container">
+                        <div class="landing-swiper">
+                            <div class="swiper-container">
+                                <ul class="swiper-wrapper">
+                                    @@for(var i =1; i < 6; i++){ <li class="swiper-slide">
+                                        <img src="../assets/images/img-landing-graph-0`+ i +`.jpg" alt="그래프이미지">
+                                        </li>
+                                        }
+                                </ul>
+                                <div class="swiper-pagination"></div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+                <section class="landing-case-info">
+                </section>
+                <section class="landing-grade">
+                    <div class="grade-img-wrap">
+                        <div class="row row-8 justify-centent-center">
+                            @@for(var i =1; i < 5; i++){
+                            <div class="col">
+                                <img src="../assets/images/img-grade-0`+ i +`.png" alt="등급별 이미지">
+                            </div>
+                            }
+                        </div>
+                    </div>
+                </section>
+
+                <!-- 컨텐츠 끝 -->
+
+            </main>
+        </div>
+    </div>
+</body>
+
+<script>
+    productSwiper = new Swiper(".landing-swiper .swiper-container", {
+        slidesPerView: 1,
+        spaceBetween: 20,
+        simulateTouch: true,
+        // watchOverflow: true,
+        pagination: {
+            el: '.swiper-pagination',
+            type: 'bullets',
+            clickable: true,
+        },
+        loop: true,
+    });
+</script>
+
+</html>

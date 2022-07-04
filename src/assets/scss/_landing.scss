@@ -1,0 +1,49 @@
+.landing{
+    padding:0;
+    &-visual{
+        width: 100vw;
+        height: 943px;
+        background:url('../images/img-landing-01.png')no-repeat center;
+        background-size: contain;
+        .landing-swiper-container{
+            width: 887px;
+            padding-top: 435px;
+            margin:auto;
+        }
+        .landing-swiper{
+            padding:0 20px;
+            .swiper-container{
+                padding:34px 0 50px 0;
+            }
+            .swiper-pagination{
+                bottom:7%;
+            }
+            background: #fff;
+            height: 307px;
+            li{
+                width: 100%;
+                img{width: 100%;}
+            }
+            .swiper-pagination{
+                &-active{
+                    background: #000;
+                }
+            }
+        }
+    }
+    &-case-info{
+        background: url('../images/img-landing-02.png')no-repeat center;
+        background-size: contain;
+        min-height: 6814px;
+        height: 100%;
+    }
+    &-grade{
+        background: url('../images/img-grade-back.png')no-repeat center;
+        background-size: contain;
+        min-height: 1856px;
+        width: 100%;
+        .grade-img-wrap{
+            padding-top: 378px;
+        }
+    }
+}
