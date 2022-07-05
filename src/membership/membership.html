@@ -29,7 +29,7 @@
                 <!-- 컨텐츠 시작 -->
                 <h2 class="page-title">멤버십 안내</h2>
 
-                <form action="">
+                <!-- <form action="">
                     <fieldset>
                         <legend>검색</legend>
                         <div class="header-search">
@@ -39,7 +39,11 @@
                             </button>
                         </div>
                     </fieldset>
-                </form>
+                </form> -->
+
+                <a href="../landing/landing.html" class="membership-banner-area">
+                    <span>노아 멤버십</span>&nbsp;<span class="blue">10% 할인</span>&nbsp;<span>받으러 가기 </span><i class="icon-memebership-banner-arrow"></i>
+                </a>
 
 
                 <h2 class="title border-bottom m-t-15 mt-lg-0 p-b-10 pb-lg-4 border-dark">멤버십 안내</h2>
@@ -356,6 +360,26 @@
 
     </div>
 
+    <div class="popup front">
+        <div class="popup-content">
+            <button class="close"><i class="icon-x"></i></button>
+            <a href="../landing/landing.html"></a>
+            <img src="../assets/images/img-popup.png" alt="프론트 팝업 이미지">
+            <span class="event-check-area">
+                <input type="checkbox" id="mEventPOPchkBox" class="custom-control-input">
+                <label for="mEventPOPchkBox" id="">일주일동안 보지않기</label>
+            </span>
+        </div>
+    </div>
+
+    <div class="popup side">
+        <div class="popup-content">
+            <button class="close"><i class="icon-x"></i></button>
+            <a href="../landing/landing.html"></a>
+            <img src="../assets/images/img-side-banner.png" alt="사이드 배너 이미지">
+        </div>
+    </div>
+
     @@include('@@webRoot/_include/_modal.html')
 
     <script>
@@ -363,6 +387,12 @@
             $(".dropdown-value").on("click", function(){
                 $(this).parent(".dropdown").toggleClass("active");
                 $(this).parent().parent(".faq").toggleClass("active");
+            });
+
+            // 팝업 스크립트(공통)
+            
+            $(".popup .close").on("click", function(){
+                $(this).closest(".popup").addClass("close");
             });
         })
     </script>

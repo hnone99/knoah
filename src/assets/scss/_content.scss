@@ -1148,3 +1148,154 @@ body.body-only-logo{
         }
     }
 }
+
+
+.membership-banner-area{
+    width: 100%;
+    height: 110px;
+    background: url('../images/img-banner-membership.png')no-repeat center;
+    background-size: cover;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 3rem;
+    text-decoration: none!important;
+    font-family: "GangwonEduPowerExtraBoldA";
+    span{
+        display: inline-block;
+        letter-spacing: -1.78px;
+        font-size: 35.5px;
+        margin-top: 22px;
+        line-height: 55.5px;
+        display: inline-block;
+    }
+    .blue{
+        color: #1c67ff;
+    }
+    i{
+        margin-left: 24px;
+    }
+}
+
+
+.popup {
+    position: fixed;
+    &.close{
+        display: none;
+    }
+    &.front{
+        left: 15%;
+        top: 25%;
+        .popup-content{
+            .close{
+                position: absolute;
+                right: 15px;
+                top: 20px;
+                cursor: pointer;
+                font-size: 0;
+            }
+            a {
+                width: 100%;
+                height: 300px;
+                display: block;
+                position: absolute;
+                top: 10%;
+            }
+        
+            .event-check-area {
+                position: absolute;
+                bottom: 14px;
+                width: 100%;
+                left: 0;
+                text-align: center;
+                label {
+                    cursor: pointer;
+                    color: #b7b7b7;
+                    font-size: 12px;
+                    font-weight: 500;
+                    line-height: 1.33;
+                    letter-spacing: -0.36px;
+                }
+        
+                input:checked+label {
+                    color: $black;
+                }
+            }
+        }
+    }
+    &.side{
+        right:0;
+        bottom:6%;
+        .popup-content{
+            .close{
+                position: absolute;
+                right: 4px;
+                top: 6px;
+                font-size: 0;
+                cursor: pointer;
+                i{
+                    width: 6px;
+                    height: 6px;
+                }
+            }
+            a{
+                width: 100%;
+                height: 150px;
+                display: block;
+                position: absolute;
+                top: 15px;
+            }
+        }
+    }
+
+}
+
+
+.header-info-area {
+    display: flex;
+    align-self: center;
+    margin-right: 20px;
+    li {
+        position: relative;
+        a {
+            letter-spacing: -0.5px;
+            color: #8c8c8c;
+            font-size: 12px;
+            font-weight: bold;
+            line-height: 18px;
+            text-decoration: none;
+        }
+
+        &+li {
+            margin-left: 8px;
+            padding-left: 8px;
+            &::before{
+                content: "";
+                position: absolute;
+                left: 0;
+                width: 1px;
+                height: 12px;
+                background: #8c8c8c;
+                top: 38%;
+            }
+        }
+    }
+}
+
+// 알림 읽음 처리
+.visited{
+    filter: grayscale(1);
+    opacity: 0.5;
+    .bg-ligthyellow{
+        background-color: #eee8e8!important;
+    }
+}
+// 알림 토글 컨텐츠
+.alram-toggle-contents{
+    padding:1rem 0;
+    border-top:1px solid #e0e0e0;
+    border-bottom:1px solid #e0e0e0;
+    letter-spacing: -0.5px;
+    font-size: 14px;
+    font-weight: 300;
+}

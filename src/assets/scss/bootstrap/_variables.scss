@@ -40,6 +40,7 @@ $pink:    #e83e8c !default;
 $red:     #ff0000 !default;
 $orange:  #fd7e14 !default;
 $yellow:  #fff2ab !default;
+$ligthyellow:  #fffcdb !default;
 $green:   #28a745 !default;
 $navy:    #0c408d !default;
 $gray:    #969ba0 !default;
@@ -67,6 +68,7 @@ $danger:        $red !default;
 $light:         $gray-200 !default;
 $dark:          $gray-800 !default;
 $lightgray:          $gray-400 !default;
+$ligthyellow:          $ligthyellow !default;
 
 $theme-colors: () !default;
 $theme-colors: map-merge(
@@ -83,6 +85,7 @@ $theme-colors: map-merge(
     "white":      $white,
     "lightgray":      $lightgray,
     "gray":       $gray,
+    "ligthyellow":       $ligthyellow,
   ),
   $theme-colors
 );
