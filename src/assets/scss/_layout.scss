@@ -108,7 +108,7 @@ aside{
     }
 }
 
-.tooltip{
+.custom-tooltip{
     width: auto;
     background-color: #fcf2b3;
     padding: 12px;
@@ -120,10 +120,11 @@ aside{
     inset: 0px auto auto 0px;
     margin: 0.25rem auto 0 auto;
     top: 100%;
-    left: 7px;
+    left: 12%;
     width: max-content;
     border-radius: 0.25rem;
     letter-spacing: -0.5px;
+    
     button{
         position: absolute;
         right: 4px;
@@ -161,6 +162,7 @@ aside{
         margin-bottom: 4px;
         transform: translateY(-110%);
         top:0;
+        left: 7px;
         &::before{
             top: auto;
             bottom: -15px;

@@ -132,7 +132,7 @@
                     <div class="col-lg">
                         <div class="collapse show" id="recent-keyword">
                             <div class="keyword-wrap m-t-10 mt-lg-0">
-                                <div class="tooltip top open">
+                                <div class="tooltip custom-tooltip top open">
                                     <button><i class="icon-x"></i></button>
                                     <div>
                                         <b class="d-block">Lv. 기능이 추가되었습니다!</b>
@@ -154,8 +154,8 @@
                                 }
                             </div>
                             <script>
-                                 $(".tooltip button").on("click", function () {
-                                    $(this).closest(".tooltip").removeClass("open");
+                                 $(".custom-tooltip button").on("click", function () {
+                                    $(this).closest(".custom-tooltip").removeClass("open");
                                 });
                             </script>
                         </div>

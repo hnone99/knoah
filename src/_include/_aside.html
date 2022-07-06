@@ -4,7 +4,7 @@
         <ul class="dep1">
             <li>
                 <a href="../webtrend/webtrend.html">WEB <br>TRENDS</a>
-                <div class="tooltip">
+                <div class="custom-tooltip tooltip">
                     <button><i class="icon-x"></i></button>
                     <div>이용횟수가 부족하다면 멤버십을<br> 업그레이드 해보세요!💎👍🏻</div>
                 </div>
@@ -14,7 +14,7 @@
             <li><a href="../collect_video/collect_video.html">수집한 <br>영상</a></li>
             <li>
                 <a href="../remove_video/remove_video.html">제거한 <br>영상</a>
-                <div class="tooltip">
+                <div class="tooltip custom-tooltip">
                     <button><i class="icon-x"></i></button>
                     <div>이용횟수가 부족하다면 멤버십을<br> 업그레이드 해보세요!💎👍🏻</div>
                 </div>
@@ -29,13 +29,13 @@
         var windowWidth = $(window).width();
         if (windowWidth > 768) { //창 가로 크기가 768이상일 경우
             $(".dep1 li>a").mouseenter(function () {
-                $(this).siblings('.tooltip').addClass("open");
+                $(this).siblings('.custom-tooltip').addClass("open");
             });
-            $(".tooltip button").on("click", function () {
-                $(this).closest(".tooltip").removeClass("open");
+            $(".custom-tooltip button").on("click", function () {
+                $(this).closest(".custom-tooltip").removeClass("open");
             });
         } else {
-            $(".tooltip").removeClass("open");
+            $(".custom-tooltip").removeClass("open");
         }
     }
     open_tooltip();
