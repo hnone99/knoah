@@ -1299,3 +1299,46 @@ body.body-only-logo{
     font-size: 14px;
     font-weight: 300;
 }
+
+
+// 멤버쉽 > 가격 
+.membership-price-wrap{
+    border-top:  1px solid;
+    padding-top: 1.5rem !important;
+    justify-content: space-around;
+    align-items: center;
+    p{
+        font-family: AppleSDGothicNeoB00;
+        font-size: 13px;
+        letter-spacing: -0.33px;
+        text-align: center;
+        color: #f00;
+        line-height:1;
+    }
+    del{
+        line-height: 1;
+        font-family: AppleSDGothicNeoB00;
+        font-size: 17.5px;
+        letter-spacing: -0.44px;
+        color: #000;
+        min-width: 100px;
+        &::before{
+            background:#f00;
+        }
+        &::after{
+            width: 8px;
+            background: red;
+            right: 7px;
+            top: 1px;
+            transform: rotate(45deg) translate(9px, -2px);
+        }
+    }
+    strong{
+        font-family: AppleSDGothicNeoH00;
+        font-size: 27.5px;
+        letter-spacing: -1.38px;
+        text-align: center;
+        color: #000;
+        font-weight: normal;
+    }
+}

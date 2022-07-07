@@ -46,7 +46,7 @@
     &-case-info{
         background: url('../images/img-landing-02.png')no-repeat top center;
    
-        height: 6844px;
+        height: 6853px;
         max-width: 1920px;
         margin: auto;
         width: 100%;
@@ -56,15 +56,37 @@
 
         .landing-grade-info{
             background: url('../images/img-grade-back.png')no-repeat top center;
-       
-            height: 1853px;
+            height: 1996px;
             width: 100%;
         }
       
         .grade-img-wrap{
-            padding-top: 378px;
+            padding-top: 350px;
             max-width: 1064px;
             margin: auto;
+            .freeuse-wrap{
+                position: relative;
+                width: 100%;
+                margin-bottom: 15px;
+                height: 142px;
+                img{
+                    position: absolute;
+                    left: 0;
+                    top: 0;
+                    box-shadow: $box-shadow;
+                }
+                .freeuse-btn{
+                    background: url('../images/btn-freeuse.png')no-repeat top center;
+                    height: 84px;
+                    position: absolute;
+                    width: 202px;
+                    bottom: 31px;
+                    right: 20px;
+                    &:hover, &:active{
+                        background: url('../images/btn-freeuse-hover.png')no-repeat top center;
+                    }
+                }
+            }
             .pay-wrap{
                 position: relative;
                 width: 288px;
@@ -77,7 +99,7 @@
                     top: 0;
                     box-shadow: $box-shadow;
                 }
-                button{
+                .pay-btn{
                     background: url('../images/btn-payment.png')no-repeat top center;
                     height: 47px;
                     position: absolute;
@@ -105,9 +127,9 @@
                     color: #fff;
                     text-align: center;
                     height: 47px;
-                    line-height: 33px;
+                    line-height: 34px;
                     letter-spacing: -0.74px;
-                    font-size: 24.5px;
+                    font-size: 23px;
                     border: 0;
                     &:hover, &.active{
                         background-color: #000000;
@@ -144,7 +166,7 @@
         height: 100%;
         width: 100%;
         max-width: 1920px;
-        margin: -1px auto 100px auto;
+        margin: -1px auto 80px auto;
     }
     &-bottom-banner-area{
         max-width: 1919px;
@@ -153,43 +175,62 @@
         bottom: 0;
         left: 50%;
         transform: translateX(-50%);
-        height: 100px;
+        height: 80px;
         display: flex;
         justify-content: center;
         background-color: #000;
         align-items:center;
+        &.time{
+            h2{
+                margin-right: 10px;
+            }
+        }
         h2{
-            font-size: 42px;
+            font-size: 34px;
             letter-spacing: -2.1px;
             color: #fff;
             font-family: "GangwonEduPowerExtraBoldA";
             margin-right: 45px;
             display: inline-block;
-            margin-top: 20px;
+            margin-top: 14px;
             b{
                 color: #f3ff2c;
             }
+
         }
         .stock-wrap{
+            height: 80px;
             font-family: AppleSDGothicNeoB00;
             color: #fff;
-            font-size: 28.5px;
+            font-size: 24px;
             letter-spacing: -0.29px;
-            margin-right: 28px;
+            margin-right: 40px;
             display: flex;
-            align-items: baseline;
+            align-items: center;
             &.period{
-                margin-right: 60px;
+                margin-right: 20px;
+                font-size: 20px;
+                .stocks{
+                    margin-right: 0;
+                }
+                span{
+                    font-size: 33px;
+                    padding: 11px 4px;
+                    background-color: #3b3b3b;
+                    line-height: 25px;
+                    height: 43px;
+                }
             }
             .stocks{
                 margin-right: 11px;
                 margin-left: 17px;
                 display: flex;
+                align-items: center;
             }
             span{
                 display: inline-block;
                 color: #f3ff2c;
-                font-size: 42px;
+                font-size: 37px;
                 padding: 11px 4px;
                 border-radius: 16px;
                 background-color: #3b3b3b;
@@ -202,8 +243,10 @@
         }
         .membership-payment-btn{
             background: url('../images/memebership-payment-btn.png')no-repeat center;
-            width: 238px;
-            height: 57px;
+            width: 202px;
+            height: 46px;
+            background-size: cover;
         }
+       
     }
 }
