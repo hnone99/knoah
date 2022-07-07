@@ -1305,7 +1305,7 @@ body.body-only-logo{
 .membership-price-wrap{
     border-top:  1px solid;
     padding-top: 1.5rem !important;
-    justify-content: space-around;
+    justify-content: space-between;
     align-items: center;
     p{
         font-family: AppleSDGothicNeoB00;
@@ -1318,10 +1318,12 @@ body.body-only-logo{
     del{
         line-height: 1;
         font-family: AppleSDGothicNeoB00;
-        font-size: 17.5px;
+        font-size: 16px;
         letter-spacing: -0.44px;
         color: #000;
-        min-width: 100px;
+        min-width: 85px;
+        margin-top: 4px;
+        padding: 0 5px;
         &::before{
             background:#f00;
         }
@@ -1329,13 +1331,13 @@ body.body-only-logo{
             width: 8px;
             background: red;
             right: 7px;
-            top: 1px;
+            top: 0px;
             transform: rotate(45deg) translate(9px, -2px);
         }
     }
     strong{
         font-family: AppleSDGothicNeoH00;
-        font-size: 27.5px;
+        font-size: 20px;
         letter-spacing: -1.38px;
         text-align: center;
         color: #000;
