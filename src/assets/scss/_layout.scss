@@ -310,7 +310,7 @@ aside{
 }
 
 .alarm-layer{
-    position: absolute;right: 0;top: 32px;border: 1px solid #e0e0e0;background: #fff;display: none;
+    position: absolute;right: 0;top: 32px;border: 1px solid #e0e0e0;background: #fff;display: none;    width: 550px;
     &.active{display: block;}
     .channel-empty{
         width: 478px;height: 587px;
