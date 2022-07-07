@@ -1299,21 +1299,6 @@ body.body-only-logo{
     font-size: 14px;
     font-weight: 300;
 }
-// 알림 메뉴
-.alarm-title{
-    i{
-        margin-left: 14px;
-        vertical-align: middle;
-        margin-bottom: 1px;
-        background-position: center;
-    }
-    &[aria-expanded="true"]{
-        i{
-            transform: rotate(180deg);
-        }
-    }
-}
-
 
 
 // 멤버쉽 > 가격 
@@ -1322,7 +1307,6 @@ body.body-only-logo{
     padding-top: 1.5rem !important;
     justify-content: space-between;
     align-items: center;
-    min-height: 58px;
     p{
         font-family: AppleSDGothicNeoB00;
         font-size: 13px;
@@ -1358,80 +1342,5 @@ body.body-only-logo{
         text-align: center;
         color: #000;
         font-weight: normal;
-    }
-}
-
-
-
-// 추천키워드 
-.recomend-keyword-wrap{
-    border-radius: 20px;
-    background-color: rgba(255, 96, 96, 0.05);
-    width: 100%;
-    padding:30px;
-    margin-bottom: 27px;
-    .title{
-        margin-bottom: 20px;
-        justify-content: center;
-        position: static;
-        button{
-            line-height: 1;
-            width: 12px;
-            height: 12px;
-            font-size: 0;
-            margin-top: -23px;
-        }
-    }
-    .recomend-keyword-container{
-        display: flex;
-        align-items: center;
-        flex-wrap: wrap;
-        justify-content: center;
-        gap: 14px;
-        .recomend-keyword{
-            font-size: 14px;
-            font-weight: bold;
-            font-stretch: normal;
-            font-style: normal;
-            line-height: 1.5;
-            letter-spacing: -0.5px;
-            padding:8.5px 32px;
-            border-radius: 30px;
-            background: $white;
-            cursor: pointer;
-            &:hover, &.active{
-                background: #ff6060;
-                color: $white;
-            }
-        }
-    }
-}
-
-.recomend-tooltip {
-    left: 14px!important;
-    .arrow{
-        left:-5px!important;
-    }
-    .arrow::before {
-        border-right-color: $white;
-        box-shadow: $box-shadow;
-        z-index: 1;
-        border-width: .28rem .45rem .28rem 0;
-    }
-
-    .tooltip-inner {
-        background: $white;
-        max-width: 215px;
-        font-size: 12px;
-        font-weight: normal;
-        font-stretch: normal;
-        font-style: normal;
-        line-height: 1.5;
-        letter-spacing: -0.5px;
-        box-shadow: 0 1px 5px 0 rgba(119, 119, 119, 0.1);
-        padding: 9px 19px;
-        z-index: 2;
-        color: $black;
-        border-radius: 6px;
     }
 }
