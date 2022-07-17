@@ -1303,11 +1303,13 @@ body.body-only-logo{
 .alarm-title{
     i{
         margin-left: 14px;
+        margin-right: 14px;
         vertical-align: middle;
         margin-bottom: 1px;
         background-position: center;
     }
     &[aria-expanded="true"]{
+        white-space: inherit;
         i{
             transform: rotate(180deg);
         }
@@ -1380,25 +1382,26 @@ body.body-only-logo{
             margin-top: -23px;
         }
     }
-    .recomend-keyword-container{
+    
+    @at-root .recomend-keyword-container{
         display: flex;
         align-items: center;
         flex-wrap: wrap;
-        justify-content: center;
         gap: 14px;
         .recomend-keyword{
             font-size: 14px;
             font-weight: bold;
             font-stretch: normal;
             font-style: normal;
-            line-height: 1.5;
+            line-height: 21px;
             letter-spacing: -0.5px;
-            padding:8.5px 32px;
+            padding:5px 16px;
             border-radius: 30px;
-            background: $white;
+            background: #efefef;
+            color: #c7c7c7;
             cursor: pointer;
             &:hover, &.active{
-                background: #ff6060;
+                background: rgba(255, 96, 96, 0.7);
                 color: $white;
             }
         }
@@ -1406,19 +1409,20 @@ body.body-only-logo{
 }
 
 .recomend-tooltip {
-    left: 14px!important;
-    .arrow{
-        left:-5px!important;
-    }
-    .arrow::before {
-        border-right-color: $white;
-        box-shadow: $box-shadow;
-        z-index: 1;
-        border-width: .28rem .45rem .28rem 0;
-    }
+    
+    // left: 14px!important;
+    // .arrow{
+    //     left:-5px!important;
+    // }
+    // .arrow::before {
+    //     border-right-color: $white;
+    //     box-shadow: $box-shadow;
+    //     z-index: 1;
+    //     border-width: .28rem .45rem .28rem 0;
+    // }
 
     .tooltip-inner {
-        background: $white;
+        background: #fff2ab;
         max-width: 215px;
         font-size: 12px;
         font-weight: normal;
@@ -1431,5 +1435,42 @@ body.body-only-logo{
         z-index: 2;
         color: $black;
         border-radius: 6px;
+        // 탑
+        .bs-tooltip-top .arrow::before, .bs-tooltip-auto[x-placement^=top] .arrow::before{
+            border-top-color: #fff2ab;
+        }
+        @at-root .bs-tooltip-top, .bs-tooltip-auto[x-placement^=top]{
+            left: 3%!important;
+        }
+        @at-root .bs-tooltip-top .arrow, .bs-tooltip-auto[x-placement^=top] .arrow{
+            left: 12%!important;
+        }
+        @at-root .bs-tooltip-top .arrow::before, .bs-tooltip-auto[x-placement^=top] .arrow::before{
+            border-top-color:  #fff2ab!important;
+            border-width: 0.5rem 0.35rem 0;
+        }
+        // 탑 끝
+    }
+}
+
+
+// 추천키워드 20220717
+.ai-keyword-wrap{
+    margin-bottom: 20px;
+    .title{
+        font-size:16px;
+        line-height: 19px;
+        border-bottom: 1px solid #000;
+        &::before{
+            display: none;
+        }
+    }
+    .title-wrap{
+        position: relative;
+        button{
+            position: absolute;
+            top: -10px;
+            right: -10px;
+        }
     }
 }

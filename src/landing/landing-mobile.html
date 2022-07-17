@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    @@include('@@webRoot/_include/_head.html')
+</head>
+
+<body>
+
+    <div id="wrap">
+        @@include('@@webRoot/_include/_header.html')
+
+        <div id="container-block">
+            <main role="main" class="mobile-landing">
+
+                <!-- 컨텐츠 시작 -->
+                <section class="landing-visual">
+                    <img src="../assets/images/img-landing-mobile-01.png" alt="모바일 랜딩이미지01">
+                    <div>
+                        <div class="landing-swiper-container">
+                            <div class="landing-swiper">
+                                <div class="swiper-container">
+                                    <ul class="swiper-wrapper">
+                                        @@for(var i =1; i < 6; i++){ <li class="swiper-slide">
+                                            <img src="../assets/images/img-landing-graph-0`+ i +`.jpg" alt="그래프이미지">
+                                            </li>
+                                            }
+                                    </ul>
+                                    <div class="swiper-pagination"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+                <section>
+                    <img src="../assets/images/img-landing-mobile-02.png" alt="모바일 랜딩이미지02">
+                </section>
+
+                <section class="landing-footer">
+                    <img src="../assets/images/img-landing-mobile-03.png" alt="모바일 랜딩이미지03">
+                    <a href="">
+                        <img src="../assets/images/img-landing-mobile-btn.png" alt="모바일 랜딩 버튼">
+                    </a>
+                </section>
+            </main>
+        </div>
+    </div>
+</body>
+
+<script>
+    productSwiper = new Swiper(".landing-swiper .swiper-container", {
+        slidesPerView: 1,
+        spaceBetween: 20,
+        simulateTouch: true,
+        // watchOverflow: true,
+        pagination: {
+            el: '.swiper-pagination',
+            type: 'bullets',
+            clickable: true,
+        },
+        autoplay: {
+            delay: 2000,
+        },
+        loop: true,
+    });
+</script>
+
+</html>
