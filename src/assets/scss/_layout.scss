@@ -351,7 +351,7 @@ aside{
         .tit{font-size: 15px ;}
     }
     @include media-breakpoint-down(md){
-        position: fixed;left: 0;right: 0;top: 0;bottom: 0;border: 0;
+        position: fixed;left: 0;right: 0;top: 0;bottom: 0;border: 0; width: 100%;
         .channel-empty{width: auto;height: calc(100vh - 53px - 40px)}
         .alarm-layer-head{
             height: $mobileHeaderHeight;
@@ -369,6 +369,9 @@ aside{
                 max-height: 80vh;
                 font-size: 12px;
            }
+        }
+        .min-width-66px{
+            min-width: 35px;
         }
     }
 }
