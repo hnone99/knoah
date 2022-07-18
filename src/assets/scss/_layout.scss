@@ -101,7 +101,8 @@ aside{
         > li:nth-child(4) > a::before{background-image: url(../images/gnb-icon-3.svg);}
         > li:nth-child(5) > a::before{background-image: url(../images/gnb-icon-4.svg);}
         > li:nth-child(6) > a::before{background-image: url(../images/gnb-icon-8.svg);}
-        > li:nth-child(7) > a::before{background-image: url(../images/gnb-icon-9.svg);}
+        // > li:nth-child(7) > a::before{background-image: url(../images/gnb-icon-9.svg);}
+        > li:nth-child(7) > a::before{background-image: url(../images/gnb-icon-11.svg);}
         > li:nth-child(8) > a::before{background-image: url(../images/gnb-icon-10.svg);}
         > li:nth-child(9) > a::before{background-image: url(../images/gnb-icon-5.svg);}
         > li:nth-child(10) > a::before{background-image: url(../images/gnb-icon-6.svg);}
@@ -207,12 +208,11 @@ aside{
         > li:nth-child(4) > a::before{background-image: url(../images/gnb-icon-3.svg);}
         > li:nth-child(5) > a::before{background-image: url(../images/gnb-icon-4.svg);}
         > li:nth-child(6) > a::before{background-image: url(../images/gnb-icon-8.svg);}
-        > li:nth-child(7) > a::before{background-image: url(../images/gnb-icon-9.svg);}
+        // > li:nth-child(7) > a::before{background-image: url(../images/gnb-icon-9.svg);}
+        > li:nth-child(7) > a::before{background-image: url(../images/gnb-icon-11.svg);}
         > li:nth-child(8) > a::before{background-image: url(../images/gnb-icon-10.svg);}
         > li:nth-child(9) > a::before{background-image: url(../images/gnb-icon-5.svg);}
         > li:nth-child(10) > a::before{background-image: url(../images/gnb-icon-6.svg);}
-        // > li:nth-child(8) > a::before{background-image: url(../images/gnb-icon-5.svg);}
-        // > li:nth-child(9) > a::before{background-image: url(../images/gnb-icon-6.svg);}
     }
 }
 
@@ -223,7 +223,7 @@ aside{
     i{color: #8c8c8c;}
 
     main &{
-        margin-top: 10px;margin-bottom: 60px;
+        margin-top: 10px;margin-bottom: 45px;
     }
 
     @include media-breakpoint-down(md){

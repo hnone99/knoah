@@ -131,7 +131,8 @@ textarea{resize: none!important;}
 .btn-outline-danger{background-color: rgba(255, 0, 0, 0.05);}
 
 .table-wrap{
-    margin: 0 -4px;position: relative;max-height: 80vh;overflow-y: auto;overflow-x: hidden;
+    margin: 0 -4px;position: relative;max-height: 80vh;overflow-y: auto;
+    // overflow-x: hidden;
     &.is-scrolled{
         .table.table-data{
             border-collapse: separate !important;
@@ -165,7 +166,7 @@ textarea{resize: none!important;}
             }
         }
         @include media-breakpoint-down(md){
-            table-layout: fixed;
+            // table-layout: fixed;
         }
     }
 }
