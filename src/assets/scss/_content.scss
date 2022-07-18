@@ -1310,7 +1310,7 @@ body.body-only-logo{
     }
     &[aria-expanded="true"]{
         white-space: inherit;
-        i{
+        & ~ i{
             transform: rotate(180deg);
         }
     }
@@ -1435,15 +1435,15 @@ body.body-only-logo{
         z-index: 2;
         color: $black;
         border-radius: 6px;
+        margin-left: 6.25rem;
         // 탑
         .bs-tooltip-top .arrow::before, .bs-tooltip-auto[x-placement^=top] .arrow::before{
             border-top-color: #fff2ab;
         }
         @at-root .bs-tooltip-top, .bs-tooltip-auto[x-placement^=top]{
-            left: 3%!important;
+            // left: 3%!important;
         }
         @at-root .bs-tooltip-top .arrow, .bs-tooltip-auto[x-placement^=top] .arrow{
-            left: 12%!important;
         }
         @at-root .bs-tooltip-top .arrow::before, .bs-tooltip-auto[x-placement^=top] .arrow::before{
             border-top-color:  #fff2ab!important;
