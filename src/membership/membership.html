@@ -69,7 +69,7 @@
                                     <p class="font-size-12px m-t-10">1회/월</p>
                                 </div>
                             </div>
-<!-- 
+                            <!-- 
                             <div class="d-flex justify-content-center pt-4 p-b-5  pb-lg-3 font-size-18px border-top border-dark font-weight-bold">
                                 ￦ 0
                             </div> -->
@@ -219,7 +219,7 @@
                                     <li>트렌드 키워드</li>
                                     <br>
                                     <li class="font-weight-bold">즐겨찾기</li>
-                                    <li>즐겨찾기 폴더  수</li>
+                                    <li>즐겨찾기 폴더 수</li>
                                     <li>맞춤 페이지 제작</li>
                                 </ul>
                             </div>
@@ -349,85 +349,117 @@
                 <h2 class="title border-bottom m-t-55 mt-lg-9 p-b-10 pb-lg-4 border-dark">자주 묻는 질문</h2>
 
                 <div class="membership-container px-0 px-lg-6">
-                    @@for(var i = 0; i < 10; i++){
-                    <div class="card faq">
+                    @@for(var i = 0; i < 10; i++){ <div class="card faq">
                         <div class="dropdown w-100">
-                            <div class="dropdown-value collapsed text-left" id="faq-header-`+i+`" role="button" data-toggle="collapse" data-target="#faq-content-`+i+`" aria-expanded="true" aria-controls="faq-content-`+i+`"><p>노아의 무료 서비스와 유료 서비스의 차이가 뭔가요?</p></div>
+                            <div class="dropdown-value collapsed text-left" id="faq-header-`+i+`" role="button" data-toggle="collapse" data-target="#faq-content-`+i+`" aria-expanded="true" aria-controls="faq-content-`+i+`">
+                                <p>노아의 무료 서비스와 유료 서비스의 차이가 뭔가요?</p>
+                            </div>
                         </div>
 
-                        <div class="collapse transition-none faq-content" id="faq-content-`+i+`"aria-labelledby="faq-header-0" data-parent="#faq-header-`+i+`">
+                        <div class="collapse transition-none faq-content" id="faq-content-`+i+`" aria-labelledby="faq-header-0" data-parent="#faq-header-`+i+`">
                             무료 서비스 유저에게는, 저희 아이템스카우트의 핵심 서비스 "아이템 발굴"과 "키워드 분석"의 기본적인 기능이 모두 제공됩니다.
                             유료 서비스 구독자는 주제별 키워드, 종합 지표 차트, 연관 키워드 분석 등 아이템 발굴과 키워드 분석의 더 많은 기능을 사용할 수 있습니다. 또한, 상품의 판매, 광고 및 마케팅 전략 수립을 위한 강력한 기능인 "랭킹 추적" 서비스를 사용할 수 있습니다.
                         </div>
-                    </div>
-                    }
                 </div>
-
-                <h2 class="title border-bottom m-t-15 mt-lg-0 p-b-10 pb-lg-4 border-dark">유의사항</h2>
-                <div class="membership-container mx-n3 mx-lg-0">
-                    <ul class="membership-notice">
-                        <li>· 모든 멤버십은 부가세(VAT) 포함 가격입니다.</li>
-                        <li class="font-weight-bold">· 멤버십은 최초 결제한 일자 기준으로 매월 동일하게 정기 결제되며, 해당 일자가 없는 경우 해당 월의 말일에 결제가 이루어집니다.</li>
-                            <li class="ml-1">(예를 들어, 1월 31일에 최초 결제 시 2월 28일/3월 31일/4월 30일 결제)</li>
-                        <li>· 멤버십 업그레이드 결제 시 당일에 바로 적용되며, 기존 등급 결제 건은 일할 계산되어 부분 환불됩니다.</li>
-                        <li>· 멤버십 다운그레이드 시 다음 결제일부터 변경 내용이 적용되며, 다음 결제일까지는 기존 멤버십에서 제공하는 범위로 서비스를 이용할 수 있습니다.</li>
-                        <li>· 멤버십의 자동연장을 중단할 경우 멤버십은 마이페이지의 멤버십 기간까지 유지되며, 자동결제 예정일에 자동결제가 일어나지 않고 멤버십이 종료됩니다.</li>
-                        <li>· 멤버십 결제 취소 및 환불은 결제 후 7일까지, 유료 멤버십 전용 서비스 이용내역이 없을 시 가능하며, 10% 수수료를 제외한 금액이 환불됩니다.</li>
-                        <li>· 환불의 경우 결제 방법에 따라 최대 7일 이상 소요될 수 있습니다.</li>
-                        <li  class="font-weight-bold">· 멤버십 정기 결제 해지 및 다운그레이드 시 최근 등록순으로 개수 제한 내 데이터만 유지됩니다. 제한 범위 외의 데이터는 모두 삭제되며, 복구 불가합니다.</li>
-                            <li class="ml-1 font-weight-bold">(예를 들어, PREMIUM 멤버십으로 상품을 100개 등록한 상태에서 등록 제한 개수가 10개인 BASIC 멤버십으로 변경 시, 최근 등록한 10개 상품의 데이터만 유지되고 나머지 90개 상품의 데이터는 삭제)</li>
-                        <li>· 정기 결제일에 결제가 되지 않으면 바로 멤버십이 보류되며, 결제일 이후 2일까지 다시 결제를 진행합니다. 마이페이지에서 직접 재결제도 가능합니다.</li>
-                        <li>· 마지막 결제시도까지 정기 결제가 이루어지지 않으면 멤버십이 최종 해지되며, 개수 제한 범위 외의 데이터가 영구 삭제됩니다.</li>
-                        <li>· 자동결제 실패로 자동연장이 진행되지 않은 경우 재결제 시도 기간에 다른 결제 수단을 등록하여 정기 결제를 다시 진행하실 수 있습니다.</li>
-                        <li>· 회원 탈퇴 시에도 멤버십 결제 취소 및 환불 정책이 동일하게 적용됩니다.</li>
-                        <li>· 이벤트 패키지는 스마트스토어 비법서, 마진계산기, 코칭권이 즉시 발송되어 환불이 불가합니다.</li>
-                    </ul>
-                </div>
-
-                <!-- 컨텐츠 끝 -->
-
-            </main>
+                }
         </div>
 
-        @@include('@@webRoot/_include/_footer.html')
+        <h2 class="title border-bottom m-t-15 mt-lg-0 p-b-10 pb-lg-4 border-dark">유의사항</h2>
+        <div class="membership-container mx-n3 mx-lg-0">
+            <ul class="membership-notice">
+                <li>· 모든 멤버십은 부가세(VAT) 포함 가격입니다.</li>
+                <li class="font-weight-bold">· 멤버십은 최초 결제한 일자 기준으로 매월 동일하게 정기 결제되며, 해당 일자가 없는 경우 해당 월의 말일에 결제가 이루어집니다.</li>
+                <li class="ml-1">(예를 들어, 1월 31일에 최초 결제 시 2월 28일/3월 31일/4월 30일 결제)</li>
+                <li>· 멤버십 업그레이드 결제 시 당일에 바로 적용되며, 기존 등급 결제 건은 일할 계산되어 부분 환불됩니다.</li>
+                <li>· 멤버십 다운그레이드 시 다음 결제일부터 변경 내용이 적용되며, 다음 결제일까지는 기존 멤버십에서 제공하는 범위로 서비스를 이용할 수 있습니다.</li>
+                <li>· 멤버십의 자동연장을 중단할 경우 멤버십은 마이페이지의 멤버십 기간까지 유지되며, 자동결제 예정일에 자동결제가 일어나지 않고 멤버십이 종료됩니다.</li>
+                <li>· 멤버십 결제 취소 및 환불은 결제 후 7일까지, 유료 멤버십 전용 서비스 이용내역이 없을 시 가능하며, 10% 수수료를 제외한 금액이 환불됩니다.</li>
+                <li>· 환불의 경우 결제 방법에 따라 최대 7일 이상 소요될 수 있습니다.</li>
+                <li class="font-weight-bold">· 멤버십 정기 결제 해지 및 다운그레이드 시 최근 등록순으로 개수 제한 내 데이터만 유지됩니다. 제한 범위 외의 데이터는 모두 삭제되며, 복구 불가합니다.</li>
+                <li class="ml-1 font-weight-bold">(예를 들어, PREMIUM 멤버십으로 상품을 100개 등록한 상태에서 등록 제한 개수가 10개인 BASIC 멤버십으로 변경 시, 최근 등록한 10개 상품의 데이터만 유지되고 나머지 90개 상품의 데이터는 삭제)</li>
+                <li>· 정기 결제일에 결제가 되지 않으면 바로 멤버십이 보류되며, 결제일 이후 2일까지 다시 결제를 진행합니다. 마이페이지에서 직접 재결제도 가능합니다.</li>
+                <li>· 마지막 결제시도까지 정기 결제가 이루어지지 않으면 멤버십이 최종 해지되며, 개수 제한 범위 외의 데이터가 영구 삭제됩니다.</li>
+                <li>· 자동결제 실패로 자동연장이 진행되지 않은 경우 재결제 시도 기간에 다른 결제 수단을 등록하여 정기 결제를 다시 진행하실 수 있습니다.</li>
+                <li>· 회원 탈퇴 시에도 멤버십 결제 취소 및 환불 정책이 동일하게 적용됩니다.</li>
+                <li>· 이벤트 패키지는 스마트스토어 비법서, 마진계산기, 코칭권이 즉시 발송되어 환불이 불가합니다.</li>
+            </ul>
+        </div>
+
+        <!-- 컨텐츠 끝 -->
+
+        </main>
+    </div>
+
+    @@include('@@webRoot/_include/_footer.html')
 
     </div>
+    .
 
     <div class="popup front">
-        <div class="popup-content">
-            <button class="close"><i class="icon-x"></i></button>
-            <a href="../landing/landing.html"></a>
-            <img src="../assets/images/img-popup.png" alt="프론트 팝업 이미지">
-            <span class="event-check-area">
-                <input type="checkbox" id="mEventPOPchkBox" class="custom-control-input">
-                <label for="mEventPOPchkBox" id="">일주일동안 보지않기</label>
-            </span>
+        <div class="popup-dialog">
+            <div class="popup-content">
+                <button class="close"><i class="icon-x"></i></button>
+                <a href="../landing/landing.html"></a>
+                <img src="../assets/images/img-popup.png" alt="프론트 팝업 이미지">
+                <span class="event-check-area">
+                    <input type="checkbox" id="mEventPOPchkBox" class="custom-control-input">
+                    <label for="mEventPOPchkBox" id="">일주일동안 보지않기</label>
+                </span>
+            </div>
+            <div class="popup-content">
+                <button class="close"><i class="icon-x"></i></button>
+                <a href="../landing/landing.html"></a>
+                <img src="../assets/images/img-popup.png" alt="프론트 팝업 이미지">
+                <span class="event-check-area">
+                    <input type="checkbox" id="mEventPOPchkBox" class="custom-control-input">
+                    <label for="mEventPOPchkBox" id="">일주일동안 보지않기</label>
+                </span>
+            </div>
         </div>
     </div>
 
-    <div class="popup side">
+    <div class="popup side" style="bottom:25%;">
         <div class="popup-content">
             <button class="close"><i class="icon-x"></i></button>
             <a href="../landing/landing.html"></a>
             <img src="../assets/images/img-side-banner.png" alt="사이드 배너 이미지">
         </div>
     </div>
+    <div class="popup side" style="bottom:42.6%;">
+        <div class="popup-content">
+            <button class="close"><i class="icon-x-white"></i></button>
+            <a href="../landing/landing.html"></a>
+            <img src="../assets/images/img-side-banner-black.png" alt="사이드 배너 이미지">
+        </div>
+    </div>
 
     @@include('@@webRoot/_include/_modal.html')
 
     <script>
-        $(document).ready(function(){
-            $(".dropdown-value").on("click", function(){
+        $(document).ready(function () {
+            $(".dropdown-value").on("click", function () {
                 $(this).parent(".dropdown").toggleClass("active");
                 $(this).parent().parent(".faq").toggleClass("active");
             });
 
             // 팝업 스크립트(공통)
-            
-            $(".popup .close").on("click", function(){
-                $(this).closest(".popup").addClass("close");
+            // 옆으로 나열하는걸로 바뀌면서 팝업닫기전에는 팝업 이외 영역 클릭 안됩니다! 보이진 않지만 모달 딤처럼 깔려있다고 봐주세요!
+            // 팝업영역 보다  z-index 가 높아야 클릭되요!(현재 header aside클릭가능)
+            $(document).on('click', '.popup-content .close', function () {
+
+                let oThis = $(this)
+
+                if (oThis.closest('.popup-dialog').find('.popup-content').length == 1) {
+                    // alert('asdf');
+                    console.log("dgd");
+                    oThis.closest(".popup").remove();
+                    return;
+                }
+
+                oThis.closest('.popup-content').remove();
+
             });
-        })
+        });
     </script>
 
 </body>
