@@ -553,6 +553,11 @@
 
     &.mobile {
         max-width: 720px;
+        section{
+            & + section{
+                margin-top: -1px;
+            }
+        }
 
         .landing-container {
             padding: 0 20px;
@@ -560,9 +565,6 @@
         .img-wrap{
             max-width: 595px;
             margin:auto;
-            >div{
-                box-shadow: $box-shadow;
-            }
         }
 
         .btn-area {
@@ -673,6 +675,7 @@
                     &-02 {
                         padding: 25px 0 55px 0;
                         max-width: 535px;
+                        width: 100%;
                     }
                 }
             }
