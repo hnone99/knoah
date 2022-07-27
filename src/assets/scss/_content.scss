@@ -568,7 +568,7 @@
 .hits-count{
     position: relative;
     display: flex;
-    display: -webkit-flex!important;
+    // display: -webkit-flex!important;
     display: -ms-flexbox;
     justify-content: center;
     span{
@@ -1414,7 +1414,7 @@ body.body-only-logo{
         gap: 14px;
         .recomend-keyword{
             font-size: 14px;
-            font-weight: bold;
+            font-weight: 500;
             font-stretch: normal;
             font-style: normal;
             line-height: 21px;
