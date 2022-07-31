@@ -1,5 +1,5 @@
 .channel-add-info{
-    border-top: 1px solid #000;border-bottom: 1px solid #000;line-height: 1.4;display: flex;align-items: center; justify-content: space-between;padding: 20px 40px;
+    border-top: 1px solid #141414;border-bottom: 1px solid #141414;line-height: 1.4;display: flex;align-items: center; justify-content: space-between;padding: 20px 40px;
     small{font-size: 12px;}
     del{color: #c7c7c7;}
     strong{font-size: 20px;font-weight: 500;display: block;}
@@ -38,7 +38,7 @@
 .filter{
     margin-bottom: 37px;
     .filter-head{
-        border-bottom: 1px solid #000;display: flex;align-items: center;padding-bottom: 10px;
+        border-bottom: 1px solid #141414;display: flex;align-items: center;padding-bottom: 10px;
         h3{font-weight: 500;font-size: 16px;}
     }
     .filter-body{border-bottom: 1px solid #8c8c8c;padding: 20px 0;}
@@ -63,7 +63,7 @@
 }
 
 .chart{
-    // border-top: 1px solid #000;
+    // border-top: 1px solid #141414;
     padding-top: 1.125rem;
     @include media-breakpoint-down(md){
         padding-top: 17px;
@@ -193,7 +193,7 @@
     margin-right:-11px;
     .bar{
         height:18px;
-        background: #000;
+        background: #141414;
     }
     li{
         a{
@@ -228,7 +228,7 @@
     align-items: center;
     .bar{
         height:14px;
-        background: #000;
+        background: #141414;
     }
     li{
         font-size: 14px;
@@ -269,7 +269,7 @@
         justify-content: center;
         position:relative;
         font-weight: 500;
-        border-left:1px solid #000;
+        border-left:1px solid #141414;
         i{margin-right: 12px; transition: all 0.35s ease; background-position: center;}
         &.on{
             .icon-addChannel{background-image: url('../images/icon-on-addChannel.svg');}
@@ -416,7 +416,7 @@
         }
         &.active{
             .dropdown-value{
-                border-color: #000;
+                border-color: #141414;
                 &::before{
                     border-color: black transparent transparent transparent;
                     transform: rotate(180deg);
@@ -449,7 +449,7 @@
         margin-top:-1px;
     }
     &.active{
-        border:1px solid #000;
+        border:1px solid #141414;
 
         & + .faq{
             margin-top:0;
@@ -883,25 +883,26 @@
 
 
 .rescan-search {
-    display: flex; align-items: center; border: 1px solid $dark; height: 36px; padding: 6px 0;
+    display: flex; align-items: center; border: 1px solid $dark; height: 29px; padding: 3px 0; border-radius: 30px;
     .dropdown {
-        border-right: 1px solid $dark; height: 100%;width: 115px;
+        border-right: 1px solid $dark; height: 100%;width: 120px;
         .dropdown-value {
-            border-bottom: 0; padding: 0 1.5rem 0 .625rem; line-height: 1.3;text-align: left;
-            &::before { right: 10px; }
+            border-bottom: 0;padding: 0 1.5rem 0 20px;line-height: 1.5;text-align: left;font-size: 14px;
+            &::before { right: 10px;     top: calc(50% - 3px);}
         }
         .dropdown-list {
             text-align: left;
-            > div a { font-weight: 500; font-size: 16px; }
+            > div a { font-weight: 500; font-size: 14px; }
         }
-        .dropdown-box { top: 28px; border-radius: 0; border: 1px solid; width: calc(100% + 2px); padding: .625rem; left: -1px; }
+        .dropdown-box { top: 24px; border-radius: 0; border: 1px solid; width: calc(100% + 2px); padding: .625rem 20px; left: -1px; }
         &.active { border-color: none; }
     }
     .header-search {
-        transform: none; margin: 0; height: 36px; width: 214px; background: transparent;
-        .form-control { padding-left: 10px; padding-right: 36px; font-size: 16px; font-weight: 400;padding-bottom: calc(.5rem + 1px); }
-        .btn-search { right: 13px; }
+        transform: none; margin: 0; height: 29px; width: 214px; background: transparent;
+        .form-control { padding-left: 10px; padding-right: 47px; font-size: 16px; font-weight: 400;padding-bottom: calc(.5rem + 1px); font-size: 14px;}
+        .btn-search { right: 20px; font-size: 0;transform: translateY(-50%);}
         i { width: 17px; height: 17px; }
+        ::placeholder{font-size: 14px; color:#8c8c8c;}
     }
     @include media-breakpoint-down(md) {
         width: 100%;
@@ -986,7 +987,7 @@
     }
     @include media-breakpoint-down(md){
         border:0;
-        border-bottom:1px solid #000;
+        border-bottom:1px solid #141414;
         margin-top: 30px;
         width: 100%;
         display: flex;
@@ -1010,8 +1011,8 @@
 
 .customer{
     text-align: center;margin-top: 50px;
-    .customer-item{border: 1px solid #000;padding: 25px;}
-    h3{border-bottom: 1px solid #000;font-size: 20px;font-weight: 700;padding-bottom: 14px;}
+    .customer-item{border: 1px solid #141414;padding: 25px;}
+    h3{border-bottom: 1px solid #141414;font-size: 20px;font-weight: 700;padding-bottom: 14px;}
     img{margin: 50px 0 46px;}
     p{font-size: 16px;font-weight: 500;line-height: 1.6;min-height: 78px;margin-bottom: 25px;
         small{font-size: 14px;}
@@ -1060,10 +1061,10 @@ body.body-only-logo{
 
 .chart-viewers{
     // margin-top: 20px;
-    // border-top: 1px solid #000;padding-top: 20px;
-    border-top: 1px solid #000;padding-top: 20px;border-bottom: 1px solid #000;padding-bottom: 40px;margin-bottom: 50px;
+    // border-top: 1px solid #141414;padding-top: 20px;
+    border-top: 1px solid #141414;padding-top: 20px;border-bottom: 1px solid #141414;padding-bottom: 40px;margin-bottom: 50px;
     .border-left,
-    .border-right{border-color: #000 !important;}
+    .border-right{border-color: #141414 !important;}
 
     .tit{margin-bottom: 20px;}
     .subtit{font-size: 14px;margin-bottom: .5rem}
@@ -1362,7 +1363,7 @@ body.body-only-logo{
        
         font-size: 16px;
         letter-spacing: -0.44px;
-        color: #000;
+        color: #141414;
         min-width: 85px;
         margin-top: 4px;
         padding: 0 5px;
@@ -1381,7 +1382,7 @@ body.body-only-logo{
         font-size: 20px;
         letter-spacing: -1.38px;
         text-align: center;
-        color: #000;
+        color: #141414;
     }
 }
 
@@ -1484,7 +1485,7 @@ body.body-only-logo{
     .title{
         font-size:16px;
         line-height: 19px;
-        border-bottom: 1px solid #000;
+        border-bottom: 1px solid #141414;
         &::before{
             display: none;
         }
@@ -1503,5 +1504,85 @@ body.body-only-logo{
     @include media-breakpoint-down(md){
         font-size: 12px!important;
         padding: 0.58203rem 1.25rem!important;
+    }
+}
+
+
+
+.help-button-area {
+    display: flex;
+    gap: 5px;
+    li {
+        font-size: 12px;
+        font-weight: 500;
+        color: #8c8c8c;
+    }
+
+    .btn-toggle {
+        margin-top: 3px;
+        background-color: #e0e0e0;
+        border-radius: 30px;
+        position: relative;
+        display: flex;
+        align-items: center;
+        width: 37px;
+        height: 14.5px;
+        padding: 0;
+        &:before,
+        &:after {
+            content: '';
+            color: #fff;
+            font-size: 10px;
+            line-height: 8.5px;
+            transition: content opacity 0.3s;
+            font-weight:lighter;
+        }
+
+        &:before {
+            content: 'ON';
+            text-align: right;
+            opacity: 0;
+            margin-left: 5.5px;
+        }
+
+        &:after {
+            content: 'OFF';
+            margin-left: -5px;
+        }
+
+        &.active {
+            transition: background-color 0.5s;
+            background-color: #ff0000;
+            &:before {
+                opacity: 1;
+            }
+
+            &:after {
+                opacity: 0;
+            }
+            .handle{
+                left: 68%;
+            }
+        }
+
+        .handle {
+            position: absolute;
+            left: 2px;
+            top: 50%;
+            transform: translateY(-50%);
+            width: 10px;
+            height: 10px;
+            border-radius: 1.875rem;
+            background: #fff;
+            transition: left 0.25s;
+        }
+    }
+}
+
+.help-img-wrap{
+    .help-img{display: none;}
+    @include media-breakpoint-down(md){
+        text-align: center;
+        .help-img{margin-top: 10px;}
     }
 }

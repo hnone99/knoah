@@ -51,7 +51,7 @@
             }
 
             .swiper-pagination-bullet-active {
-                background: #000;
+                background: #141414;
             }
         }
     }
@@ -161,7 +161,7 @@
 
                     &:hover,
                     &.active {
-                        background-color: #000000;
+                        background-color: #141414;
                         border: 0;
                     }
                 }
@@ -213,7 +213,7 @@
         height: 80px;
         display: flex;
         justify-content: center;
-        background-color: #000;
+        background-color: #141414;
         align-items: center;
 
         &.time {
@@ -229,7 +229,7 @@
             padding-top: 41px;
 
             p {
-                color: #000;
+                color: #141414;
                 background: #ff9898;
                 font-size: 18px;
                 padding: 7px 25px;
@@ -674,12 +674,8 @@
     
                     &-02 {
                         padding: 25px 0 55px 0;
-<<<<<<< Updated upstream
-                        max-width: 535px;
                         width: 100%;
-=======
                         // max-width: 535px;
->>>>>>> Stashed changes
                     }
                 }
             }

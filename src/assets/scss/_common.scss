@@ -9,6 +9,7 @@
 .icon-gear{width: 24px;height: 24px;background-image: url('../images/icon-gear.svg');}
 .icon-x{width: 15px;height: 15px;background-image: url('../images/icon-x.svg');}
 .icon-x-white{width: 15px;height: 15px;background-image: url('../images/icon-x-white.svg');}
+.icon-x-gray{width: 15px;height: 15px;background-image: url('../images/icon-x-gray.svg');}
 .icon-angle-left{width: 6px;height: 10px;background-image: url('../images/icon-angle-left.svg');}
 .icon-angle-right{width: 6px;height: 10px;background-image: url('../images/icon-angle-right.svg');}
 .icon-filter{width: 18px;height: 20px;background-image: url('../images/icon-filter.svg');}
@@ -106,7 +107,9 @@ button,
 .btn-lg{
     padding: 0.625rem 1rem;
 }
-
+.btn-sm{
+    padding:4px 12px;
+}
 .line-height{
     line-height: 1.4!important;
 }
@@ -178,10 +181,10 @@ textarea{resize: none!important;}
 }
 
 .form-datepicker{
-    border: 0;border-bottom: 1px solid #000;text-align: center;font-weight: 500;font-size: 16px;height: 46px; min-width: 220px;padding: 11px 20px;transition: color 0.3s;
+    border: 0;border-bottom: 1px solid #141414;text-align: center;font-weight: 500;font-size: 16px;height: 46px; min-width: 220px;padding: 11px 20px;transition: color 0.3s;
     background: url('../images/icon-calendar.svg') no-repeat 100% 50%;
     &::placeholder{
-        color:#000;
+        color:#141414;
     }
     &.hasDatepicker{
         border-color: $danger; background-image: url('../images/icon-calendar-red.svg');
@@ -195,7 +198,7 @@ textarea{resize: none!important;}
     .ui-state-default{border: 0;}
     td span,
     td a{text-align: center;border-radius: 50px;display: block;width: 100%;height: 100%;background: none;padding: 0;}
-    .ui-state-highlight{background: $light;color: #000;}
+    .ui-state-highlight{background: $light;color: #141414;}
     .ui-state-active{background: #ff6060;color: #fff !important;}
     .ui-datepicker-calendar{
         font-size: 12px;margin-bottom: 0;width: auto;
@@ -330,7 +333,7 @@ textarea.form-control{resize: none;}
     z-index: 2;
 }
 .popover-header{
-    font-size: 20px;font-weight: 700;line-height: 1.4;text-align: center;color: #000 !important; width: 100%; position:relative;
+    font-size: 20px;font-weight: 700;line-height: 1.4;text-align: center;color: #141414 !important; width: 100%; position:relative;
     .close{
         position: absolute;
         right: -15px;
@@ -355,24 +358,25 @@ textarea.form-control{resize: none;}
 .modal[data-overlap=true]{
     z-index: 1052;
 }
-.modal-title{color:#000;
+.modal-title{color:#141414;
     img{height: 38px;}
 }
 .modal{
+    z-index: 1080!important;
     .modal-content{box-shadow: 0 1px 30px 0 rgba(119, 119, 119, 0.2);border: 0;border-radius: 36px;}
     .modal-close{position: absolute;right: -15px;top: -5px;line-height: 1;
         button{vertical-align: top;line-height: 1;}
     }
     .modal-body{padding: 40px 60px;}
-    .modal-title{font-size: 20px;font-weight: 700;line-height: 1.4;text-align: center;margin-bottom: 1rem; color: #000 !important;}
+    .modal-title{font-size: 20px;font-weight: 700;line-height: 1.4;text-align: center;margin-bottom: 1rem; color: #141414 !important;}
     &.modal-square{
         .modal-close{right: -30px; top: -3px;}
-        .modal-content{border-radius: 0;border: 1px solid #000;}
+        .modal-content{border-radius: 0;border: 1px solid #141414;}
     }
     .modal-dialog-scrollable{
         overflow: visible;
         .modal-content{
-            max-height: 85vh;
+            max-height: 80vh;
             overflow: visible;
             .modal-body{
                 margin: 37px 0;
@@ -432,10 +436,14 @@ textarea.form-control{resize: none;}
     }
     @include media-breakpoint-down(sm){
         .modal-dialog{
-            margin:auto;
+            margin:8px auto;
             max-width: 86%!important;
         }
-
+        .modal-dialog-scrollable{
+            .modal-content{
+                max-height: 80vh;
+            }
+        }
     }
 }
 
@@ -457,11 +465,11 @@ textarea.form-control{resize: none;}
 	    -ms-user-select: none;
             user-select: none;
     .dropdown-value {
-        border-bottom: 1px solid #000;text-align: center;font-weight: 500;font-size: 16px;
+        border-bottom: 1px solid #141414;text-align: center;font-weight: 500;font-size: 16px;
         height: 100%;position: absolute;left: 0;top: 0;bottom: 0;right: 0;padding: 11px 20px;transition: color 0.3s;
         &.filled{}
         &::before {
-            content: '';display: block;position: absolute;top: calc(50% - 2px);right: 0;width: 0;height: 0;border-style: solid;border-width: 7px 4px 0 4px;border-color: #000 transparent transparent transparent;transition: all .2s .1s;
+            content: '';display: block;position: absolute;top: calc(50% - 2px);right: 0;width: 0;height: 0;border-style: solid;border-width: 7px 4px 0 4px;border-color: #141414 transparent transparent transparent;transition: all .2s .1s;
         }
     }
     .dropdown-box{
@@ -512,9 +520,9 @@ textarea.form-control{resize: none;}
 }
 .keyword{
     background: #efefef;padding: 5px 1rem 6px;border-radius: 30px;position: relative;margin: 10px 7px;display: inline-flex;
-    a{color: #000000;font-size: 12px;text-decoration: none;}
+    a{color: #141414;font-size: 12px;text-decoration: none;}
     button{position: absolute;right: -8px;top: -8px;line-height: 1;font-size: 0;}
-    .icon-x{width: 9px;height: 9px;vertical-align: top;}
+    .icon-x-gray{width: 9px;height: 9px;vertical-align: top;}
     &.on{
         background: black !important;
         a, span{ color:$white !important;}
@@ -527,7 +535,7 @@ textarea.form-control{resize: none;}
 .loading{
     border-radius: 50px;border: 3px solid rgba(0,0,0,0.15);display: inline-block;position: relative;width: 17px;height: 17px;vertical-align: middle;
     &::after{
-        content: "";position: absolute;top: -3px;right: -3px;bottom: -3px;left: -3px;border-radius: 50px;border: 3px solid #0000;border-top-color: #797979;
+        content: "";position: absolute;top: -3px;right: -3px;bottom: -3px;left: -3px;border-radius: 50px;border: 3px solid #141414;border-top-color: #797979;
         -webkit-animation: spin 1s linear infinite;
         animation: spin 1s linear infinite;
     }
@@ -603,12 +611,12 @@ textarea.form-control{resize: none;}
     }
     .bar-area{
         position: relative;
-        .line{width: 100%;height: 1px;background: #000;position: absolute;left: 0;top: calc(50% - 0.5px);}
+        .line{width: 100%;height: 1px;background: #141414;position: absolute;left: 0;top: calc(50% - 0.5px);}
         &::before,
-        &::after{content: '';width: 1px;height: 5px;background: #000;position: absolute;left: 0; top: calc(50% - 2.5px);}
+        &::after{content: '';width: 1px;height: 5px;background: #141414;position: absolute;left: 0; top: calc(50% - 2.5px);}
         &::after{left: auto;right: 0;}
         p{
-            position: absolute;top: 10px;display: inline-block;font-size: 12px;color: #000;
+            position: absolute;top: 10px;display: inline-block;font-size: 12px;color: #141414;
             i{font-style: normal;}
             &.female{left: 0;transform: translateX(-50%);}
             &.male{right: 0;transform: translateX(50%);}
@@ -631,7 +639,7 @@ textarea.form-control{resize: none;}
             }
             &.active,
             &.active ~ span{
-                &::before{background: #000;}
+                &::before{background: #141414;}
             }
         }
     }
@@ -641,9 +649,9 @@ textarea.form-control{resize: none;}
     padding: 5px 0 28px;
     .bar-area{
         position: relative;
-        .line{width: 100%;height: 1px;background: #000;position: absolute;left: 0;top: 50%;}
+        .line{width: 100%;height: 1px;background: #141414;position: absolute;left: 0;top: 50%;}
         &::before,
-        &::after{content: '';width: 1px;height: 5px;background: #000;position: absolute;left: 0;top: 50%;margin-top: -2px;}
+        &::after{content: '';width: 1px;height: 5px;background: #141414;position: absolute;left: 0;top: 50%;margin-top: -2px;}
         &::after{left: auto;right: 0;}
     }
     .labels{
@@ -652,7 +660,7 @@ textarea.form-control{resize: none;}
             position: relative;
             a{
                 padding: 5px;font-size: 0;line-height: 1;position: absolute;left: 50%;top: 50%;transform: translate(-50%,-50%);
-                &::before{content: '';display: block;width: 5px;height: 5px;background: #000;border-radius: 50%;}
+                &::before{content: '';display: block;width: 5px;height: 5px;background: #141414;border-radius: 50%;}
                 &.active{
                     &::before{background: $danger;}
                     span{color: $danger;font-weight: 700;}
@@ -691,14 +699,14 @@ textarea.form-control{resize: none;}
 
 .form-control{
     border:0;
-    border-bottom: 1px solid #000;
+    border-bottom: 1px solid #141414;
     padding:0.5rem 0;
 
     &:focus{
         outline: 0;
         border: 0;
         box-shadow: none;
-        border-bottom:1px solid #000;
+        border-bottom:1px solid #141414;
     }
     &::placeholder{color:#8c8c8c;}
     &.has-validation{
@@ -706,14 +714,14 @@ textarea.form-control{resize: none;}
     }
     &.is-invalid{
         margin-bottom: 0;
-        border-color: #000;
+        border-color: #141414;
         &:focus{
-            border-color: #000;
+            border-color: #141414;
             box-shadow: none;
         }
     }
     &.form-control-basic{
-        border: 1px solid #000;padding-left: 1rem;padding-right: 1rem;
+        border: 1px solid #141414;padding-left: 1rem;padding-right: 1rem;
         &::placeholder{text-align: left;}
     }
 }
@@ -722,8 +730,8 @@ textarea.form-control{resize: none;}
     margin-top: 8px; font-size: 14px;
     .is-invalid &{
         margin-bottom:0;
-        border-color: #000;
-        color:#000;
+        border-color: #141414;
+        color:#141414;
     }
 }
 
@@ -813,7 +821,7 @@ textarea.form-control{resize: none;}
     margin-left: 78px;margin-right: 78px;
     .nav-tabs{
         .nav-link{
-            border: 0;border-bottom: 1px solid #000;padding-top: 1rem;padding-bottom: 1rem;font-weight: 500;
+            border: 0;border-bottom: 1px solid #141414;padding-top: 1rem;padding-bottom: 1rem;font-weight: 500;
             &.active{border-bottom: 2px solid $danger;color: $danger;padding-bottom: calc(1rem - 1px);}
         }
     }

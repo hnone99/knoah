@@ -170,6 +170,15 @@ var Common = {
 				}, 0);
 			}
 		});
+
+		// 도움말 이미지 on off 
+		$(".help-button-area button.btn-toggle").on("click", function () {
+			if ( $(this).attr('aria-pressed') == 'true') {
+				$("body").find(".help-img").hide();
+			} else {
+				$("body").find(".help-img").show();
+			}
+		});
 	}
 };
 

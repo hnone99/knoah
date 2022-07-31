@@ -17,7 +17,7 @@
   background-color: transparent;
   border: $btn-border-width solid transparent;
   text-decoration: none;
-  @include button-size($btn-padding-y, $btn-padding-x, $btn-font-size, $btn-line-height, $btn-border-radius);
+  @include button-size($btn-padding-y, $btn-padding-x, $btn-font-size, $btn-line-height, 30px);
   @include transition($btn-transition);
 
   @include hover() {

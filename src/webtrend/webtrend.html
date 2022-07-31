@@ -19,30 +19,31 @@
 
                 <!-- 컨텐츠 시작 -->
                 <h2 class="page-title">WEB TRENDS</h2>
-
-                <form action="">
-                    <fieldset>
-                        <legend>검색</legend>
-                        <div class="header-search">
-                            <div class="position-relative h-100">
-                                <input type="text" class="form-control" placeholder="채널명 또는 채널 URL을 입력해 주세요.">
-                                <button type="button" class="btn-search" aria-label="검색">
-                                    <i class="icon-search"></i>
-                                </button>
-                            </div>
-                            <div class="dropdown search active">
-                                <div class="dropdown-box">
-                                    <div class="dropdown-list">
-                                        @@for (var i = 1; i < 10; i++) {
-                                            <div>
-                                                <a href="">
-                                                    <span class="channel-thumb">
-                                                        <img src="../assets/images/@profile.jpg" alt="채널 이미지">
-                                                    </span>
-                                                    <span class="channel-name">
-                                                        현승원 TV
-                                                    </span>
-                                                </a>
+                <div class="row m-b-45">
+                    <div class="col-12 col-lg d-none d-md-block"></div>
+                    <div class="col-12 col-lg-auto">
+                        <form action="">
+                            <fieldset>
+                                <legend>검색</legend>
+                                <div class="header-search">
+                                    <div class="position-relative h-100">
+                                        <input type="text" class="form-control" placeholder="채널명 또는 채널 URL을 입력해 주세요.">
+                                        <button type="button" class="btn-search" aria-label="검색">
+                                            <i class="icon-search"></i>
+                                        </button>
+                                    </div>
+                                    <div class="dropdown search">
+                                        <div class="dropdown-box">
+                                            <div class="dropdown-list">
+                                                @@for (var i = 1; i < 10; i++) { <div>
+                                                    <a href="">
+                                                        <span class="channel-thumb">
+                                                            <img src="../assets/images/@profile.jpg" alt="채널 이미지">
+                                                        </span>
+                                                        <span class="channel-name">
+                                                            현승원 TV
+                                                        </span>
+                                                    </a>
                                             </div>
                                             <div>
                                                 <a href="">
@@ -55,12 +56,20 @@
                                                 </a>
                                             </div>
                                             }
+                                        </div>
                                     </div>
                                 </div>
-                            </div>
-                        </div>
-                    </fieldset>
-                </form>
+
+                            </fieldset>
+                        </form>
+                    </div>
+                    <div class="col-12 col-lg help-img-wrap">
+                        <img src="../assets/images/img-help-trend.png" class="help-img" alt="웹트렌드 도움말 이미지">
+                        <!-- <img src="../assets/images/img-help-topic.png" class="help-img" alt="토픽마이닝 도움말 이미지">
+                        <img src="../assets/images/img-help-keword.png" class="help-img" alt="키워드마이닝 도움말 이미지">
+                        <img src="../assets/images/img-help-channel.png" class="help-img" alt="채널 도움말 이미지"> -->
+                    </div>
+                </div>
 
                 <div class="filter has-collapsed">
                     <div class="border-bottom border-dark row row-0 justify-content-between">
@@ -93,24 +102,20 @@
                                                 <div class="dropdown-value">일별 검색 이력</div>
                                                 <div class="dropdown-box">
                                                     <div class="dropdown-list">
-                                                        @@for (var i = 1; i < 10; i++) {
-                                                            <div><a href="javascript:;">2022.03.0`+i+`</a></div>
-                                                        }
-                                                    </div>
+                                                        @@for (var i = 1; i < 10; i++) { <div><a href="javascript:;">2022.03.0`+i+`</a></div>
+                                                    }
                                                 </div>
                                             </div>
                                         </div>
-                                        <div class="col-12 col-md mt-1 mt-md-0">
-                                            <div class="dropdown">
-                                                <div class="dropdown-value">키워드 검색 이력</div>
-                                                <div class="dropdown-box">
-                                                    <div class="dropdown-list">
-                                                        @@for (var i = 1; i < 10; i++) {
-                                                            <div><a href="javascript:;">근육량 늘리는 방법</a></div>
-                                                            <div><a href="javascript:;">홈트레이닝 추천</a></div>
-                                                        }
-                                                    </div>
-                                                </div>
+                                    </div>
+                                    <div class="col-12 col-md mt-1 mt-md-0">
+                                        <div class="dropdown">
+                                            <div class="dropdown-value">키워드 검색 이력</div>
+                                            <div class="dropdown-box">
+                                                <div class="dropdown-list">
+                                                    @@for (var i = 1; i < 10; i++) { <div><a href="javascript:;">근육량 늘리는 방법</a></div>
+                                                <div><a href="javascript:;">홈트레이닝 추천</a></div>
+                                                }
                                             </div>
                                         </div>
                                     </div>
@@ -119,205 +124,382 @@
                         </div>
                     </div>
                 </div>
-                <div class="row row-15 m-b-30">
-                    <div class="col-lg-auto pt-lg-3">
-                        <!--[공통] 원래 있던 text-underline 빼고 collapse-btn추가 입니다.  -->
-                        <a href="#recent-keyword" class="min-width-75px font-size-16px font-weight-medium collapse-btn" data-toggle="collapse" role="button" aria-expanded="false" aria-controls="recent-keyword">
-                            최근 검색 키워드
-                        </a>
-                    </div>
-                    <script>
-                        
-                    </script>
-                    <div class="col-lg">
-                        <div class="collapse show" id="recent-keyword">
-                            <div class="keyword-wrap m-t-10 mt-lg-0">
-                                <div class="tooltip custom-tooltip top open">
-                                    <button><i class="icon-x"></i></button>
-                                    <div>
-                                        <b class="d-block">Lv. 기능이 추가되었습니다!</b>
-                                        레벨은 동일한 키워드에 대한 분석 횟수로<br>
-                                        레벨이 올라갈수록 확인할 수 있는 영상이 쌓이게 됩니다.<br>
-                                        키워드를 레벨업시켜 키워드를 마스터해보세요!&ensp;🔥</div>
-                                </div>
-                                @@for (var i = 1; i < 20; i++) {
-                                        <div class="keyword-list">
-                                            <div class="keyword">
-                                                <a href="#none" class="text-truncate d-block">다이어트</a>
-                                                <button type="text" aria-label="삭제"><i class="icon-x"></i></button>
-                                            </div>
-                                        </div>
-                                    <div class="keyword">
-                                        <a href="#none" class="text-truncate d-block">닭가슴살 레시피</a>
-                                        <button type="text" aria-label="삭제"><i class="icon-x"></i></button>
-                                    </div>
-                                }
-                            </div>
-                            <script>
-                                 $(".custom-tooltip button").on("click", function () {
-                                    $(this).closest(".custom-tooltip").removeClass("open");
-                                });
-                            </script>
-                        </div>
-                    </div>
-                </div>
-                <div class="row align-items-center justify-content-between m-b-20">
-                    <div class="col-auto">
-                        <h2 class="title">분석 키워드 <i class="bar"></i> 등근육</h2>
-                    </div>
-                    <div class="col-auto">
-                        <div class="row row-10">
-                            <div class="col-auto">
-                                <button type="button" class="btn btn-outline-dark">키워드 포함</button>
-                            </div>
-                            <div class="col-auto d-none d-lg-block">
-                                <button type="button" class="btn btn-outline-danger">엑셀 다운로드</button>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="table-wrap">
-                    <table class="table table-hover table-data dataTable">
-                        <colgroup>
-                            <col>
-                            <col style="width: 22%">
-                            <col style="width: 15%" class="d-none d-md-table-column">
-                            <col style="width: 15%" class="d-none d-md-table-column">
-                            <col style="width: 20%">
-                        </colgroup>
-                        <thead>
-                            <tr>
-                                <th class="text-center"><div>제목</div></th>
-                                <th class="text-center sorting">조회수</th>
-                                <th class="text-center sorting sorting_asc d-none d-md-table-cell">게시자</th>
-                                <th class="text-center sorting sorting_desc d-none d-md-table-cell">게시일</th>
-                                <th class="text-center sorting">플랫폼</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            @@for (var i = 1; i < 16; i++) {
-                            <tr>
-                                <td class="text-left text-truncate" style="max-width:477px">
-                                    <a href="#none">당신이 알고 있어야 할 일상생활에 유용한 히트 아이디어템 당신이 알고 있어야 할 일상생활에 유용한 히트 아이디어템</a>
-                                </td>
-                                <td class="text-center">4,472,309</td>
-                                <td class="text-center d-none d-md-table-cell">코하루</td>
-                                <td class="text-center d-none d-md-table-cell">2022.01.01</td>
-                                <td class="text-center"></td>
-                            </tr>
-                            }
-                        </tbody>
-                    </table>
-                </div>
-                @@include('@@webRoot/_include/_pagination.html')
-
-                <div class="row align-items-center justify-content-sm-between m-b-20 m-t-50">
-                    <div class="col-auto">
-                        <h2 class="title">분석 키워드 구글 트렌드 관심도</h2>
-                    </div>
-                </div>
-                <div class="chart">
-                    <div class="text-right">
-                        <div class="chart-legend">
-                            <span class="dot bg-danger"></span> 연간 관심도 추이
-                        </div>
-                    </div>
-                    <canvas id="chart-trend"></canvas>
-                </div>
-
-                <!-- 컨텐츠 끝 -->
-
-            </main>
         </div>
+    </div>
+    <div class="row row-15 m-b-30">
+        <div class="col-lg-auto pt-lg-3">
+            <!--[공통] 원래 있던 text-underline 빼고 collapse-btn추가 입니다.  -->
+            <a href="#recent-keyword" class="min-width-75px font-size-16px font-weight-medium collapse-btn" data-toggle="collapse" role="button" aria-expanded="false" aria-controls="recent-keyword">
+                최근 검색 키워드
+            </a>
+        </div>
+        <script>
 
-        @@include('@@webRoot/_include/_footer.html')
+        </script>
+        <div class="col-lg">
+            <div class="collapse show" id="recent-keyword">
+                <div class="keyword-wrap m-t-10 mt-lg-0">
+                    <div class="tooltip custom-tooltip top open">
+                        <button><i class="icon-x"></i></button>
+                        <div>
+                            <b class="d-block">Lv. 기능이 추가되었습니다!</b>
+                            레벨은 동일한 키워드에 대한 분석 횟수로<br>
+                            레벨이 올라갈수록 확인할 수 있는 영상이 쌓이게 됩니다.<br>
+                            키워드를 레벨업시켜 키워드를 마스터해보세요!&ensp;🔥</div>
+                    </div>
+                    @@for (var i = 1; i < 20; i++) { <div class="keyword-list">
+                        <div class="keyword">
+                            <a href="#none" class="text-truncate d-block">다이어트</a>
+                            <button type="text" aria-label="삭제"><i class="icon-x-gray"></i></button>
+                        </div>
+                </div>
+                <div class="keyword">
+                    <a href="#none" class="text-truncate d-block">닭가슴살 레시피</a>
+                    <button type="text" aria-label="삭제"><i class="icon-x-gray"></i></button>
+                </div>
+                }
+            </div>
+            <script>
+                $(".custom-tooltip button").on("click", function () {
+                    $(this).closest(".custom-tooltip").removeClass("open");
+                });
+            </script>
+        </div>
+    </div>
+    </div>
+    <div class="row align-items-center justify-content-between m-b-20">
+        <div class="col-auto">
+            <h2 class="title">분석 키워드 <i class="bar"></i> 등근육</h2>
+        </div>
+        <div class="col-auto">
+            <div class="row row-10">
+                <div class="col-auto">
+                    <button type="button" class="btn btn-outline-dark">키워드 포함</button>
+                </div>
+                <div class="col-auto d-none d-lg-block">
+                    <button type="button" class="btn btn-outline-danger">엑셀 다운로드</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="table-wrap">
+        <table class="table table-hover table-data dataTable">
+            <colgroup>
+                <col>
+                <col style="width: 22%">
+                <col style="width: 15%" class="d-none d-md-table-column">
+                <col style="width: 15%" class="d-none d-md-table-column">
+                <col style="width: 20%">
+            </colgroup>
+            <thead>
+                <tr>
+                    <th class="text-center">
+                        <div>제목</div>
+                    </th>
+                    <th class="text-center sorting">조회수</th>
+                    <th class="text-center sorting sorting_asc d-none d-md-table-cell">게시자</th>
+                    <th class="text-center sorting sorting_desc d-none d-md-table-cell">게시일</th>
+                    <th class="text-center sorting">플랫폼</th>
+                </tr>
+            </thead>
+            <tbody>
+                @@for (var i = 1; i < 16; i++) { <tr>
+                    <td class="text-left text-truncate" style="max-width:477px">
+                        <a href="#none">당신이 알고 있어야 할 일상생활에 유용한 히트 아이디어템 당신이 알고 있어야 할 일상생활에 유용한 히트 아이디어템</a>
+                    </td>
+                    <td class="text-center">4,472,309</td>
+                    <td class="text-center d-none d-md-table-cell">코하루</td>
+                    <td class="text-center d-none d-md-table-cell">2022.01.01</td>
+                    <td class="text-center"></td>
+                    </tr>
+                    }
+            </tbody>
+        </table>
+    </div>
+    @@include('@@webRoot/_include/_pagination.html')
+
+    <div class="row align-items-center justify-content-sm-between m-b-20 m-t-50">
+        <div class="col-auto">
+            <h2 class="title">분석 키워드 구글 트렌드 관심도</h2>
+        </div>
+    </div>
+    <div class="chart">
+        <div class="text-right">
+            <div class="chart-legend">
+                <span class="dot bg-danger"></span> 연간 관심도 추이
+            </div>
+        </div>
+        <canvas id="chart-trend"></canvas>
+    </div>
+
+    <!-- 컨텐츠 끝 -->
+
+    </main>
+    </div>
+
+    @@include('@@webRoot/_include/_footer.html')
 
     </div>
 
     @@include('@@webRoot/_include/_modal.html')
 
     <script>
-        $(document).ready(function () {
-            //chartjs - 한 눈에 그래프로 보기
-            var config = {
-                type: 'line',
-                data: {
-                    labels: ["1", "2", "3", "4", "5", "6", "7", "8", "9", "10", "11", "12"],
-                    datasets: [{
-                        backgroundColor: "#000",
-                        borderColor: '#000',
-                        borderWidth: 1,
-                        pointRadius: 2,
-                        pointHoverRadius: 2,
-                        data: [90, 20, 40, 50, 60, 70, 50, 85, 90, 52, 94, 76, 90],
-                        fill: false,
-                        lineTension: 0,
-                    }],
+        // $(document).ready(function () {
+        //     //chartjs - 한 눈에 그래프로 보기
+        //     var config = {
+        //         type: 'line',
+        //         data: {
+        //             labels: ["1", "2", "3", "4", "5", "6", "7", "8", "9", "10", "11", "12"],
+        //             datasets: [{
+        //                 backgroundColor: "#000",
+        //                 borderColor: '#000',
+        //                 borderWidth: 1,
+        //                 pointRadius: 2,
+        //                 pointHoverRadius: 2,
+        //                 data: [90, 20, 40, 50, 60, 70, 50, 85, 90, 52, 94, 76, 90],
+        //                 fill: false,
+        //                 lineTension: 0,
+        //             }],
+        //         },
+        //         options: {
+        //             responsive: true,
+        //             legend: {
+        //                 display: false,
+        //             },
+        //             tooltips: {
+        //                 mode: 'index',
+        //                 intersect: false,
+        //                 displayColors: false,
+        //                 position: 'average',
+        //                 backgroundColor: '#ff2d00',
+        //                 bodyFontFamily: 'Noto Sans KR',
+        //                 cornerRadius: 12,
+        //                 caretSize: 0,
+        //                 xPadding: 10,
+        //                 callbacks: {
+        //                     title: function (tooltipItem, data) {
+        //                         return "";
+        //                     },
+        //                     label: function (tooltipItem) {
+        //                         return Number(tooltipItem.yLabel);
+        //                     }
+        //                 }
+        //             },
+        //             hover: {
+        //                 mode: 'nearest',
+        //                 intersect: true
+        //             },
+        //             scales: {
+        //                 xAxes: [{
+        //                     gridLines: {
+        //                         //display: false,
+        //                     },
+        //                     scaleLabel: {
+        //                         display: false,
+        //                     },
+        //                     ticks: {
+        //                         fontColor: '#989da0',
+        //                         fontSize: 15,
+        //                         fontFamily: 'Noto Sans KR',
+        //                         padding: 10,
+        //                     },
+        //                 }],
+        //                 yAxes: [{
+        //                     scaleLabel: {
+        //                         drawBorder: false,
+        //                     },
+        //                     ticks: {
+        //                         fontColor: '#989da0',
+        //                         fontSize: 15,
+        //                         fontFamily: 'Noto Sans KR',
+        //                         stepSize: 10,
+        //                         beginAtZero: true,
+        //                         padding: 10,
+        //                     },
+        //                 }]
+        //             }
+        //         }
+        //     };
+        //     window.onload = function () {
+        //         var ctx = document.getElementById('chart-trend').getContext('2d');
+        //         window.myLine = new Chart(ctx, config);
+        //     };
+        // })
+        var ctx = document.getElementById('chart-trend').getContext('2d');
+
+        var data = [{
+                x: '2021-11-07',
+                y: 10
+            },
+            {
+                x: '2021-12-07',
+                y: 29
+            },
+            {
+                x: '2021-12-10',
+                y: 51
+            },
+            {
+                x: '2021-12-16',
+                y: 56
+            },
+            {
+                x: '2021-12-17',
+                y: 58
+            },
+            {
+                x: '2021-12-18',
+                y: 60
+            },
+            {
+                x: '2021-12-19',
+                y: 62
+            },
+            {
+                x: '2021-12-20',
+                y: 65
+            },
+            {
+                x: '2021-12-21',
+                y: 70
+            },
+            {
+                x: '2021-12-22',
+                y: 72
+            },
+            {
+                x: '2021-12-23',
+                y: 73
+            },
+            {
+                x: '2021-12-24',
+                y: 74
+            },
+            {
+                x: '2021-12-25',
+                y: 81
+            },
+            {
+                x: '2021-12-26',
+                y: 81
+            },
+            {
+                x: '2021-12-27',
+                y: 81
+            },
+            {
+                x: '2021-12-28',
+                y: 81
+            },
+            {
+                x: '2021-12-29',
+                y: 81
+            },
+            {
+                x: '2021-12-30',
+                y: 81
+            },
+            {
+                x: '2022-01-11',
+                y: 81
+            },
+            {
+                x: '2022-01-12',
+                y: 85
+            },
+            {
+                x: '2022-01-14',
+                y: 86
+            },
+            {
+                x: '2022-01-15',
+                y: 87
+            },
+            {
+                x: '2022-01-16',
+                y: 8
+            },
+
+        ];
+
+        const totalDuration = 400; //애니메이션 빠르기 조절
+        const delayBetweenPoints = totalDuration / data.length;
+        const previousY = (ctx) => ctx.index === 0 ? ctx.chart.scales.y.getPixelForValue(100) : ctx.chart.getDatasetMeta(ctx.datasetIndex).data[ctx.index - 1].getProps(['y'], true).y;
+
+        var animation = {
+            x: {
+                type: 'number',
+                easing: 'linear',
+                duration: delayBetweenPoints,
+                from: NaN,
+                delay(ctx) {
+                    if (ctx.type !== 'data' || ctx.xStarted) {
+                        return 0;
+                    }
+                    ctx.xStarted = true;
+                    return ctx.index * delayBetweenPoints;
+                }
+            },
+            y: {
+                type: 'number',
+                easing: 'linear',
+                duration: delayBetweenPoints,
+                from: previousY,
+                delay(ctx) {
+                    if (ctx.type !== 'data' || ctx.yStarted) {
+                        return 0;
+                    }
+                    ctx.yStarted = true;
+                    return ctx.index * delayBetweenPoints;
+                }
+            }
+        }
+
+        const config = {
+            type: 'line',
+            data: {
+                //labels: labels,
+                datasets: [{
+                    data: data,
+                    fill: false,
+                    borderColor: '#000',
+                    cubicInterpolationMode: 'monotone',
+                    borderWidth: 1,
+                    pointStyle: 'circle', //포인터 모양
+                    pointBackgroundColor: '#000', //포인터 배경색
+                }, ],
+            },
+            options: {
+                animation: animation,
+                interaction: {
+                    mode: 'nearest',
+                    axis: 'x',
+                    intersect: false
                 },
-                options: {
-                    responsive: true,
-                    legend: {
-                        display: false,
-                    },
-                    tooltips: {
-                        mode: 'index',
-                        intersect: false,
+                plugins: {
+                    legend: false,
+                    tooltip: {
+                        backgroundColor: '#ff2d00',
                         displayColors: false,
                         position: 'average',
                         backgroundColor: '#ff2d00',
                         bodyFontFamily: 'Noto Sans KR',
-                        cornerRadius: 12,
+                        cornerRadius: 15,
                         caretSize: 0,
-                        xPadding: 10,
-                        callbacks: {
-                            title: function (tooltipItem, data) {
-                                return "";
-                            },
-                            label: function (tooltipItem) {
-                                return Number(tooltipItem.yLabel);
-                            }
-                        }
-                    },
-                    hover: {
-                        mode: 'nearest',
-                        intersect: true
-                    },
-                    scales: {
-                        xAxes: [{
-                            gridLines: {
-                                //display: false,
-                            },
-                            scaleLabel: {
-                                display: false,
-                            },
-                            ticks: {
-                                fontColor: '#989da0',
-                                fontSize: 15,
-                                fontFamily: 'Noto Sans KR',
-                                padding: 10,
-                            },
-                        }],
-                        yAxes: [{
-                            scaleLabel: {
-                                drawBorder: false,
-                            },
-                            ticks: {
-                                fontColor: '#989da0',
-                                fontSize: 15,
-                                fontFamily: 'Noto Sans KR',
-                                stepSize: 10,
-                                beginAtZero: true,
-                                padding: 10,
-                            },
-                        }]
+                        padding: 8,
+                        caretPadding: 10, //포인터로부터 툴팁패딩
+                        titleFont: {
+                            size: 12
+                        },
+                        bodyFont: {
+                            size: 12
+                        },
                     }
-                }
-            };
-            window.onload = function () {
-                var ctx = document.getElementById('chart-trend').getContext('2d');
-                window.myLine = new Chart(ctx, config);
-            };
-        })
+                },
+            },
+        };
+
+        const chart = new Chart(ctx, config);
     </script>
 
 </body>

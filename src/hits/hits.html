@@ -19,17 +19,58 @@
 
                 <!-- 컨텐츠 시작 -->
                 <h2 class="page-title">TOPIC MINING</h2>
-                <form action="">
-                    <fieldset>
-                        <legend>검색</legend>
-                        <div class="header-search">
-                            <input type="text" class="form-control" placeholder="키워드를 입력해 주세요.">
-                            <button type="button" class="btn-search" aria-label="검색">
-                                <i class="icon-search"></i>
-                            </button>
-                        </div>
-                    </fieldset>
-                </form>
+                <div class="row m-b-45">
+                    <div class="col-12 col-lg d-none d-md-block"></div>
+                    <div class="col-12 col-lg-auto">
+                        <form action="">
+                            <fieldset>
+                                <legend>검색</legend>
+                                <div class="header-search">
+                                    <div class="position-relative h-100">
+                                        <input type="text" class="form-control" placeholder="채널명 또는 채널 URL을 입력해 주세요.">
+                                        <button type="button" class="btn-search" aria-label="검색">
+                                            <i class="icon-search"></i>
+                                        </button>
+                                    </div>
+                                    <div class="dropdown search">
+                                        <div class="dropdown-box">
+                                            <div class="dropdown-list">
+                                                @@for (var i = 1; i < 10; i++) { <div>
+                                                    <a href="">
+                                                        <span class="channel-thumb">
+                                                            <img src="../assets/images/@profile.jpg" alt="채널 이미지">
+                                                        </span>
+                                                        <span class="channel-name">
+                                                            현승원 TV
+                                                        </span>
+                                                    </a>
+                                            </div>
+                                            <div>
+                                                <a href="">
+                                                    <span class="channel-thumb">
+                                                        <img src="../assets/images/@profile.jpg" alt="채널 이미지">
+                                                    </span>
+                                                    <span class="channel-name">
+                                                        현승원 TV 채널이름 길어요
+                                                    </span>
+                                                </a>
+                                            </div>
+                                            }
+                                        </div>
+                                    </div>
+                                </div>
+
+                            </fieldset>
+                        </form>
+                    </div>
+                    <div class="col-12 col-lg help-img-wrap">
+                        <!-- <img src="../assets/images/img-help-trend.png" class="help-img" alt="웹트렌드 도움말 이미지"> -->
+                        <img src="../assets/images/img-help-topic.png" class="help-img" alt="토픽마이닝 도움말 이미지">
+                        <!-- 
+                        <img src="../assets/images/img-help-keword.png" class="help-img" alt="키워드마이닝 도움말 이미지">
+                        <img src="../assets/images/img-help-channel.png" class="help-img" alt="채널 도움말 이미지"> -->
+                    </div>
+                </div>
 
                 <div class="filter has-collapsed">
                     <div class="border-bottom border-dark row row-0 justify-content-between">
@@ -89,10 +130,10 @@
                 <div class="row row-10 justify-content-between align-items-center">
                     <div class="col-lg-auto">
                         <div class="d-none d-lg-flex">
-                            <button type="button" class="btn btn-outline-dark top-add-channels mr-2"><img src="https://knoah.ai/assets/images/gnb-icon-3-mini.svg" width="19px" height="19px">&nbsp;CHANNEL ANALYSIS</button>
-                            <button type="button" class="btn btn-outline-dark top-add-videos mr-2"><img src="https://knoah.ai/assets/images/gnb-icon-4-mini.svg" width="19px" height="19px">&nbsp;영상수집</button>
-                            <button type="button" class="btn btn-outline-dark top-remove-videos mr-2"><img src="https://knoah.ai/assets/images/gnb-icon-5-mini.svg" width="19px" height="19px">&nbsp;이 영상은 관심이 없습니다</button>
-                            <button type="button" class="btn btn-outline-dark top-remove-channels"><img src="https://knoah.ai/assets/images/gnb-icon-6-mini.svg" width="19px" height="19px">&nbsp;이 채널은 관심이 없습니다</button>
+                            <button type="button" class="btn btn-sm btn-outline-dark top-add-channels mr-2"><img src="https://knoah.ai/assets/images/gnb-icon-3-mini.svg" width="19px" height="19px">&nbsp;CHANNEL ANALYSIS</button>
+                            <button type="button" class="btn btn-sm btn-outline-dark top-add-videos mr-2"><img src="https://knoah.ai/assets/images/gnb-icon-4-mini.svg" width="19px" height="19px">&nbsp;영상수집</button>
+                            <button type="button" class="btn btn-sm btn-outline-dark top-remove-videos mr-2"><img src="https://knoah.ai/assets/images/gnb-icon-5-mini.svg" width="19px" height="19px">&nbsp;이 영상은 관심이 없습니다</button>
+                            <button type="button" class="btn btn-sm btn-outline-dark top-remove-channels"><img src="https://knoah.ai/assets/images/gnb-icon-6-mini.svg" width="19px" height="19px">&nbsp;이 채널은 관심이 없습니다</button>
                         </div>
                     </div>
 
@@ -102,11 +143,12 @@
                                 <legend>결과 내 재검색</legend>
                                 <div class="rescan-search">
                                     <div class="dropdown">
-                                        <div class="dropdown-value">제목</div>
+                                        <div class="dropdown-value">제목+채널명</div>
                                         <div class="dropdown-box">
                                             <div class="dropdown-list">
                                                 <div><a href="javascript:;">제목</a></div>
                                                 <div><a href="javascript:;">채널명</a></div>
+                                                <div><a href="javascript:;">제목+채널명</a></div>
                                             </div>
                                         </div>
                                     </div>

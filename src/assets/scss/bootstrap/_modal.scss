@@ -19,7 +19,8 @@
   position: fixed;
   top: 0;
   left: 0;
-  z-index: $zindex-modal;
+  // z-index: $zindex-modal;
+  z-index: 1080;
   display: none;
   width: 100%;
   height: 100%;
@@ -126,7 +127,8 @@
   position: fixed;
   top: 0;
   left: 0;
-  z-index: $zindex-modal-backdrop;
+  // z-index: $zindex-modal-backdrop;
+  z-index: 1079;
   width: 100vw;
   height: 100vh;
   background-color: $modal-backdrop-bg;
