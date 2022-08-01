@@ -1580,7 +1580,7 @@ body.body-only-logo{
 }
 
 .help-img-wrap{
-    .help-img{display: none;}
+    .help-img{display: none; margin-top: 9px;}
     @include media-breakpoint-down(md){
         text-align: center;
         .help-img{margin-top: 10px;}
