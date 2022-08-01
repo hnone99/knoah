@@ -146,9 +146,9 @@
                                 min: 0,
                                 max: 100,
                                 step: 10,
-                                slide: function(event, ui) {
-                                    $(".female i").text( ui.value );
-                                    $(".male i").text( 100 - ui.value );
+                                slide: function (event, ui) {
+                                    $(".female i").text(ui.value);
+                                    $(".male i").text(100 - ui.value);
                                     //선택된 값의 뒷자리 자른 후 .active 로 제어 요청!! (현재 5로 설정)
                                     $(".ratio-progress-bar .ratio span").eq(5).siblings().removeClass('active');
                                     $(".ratio-progress-bar .ratio span").eq(5).addClass('active');
@@ -161,32 +161,31 @@
                         <div class="bar-area">
                             <div class="line"></div>
                             <div class="labels">
-                                @@for (var i = 1; i < 7; i++) {
-                                <div class="label">
+                                @@for (var i = 1; i < 7; i++) { <div class="label">
                                     <a href="javascript:;" role="button">
                                         <span>`+i+`0대</span>
                                     </a>
-                                </div>
-                                }
                             </div>
+                            }
                         </div>
-                        <script>
-                            $('.select-progress-bar a').on('click',function(e){
-                                e.preventDefault();
-                                $(this).parent().siblings().find('a').removeClass('active');
-                                $(this).addClass('active');
-                            })
-                        </script>
                     </div>
-                    <input type="text" class="form-control m-t-20 mt-lg-5" placeholder="노출량을 입력 해주세요.">
-                    <input type="text" class="form-control m-t-20 mt-lg-5" placeholder="클릭률을 입력 해주세요.">
-                    <input type="text" class="form-control m-t-20 mt-lg-5" placeholder="시청지속시간(분)을 입력 해주세요.">
-
-                    <button class="btn btn-dark btn-block btn-lg m-t-20 mt-lg-5">수정</button>
+                    <script>
+                        $('.select-progress-bar a').on('click', function (e) {
+                            e.preventDefault();
+                            $(this).parent().siblings().find('a').removeClass('active');
+                            $(this).addClass('active');
+                        })
+                    </script>
                 </div>
+                <input type="text" class="form-control m-t-20 mt-lg-5" placeholder="노출량을 입력 해주세요.">
+                <input type="text" class="form-control m-t-20 mt-lg-5" placeholder="클릭률을 입력 해주세요.">
+                <input type="text" class="form-control m-t-20 mt-lg-5" placeholder="시청지속시간(분)을 입력 해주세요.">
+
+                <button class="btn btn-dark btn-block btn-lg m-t-20 mt-lg-5">수정</button>
             </div>
         </div>
     </div>
+
 
     <!-- modal : 채널 등록/수정 > 정보 (타이틀 클릭시) -->
     <div class="modal" tabindex="-1" id="modal-modify-channel-info" data-overlap="true">
@@ -304,7 +303,7 @@
                         <div class="col">
                             <div class="border-bottom border-dark">
                                 <div class="custom-control custom-radio pb-2 pt-1">
-                                    <input type="radio" class="custom-control-input select-primary" id="pamentMethod" name="pamentMethod" >
+                                    <input type="radio" class="custom-control-input select-primary" id="pamentMethod" name="pamentMethod">
                                     <label class="custom-control-label" for="pamentMethod">삼성카드 4015-****-****-3106</label>
                                 </div>
                             </div>
@@ -319,7 +318,7 @@
                         <div class="col">
                             <div class="border-bottom border-dark">
                                 <div class="custom-control custom-radio pb-2 pt-1">
-                                    <input type="radio" class="custom-control-input select-primary" id="pamentMethod" name="pamentMethod" >
+                                    <input type="radio" class="custom-control-input select-primary" id="pamentMethod" name="pamentMethod">
                                     <label class="custom-control-label" for="pamentMethod">삼성카드 4015-****-****-3106</label>
                                 </div>
                             </div>
@@ -362,12 +361,12 @@
                         </li>
                     </ul>
                     <script>
-                        $('#nav-scrollspy').on('click', function(e){
+                        $('#nav-scrollspy').on('click', function (e) {
                             //탭 클릭시, 스크롤 이동 후에 해당 탭의 활성화 기준점이 안맞는것 같아 1px 더해줌.
-                            setTimeout(function(){
+                            setTimeout(function () {
                                 let scrollTop = $('[data-target="#nav-scrollspy"]').scrollTop() + 1;
                                 $('[data-target="#nav-scrollspy"]').scrollTop(scrollTop);
-                            },0)
+                            }, 0)
                         })
                     </script>
                 </div>
@@ -431,7 +430,7 @@
                                     <li><span>동영상 : <data class="channelVideoCount">52</data>개</span></li>
                                     <li><span>누적조회수 : <data class="channelViewCount">23,811,209</data></span></li>
                                     <li><span>오픈일 : <data class="openDate">2020.07.15</data></span></li>
-                                <ul>
+                                    <ul>
                             </div>
                         </div>
 
@@ -454,7 +453,7 @@
                                         <p class="mb-0 mb-lg-2 font-weight-medium">이 동영상 예상 수익</p>
                                     </div>
                                     <div class="col-6 col-lg-12">
-                                        <button type="button" class="btn btn-dark btn-lg  rounded-pill px-5 mt-2 font-size-14px knoah-ai-btn">노아AI로 추정하기</button>
+                                        <button type="button" class="btn btn-dark btn-lg  rounded-pill px-5 mt-0 mt-lg-2 font-size-14px knoah-ai-btn">노아AI로 추정하기</button>
                                     </div>
                                 </div>
                             </div>
@@ -464,7 +463,7 @@
                                         <p class="mb-0  mb-lg-2 font-weight-medium">이 동영상의 예상 시청 지속시간</p>
                                     </div>
                                     <div class="col-6 col-lg-12">
-                                        <button type="button" class="btn btn-dark btn-lg  rounded-pill px-5 mt-2 font-size-14px knoah-ai-btn">노아AI로 추정하기</button>
+                                        <button type="button" class="btn btn-dark btn-lg  rounded-pill px-5 mt-0 mt-lg-2 font-size-14px knoah-ai-btn">노아AI로 추정하기</button>
                                     </div>
                                 </div>
                             </div>
@@ -483,15 +482,33 @@
                                 var text1 = new TimelineMax();
                                 var text2 = new TimelineMax();
                                 var text3 = new TimelineMax();
-                                text1.staggerFromTo(".text1 span", 0.8,
-                                    { ease: Back.easeOut.config(1.7), opacity: 0, bottom: -40 },
-                                    { ease: Back.easeOut.config(1.7), opacity: 1, bottom: 0 }, 0.02);
-                                text2.staggerFromTo(".text2 span", 1,
-                                    { ease: Back.easeOut.config(1.7), opacity: 0, bottom: -50 },
-                                    { ease: Back.easeOut.config(1.7), opacity: 1, bottom: 0 }, 0.02);
-                                text3.staggerFromTo(".text3 span", 1.2,
-                                    { ease: Back.easeOut.config(1.7), opacity: 0, bottom: -60 },
-                                    { ease: Back.easeOut.config(1.7), opacity: 1, bottom: 0 }, 0.02);
+                                text1.staggerFromTo(".text1 span", 0.8, {
+                                    ease: Back.easeOut.config(1.7),
+                                    opacity: 0,
+                                    bottom: -40
+                                }, {
+                                    ease: Back.easeOut.config(1.7),
+                                    opacity: 1,
+                                    bottom: 0
+                                }, 0.02);
+                                text2.staggerFromTo(".text2 span", 1, {
+                                    ease: Back.easeOut.config(1.7),
+                                    opacity: 0,
+                                    bottom: -50
+                                }, {
+                                    ease: Back.easeOut.config(1.7),
+                                    opacity: 1,
+                                    bottom: 0
+                                }, 0.02);
+                                text3.staggerFromTo(".text3 span", 1.2, {
+                                    ease: Back.easeOut.config(1.7),
+                                    opacity: 0,
+                                    bottom: -60
+                                }, {
+                                    ease: Back.easeOut.config(1.7),
+                                    opacity: 1,
+                                    bottom: 0
+                                }, 0.02);
                             }
                         </script>
                     </div>
@@ -540,191 +557,463 @@
                             <div class="row">
                                 <div class="col-12 col-lg">
                                     <div class="subtit">시청자 분포</div>
-                                    <canvas id="chart-viewers-1"></canvas>
+                                    <div class="chart-area">
+                                        <canvas id="chart-viewers-1" style="height:200px!important;"></canvas>
+                                    </div>
                                 </div>
                                 <div class="col-12 col-lg border-lg-left border-lg-right">
                                     <div class="subtit">시청자 성비</div>
-                                    <canvas id="chart-viewers-2"></canvas>
+                                    <div class="chart-area">
+                                        <canvas id="chart-viewers-2" style="height:160px!important; margin-top: 50px;"></canvas>
+                                    </div>
                                 </div>
                                 <div class="col-12 col-lg">
                                     <div class="subtit">시청자 연령</div>
-                                    <canvas id="chart-viewers-3"></canvas>
+                                    <div class="chart-area">
+                                        <canvas id="chart-viewers-3" style="margin-top: 43px;height: 170px!important;"></canvas>
+                                    </div>
                                 </div>
                             </div>
                             <script>
-                                 var growthConfig = {
-                                    type: 'line',
-                                    data: {
-                                        labels: ["1", "2", "3", "4", "5", "6", "7", "8", "9", "10", "11", "12"],
-                                        datasets: [{
-                                            backgroundColor: "#2ca6cb",
-                                            borderColor: '#2ca6cb',
-                                            borderWidth: 2,
-                                            pointRadius: 2,
-                                            pointHoverRadius: 2,
-                                            data: [90, 20, 40, 50, 60, 70, 50, 85, 90, 52, 94, 76, 90],
-                                            fill: false,
-                                            lineTension: .3,
-                                        }],
-                                    },
+                                $(document).ready(function () {
+                                    window.onload = function () {
+                                        //시청자 분포 차트 로드
+                                        var chartview1 = document.getElementById('chart-viewers-1').getContext('2d');
+                                        window.chart1 = new Chart(chartview1, doughnutConfig);
+                                        //시청자 성비 차트 로드
+                                        var chartview2 = document.getElementById('chart-viewers-2').getContext('2d');
+                                        window.chart2 = new Chart(chartview2, horizonConfig1);
+
+                                        //시청자 연령 차트 로드
+                                        var chartview3 = document.getElementById('chart-viewers-3').getContext('2d');
+                                        window.chart3 = new Chart(chartview3, horizonConfig2);
+                                    };
+                                });
+                                // 시청자 분포 차트 시작
+                                const chartData1 = {
+                                    labels: ['대한민국', '미국', '일본', '캐나다', '기타'],
+                                    datasets: [{
+                                        data: ['30', '15', '10', '15', '10'],
+                                        backgroundColor: [
+                                            '#ff6384',
+                                            '#4bc0c0',
+                                            '#ffcd56',
+                                            '#ff9f40',
+                                            '#36a2eb',
+                                        ],
+                                        offset: 0,
+                                        borderWidth: 0,
+                                        cutout: "60%", // 도넛 안쪽 흰색원의 크기 설정
+                                    }]
+                                };
+                                const doughnutConfig = {
+                                    type: 'doughnut',
+                                    data: chartData1,
                                     options: {
                                         responsive: true,
-                                        legend: {
-                                            display: false,
+                                        cutoutPercentage: 10, // 도넛 두께
+                                        layout: {
+                                            padding: {
+                                                left: 10,
+                                                right: 0,
+                                                top: 0,
+                                                bottom: 25
+                                            }
                                         },
-                                        tooltips: {
-                                            mode: 'index',
-                                            intersect: false,
-                                            displayColors: false,
-                                            position: 'average',
-                                            backgroundColor: '#2ca6cb',
-                                            bodyFontFamily: 'Noto Sans KR',
-                                            cornerRadius: 12,
-                                            caretSize: 0,
-                                            xPadding: 10,
-                                            callbacks: {
-                                                title: function (tooltipItem, data) {
-                                                    return "";
-                                                },
-                                                label: function (tooltipItem) {
-                                                    return Number(tooltipItem.yLabel);
+                                        plugins: {
+                                            legend: {
+                                                position: 'right',
+                                                align: 'end',
+                                                padding: 100, //default is 10
+                                                labels: {
+                                                    usePointStyle: true, // 둥글게
+                                                    boxWidth: '6',
+                                                    boxHeight: '4',
+                                                    padding: 3 //default is 10
                                                 }
-                                            }
-                                        },
-                                        hover: {
-                                            mode: 'nearest',
-                                            intersect: true
-                                        },
-                                        scales: {
-                                            xAxes: [{
-                                                gridLines: {
-                                                    //display: false,
-                                                },
-                                                scaleLabel: {
-                                                    display: false,
-                                                },
-                                                ticks: {
-                                                    fontColor: '#989da0',
-                                                    fontSize: 15,
-                                                    fontFamily: 'Noto Sans KR',
-                                                    padding: 10,
-                                                },
-                                            }],
-                                            yAxes: [{
-                                                scaleLabel: {
-                                                    drawBorder: false,
-                                                },
-                                                ticks: {
-                                                    fontColor: '#989da0',
-                                                    fontSize: 15,
-                                                    fontFamily: 'Noto Sans KR',
-                                                    stepSize: 10,
-                                                    beginAtZero: true,
-                                                    padding: 10,
-                                                },
-                                            }]
-                                        }
-                                    }
-                                };
-                                var doughnutConfig = {
-                                    type: 'doughnut',
-                                    data: {
-                                        datasets: [{
-                                            data: [50, 20, 10, 15, 5],
-                                            backgroundColor: [
-                                                'rgba(255, 99, 132, 0.8)',
-                                                'rgba(75, 192, 192, 0.8)',
-                                                'rgba(255, 206, 86, 0.8)',
-                                                'rgba(255, 159, 64, 0.8)',
-                                                'rgba(54, 162, 235, 0.8)'
-                                            ],
-                                        }],
-                                        labels: ['대한민국', '미국', '일본', '캐나다', '기타'],
-                                    },
-                                    options: {
-                                        legend: {
-                                            position: 'right',
-                                            labels: {
-                                                usePointStyle: true,
-                                                boxWidth: 8
-                                            }
-                                        },
-                                    }
-                                };
-                                var horizontalConfig1 = {
-                                    type: 'horizontalBar',
-                                    data: {
-                                        labels: [''],
-                                        datasets: [
-                                            {
-                                                label: "남성",
-                                                data: [60],
-                                                backgroundColor: "rgb(75, 192, 192)",
-                                                borderColor: "rgb(75, 192, 192)",
-                                                borderWidth: 1,
                                             },
-                                            {
-                                                label: '여성',
-                                                data: [40],
-                                                backgroundColor: "rgb(255, 99, 132)",
-                                                borderColor: "rgb(255, 99, 132)",
+                                            title: {
+                                                display: false,
+                                            },
+                                            tooltip: {
+                                                callbacks: {
+                                                    title: function (tooltipItem, data) {
+                                                        return "";
+                                                    },
+                                                },
+                                                displayColors: false,
+                                                position: 'average',
+                                                bodyFontFamily: 'Noto Sans KR',
+                                                padding: 8,
+                                                caretPadding: 10, //포인터로부터 툴팁패딩
+                                                titleFont: {
+                                                    size: 12
+                                                },
+                                                bodyFont: {
+                                                    size: 12
+                                                },
                                             }
-                                        ],
+                                        },
                                     },
+                                };
+                                // 시청자 분포 차트 시작 끝
+
+                                // 시청자 성비 차트 시작
+                                const chartData2 = {
+                                    labels: [""],
+                                    datasets: [{
+                                            label: '남성',
+                                            data: [37],
+                                            backgroundColor: ["#43d3d3"],
+                                            categoryPercentage: 0.8,
+                                            barPercentage: 0.7,
+                                        },
+                                        {
+                                            label: '여성',
+                                            data: [63],
+                                            backgroundColor: ["#ff6060"],
+                                            categoryPercentage: 1,
+                                            barPercentage: 0.5,
+                                        }
+                                    ]
+                                };
+                                const horizonConfig1 = {
+                                    type: 'bar',
+                                    data: chartData2,
+
                                     options: {
-                                        legend: {
-                                            position: 'bottom',
-                                            labels: {
-                                                usePointStyle: true,
-                                                boxWidth: 8
+                                        indexAxis: 'y', // horizon
+                                        responsive: true,
+                                        plugins: {
+                                            legend: {
+                                                position: 'bottom',
+                                                labels: {
+                                                    usePointStyle: true, // 둥글게
+                                                    boxWidth: '6',
+                                                    boxHeight: '4',
+                                                }
+                                            },
+                                            title: {
+                                                display: false,
+                                            },
+                                            tooltip: {
+                                                callbacks: {
+                                                    title: function (tooltipItem, data) {
+                                                        return "";
+                                                    },
+                                                },
+                                                displayColors: false,
+                                                position: 'average',
+                                                bodyFontFamily: 'Noto Sans KR',
+                                                padding: 8,
+                                                caretPadding: 10, //포인터로부터 툴팁패딩
+                                                titleFont: {
+                                                    size: 12
+                                                },
+                                                bodyFont: {
+                                                    size: 12
+                                                },
                                             }
                                         },
                                         scales: {
-                                            xAxes: [{
-                                                ticks: {
-                                                    beginAtZero: true
-                                                }
-                                            }]
-                                        }
-                                    }
-                                };
-                                var horizontalConfig2 = {
-                                        type: 'horizontalBar',
-                                        data: {
-                                            labels: ['17세 이하', '18 - 24세', '25 - 34세', '35 - 44세', '45 - 54세', '55 - 64세', '65세 이상'],
-                                            datasets: [
-                                                {
-                                                    data: [7, 27, 22, 24, 14, 4, 2],
-                                                    backgroundColor: "#000",
-                                                    borderWidth: 0,
+                                            x: {
+                                                min: 0,
+                                                max: 100,
+                                                grid: {
+                                                    drawBorder: false,
+                                                    color: "#c7c7c7",
+                                                    lineWidth: 1
                                                 },
-                                            ],
+                                                ticks: {
+                                                    padding: 10, //그래프로부터 패딩
+                                                    stepSize: 50, //간격 사이즈
+                                                    font: {
+                                                        size: 10,
+                                                        family: 'Noto Sans KR'
+                                                    }
+                                                }
+                                            },
+                                            y: {
+                                                ticks: {
+                                                    display: false
+                                                },
+                                                grid: {
+                                                    display: false
+                                                }
+                                            }
                                         },
-                                        options: {
+                                    },
+                                };
+                                // 시청자 성비 차트 시작 끝
+
+
+                                // 시청자 연령 차트 시작
+                                // Chart.register(ChartDataLabels); //w플러그인 전역으로 등록
+                                const chartData3 = {
+                                    labels: ["17세 이하", "18 - 24세", "25 - 34세", "35 - 44세", "45 - 54세", "55 - 64세", "65세 이상"],
+                                    datasets: [{
+                                        label: "",
+                                        backgroundColor: "black",
+                                        pointBackgroundColor: "white",
+                                        borderWidth: 0,
+                                        fill: true,
+                                        tension: 0.1,
+                                        data: [3, 2, 7, 5, 4, 9, 25],
+                                        categoryPercentage: 1,
+                                        barPercentage: 0.2,
+                                    }]
+                                };
+                                const horizonConfig2 = {
+                                    type: 'bar',
+                                    data: chartData3,
+                                    plugins: [ChartDataLabels], //플러그인 이 차트영역에서만 사용
+                                    options: {
+                                        // maintainAspectRatio: false,
+                                        indexAxis: 'y', // horizon
+                                        responsive: true,
+                                        plugins: {
                                             legend: {
                                                 display: false,
                                             },
-                                            scales: {
-                                                xAxes: [{
-                                                    ticks: {
-                                                        beginAtZero: true,
-                                                        categoryPercentage: 1.0,
-                                                        barPercentage: 1.0
-                                                    }
-                                                }]
+                                            title: {
+                                                display: false,
+                                            },
+                                            tooltip: {
+                                                enabled: false, // 툴팁 사용안할떄
+                                                // callbacks: {
+
+                                                // },
+                                                // displayColors: false,
+                                                // position: 'average',
+                                                // bodyFontFamily: 'Noto Sans KR',
+                                                // padding: 8,
+                                                // caretPadding: 10, //포인터로부터 툴팁패딩
+                                                // titleFont: {
+                                                //     size: 12
+                                                // },
+                                                // bodyFont: {
+                                                //     size: 12
+                                                // },
+                                            },
+                                            datalabels: {
+                                                anchor: 'end',
+                                                align: 'end',
+                                                formatter: Math.round,
+                                                font: {
+                                                    weight: 'bold',
+                                                    size: 10
+                                                }
                                             }
-                                        }
-                                    };
-                                window.onload = function () {
-                                    var ctx1 = document.getElementById('chart-growth').getContext('2d');
-                                    window.myLineGrowth = new Chart(ctx1, growthConfig);
-                                    var ctx2_1 = document.getElementById('chart-viewers-1').getContext('2d');
-                                    window.myDoughnut = new Chart(ctx2_1, doughnutConfig);
-                                    var ctx2_2 = document.getElementById('chart-viewers-2').getContext('2d');
-                                    window.myHorizontalBar1 = new Chart(ctx2_2, horizontalConfig1);
-                                    var ctx2_3 = document.getElementById('chart-viewers-3').getContext('2d');
-                                    window.myHorizontalBar2 = new Chart(ctx2_3, horizontalConfig2);
+                                        },
+                                        scales: {
+                                            x: {
+                                                min: 0,
+                                                max: 30,
+                                                grid: {
+                                                    drawBorder: false,
+                                                    color: "#c7c7c7",
+                                                    lineWidth: 1
+                                                },
+                                                ticks: {
+                                                    padding: 10, //그래프로부터 패딩
+                                                    stepSize: 5, //간격 사이즈
+                                                    font: {
+                                                        size: 10,
+                                                        family: 'Noto Sans KR'
+                                                    }
+                                                }
+                                            },
+                                            y: {
+                                                beginAtZero: true,
+                                                ticks: {
+
+                                                    font: {
+                                                        size: 10,
+                                                        family: 'Noto Sans KR'
+                                                    }
+                                                },
+                                                grid: {
+                                                    display: false
+                                                }
+                                            }
+                                        },
+                                    },
                                 };
+                                // 시청자 연령 차트 시작 끝
+
+                                //  var growthConfig = {
+                                //     type: 'line',
+                                //     data: {
+                                //         labels: ["1", "2", "3", "4", "5", "6", "7", "8", "9", "10", "11", "12"],
+                                //         datasets: [{
+                                //             backgroundColor: "#2ca6cb",
+                                //             borderColor: '#2ca6cb',
+                                //             borderWidth: 2,
+                                //             pointRadius: 2,
+                                //             pointHoverRadius: 2,
+                                //             data: [90, 20, 40, 50, 60, 70, 50, 85, 90, 52, 94, 76, 90],
+                                //             fill: false,
+                                //             lineTension: .3,
+                                //         }],
+                                //     },
+                                //     options: {
+                                //         responsive: true,
+                                //         legend: {
+                                //             display: false,
+                                //         },
+                                //         tooltips: {
+                                //             mode: 'index',
+                                //             intersect: false,
+                                //             displayColors: false,
+                                //             position: 'average',
+                                //             backgroundColor: '#2ca6cb',
+                                //             bodyFontFamily: 'Noto Sans KR',
+                                //             cornerRadius: 12,
+                                //             caretSize: 0,
+                                //             xPadding: 10,
+                                //             callbacks: {
+                                //                 title: function (tooltipItem, data) {
+                                //                     return "";
+                                //                 },
+                                //                 label: function (tooltipItem) {
+                                //                     return Number(tooltipItem.yLabel);
+                                //                 }
+                                //             }
+                                //         },
+                                //         hover: {
+                                //             mode: 'nearest',
+                                //             intersect: true
+                                //         },
+                                //         scales: {
+                                //             xAxes: [{
+                                //                 gridLines: {
+                                //                     //display: false,
+                                //                 },
+                                //                 scaleLabel: {
+                                //                     display: false,
+                                //                 },
+                                //                 ticks: {
+                                //                     fontColor: '#989da0',
+                                //                     fontSize: 15,
+                                //                     fontFamily: 'Noto Sans KR',
+                                //                     padding: 10,
+                                //                 },
+                                //             }],
+                                //             yAxes: [{
+                                //                 scaleLabel: {
+                                //                     drawBorder: false,
+                                //                 },
+                                //                 ticks: {
+                                //                     fontColor: '#989da0',
+                                //                     fontSize: 15,
+                                //                     fontFamily: 'Noto Sans KR',
+                                //                     stepSize: 10,
+                                //                     beginAtZero: true,
+                                //                     padding: 10,
+                                //                 },
+                                //             }]
+                                //         }
+                                //     }
+                                // };
+                                // var doughnutConfig = {
+                                //     type: 'doughnut',
+                                //     data: {
+                                //         datasets: [{
+                                //             data: [50, 20, 10, 15, 5],
+                                //             backgroundColor: [
+                                //                 'rgba(255, 99, 132, 0.8)',
+                                //                 'rgba(75, 192, 192, 0.8)',
+                                //                 'rgba(255, 206, 86, 0.8)',
+                                //                 'rgba(255, 159, 64, 0.8)',
+                                //                 'rgba(54, 162, 235, 0.8)'
+                                //             ],
+                                //         }],
+                                //         labels: ['대한민국', '미국', '일본', '캐나다', '기타'],
+                                //     },
+                                //     options: {
+                                //         legend: {
+                                //             position: 'right',
+                                //             labels: {
+                                //                 usePointStyle: true,
+                                //                 boxWidth: 8
+                                //             }
+                                //         },
+                                //     }
+                                // };
+                                // var horizontalConfig1 = {
+                                //     type: 'horizontalBar',
+                                //     data: {
+                                //         labels: [''],
+                                //         datasets: [
+                                //             {
+                                //                 label: "남성",
+                                //                 data: [60],
+                                //                 backgroundColor: "rgb(75, 192, 192)",
+                                //                 borderColor: "rgb(75, 192, 192)",
+                                //                 borderWidth: 1,
+                                //             },
+                                //             {
+                                //                 label: '여성',
+                                //                 data: [40],
+                                //                 backgroundColor: "rgb(255, 99, 132)",
+                                //                 borderColor: "rgb(255, 99, 132)",
+                                //             }
+                                //         ],
+                                //     },
+                                //     options: {
+                                //         legend: {
+                                //             position: 'bottom',
+                                //             labels: {
+                                //                 usePointStyle: true,
+                                //                 boxWidth: 8
+                                //             }
+                                //         },
+                                //         scales: {
+                                //             xAxes: [{
+                                //                 ticks: {
+                                //                     beginAtZero: true
+                                //                 }
+                                //             }]
+                                //         }
+                                //     }
+                                // };
+                                // var horizontalConfig2 = {
+                                //         type: 'horizontalBar',
+                                //         data: {
+                                //             labels: ['17세 이하', '18 - 24세', '25 - 34세', '35 - 44세', '45 - 54세', '55 - 64세', '65세 이상'],
+                                //             datasets: [
+                                //                 {
+                                //                     data: [7, 27, 22, 24, 14, 4, 2],
+                                //                     backgroundColor: "#000",
+                                //                     borderWidth: 0,
+                                //                 },
+                                //             ],
+                                //         },
+                                //         options: {
+                                //             legend: {
+                                //                 display: false,
+                                //             },
+                                //             scales: {
+                                //                 xAxes: [{
+                                //                     ticks: {
+                                //                         beginAtZero: true,
+                                //                         categoryPercentage: 1.0,
+                                //                         barPercentage: 1.0
+                                //                     }
+                                //                 }]
+                                //             }
+                                //         }
+                                //     };
+                                // window.onload = function () {
+                                //     var ctx1 = document.getElementById('chart-growth').getContext('2d');
+                                //     window.myLineGrowth = new Chart(ctx1, growthConfig);
+                                //     var ctx2_1 = document.getElementById('chart-viewers-1').getContext('2d');
+                                //     window.myDoughnut = new Chart(ctx2_1, doughnutConfig);
+                                //     var ctx2_2 = document.getElementById('chart-viewers-2').getContext('2d');
+                                //     window.myHorizontalBar1 = new Chart(ctx2_2, horizontalConfig1);
+                                //     var ctx2_3 = document.getElementById('chart-viewers-3').getContext('2d');
+                                //     window.myHorizontalBar2 = new Chart(ctx2_3, horizontalConfig2);
+                                // };
                             </script>
                         </div>
                     </div>
@@ -732,8 +1021,7 @@
                     <!-- 인기동영상 -->
                     <div id="area-3">
                         <div class="row row-20">
-                            @@for(var i = 0; i < 6; i++){
-                            <div class="col-lg-6 m-b-20">
+                            @@for(var i = 0; i < 6; i++){ <div class="col-lg-6 m-b-20">
                                 <div class="card">
                                     <div class="card-img-top">
                                         <div class="thumbnail">
@@ -760,15 +1048,15 @@
                                         </div>
                                     </div>
                                 </div>
-                            </div>
-                            }
                         </div>
-
+                        }
                     </div>
+
                 </div>
             </div>
         </div>
     </div>
+
 
     <!-- modal : 전화번호 안내 -->
     <div class="modal" tabindex="-1" id="modal-contact">

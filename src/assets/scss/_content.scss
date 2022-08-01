@@ -1068,8 +1068,40 @@ body.body-only-logo{
 
     .tit{margin-bottom: 20px;}
     .subtit{font-size: 14px;margin-bottom: .5rem}
+    .chart-area{
+        margin-top: -20px;
+    }
+    .row{
+     
+        [class^=col]{
+            height: 210px;
+            overflow: hidden;
+            & + [class^=col]{
+                border-left: 1px solid $black;
+            }
+        }
+    }
     canvas{
         width: 100%;
+        // &#chart-viewers-1{height:200px!important;}
+        // &#chart-viewers-2{height:160px!important; margin-top: 50px}
+        // &#chart-viewers-3{margin-top: 43px;height: 170px!important;}
+    }
+    @include media-breakpoint-down(md){
+        .row{
+     
+            [class^=col]{
+                height: auto;
+                overflow: visible;
+                & + [class^=col]{
+                    border-left: 0;
+                    margin-top: 1rem;
+                }
+            }
+        }
+        canvas{
+            height: auto!important;
+        }
     }
 }
 
@@ -1503,7 +1535,7 @@ body.body-only-logo{
 .knoah-ai-btn{
     @include media-breakpoint-down(md){
         font-size: 12px!important;
-        padding: 0.58203rem 1.25rem!important;
+        padding: 0.4rem 1.25rem!important;
     }
 }
 
