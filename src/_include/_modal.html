@@ -558,20 +558,20 @@
                         <div class="row">
                             <div class="col-12 col-lg">
                                 <div class="subtit">시청자 분포</div>
-                                <div class="chart-area">
-                                    <canvas id="chart-viewers-1" style="height:200px!important;"></canvas>
+                                <div class="chart-area view1">
+                                    <canvas id="chart-viewers-1" style="width: 100%!important; margin-top: 50px;"></canvas>
                                 </div>
                             </div>
                             <div class="col-12 col-lg border-lg-left border-lg-right">
                                 <div class="subtit">시청자 성비</div>
-                                <div class="chart-area">
-                                    <canvas id="chart-viewers-2" style="height:160px!important; margin-top: 50px;"></canvas>
+                                <div class="chart-area view2">
+                                    <canvas id="chart-viewers-2" style="margin-top: 50px;"></canvas>
                                 </div>
                             </div>
                             <div class="col-12 col-lg">
                                 <div class="subtit">시청자 연령</div>
-                                <div class="chart-area">
-                                    <canvas id="chart-viewers-3" style="margin-top: 43px;height: 170px!important;"></canvas>
+                                <div class="chart-area view3">
+                                    <canvas id="chart-viewers-3" style="margin-top: 43px;"></canvas>
                                 </div>
                             </div>
                         </div>
@@ -611,16 +611,9 @@
                                 type: 'doughnut',
                                 data: chartData1,
                                 options: {
-                                    responsive: true,
+                                    // responsive: true,
                                     cutoutPercentage: 10, // 도넛 두께
-                                    layout: {
-                                        padding: {
-                                            left: 10,
-                                            right: 0,
-                                            top: 0,
-                                            bottom: 25
-                                        }
-                                    },
+                                    maintainAspectRatio: false, //상위 div를 무시한 채 창 크기에 따라 크기가 크기가 마음대로 바뀌던 것이 상위 div에 구속된다
                                     plugins: {
                                         legend: {
                                             position: 'right',
@@ -666,15 +659,15 @@
                                         label: '남성',
                                         data: [37],
                                         backgroundColor: ["#43d3d3"],
-                                        categoryPercentage: 0.8,
-                                        barPercentage: 0.7,
+                                        categoryPercentage: 1,
+                                        barPercentage: 0.6,//바 두께 조절
                                     },
                                     {
                                         label: '여성',
                                         data: [63],
                                         backgroundColor: ["#ff6060"],
                                         categoryPercentage: 1,
-                                        barPercentage: 0.5,
+                                        barPercentage: 0.6,//바 두께 조절
                                     }
                                 ]
                             };
@@ -683,6 +676,7 @@
                                 data: chartData2,
 
                                 options: {
+                                    maintainAspectRatio: false, //상위 div를 무시한 채 창 크기에 따라 크기가 크기가 마음대로 바뀌던 것이 상위 div에 구속된다
                                     indexAxis: 'y', // horizon
                                     responsive: true,
                                     plugins: {
@@ -751,7 +745,7 @@
                             // 시청자 연령 차트 시작
                             // Chart.register(ChartDataLabels); //w플러그인 전역으로 등록
                             const chartData3 = {
-                                labels: ["17세 이하", "18 - 24세", "25 - 34세", "35 - 44세", "45 - 54세", "55 - 64세", "65세 이상"],
+                                labels: ["17세 이하", "18 - 24세", "25 - 34세", "35 - 44세", "45 - 54세"],
                                 datasets: [{
                                     label: "",
                                     backgroundColor: "black",
@@ -759,9 +753,9 @@
                                     borderWidth: 0,
                                     fill: true,
                                     tension: 0.1,
-                                    data: [3, 2, 7, 5, 4, 9, 25],
+                                    data: [3, 2, 7, 25, 4],
                                     categoryPercentage: 1,
-                                    barPercentage: 0.2,
+                                    barPercentage: 0.7,//바 두께 조절
                                 }]
                             };
                             const horizonConfig2 = {
@@ -769,7 +763,7 @@
                                 data: chartData3,
                                 plugins: [ChartDataLabels], //플러그인 이 차트영역에서만 사용
                                 options: {
-                                    // maintainAspectRatio: false,
+                                    maintainAspectRatio: false, //상위 div를 무시한 채 창 크기에 따라 크기가 크기가 마음대로 바뀌던 것이 상위 div에 구속된다
                                     indexAxis: 'y', // horizon
                                     responsive: true,
                                     plugins: {
@@ -801,7 +795,7 @@
                                             align: 'end',
                                             formatter: Math.round,
                                             font: {
-                                                weight: 'bold',
+                                                weight: 'normal',
                                                 size: 10
                                             }
                                         }

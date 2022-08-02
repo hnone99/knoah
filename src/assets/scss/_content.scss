@@ -1070,9 +1070,17 @@ body.body-only-logo{
     .subtit{font-size: 14px;margin-bottom: .5rem}
     .chart-area{
         margin-top: -20px;
+        &.view1{
+            height: 160px;
+        }
+        &.view2{
+            height: 216px;
+        }
+        &.view3{
+            height: 215px;
+        }
     }
     .row{
-     
         [class^=col]{
             height: 210px;
             overflow: hidden;
@@ -1089,7 +1097,6 @@ body.body-only-logo{
     }
     @include media-breakpoint-down(md){
         .row{
-     
             [class^=col]{
                 height: auto;
                 overflow: visible;
@@ -1097,6 +1104,23 @@ body.body-only-logo{
                     border-left: 0;
                     margin-top: 1rem;
                 }
+                &:nth-child(2){
+                    margin-top: -10px;
+                }
+                &:nth-child(3){
+                    margin-top: -30px;
+                }
+            }
+        }
+        .chart-area{
+            &.view1{
+                height: 150px;
+            }
+            .view2{
+                padding-bottom: 2rem;
+            }
+            &.view3{
+                height: 250px;
             }
         }
         canvas{
