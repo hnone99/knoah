@@ -559,19 +559,19 @@
                             <div class="col-12 col-lg">
                                 <div class="subtit">시청자 분포</div>
                                 <div class="chart-area view1">
-                                    <canvas id="chart-viewers-1" style="width: 100%!important; margin-top: 50px;"></canvas>
+                                    <canvas id="chart-viewers-1"></canvas>
                                 </div>
                             </div>
                             <div class="col-12 col-lg border-lg-left border-lg-right">
                                 <div class="subtit">시청자 성비</div>
                                 <div class="chart-area view2">
-                                    <canvas id="chart-viewers-2" style="margin-top: 50px;"></canvas>
+                                    <canvas id="chart-viewers-2"></canvas>
                                 </div>
                             </div>
                             <div class="col-12 col-lg">
                                 <div class="subtit">시청자 연령</div>
                                 <div class="chart-area view3">
-                                    <canvas id="chart-viewers-3" style="margin-top: 43px;"></canvas>
+                                    <canvas id="chart-viewers-3"></canvas>
                                 </div>
                             </div>
                         </div>
@@ -604,7 +604,7 @@
                                     ],
                                     offset: 0,
                                     borderWidth: 0,
-                                    cutout: "60%", // 도넛 안쪽 흰색원의 크기 설정
+                                    cutout: "50%", // 도넛 안쪽 흰색원의 크기 설정
                                 }]
                             };
                             const doughnutConfig = {
@@ -618,7 +618,6 @@
                                         legend: {
                                             position: 'right',
                                             align: 'end',
-                                            padding: 100, //default is 10
                                             labels: {
                                                 usePointStyle: true, // 둥글게
                                                 boxWidth: '6',
@@ -660,14 +659,14 @@
                                         data: [37],
                                         backgroundColor: ["#43d3d3"],
                                         categoryPercentage: 1,
-                                        barPercentage: 0.6,//바 두께 조절
+                                        barPercentage: 0.8,//바 두께 조절
                                     },
                                     {
                                         label: '여성',
                                         data: [63],
                                         backgroundColor: ["#ff6060"],
                                         categoryPercentage: 1,
-                                        barPercentage: 0.6,//바 두께 조절
+                                        barPercentage: 0.8,//바 두께 조절
                                     }
                                 ]
                             };
@@ -810,7 +809,7 @@
                                                 lineWidth: 1
                                             },
                                             ticks: {
-                                                padding: 10, //그래프로부터 패딩
+                                                padding: 0, //그래프로부터 패딩
                                                 stepSize: 5, //간격 사이즈
                                                 font: {
                                                     size: 10,
@@ -828,7 +827,7 @@
                                                 }
                                             },
                                             grid: {
-                                                display: false
+                                                // display: false
                                             }
                                         }
                                     },

@@ -1069,21 +1069,16 @@ body.body-only-logo{
     .tit{margin-bottom: 20px;}
     .subtit{font-size: 14px;margin-bottom: .5rem}
     .chart-area{
-        margin-top: -20px;
+        height: 150px;
         &.view1{
-            height: 160px;
-        }
-        &.view2{
-            height: 216px;
+            height: 120px;
         }
         &.view3{
-            height: 215px;
+            margin-top: -10px;
         }
     }
     .row{
         [class^=col]{
-            height: 210px;
-            overflow: hidden;
             & + [class^=col]{
                 border-left: 1px solid $black;
             }
@@ -1102,25 +1097,14 @@ body.body-only-logo{
                 overflow: visible;
                 & + [class^=col]{
                     border-left: 0;
-                    margin-top: 1rem;
-                }
-                &:nth-child(2){
-                    margin-top: -10px;
-                }
-                &:nth-child(3){
-                    margin-top: -30px;
+                    margin-top: 2rem;
                 }
             }
         }
         .chart-area{
-            &.view1{
-                height: 150px;
-            }
-            .view2{
-                padding-bottom: 2rem;
-            }
+            margin-top: 1rem;
             &.view3{
-                height: 250px;
+                margin-top: 0;
             }
         }
         canvas{
