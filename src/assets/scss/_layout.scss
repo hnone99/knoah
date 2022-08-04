@@ -58,7 +58,7 @@ body{
 
 
 header{
-    width: 100%;transition: .2s ease-out;border-bottom: 1px solid #e0e0e0;height: 80px;position: fixed;top: 0;left: 0; z-index: 1;display: flex;align-items: center;background: #fff; z-index: 1070;
+    width: 100%;transition: .2s ease-out;border-bottom: 1px solid #e0e0e0;height: 80px;position: fixed;top: 0;left: 0; z-index: 1;display: flex;align-items: center;background: #fff; z-index: 1030;
     @include media-breakpoint-down(md){
         height: $mobileHeaderHeight;justify-content: space-between;
     }
@@ -72,7 +72,7 @@ header{
 }
 
 aside{
-    position: fixed;overflow: hidden;width: $asideWidth;opacity: 1;height: 100vh;top: 0;left: 0;padding-top: 80px;background: #fff; z-index: 1060;
+    position: fixed;overflow: hidden;width: $asideWidth;opacity: 1;height: 100vh;top: 0;left: 0;padding-top: 80px;background: #fff; z-index: 1020;
     @include media-breakpoint-down(md){
         padding-top: $mobileHeaderHeight;left: -100%;
         .dim{width: 100vw;height: 100%;background: rgba(199, 199, 199, .7);position: fixed; left: 0;top: $mobileHeaderHeight;display: none;}
