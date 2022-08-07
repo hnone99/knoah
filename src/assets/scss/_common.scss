@@ -2,7 +2,7 @@
 
 [class^=icon-]{display: inline-block;background-size: contain;background-repeat: no-repeat;background-position: 0 0;font-style: normal;font-size: 0;line-height: 1;}
 .icon-hamburger{width: 18px;height: 21px;background-image: url('../images/icon-hamburger.svg');}
-.icon-search{width: 22px;height: 22px;background-image: url('../images/icon-search.svg');}
+.icon-search{width: 16px;height: 16px;background-image: url('../images/icon-search.svg');}
 .icon-account{width: 21px;height: 21px;background-image: url('../images/icon-account.svg');}
 .icon-more{width: 3px;height: 18px;background-image: url('../images/icon-more.svg');}
 .icon-bell{width: 18px;height: 22px;background-image: url('../images/icon-bell.svg');}
@@ -35,6 +35,18 @@
 .icon-alarm-arrow{width: 10px; height: 6px; background-image: url('../images/icon-alarm-arrow.svg');}
 .icon-question-mark{width: 12px; height:12px; background-image: url('../images/icon-question-mark.svg');}
 .icon-paying{width: 200px; height: 100px; background-image: url('../images/icon-card.gif');background-size: cover;}
+
+
+// 20220806
+.icon-rank-1{width: 16px; height: 16px; background-image: url('../images/icon-rank-1.png');}
+.icon-rank-2{width: 16px; height: 16px; background-image: url('../images/icon-rank-2.png');}
+.icon-rank-3{width: 16px; height: 16px; background-image: url('../images/icon-rank-3.png');}
+.icon-header-arrow{width: 19px; height: 19px; background-image: url('../images/icon-header-arrow.svg'); }
+.icon-arrow-down-gray{width: 18px; height: 18px; background-image: url('../images/icon-arrow-down-gray.svg'); }
+.icon-arrow-up-red{width: 18px; height: 18px; background-image: url('../images/icon-arrow-up-red.svg'); }
+.icon-dash-gray{width: 18px; height: 18px; background-image: url('../images/icon-dash-gray.svg'); }
+.icon-new{width: 18px; height: 18px; background-image: url('../images/icon-new.svg'); }
+.icon-arrow-right-double{width: 8px; height: 8px; background-image: url('../images/icon-arrow-right-double.svg'); }
 
 .bar{display: inline-block;width: 1px;height: 22px;background: #8c8c8c;}
 
@@ -85,6 +97,7 @@
         & > [class^=col]{padding-left: 0 !important;padding-right: 0 !important;}
     }
 }
+
 
 .cursor-pointer{cursor: pointer;}
 

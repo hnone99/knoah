@@ -6,6 +6,7 @@ var Header = {
 		this.collapse();
 		this.menu();
 		this.alarm();
+		this.banner();
 
 		if ($('.page-title').length > 0) {
 			$('title').text($('.page-title').text() + ' | knoah');
@@ -19,6 +20,13 @@ var Header = {
 		$('aside .dim').on('click', function (e) {
 			$('html').toggleClass('is-collapsed');
 		})
+	},
+	// 배너
+	banner: function () { 
+		$(".banner .close").on("click", function () {
+			$('html').addClass("is-fold");
+			$('.banner-area').hide();
+		 });
 	},
 	menu: function () {
 		$('.btn-my, .btn-more').on('click',function(){
