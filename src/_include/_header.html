@@ -386,34 +386,54 @@
                     <li class="active"><a href="../hits/hits.html" class="gnb-keyword">키워드 마이닝</a></li>
                     <li><a href="../hits/hits.html" class="gnb-topic">토픽 마이닝</a></li>
                     <li><a href="../channel/channel.html" class="gnb-channel">채널 분석</a></li>
-                    <li><a href="../webtrend/webtrend.html"  class="gnb-trend">웹 트렌드</a></li>
-                    <li><a href="../collect_video/collect_video.html"  class="gnb-collect">수집한 영상</a></li>
-                    <li><a href="../remove_video/remove_video.html"  class="gnb-membership">멤버십 안내</a></li>
+                    <li><a href="../webtrend/webtrend.html" class="gnb-trend">웹 트렌드</a></li>
+                    <li><a href="../collect_video/collect_video.html" class="gnb-collect">수집한 영상</a></li>
+                    <li><a href="../remove_video/remove_video.html" class="gnb-membership">멤버십 안내</a></li>
                 </ul>
             </div>
         </nav>
     </div>
 
 
-    
+
     <script>
         // 키워드 롤링효과
-        $(function () {
-            var count = $('.rank-title-list li').length;
-            var height = $('.rank-title-list li').height();
+        // $(function () {
+        //     var count = $('.rank-title-list li').length;
+        //     var height = $('.rank-title-list li').height();
 
-            function step(index) {
-                $('.rank-title-list ol').delay(2000).animate({
-                    top: -height * index,
-                }, 500, function () {
-                    step((index + 1) % count);
-                });
-            }
+        //     function step(index) {
+        //         $('.rank-title-list ol').delay(2000).animate({
+        //             top: - height * index,
+        //         }, 500, function () {
+        //             step((index + 1) % count);
+        //         });
+        //     }
 
-            step(1);
-        });
+        //     step(0);
+        // });
 
         $(document).ready(function () {
+            // 키워드 롤링효과
+            const newsTicker = (timer) => {
+                const $ul = document.querySelector('.rank-title-list ol');
+
+                window.setInterval(() => {
+                    $ul.style.transitionDuration = "3000ms";
+                    $ul.style.marginTop = "-34px";
+
+                    window.setTimeout(() => {
+                        $ul.style.transitionDuration = "";
+                        $ul.style.marginTop = "";
+                        // send the first element to the back 400ms later.
+                        $ul.appendChild($ul.querySelector("li:first-child"));
+                    }, 800)
+
+                }, timer)
+            }
+
+            newsTicker(1500)
+            
             var target = $(".rank-list");
             // 드롭창 보이게
             $(".rank-title-list a, .header-keyword-wrap>a").on("click", function () {
