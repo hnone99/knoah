@@ -1,0 +1,201 @@
+<header id="header">
+    <button type="button" class="btn-hamburger" aria-label="메뉴 접기/닫기"><i class="icon-hamburger"></i></button>
+    <h1 class="logo">
+
+        <a href="../main/main.html"><img src="../assets/images/logo.svg" alt="knosh"></a>
+    </h1>
+    <div class="header-menu">
+        <ul class="help-button-area">
+            <li>도움말</li>
+            <li>
+                <button type="button" class="btn btn-sm btn-toggle" data-toggle="button" aria-pressed="false" autocomplete="off">
+                    <div class="handle"></div>
+                </button>
+                <!-- <div class="custom-control custom-switch">
+                    <input type="checkbox" class="custom-control-input" id="customSwitch1">
+                    <label class="custom-control-label" for="customSwitch1"></label>
+                </div> -->
+            </li>
+            <!-- 아래 원본 이미지 사이즈 너무 작아서.. 이미지로 안쓰고 제가 임의로 수정했어요 (확인용)-->
+            <li>
+                <a href="">
+                    <img src="../assets/images/icon-help-off.png" alt="">
+                </a>
+            </li>
+        </ul>
+
+        <ul class="header-info-area">
+            <li><a href="">knoah 100% 활용하기</a></li>
+            <li><a href="">업데이트 안내</a></li>
+        </ul>
+
+        <!-- 로그인유도 -->
+        <a href="#modal-alert-login" data-toggle="modal"><small>alert(확인용)</small></a>
+
+        <div class="position-relative">
+            <!-- 프로필  .icon-memeber-{{등급}}으로 등급별 아이콘도 만들어놨습니다.-->
+            <!-- <button type="button" class="btn-my" aria-label="프로필" style="background: #000000">
+                <span>W</span>
+            </button> -->
+            <button type="button" class="btn-my" aria-label="프로필" style="background-image:url(../assets/images/icon-member-free.svg)">
+            </button>
+            <button type="button" class="btn-my" aria-label="프로필" style="background-image:url(../assets/images/icon-member-silver.svg)">
+            </button>
+            <button type="button" class="btn-my" aria-label="프로필" style="background-image:url(../assets/images/icon-member-diamond.svg)">
+            </button>
+            <button type="button" class="btn-my" aria-label="프로필" style="background-image:url(../assets/images/icon-member-gold.svg)">
+            </button>
+            <!-- 더보기 -->
+            <button type="button" class="btn-more" aria-label="더보기"><i class="icon-more"></i></button>
+            <div class="menu-layer">
+                <div class="inner">
+                    <button type="button" class="btn-close d-lg-none" aria-label="메뉴 닫기"><i class="icon-x"></i></button>
+                    <ul class="dep1">
+                        <li><a href="../mypage/mypage.html">마이페이지</a></li>
+                        <li class="has-sub active">
+                            <a href="javascript:;">언어(한국어)</a>
+                            <div class="dep2">
+                                <div class="back"><a href="javascript:;">언어</a></div>
+                                <ul>
+                                    <li class="active"><a href="javascript:;">한국어</a></li>
+                                    <li><a href="">English</a></li>
+                                </ul>
+                            </div>
+                        </li>
+                        <li class="has-sub">
+                            <a href="javascript:;">테마(추후)</a>
+                            <div class="dep2">
+                                <div class="back"><a href="javascript:;">테마</a></div>
+                                <ul>
+                                    <li class="active"><a href="javascript:;">밝음</a></li>
+                                    <li><a href="">어두움</a></li>
+                                </ul>
+                            </div>
+                        </li>
+                        <li><a href="../membership/membership.html">멤버십 안내</a></li>
+                        <li><a href="">로그아웃</a></li>
+                        <li class="has-sub">
+                            <a href="javascript:;">육성 채널 변경</a>
+                            <div class="dep2">
+                                <div class="back"><a href="javascript:;">육성 채널 변경</a></div>
+                                <ul>
+                                    <li class="active"><a href="javascript:;">채널A</a></li>
+                                    <li><a href="javascript:;">채널B</a></li>
+                                    <li><a href="#modal-channel-add" data-toggle="modal">채널 추가</a></li>
+                                </ul>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <!-- 알림 -->
+        <div class="position-relative pr-3">
+            <button type="button" class="btn-alarm" aria-label="알림">
+                <!-- 새 알림 있을때 span.new 추가 -->
+                <!-- <i class="icon-bell"><span class="new"></span></i> -->
+                <i class="icon-bell"><span class="new-alarm">2</span></i>
+            </button>
+            <div class="alarm-layer">
+                <div class="alarm-layer-head">
+                    <div class="tit d-none d-lg-block">알림</div>
+                    <div class="back d-lg-none">
+                        <a href="javascript:;" role="button" aria-label="뒤로"><i class="icon-angle-left"></i></a>
+                    </div>
+                    <h1 class="logo d-lg-none">
+                        <a href=""><img src="../assets/images/logo.svg" alt="knosh"></a>
+                    </h1>
+                    <!-- <button type="button" aria-label="알림 설정" class="btn-alarm-setting"><i class="icon-gear"></i></button> -->
+                    <button type="button" aria-label="전체 삭제" class="btn-alarm-setting">전체 삭제</button>
+                </div>
+                <div class="alarm-layer-body">
+                    <div class="tit d-lg-none">알림</div>
+                    <!-- 구독 채널 없는 경우 -->
+                    <div class="channel-empty" style="display:none;">
+                        <div class="d-flex flex-column align-items-center justify-content-center h-100">
+                            <img src="../assets/images/bg-bell.svg" alt="">
+                            <p>여기에 알림이 표시됩니다.</p>
+                            <span>즐겨찾는 채널을 구독하여 최신 동영상의 알림을 받아보세요.</span>
+                        </div>
+                    </div>
+                    <!-- 있는 경우  -->
+                    <div class="channel-full">
+                        <ul>
+                            @@for(var i = 0; i < 40; i++){ <li class="row row-20">
+                                <div class="col-auto">
+                                    <div class="alarm-sort">결제</div>
+                                </div>
+                                <div class="col">
+                                    <a href="" class="text-truncate d-block">
+                                        <span class="text-danger">키워드마이닝</span> 분석 완료. <span class="bg-ligthyellow">‘뷰티’의 새로운 영상 50개 발견.</span>
+                                    </a>
+                                </div>
+                                <div class="col-auto">
+                                    <div class="min-width-66px">1분전</div>
+                                </div>
+                                <div class="col-auto">
+                                    <a href="" class="delete-btn">
+                                        <i class="icon-x"></i>
+                                    </a>
+                                </div>
+                                </li>
+                                <!-- 읽음처리 -->
+                                <li class="row row-20 visited">
+                                    <div class="col-auto">
+                                        <div class="alarm-sort">읽음</div>
+                                    </div>
+                                    <div class="col">
+                                        <a href="" class="text-truncate d-block">
+                                            <span class="text-danger">키워드마이닝</span> 분석 완료. <span class="bg-ligthyellow">‘뷰티’의 새로운 영상 50개 발견.</span>
+                                        </a>
+                                    </div>
+                                    <div class="col-auto">
+                                        <div class="min-width-66px">13일전</div>
+                                    </div>
+                                    <div class="col-auto">
+                                        <a href="" class="delete-btn">
+                                            <i class="icon-x"></i>
+                                        </a>
+                                    </div>
+                                </li>
+
+                                <!-- 알림창 토글 -->
+                                <li class="row row-20 toggle-alarm">
+                                    <div class="col-auto">
+                                        <div class="alarm-sort">토글</div>
+                                    </div>
+                                    <div class="col d-flex align-items-center">
+                                        <a href="#alram-toggle-0`+i+`" class="text-truncate d-block alarm-title pr-2 w-90" role="button" aria-expanded="false" data-toggle="collapse">
+                                            토글 컨텐츠에요토글 컨텐츠에요 토글 컨텐츠에요 토글 컨텐츠에요 토글 컨텐츠에요 토글 컨텐츠에요 토글 컨텐츠에요
+                                        </a>
+                                        <i class="icon-alarm-arrow"></i>
+                                    </div>
+                                    <div class="col-auto">
+                                        <div class="min-width-66px">13일전</div>
+                                    </div>
+                                    <div class="col-auto">
+                                        <a href="" class="delete-btn">
+                                            <i class="icon-x"></i>
+                                        </a>
+                                    </div>
+                                </li>
+                                <li class="collapse" id="alram-toggle-0`+i+`">
+                                    <div class="alram-toggle-contents">
+                                        <p>·토픽/키워드마이닝의 키워드 레벨 기능이 추가되었습니다.</p>
+                                        <p>·키워드 레벨은 ‘최근 분석 키워드’에서 각 키워드 별로 확인하실 수 있습니다.</p>
+                                        <p>·키워드 레벨은 동일한 키워드에 대한 분석 횟수로 레벨이 올라가면 확인할 수 있는 영상이 쌓이게 됩니다.</p>
+                                        <p>·키워드를 레벨업시켜 키워드를 마스터해 보세요!</p>
+                                    </div>
+                                </li>
+                                }
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- 로그인 -->
+        <a href="" class="btn btn-outline-dark btn-login"><i class="icon-account"></i><span class="align-middle ml-1">로그인</span></a>
+    </div>
+</header>

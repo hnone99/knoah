@@ -1,201 +1,438 @@
-<header id="header">
-    <button type="button" class="btn-hamburger" aria-label="메뉴 접기/닫기"><i class="icon-hamburger"></i></button>
-    <h1 class="logo">
-
-        <a href="../main/main.html"><img src="../assets/images/logo.svg" alt="knosh"></a>
-    </h1>
-    <div class="header-menu">
-        <ul class="help-button-area">
-            <li>도움말</li>
-            <li>
-                <button type="button" class="btn btn-sm btn-toggle" data-toggle="button" aria-pressed="false" autocomplete="off">
-                    <div class="handle"></div>
+    <div id="header-block">
+        <!-- 배너 영역 -->
+        <div class="banner-area">
+            <!-- <div class="banner bg-dark text-white">
+                <p class="title">멤버십 결제 2개월 연속 시 10%, 그 이후 매달 1%씩 최대 50%까지 할인됩니다.</p>
+            </div> -->
+            <div class="banner">
+                <p class="title">Knoah AI의 서비스는 상표권과 특허권이 출원 된 AITIVE의 지적재산으로 기능 및 디자인 무단 도용 시 민형사상 처벌을 받을 수 있습니다.</p>
+                <button type="button" class="close">
+                    <i class="icon-x"></i>
                 </button>
-                <!-- <div class="custom-control custom-switch">
-                    <input type="checkbox" class="custom-control-input" id="customSwitch1">
-                    <label class="custom-control-label" for="customSwitch1"></label>
-                </div> -->
-            </li>
-            <!-- 아래 원본 이미지 사이즈 너무 작아서.. 이미지로 안쓰고 제가 임의로 수정했어요 (확인용)-->
-            <li>
-                <a href="">
-                    <img src="../assets/images/icon-help-off.png" alt="">
-                </a>
-            </li>
-        </ul>
+            </div>
+        </div>
+        <!-- // 배너 영역 -->
 
-        <ul class="header-info-area">
-            <li><a href="">knoah 100% 활용하기</a></li>
-            <li><a href="">업데이트 안내</a></li>
-        </ul>
+        <!-- 헤더 영역 -->
+        <header id="header">
+            <div class="container d-flex align-items-center justify-content-between">
+                <!-- 로고 +  검색창 -->
+                <div class="header-form-area">
+                    <!-- 로고 -->
+                    <h1 class="logo">
+                        <a href="../main/main.html"><img src="../assets/images/logo.svg" alt="knoah"></a>
+                    </h1>
+                    <!-- pc 검색영역 -->
+                    <form action="" class="d-none d-lg-block">
+                        <fieldset>
+                            <legend>검색</legend>
+                            <div class="header-search">
+                                <!-- 인풋 -->
+                                <div class="position-relative h-100 header-input-wrap  col p-0">
+                                    <input type="text" class="form-control" placeholder="채널에서 다루시려는 키워드(단어)를 입력하세요.">
+                                    <button type="button" class="btn-search" aria-label="검색">
+                                        <i class="icon-search"></i>
+                                    </button>
 
-        <!-- 로그인유도 -->
-        <a href="#modal-alert-login" data-toggle="modal"><small>alert(확인용)</small></a>
+                                    <!-- 도움말 이미지  -->
+                                    <div class="help-img-container">
+                                        <img src="../assets/images/img-help-keyword.png" alt="도움말이미지">
+                                        <button type="button" class="close">
+                                            <i class="icon-x"></i>
+                                        </button>
+                                    </div>
+                                </div>
+                                <div class="header-keyword-wrap">
+                                    <a href="#">많이 검색하는 키워드</a>
+                                    <i class="icon-header-arrow"></i>
+                                    <div class="rank-title-list">
+                                        <ol>
+                                            <li><a href="#" class="rank-title text-truncate text-center">커플여행브이로그ddd</a></li>
+                                            <li><a href="#" class="rank-title text-truncate text-center">커플여</a></li>
+                                            <li><a href="#" class="rank-title text-truncate text-center">커플여1</a></li>
+                                            <li><a href="#" class="rank-title text-truncate text-center">커플여2</a></li>
+                                            <li><a href="#" class="rank-title text-truncate text-center">커플여3</a></li>
+                                        </ol>
+                                    </div>
+                                    <ol class="rank-list">
+                                        <li>
+                                            <a href="">
+                                                <div class="rank-num">
+                                                    <i class="icon-rank-1"></i>
+                                                </div>
+                                                <div class="rank text-truncate">커플여행브이로그dd</div>
+                                                <div class="rank-state">
+                                                    <i class="icon-arrow-down-gray"></i>
+                                                </div>
+                                                <div class="rank-count">46</div>
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="">
+                                                <div class="rank-num">
+                                                    <i class="icon-rank-2"></i>
+                                                </div>
+                                                <div class="rank text-truncate">커플여행브이로그dd</div>
+                                                <div class="rank-state">
+                                                    <i class="icon-arrow-down-gray"></i>
+                                                </div>
+                                                <div class="rank-count">46</div>
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="">
+                                                <div class="rank-num">
+                                                    <i class="icon-rank-3"></i>
+                                                </div>
+                                                <div class="rank text-truncate">커플여행브이로그dd</div>
+                                                <div class="rank-state">
+                                                    <i class="icon-arrow-down-gray"></i>
+                                                </div>
+                                                <div class="rank-count">46</div>
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="">
+                                                <div class="rank-num">
+                                                    4
+                                                </div>
+                                                <div class="rank text-truncate">커플여행브이로그dd</div>
+                                                <div class="rank-state">
+                                                    <i class="icon-arrow-down-gray"></i>
+                                                </div>
+                                                <div class="rank-count">46</div>
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="">
+                                                <div class="rank-num">
+                                                    5
+                                                </div>
+                                                <div class="rank text-truncate">커플여행브이로그dd</div>
+                                                <div class="rank-state">
+                                                    <i class="icon-arrow-down-gray"></i>
+                                                </div>
+                                                <div class="rank-count">46</div>
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="">
+                                                <div class="rank-num">
+                                                    6
+                                                </div>
+                                                <div class="rank text-truncate">커플여행브이로그dd</div>
+                                                <div class="rank-state">
+                                                    <i class="icon-arrow-down-gray"></i>
+                                                </div>
+                                                <div class="rank-count">46</div>
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="">
+                                                <div class="rank-num">
+                                                    7
+                                                </div>
+                                                <div class="rank text-truncate">커플여행브이로그dd</div>
+                                                <div class="rank-state">
+                                                    <i class="icon-new"></i>
+                                                </div>
+                                                <div class="rank-count">46</div>
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="">
+                                                <div class="rank-num">
+                                                    8
+                                                </div>
+                                                <div class="rank text-truncate">커플여행브이로그dd</div>
+                                                <div class="rank-state">
+                                                    <i class="icon-dash-gray"></i>
+                                                </div>
+                                                <div class="rank-count">46</div>
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="">
+                                                <div class="rank-num">
+                                                    9
+                                                </div>
+                                                <div class="rank text-truncate">커플여행브이로그dd</div>
+                                                <div class="rank-state">
+                                                    <i class="icon-arrow-down-gray"></i>
+                                                </div>
+                                                <div class="rank-count">99</div>
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="">
+                                                <div class="rank-num">
+                                                    10
+                                                </div>
+                                                <div class="rank text-truncate">커플여행브이로그dd</div>
+                                                <div class="rank-state">
+                                                    <i class="icon-arrow-up-red"></i>
+                                                </div>
+                                                <div class="rank-count">46</div>
+                                            </a>
+                                        </li>
+                                    </ol>
+                                </div>
+                            </div>
+                        </fieldset>
+                    </form>
+                </div>
 
-        <div class="position-relative">
-            <!-- 프로필  .icon-memeber-{{등급}}으로 등급별 아이콘도 만들어놨습니다.-->
-            <!-- <button type="button" class="btn-my" aria-label="프로필" style="background: #000000">
-                <span>W</span>
-            </button> -->
-            <button type="button" class="btn-my" aria-label="프로필" style="background-image:url(../assets/images/icon-member-free.svg)">
-            </button>
-            <button type="button" class="btn-my" aria-label="프로필" style="background-image:url(../assets/images/icon-member-silver.svg)">
-            </button>
-            <button type="button" class="btn-my" aria-label="프로필" style="background-image:url(../assets/images/icon-member-diamond.svg)">
-            </button>
-            <button type="button" class="btn-my" aria-label="프로필" style="background-image:url(../assets/images/icon-member-gold.svg)">
-            </button>
-            <!-- 더보기 -->
-            <button type="button" class="btn-more" aria-label="더보기"><i class="icon-more"></i></button>
-            <div class="menu-layer">
-                <div class="inner">
-                    <button type="button" class="btn-close d-lg-none" aria-label="메뉴 닫기"><i class="icon-x"></i></button>
-                    <ul class="dep1">
-                        <li><a href="../mypage/mypage.html">마이페이지</a></li>
-                        <li class="has-sub active">
-                            <a href="javascript:;">언어(한국어)</a>
-                            <div class="dep2">
-                                <div class="back"><a href="javascript:;">언어</a></div>
-                                <ul>
-                                    <li class="active"><a href="javascript:;">한국어</a></li>
-                                    <li><a href="">English</a></li>
-                                </ul>
-                            </div>
-                        </li>
-                        <li class="has-sub">
-                            <a href="javascript:;">테마(추후)</a>
-                            <div class="dep2">
-                                <div class="back"><a href="javascript:;">테마</a></div>
-                                <ul>
-                                    <li class="active"><a href="javascript:;">밝음</a></li>
-                                    <li><a href="">어두움</a></li>
-                                </ul>
-                            </div>
-                        </li>
-                        <li><a href="../membership/membership.html">멤버십 안내</a></li>
-                        <li><a href="">로그아웃</a></li>
-                        <li class="has-sub">
-                            <a href="javascript:;">육성 채널 변경</a>
-                            <div class="dep2">
-                                <div class="back"><a href="javascript:;">육성 채널 변경</a></div>
-                                <ul>
-                                    <li class="active"><a href="javascript:;">채널A</a></li>
-                                    <li><a href="javascript:;">채널B</a></li>
-                                    <li><a href="#modal-channel-add" data-toggle="modal">채널 추가</a></li>
-                                </ul>
-                            </div>
+
+                <!-- 헤더 메뉴 -->
+                <div class="header-menu">
+                    <ul class="help-button-area d-lg-flex d-none">
+                        <li>도움말</li>
+                        <li>
+                            <button type="button" class="btn btn-sm btn-toggle" data-toggle="button" aria-pressed="false" autocomplete="off">
+                                <div class="handle"></div>
+                            </button>
                         </li>
                     </ul>
-                </div>
-            </div>
-        </div>
-
-        <!-- 알림 -->
-        <div class="position-relative pr-3">
-            <button type="button" class="btn-alarm" aria-label="알림">
-                <!-- 새 알림 있을때 span.new 추가 -->
-                <!-- <i class="icon-bell"><span class="new"></span></i> -->
-                <i class="icon-bell"><span class="new-alarm">2</span></i>
-            </button>
-            <div class="alarm-layer">
-                <div class="alarm-layer-head">
-                    <div class="tit d-none d-lg-block">알림</div>
-                    <div class="back d-lg-none">
-                        <a href="javascript:;" role="button" aria-label="뒤로"><i class="icon-angle-left"></i></a>
-                    </div>
-                    <h1 class="logo d-lg-none">
-                        <a href=""><img src="../assets/images/logo.svg" alt="knosh"></a>
-                    </h1>
-                    <!-- <button type="button" aria-label="알림 설정" class="btn-alarm-setting"><i class="icon-gear"></i></button> -->
-                    <button type="button" aria-label="전체 삭제" class="btn-alarm-setting">전체 삭제</button>
-                </div>
-                <div class="alarm-layer-body">
-                    <div class="tit d-lg-none">알림</div>
-                    <!-- 구독 채널 없는 경우 -->
-                    <div class="channel-empty" style="display:none;">
-                        <div class="d-flex flex-column align-items-center justify-content-center h-100">
-                            <img src="../assets/images/bg-bell.svg" alt="">
-                            <p>여기에 알림이 표시됩니다.</p>
-                            <span>즐겨찾는 채널을 구독하여 최신 동영상의 알림을 받아보세요.</span>
+                    <ul class="header-info-area  d-lg-flex d-none">
+                        <li><a href="">knoah 100% 활용하기</a></li>
+                        <li><a href="">업데이트 안내</a></li>
+                        <li><a href="">처음부터 학습시키기</a></li>
+                    </ul>
+                    <!-- 알림 -->
+                    <div class="position-relative pr-2">
+                        <button type="button" class="btn-alarm" aria-label="알림">
+                            <!-- 새 알림 있을때 span.new 추가 -->
+                            <!-- <i class="icon-bell"><span class="new"></span></i> -->
+                            <i class="icon-bell"><span class="new-alarm">2</span></i>
+                        </button>
+                        <div class="alarm-layer">
+                            <div class="alarm-layer-head">
+                                <div class="tit d-none d-lg-block">알림</div>
+                                <div class="back d-lg-none">
+                                    <a href="javascript:;" role="button" aria-label="뒤로"><i class="icon-angle-left"></i></a>
+                                </div>
+                                <h1 class="logo d-lg-none">
+                                    <a href=""><img src="../assets/images/logo.svg" alt="knosh"></a>
+                                </h1>
+                                <!-- <button type="button" aria-label="알림 설정" class="btn-alarm-setting"><i class="icon-gear"></i></button> -->
+                                <button type="button" aria-label="전체 삭제" class="btn-alarm-setting">전체 삭제</button>
+                            </div>
+                            <div class="alarm-layer-body">
+                                <div class="tit d-lg-none">알림</div>
+                                <!-- 구독 채널 없는 경우 -->
+                                <div class="channel-empty" style="display:none;">
+                                    <div class="d-flex flex-column align-items-center justify-content-center h-100">
+                                        <img src="../assets/images/bg-bell.svg" alt="">
+                                        <p>여기에 알림이 표시됩니다.</p>
+                                        <span>즐겨찾는 채널을 구독하여 최신 동영상의 알림을 받아보세요.</span>
+                                    </div>
+                                </div>
+                                <!-- 있는 경우  -->
+                                <div class="channel-full">
+                                    <ul>
+                                        @@for(var i = 0; i < 40; i++){ <li class="row row-20">
+                                            <div class="col-auto">
+                                                <div class="alarm-sort">결제</div>
+                                            </div>
+                                            <div class="col">
+                                                <a href="" class="text-truncate d-block">
+                                                    <span class="text-danger">키워드마이닝</span> 분석 완료. <span class="bg-ligthyellow">‘뷰티’의 새로운 영상 50개 발견.</span>
+                                                </a>
+                                            </div>
+                                            <div class="col-auto">
+                                                <div class="min-width-66px">1분전</div>
+                                            </div>
+                                            <div class="col-auto">
+                                                <a href="" class="delete-btn">
+                                                    <i class="icon-x"></i>
+                                                </a>
+                                            </div>
+                                            </li>
+                                            <!-- 읽음처리 -->
+                                            <li class="row row-20 visited">
+                                                <div class="col-auto">
+                                                    <div class="alarm-sort">읽음</div>
+                                                </div>
+                                                <div class="col">
+                                                    <a href="" class="text-truncate d-block">
+                                                        <span class="text-danger">키워드마이닝</span> 분석 완료. <span class="bg-ligthyellow">‘뷰티’의 새로운 영상 50개 발견.</span>
+                                                    </a>
+                                                </div>
+                                                <div class="col-auto">
+                                                    <div class="min-width-66px">13일전</div>
+                                                </div>
+                                                <div class="col-auto">
+                                                    <a href="" class="delete-btn">
+                                                        <i class="icon-x"></i>
+                                                    </a>
+                                                </div>
+                                            </li>
+                                            <!-- 알림창 토글 -->
+                                            <li class="row row-20 toggle-alarm">
+                                                <div class="col-auto">
+                                                    <div class="alarm-sort">토글</div>
+                                                </div>
+                                                <div class="col d-flex align-items-center">
+                                                    <a href="#alram-toggle-0`+i+`" class="text-truncate d-block alarm-title pr-2 w-90" role="button" aria-expanded="false" data-toggle="collapse">
+                                                        토글 컨텐츠에요토글 컨텐츠에요 토글 컨텐츠에요 토글 컨텐츠에요 토글 컨텐츠에요 토글 컨텐츠에요 토글 컨텐츠에요
+                                                    </a>
+                                                    <i class="icon-alarm-arrow"></i>
+                                                </div>
+                                                <div class="col-auto">
+                                                    <div class="min-width-66px">13일전</div>
+                                                </div>
+                                                <div class="col-auto">
+                                                    <a href="" class="delete-btn">
+                                                        <i class="icon-x"></i>
+                                                    </a>
+                                                </div>
+                                            </li>
+                                            <li class="collapse" id="alram-toggle-0`+i+`">
+                                                <div class="alram-toggle-contents">
+                                                    <p>·토픽/키워드마이닝의 키워드 레벨 기능이 추가되었습니다.</p>
+                                                    <p>·키워드 레벨은 ‘최근 분석 키워드’에서 각 키워드 별로 확인하실 수 있습니다.</p>
+                                                    <p>·키워드 레벨은 동일한 키워드에 대한 분석 횟수로 레벨이 올라가면 확인할 수 있는 영상이 쌓이게 됩니다.</p>
+                                                    <p>·키워드를 레벨업시켜 키워드를 마스터해 보세요!</p>
+                                                </div>
+                                            </li>
+                                            }
+                                    </ul>
+                                </div>
+                            </div>
                         </div>
                     </div>
-                    <!-- 있는 경우  -->
-                    <div class="channel-full">
-                        <ul>
-                            @@for(var i = 0; i < 40; i++){ <li class="row row-20">
-                                <div class="col-auto">
-                                    <div class="alarm-sort">결제</div>
-                                </div>
-                                <div class="col">
-                                    <a href="" class="text-truncate d-block">
-                                        <span class="text-danger">키워드마이닝</span> 분석 완료. <span class="bg-ligthyellow">‘뷰티’의 새로운 영상 50개 발견.</span>
-                                    </a>
-                                </div>
-                                <div class="col-auto">
-                                    <div class="min-width-66px">1분전</div>
-                                </div>
-                                <div class="col-auto">
-                                    <a href="" class="delete-btn">
-                                        <i class="icon-x"></i>
-                                    </a>
-                                </div>
-                                </li>
-                                <!-- 읽음처리 -->
-                                <li class="row row-20 visited">
-                                    <div class="col-auto">
-                                        <div class="alarm-sort">읽음</div>
-                                    </div>
-                                    <div class="col">
-                                        <a href="" class="text-truncate d-block">
-                                            <span class="text-danger">키워드마이닝</span> 분석 완료. <span class="bg-ligthyellow">‘뷰티’의 새로운 영상 50개 발견.</span>
-                                        </a>
-                                    </div>
-                                    <div class="col-auto">
-                                        <div class="min-width-66px">13일전</div>
-                                    </div>
-                                    <div class="col-auto">
-                                        <a href="" class="delete-btn">
-                                            <i class="icon-x"></i>
-                                        </a>
-                                    </div>
-                                </li>
-
-                                <!-- 알림창 토글 -->
-                                <li class="row row-20 toggle-alarm">
-                                    <div class="col-auto">
-                                        <div class="alarm-sort">토글</div>
-                                    </div>
-                                    <div class="col d-flex align-items-center">
-                                        <a href="#alram-toggle-0`+i+`" class="text-truncate d-block alarm-title pr-2 w-90" role="button" aria-expanded="false" data-toggle="collapse">
-                                            토글 컨텐츠에요토글 컨텐츠에요 토글 컨텐츠에요 토글 컨텐츠에요 토글 컨텐츠에요 토글 컨텐츠에요 토글 컨텐츠에요
-                                        </a>
-                                        <i class="icon-alarm-arrow"></i>
-                                    </div>
-                                    <div class="col-auto">
-                                        <div class="min-width-66px">13일전</div>
-                                    </div>
-                                    <div class="col-auto">
-                                        <a href="" class="delete-btn">
-                                            <i class="icon-x"></i>
-                                        </a>
-                                    </div>
-                                </li>
-                                <li class="collapse" id="alram-toggle-0`+i+`">
-                                    <div class="alram-toggle-contents">
-                                        <p>·토픽/키워드마이닝의 키워드 레벨 기능이 추가되었습니다.</p>
-                                        <p>·키워드 레벨은 ‘최근 분석 키워드’에서 각 키워드 별로 확인하실 수 있습니다.</p>
-                                        <p>·키워드 레벨은 동일한 키워드에 대한 분석 횟수로 레벨이 올라가면 확인할 수 있는 영상이 쌓이게 됩니다.</p>
-                                        <p>·키워드를 레벨업시켜 키워드를 마스터해 보세요!</p>
-                                    </div>
-                                </li>
-                                }
-                        </ul>
+                    <div class="position-relative ml-2 ml-lg-3">
+                        <button type="button" class="btn-my" aria-label="프로필" style="background-image:url(../assets/images/icon-member-free.svg)">
+                        </button>
+                        <!-- <button type="button" class="btn-my" aria-label="프로필" style="background-image:url(../assets/images/icon-member-silver.svg)">
+                        </button>
+                        <button type="button" class="btn-my" aria-label="프로필" style="background-image:url(../assets/images/icon-member-diamond.svg)">
+                        </button>
+                        <button type="button" class="btn-my" aria-label="프로필" style="background-image:url(../assets/images/icon-member-gold.svg)">
+                        </button> -->
+                        <!-- 더보기 -->
+                        <!-- <button type="button" class="btn-more" aria-label="더보기"><i class="icon-more"></i></button>
+                        <div class="menu-layer">
+                            <div class="inner">
+                                <button type="button" class="btn-close d-lg-none" aria-label="메뉴 닫기"><i class="icon-x"></i></button>
+                                <ul class="dep1">
+                                    <li><a href="../mypage/mypage.html">마이페이지</a></li>
+                                    <li class="has-sub active">
+                                        <a href="javascript:;">언어(한국어)</a>
+                                        <div class="dep2">
+                                            <div class="back"><a href="javascript:;">언어</a></div>
+                                            <ul>
+                                                <li class="active"><a href="javascript:;">한국어</a></li>
+                                                <li><a href="">English</a></li>
+                                            </ul>
+                                        </div>
+                                    </li>
+                                    <li class="has-sub">
+                                        <a href="javascript:;">테마(추후)</a>
+                                        <div class="dep2">
+                                            <div class="back"><a href="javascript:;">테마</a></div>
+                                            <ul>
+                                                <li class="active"><a href="javascript:;">밝음</a></li>
+                                                <li><a href="">어두움</a></li>
+                                            </ul>
+                                        </div>
+                                    </li>
+                                    <li><a href="../membership/membership.html">멤버십 안내</a></li>
+                                    <li><a href="">로그아웃</a></li>
+                                    <li class="has-sub">
+                                        <a href="javascript:;">육성 채널 변경</a>
+                                        <div class="dep2">
+                                            <div class="back"><a href="javascript:;">육성 채널 변경</a></div>
+                                            <ul>
+                                                <li class="active"><a href="javascript:;">채널A</a></li>
+                                                <li><a href="javascript:;">채널B</a></li>
+                                                <li><a href="#modal-channel-add" data-toggle="modal">채널 추가</a></li>
+                                            </ul>
+                                        </div>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div> -->
                     </div>
+                    <!-- 로그인 -->
+                    <a href="" class="btn btn-outline-dark btn-login shadow border-0"><i class="icon-account"></i><span class="align-middle ml-1">로그인</span></a>
                 </div>
             </div>
-        </div>
+        </header>
 
-        <!-- 로그인 -->
-        <a href="" class="btn btn-outline-dark btn-login"><i class="icon-account"></i><span class="align-middle ml-1">로그인</span></a>
+        <!-- 모바일 검색영역 -->
+        <form action="" class="d-block d-lg-none position-relative">
+            <fieldset>
+                <legend>검색</legend>
+                <div class="header-search">
+                    <!-- 인풋 -->
+                    <div class="position-relative header-input-wrap  col">
+                        <input type="text" class="form-control" placeholder="채널에서 다루시려는 키워드(단어)를 입력하세요.">
+                        <button type="button" class="btn-search" aria-label="검색">
+                            <i class="icon-search"></i>
+                        </button>
+                    </div>
+                </div>
+            </fieldset>
+            <div class="next-arrow">
+                <i class="icon-arrow-right-double"></i>
+            </div>
+        </form>
+
+        <!-- 메뉴 -->
+        <nav class="gnb">
+            <div class="container">
+                <ul class="dep1">
+                    <li class="active"><a href="../hits/hits.html" class="gnb-keyword">키워드 마이닝</a></li>
+                    <li><a href="../hits/hits.html" class="gnb-topic">토픽 마이닝</a></li>
+                    <li><a href="../channel/channel.html" class="gnb-channel">채널 분석</a></li>
+                    <li><a href="../webtrend/webtrend.html"  class="gnb-trend">웹 트렌드</a></li>
+                    <li><a href="../collect_video/collect_video.html"  class="gnb-collect">수집한 영상</a></li>
+                    <li><a href="../remove_video/remove_video.html"  class="gnb-membership">멤버십 안내</a></li>
+                </ul>
+            </div>
+        </nav>
     </div>
-</header>
+
+
+    
+    <script>
+        // 키워드 롤링효과
+        $(function () {
+            var count = $('.rank-title-list li').length;
+            var height = $('.rank-title-list li').height();
+
+            function step(index) {
+                $('.rank-title-list ol').delay(2000).animate({
+                    top: -height * index,
+                }, 500, function () {
+                    step((index + 1) % count);
+                });
+            }
+
+            step(1);
+        });
+
+        $(document).ready(function () {
+            var target = $(".rank-list");
+            // 드롭창 보이게
+            $(".rank-title-list a, .header-keyword-wrap>a").on("click", function () {
+                $(this).closest(".header-keyword-wrap").find(".rank-list").addClass("show");
+            });
+
+
+            // 드롭창 외 클릭시 닫힘
+            $(document).mouseup(function (e) {
+                if (target.has(e.target).length == 0) {
+                    // target.hide();
+                    target.removeClass('show');
+                }
+            });
+
+            //도움말 이미지
+            $(".help-img-container button.close").on("click", function () {
+                $(this).closest(".help-img-container").hide();
+            });
+
+        });
+    </script>
