@@ -26,7 +26,7 @@ var Header = {
 		$(".banner .close").on("click", function () {
 			$('html').addClass("is-fold");
 			$('.banner-area').hide();
-		 });
+		});
 	},
 	menu: function () {
 		$('.btn-my, .btn-more').on('click',function(){
@@ -162,6 +162,11 @@ var Common = {
 		//custom scroll
 		$(".overflow-y-scroll").mCustomScrollbar({
 			theme:"dark"
+		});
+		// 가로스크롤 커스텀
+		$(".overflow-x-scroll").mCustomScrollbar({
+			theme: "dark",
+			axis:"x" 
 		});
 
         //모달 중첩 z-index 조정

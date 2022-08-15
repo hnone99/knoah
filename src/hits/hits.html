@@ -18,62 +18,10 @@
             <main id="content" role="main">
 
                 <!-- 컨텐츠 시작 -->
-                <h2 class="page-title">TOPIC MINING</h2>
-                <div class="row m-b-45">
-                    <div class="col-12 col-lg d-none d-md-block"></div>
-                    <div class="col-12 col-lg-auto">
-                        <form action=""  style="height: 68px;">
-                            <fieldset>
-                                <legend>검색</legend>
-                                <div class="header-search">
-                                    <div class="position-relative h-100">
-                                        <input type="text" class="form-control" placeholder="채널명 또는 채널 URL을 입력해 주세요.">
-                                        <button type="button" class="btn-search" aria-label="검색">
-                                            <i class="icon-search"></i>
-                                        </button>
-                                    </div>
-                                    <div class="dropdown search">
-                                        <div class="dropdown-box">
-                                            <div class="dropdown-list">
-                                                @@for (var i = 1; i < 10; i++) { <div>
-                                                    <a href="">
-                                                        <span class="channel-thumb">
-                                                            <img src="../assets/images/@profile.jpg" alt="채널 이미지">
-                                                        </span>
-                                                        <span class="channel-name">
-                                                            현승원 TV
-                                                        </span>
-                                                    </a>
-                                            </div>
-                                            <div>
-                                                <a href="">
-                                                    <span class="channel-thumb">
-                                                        <img src="../assets/images/@profile.jpg" alt="채널 이미지">
-                                                    </span>
-                                                    <span class="channel-name">
-                                                        현승원 TV 채널이름 길어요
-                                                    </span>
-                                                </a>
-                                            </div>
-                                            }
-                                        </div>
-                                    </div>
-                                </div>
+                <h2 class="page-title">토픽 마이닝</h2>
 
-                            </fieldset>
-                        </form>
-                    </div>
-                    <div class="col-12 col-lg help-img-wrap">
-                        <!-- <img src="../assets/images/img-help-trend.png" class="help-img" alt="웹트렌드 도움말 이미지"> -->
-                        <img src="../assets/images/img-help-topic.png" class="help-img" alt="토픽마이닝 도움말 이미지">
-                        <!-- 
-                        <img src="../assets/images/img-help-keword.png" class="help-img" alt="키워드마이닝 도움말 이미지">
-                        <img src="../assets/images/img-help-channel.png" class="help-img" alt="채널 도움말 이미지"> -->
-                    </div>
-                </div>
-
-                <div class="filter has-collapsed">
-                    <div class="border-bottom border-dark row row-0 justify-content-between">
+                <div class="filter">
+                    <div class="row row-0 justify-content-between">
                         <div class="col-auto">
                             <a href="#collapse-channel" class="filter-head" data-toggle="collapse" role="button" aria-expanded="false" aria-controls="collapse-channel">
                                 <i class="icon-filter m-r-10"></i>
@@ -83,7 +31,7 @@
                         <div class="col-auto">
                             <div class="d-flex align-items-center">
                                 <i class="icon-check-circle m-r-5"></i>
-                                <span class="font-size-14px m-r-15">이용횟수</span>
+                                <span class="frequency-title">이용횟수</span>
                                 <ul class="frequency-use">
                                     <i class="bar"></i>
                                     <li>13/30</li>
@@ -94,143 +42,267 @@
                     </div>
                     <div class="collapse show transition-none" id="collapse-channel">
                         <div class="filter-body channel">
-                            <div class="row row-50 align-items-center justify-content-between">
-                                <div class="col-md col-12">
-                                    <div class="row">
-                                        <div class="col-12 col-md-6 mt-1 mt-md-0 condition">
-                                            <div class="dropdown">
-                                                <div class="dropdown-value">일별 검색 이력</div>
+                            <div class="row row-40 align-items-center justify-content-between">
+                                <div class="col-12 col-xl-auto condition">
+                                    <div class="row row-50">
+                                        <div class="col-12 col-md mt-1 mt-md-0">
+                                            <!-- onmouseout="javscript:dropdownMouseout()" -->
+                                            <div class="dropdown" id="select-date" data-default="일별 검색 이력">
+                                                <div class="dropdown-value" data-toggle="tooltip" data-placement="top" data-custom-class="question-tooltip" title="" data-original-title="‘일별 검색 이력’에서 날짜를 클릭하면 해당 날짜에 검색한 키워드가 ‘키워드 검색 이력’에 나타납니다.">일별 검색 이력</div>
                                                 <div class="dropdown-box">
                                                     <div class="dropdown-list">
-                                                        @@for (var i = 1; i < 10; i++) {
-                                                        <div><a href="javascript:;">2022.03.0`+i+`</a></div>
-                                                        }
+                                                        
+                                                                <div class="keyword-history complete" onmouseover="javascript:chooseDate('2022.07.04')">
+                                                                    <a>2022.07.04</a>
+                                                                </div>
+                                                            
+                                                        
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-12 col-md mt-1 mt-md-0">
+                                            <div class="dropdown" id="select-keyword" data-default="키워드 검색 이력">
+                                                <div class="dropdown-value" data-toggle="tooltip" data-placement="top" data-custom-class="question-tooltip" title="" data-original-title="‘키워드 검색 이력’에 나타난 키워드를 선택하면 하단의 검색결과 창에서 검색일 당시 노아AI가 분석한 모든 데이터(기여도, 성과도, 채널활성도)를 다시 확인할 수 있습니다.">키워드 검색 이력</div>
+                                                <div class="dropdown-box">
+                                                    <div class="dropdown-list">
+                                                        
                                                     </div>
                                                 </div>
                                             </div>
                                         </div>
                                     </div>
                                 </div>
-                                <div class="col-md-auto col-12">
+                                <!-- <div class="col-xl-auto col-12">
                                     <div class="row row-10 justify-content-end">
-                                        <div class="col-lg-auto mt-6 mt-md-3 mt-lg-0">
-                                            <button type="button" class="btn btn-dark min-width-153px btn-block
-                                            analyze-btn">분석 시작</button>
+                                        <div class="col-lg-auto mt-6 mt-lg-3 mt-xl-0">
+                                            <button type="button" class="btn btn-sm btn-dark min-width-153px btn-block reset-knoah" data-toggle="tooltip" data-placement="bottom" data-custom-class="question-tooltip" title="" data-original-title="‘처음부터 학습시키기’를 클릭하면 그동안 노아AI를 학습시켰던 모든 데이터를 초기화 합니다. (검색 이력, 이 영상은 관심이 없습니다, 이 채널은 관심이 없습니다 등)">처음부터 학습시키기</button>
                                         </div>
-                                        <div class="col-auto  mt-6 mt-md-3 mt-lg-0  d-none d-lg-block">
-                                            <a href="" class="btn btn-outline-dark">엑셀 다운로드</a>
-                                        </div>
+                                        
                                     </div>
+                                </div> -->
+                            </div>
+                        </div>
+                    </div>
+                    <div class="next-arrow">
+                        <i class="icon-arrow-right-double"></i>
+                    </div>
+                </div>
+                <!-- 필터 클릭시 보더 생기고 없애는 스크립트 -->
+                <script>
+                    $(".filter-head").on("click", function(){
+                        if(!$(this).hasClass("collapsed")){
+                            $(this).closest(".filter").addClass("has-collapsed");
+                        }else{
+                            $(this).closest(".filter").removeClass("has-collapsed");
+
+                        }
+                    });
+                </script>
+                <!-- 최근 등록된 키워드  -->
+                <div class="row row-20 align-items-center mb-3 mb-lg-5 p-t-10 p-b-10">
+                    <div class="col-auto">
+                        <a class="font-weight-medium recent-analysis-title" data-toggle="tooltip" data-placement="bottom" data-custom-class="question-tooltip" title="" data-original-title="왼쪽부터 순서대로 최근에 검색한 키워드를 나타내며, Lv.(레벨)은 검색한 횟수를 나타냅니다.">
+                            최근 검색 키워드
+                        </a>
+                    </div>
+                    <div class="col">
+                        <div class="collapse show" id="recent-keyword">
+                            <div class="keyword-wrap overflow-x-scroll" style="height: 50px; max-width:1300px;">
+                                @@ for(var i = 0; i < 4; i++){
+                                <div class="keyword on" title="김치의 키워드로 1번 분석">
+                                    <a href="#none">김치 <span class="text-level m-l-5">Lv.</span><span class="num-level">1</span><input type="hidden" value="" id="round"><button type="text" aria-label="삭제"><i class="icon-x-gray"></i></button></a>
                                 </div>
+                                <div class="keyword" title="김치의 키워드로 1번 분석">
+                                    <a href="#none">김치 부동산 <span class="text-level m-l-5">Lv.</span><span class="num-level">1</span><input type="hidden" value="" id="round"><button type="text" aria-label="삭제"><i class="icon-x-gray"></i></button></a>
+                                </div>
+                                <div class="keyword" title="김치의 키워드로 1번 분석">
+                                    <a href="#none">김치 부동산김치 부동산 <span class="text-level m-l-5">Lv.</span><span class="num-level">1</span><input type="hidden" value="" id="round"><button type="text" aria-label="삭제"><i class="icon-x-gray"></i></button></a>
+                                </div>
+                                <div class="keyword" title="김치의 키워드로 1번 분석">
+                                    <a href="#none">김치 부동산김치 부동산김치 부동산 <span class="text-level m-l-5">Lv.</span><span class="num-level">1</span><input type="hidden" value="" id="round"><button type="text" aria-label="삭제"><i class="icon-x-gray"></i></button></a>
+                                </div>
+                                }
                             </div>
                         </div>
                     </div>
                 </div>
+                <!-- //최근등록된 키워드 -->
 
-                <div class="row row-10 justify-content-between align-items-center">
-                    <div class="col-lg-auto">
-                        <div class="d-none d-lg-flex">
-                            <button type="button" class="btn btn-sm btn-outline-dark top-add-channels mr-2"><img src="https://knoah.ai/assets/images/gnb-icon-3-mini.svg" width="19px" height="19px">&nbsp;CHANNEL ANALYSIS</button>
-                            <button type="button" class="btn btn-sm btn-outline-dark top-add-videos mr-2"><img src="https://knoah.ai/assets/images/gnb-icon-4-mini.svg" width="19px" height="19px">&nbsp;영상수집</button>
-                            <button type="button" class="btn btn-sm btn-outline-dark top-remove-videos mr-2"><img src="https://knoah.ai/assets/images/gnb-icon-5-mini.svg" width="19px" height="19px">&nbsp;이 영상은 관심이 없습니다</button>
-                            <button type="button" class="btn btn-sm btn-outline-dark top-remove-channels"><img src="https://knoah.ai/assets/images/gnb-icon-6-mini.svg" width="19px" height="19px">&nbsp;이 채널은 관심이 없습니다</button>
+                <!-- 폼 필드 -->
+                <div class="row row-10 justify-content-between align-items-center mb-3 form-filed">
+                    <div class="col-12 col-lg-auto page-button-area">
+                        <div class="form-button-list">
+                            <button type="button" class="btn btn-sm form-button top-add-channels" data-toggle="tooltip" data-placement="bottom" data-custom-class="question-tooltip" title="" data-original-title="이 영상의 유튜브 채널이 채널분석 메뉴에 추가됩니다. 채널분석에 추가하시면 지금 선택하신 영상의 채널안에 있는 모든 영상을 분석(기여도, 성과도, 채널활성도)하여 보여드립니다 결과값은 왼쪽 상단 세번째에 있는 ‘채널분석’ 메뉴에 들어가시면 확인하실 수 있습니다.">
+                                <span class="d-none d-lg-block">채널분석에 추가</span>
+                            </button>
+                            <button type="button" class="btn btn-sm form-button top-add-videos" data-toggle="tooltip" data-placement="bottom" data-custom-class="question-tooltip" title="" data-original-title="영상을 선택하신 뒤 ‘이 영상을 수집’하시면 해당 영상만 왼쪽 상단 다섯번째에 있는 ‘수집한 영상’ 메뉴로 들어가며, 이후로는 언제든 해당 메뉴에서 내가 수집한 영상만을 모아 볼 수 있습니다.">
+                                <span class="d-none d-lg-block">이 영상을 수집</span>
+                            </button>
+                            <button type="button" class="btn btn-sm  form-button top-remove-videos" data-toggle="tooltip" data-placement="bottom" data-custom-class="question-tooltip" title="" data-original-title="영상을 선택하신 뒤 ‘이 영상은 관심없습니다’를 선택하시면 노아AI가 해당 영상과 유사한 종류의 영상들을 검색 시 다시는 노출시키지 않습니다.">
+                                <span class="d-none d-lg-block">이 영상은 관심이 없습니다</span>
+                            </button>
+                            <button type="button" class="btn btn-sm  form-button top-remove-channels" data-toggle="tooltip" data-placement="bottom" data-custom-class="question-tooltip" title="" data-original-title="영상을 선택하신 뒤 ‘이 채널은 관심없습니다’를 선택하시면 노아AI가 선택하신 영상을 포함하고 있는 채널 및 그 채널의 종류와 유사한 채널들의 영상은 검색 시 다시는 노출시키지 않습니다.">
+                                <span class="d-none d-lg-block">이 채널은 관심이 없습니다</span>
+                            </button>
+                            <button type="button" class="btn btn-sm form-button show-shorts active">
+                                <span class="d-none d-lg-block">shorts만 보기</span>
+                            </button>
+                            <button type="button" class="btn btn-sm form-button remove-shorts">
+                                <span class="d-none d-lg-block">shorts 제거</span>
+                            </button>
+                            <button type="button" class="btn btn-sm form-button remove-liveStream">
+                                <span class="d-none d-lg-block">Streaming 제거</span>
+                            </button>
                         </div>
                     </div>
 
-                    <div class="col-lg-auto m-t-10 mt-lg-0">
+                    <div class="col-12 col-lg-auto m-t-10 mt-lg-0 page-search-area">
                         <form action="">
                             <fieldset>
                                 <legend>결과 내 재검색</legend>
                                 <div class="rescan-search">
-                                    <div class="dropdown">
+                                    <div class="dropdown" data-default="제목+채널명">
                                         <div class="dropdown-value">제목+채널명</div>
                                         <div class="dropdown-box">
                                             <div class="dropdown-list">
-                                                <div><a href="javascript:;">제목</a></div>
-                                                <div><a href="javascript:;">채널명</a></div>
-                                                <div><a href="javascript:;">제목+채널명</a></div>
+                                                <div><a href="javascript:;" onclick="javascript:$('#search-text').val('');$('#search-text').focus();">제목+채널명</a></div>
+                                                <div><a href="javascript:;" onclick="javascript:$('#search-text').val('');$('#search-text').focus();">제목</a></div>
+                                                <div><a href="javascript:;" onclick="javascript:$('#search-text').val('');$('#search-text').focus();">채널명</a></div>
                                             </div>
                                         </div>
                                     </div>
-
-                                    <div class="header-search">
-                                        <input type="text" class="form-control" placeholder="결과 내 검색">
+                                    
+                                    <div class="header-search p-0 border-0">
+                                        <input type="text" class="form-control" placeholder="결과 내 검색" id="search-text" autocomplete="off">
                                         <button type="button" class="btn-search" aria-label="검색">
                                             <i class="icon-search"></i>
                                         </button>
                                     </div>
                                 </div>
-                                </fieldset>
-                            </form>
+                            </fieldset>
+                        </form>
                     </div>
                 </div>
 
-                <div class="d-flex justify-content-end">
-                    <ul class="sort">
-                        <li class="active"><a href="javascript:;">최신순 <i class="icon-sort"></i></a></i></li>
-                        <i class="bar"></i>
-                        <li><a href="javascript:;">인기순 <i class="icon-sort"></i></a></li>
-                    </ul>
+                <!-- 테이블 필드 -->
+                <div class="table-responsive">
+                    <table class="table table-hover table-data dataTable" id="dataTable">
+                        <colgroup>
+                            <col style="width: 50px">
+                            <col style="width: 18%">
+                            <col style="width: 265px">
+                            <col style="width: 8%">
+                            <col style="width: 8%">
+                            <col style="width: 8%">
+                            <col style="width: 8%">
+                            <col style="width: 8%">
+                            <col style="width: 8%">
+                            <col style="width: 8%">
+                        </colgroup>
+                        <thead>
+                            <tr>
+                                <th class="text-center">선택</th>
+                                <th class="text-center thumbnail-header">썸네일(50)</th>
+                                <th class="text-center">
+                                    <div>제목</div>
+                                </th>
+                                <th class="text-center sorting viewCountHead" onclick="sortTable(3,this)">
+                                    <p>조회수</p>
+                                    <p style="color: #AAAAAA;">
+                                        0회
+                                        <button type="button" class="btn-question-mid" data-toggle="tooltip" data-custom-class="question-tooltip" data-placement="right" title="" data-original-title="가입할 때 등록한 육성채널의 평균조회수입니다.">
+                                            <i class="icon-question-mark"></i>
+                                        </button>
+                                    </p>
+                                </th>
+                                <th class="text-center sorting d-table-cell" onclick="sortTable(4,this)">
+                                    구독자
+                                    <p style="color: #AAAAAA;">
+                                        0명
+                                        <button type="button" class="btn-question-mid" data-toggle="tooltip" data-custom-class="question-tooltip" data-placement="right" title="" data-original-title="가입할 때 등록한 육성채널의 구독자수입니다.">
+                                            <i class="icon-question-mark"></i>
+                                        </button>
+                                    </p>
+                                </th>
+                                <th class="text-center sorting d-table-cell contributionRate-head sorting_desc" data-toggle="tooltip" data-placement="right" data-custom-class="question-tooltip" title="" onclick="sortTable(5,this)" data-original-title="조회수를 급상승시킬 영상을 찾고 싶다면 기여도를 이용해보세요. 기여도는 검색 결과에 나온 유튜브 채널의 영상들 중 평소보다 탁월하게 높은 성과를 보여준 정도를 의미합니다. 예를 들어 평소 영상에서 3천 조회수가 나오는데 특정 영상에서 30만 조회수가 나왔다면 그 영상은 압도적인 기여도로 표기됩니다. 기여도가 높은 영상의 썸네일과 제목을 참고하시면 영상을 히트시킬 가능성을 올려줍니다. 육성채널의 활성도와 비슷한 활성도를 보여주는 채널의 영상을 참고하시면 더 좋은 결과를 얻을 수 있습니다.">기여도</th>
+                                <th class="text-center sorting d-table-cell" data-toggle="tooltip" data-placement="right" data-custom-class="question-tooltip" title="" onclick="sortTable(6,this)" data-original-title="구독자가 작은 채널에서 히트한 영상을 발굴하고 싶다면 성과도를 이용해 보세요. 성과도는 구독자의 도움 없이 유튜브의 알고리즘으로 성장한 경우 높게 표기됩니다. 예를 들어 구독자 10명 채널에서 10만 조회수의 영상이 나왔다면 그 영상은 압도적인 성과도로 표기됩니다. 성과도가 높은 영상의 제목과 썸네일을 참고하시면 구독자가 적더라도 여러분의 영상을 히트시킬 가능성을 올려줍니다. 육성 채널의 구독자수와 비슷한 구독자를 보유한 채널의 영상을 참고하시면 더 좋은 결과를 얻을 수 있습니다.">성과도</th>
+                                <th class="text-center sorting d-table-cell" onclick="sortTable(7,this)">
+                                    <p data-toggle="tooltip" data-placement="right" data-custom-class="question-tooltip" title="" data-original-title="유튜브 채널로 얼마나 많은 사람들이 유입되고 그 채널에서 활동하는지 보여주는 수치입니다. 활동이란 영상 조회수, 댓글작성 수, 좋아요 클릭 수 등을 포함하여 AI가 산정한 결과값입니다.">채널활성도</p>
+                                    <p style="color: #AAAAAA;">
+                                        0
+                                        <button type="button" class="btn-question-mid" data-toggle="tooltip" data-custom-class="question-tooltip" data-placement="left" title="" data-original-title="가입할 때 등록한 육성채널의 채널활성도입니다.">
+                                            <i class="icon-question-mark"></i>
+                                        </button>
+                                    </p>
+                                </th>
+                                <th class="text-center sorting d-table-cell" data-toggle="tooltip" data-placement="top" data-custom-class="question-tooltip" title="" onclick="sortTable(8,this)" data-original-title="유튜브 크리에이터가 유튜브에 영상을 업로드한 날짜입니다.">게시일</th>
+                                <th class="text-center sorting d-table-cell" data-toggle="tooltip" data-placement="top" data-custom-class="question-tooltip" title="" onclick="sortTable(9,this)" data-original-title="키워드 마이닝에서 검색하여 결과값을 얻은 날짜입니다.">검색일</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <!-- 신규 -->
+                            <tr class="new-table">
+                                <td class="text-center check">
+                                    <div class="custom-control custom-radio text-center">
+                                        <input type="radio" class="custom-control-input select-primary" id="pamentMethod" name="pamentMethod">
+                                        <label class="custom-control-label" for="pamentMethod"></label>
+                                    </div>
+                                </td>
+                                <td class="text-center thumb"><a href="javascript:;"><img src="https://i.ytimg.com/vi/zcIgSu9sBpo/mqdefault.jpg"><input type="hidden" id="videoId" value="zcIgSu9sBpo"><input type="hidden" id="shorts" value="undefined"><input type="hidden" id="liveStream" value="false"> <input type="hidden" id="round_no" value="220815_2"></a></td>
+                                <td class="text-left text-truncate content-title  px-3" style="max-width:265px; white-space:normal;">
+                                    <a href="#none">나박김치 맛있게 담는법 - 배추물김치 황금레시피 알아보아요</a>
+                                </td>
+                                <td class="text-center hit viewCount">3,196,227</td>
+                                <td class="text-center d-table-cell nickname channelTitle text-truncate" style="max-width: 80px;">
+                                    <p>131,000명</p>
+                                    <channeltitle>헬로우미자씨</channeltitle><input type="hidden" id="channelId" value="UCGeLzxKcBgluMK8_TS-qXUw">
+                                </td>
+                                <td class="text-center d-table-cell hit contributionRate">9,313.01%</td>
+                                <td class="text-center d-table-cell hit performanceRate">348.55%</td>
+                                <td class="text-center d-table-cell hit activeRate">40.56</td>
+                                <td class="text-center d-table-cell published">20.06.17</td>
+                                <td class="text-center d-table-cell created">22.07.04</td>
+                            </tr>
+                            <!-- 디폴트 -->
+                            <tr>
+                                <td class="text-center check">
+                                    <div class="custom-control custom-radio text-center">
+                                        <input type="radio" class="custom-control-input select-primary" id="pamentMethod1" name="pamentMethod">
+                                        <label class="custom-control-label" for="pamentMethod1"></label>
+                                    </div>
+                                </td>
+                                <td class="text-center thumb"><a href="javascript:;"><img src="https://i.ytimg.com/vi/zcIgSu9sBpo/mqdefault.jpg"><input type="hidden" id="videoId" value="zcIgSu9sBpo"><input type="hidden" id="shorts" value="undefined"><input type="hidden" id="liveStream" value="false"> <input type="hidden" id="round_no" value="220815_2"></a></td>
+                                <td class="text-left text-truncate content-title  px-3" style="max-width:265px; white-space:normal;">
+                                    <a href="#none">나박김치 맛있게 담는법 - 배추물김치 황금레시피 알아보아요</a>
+                                </td>
+                                <td class="text-center hit viewCount">3,196,227</td>
+                                <td class="text-center d-table-cell nickname channelTitle text-truncate" style="max-width: 80px;">
+                                    <p>131,000명</p>
+                                    <channeltitle>헬로우미자씨</channeltitle><input type="hidden" id="channelId" value="UCGeLzxKcBgluMK8_TS-qXUw">
+                                </td>
+                                <td class="text-center d-table-cell hit contributionRate">9,313.01%</td>
+                                <td class="text-center d-table-cell hit performanceRate">348.55%</td>
+                                <td class="text-center d-table-cell hit activeRate">40.56</td>
+                                <td class="text-center d-table-cell published">20.06.17</td>
+                                <td class="text-center d-table-cell created">22.07.04</td>
+                            </tr>
+                        </tbody>
+                    </table>
                 </div>
-                <div class="card channel-list hits mt-3 mt-lg-4 w-100">
-                    <a href="#modal-hits" data-toggle="modal" class="">
-                        <div class="row row-60 p-b-30">
-                            <div class="col-xl-auto">
-                                <div class="thumbnail">
-                                    <img src="https://img.youtube.com/vi/oClFVDs3b74/mqdefault.jpg" alt="동영상 이미지">
-                                </div>
-                            </div>
-                            <div class="col-xl mt-3 mt-xl-0">
-                                <div class="d-flex align-items-center">
-                                    <img src="../assets/images/@profile.jpg" alt="채널이미지" class="channel-img">
-                                    <div class="channel-name">신사임당</div>
-                                    <div class="channel-subscriber">구독자 174만명</div>
-                                </div>
-                                <div class="channel-title m-t-10 mt-lg-3 text-truncate">주식 초보가 담아도 큰 실패 없는 종목 (정재호 3부, 부자아빠)주식</div>
-                                <div class="channel-desc m-t-15 mt-lg-3">
-                                    <ul>
-                                        <li><span>조회수 : 234회</span></li>
-                                        <li><span>채널 평균 조회수 : 5만회</span></li>
-                                        <li><span>성과도 : 10% </span></li>
-                                        <li><span>게시일 : 2022.03.23</span></li>
-                                        <li class="w-100"><span>영상설명 : *출연신청 & 제휴 및 광고문의 : ssid@dpnstud.io</span></li>
-                                    </ul>
-                                </div>
-                            </div>
-                        </div>
-                    </a>
-                    <div class="border-top"></div>
-                    <div class="hits-btn-container">
-                        <div class="row row-0 hits-btns">
-                            <div class="col-3">
-                                <a href="javascript:;" class="hits-btn border-0 flex-column flex-lg-row">
-                                    <i class="icon-addChannel"></i>
-                                    채널 판독기에<br class="d-block d-lg-none"> 추가하기
-                                </a>
-                            </div>
-                            <div class="col-3">
-                                <a href="javascript:;" class="hits-btn flex-column flex-lg-row">
-                                    <i class="icon-addVideo"></i>
-                                    영상<br class="d-block d-lg-none"> 수집하기
-                                </a>
-                            </div>
-                            <div class="col-3">
-                                <a href="javascript:;" class="hits-btn flex-column flex-lg-row">
-                                    <i class="icon-notRecomendVideo"></i>
-                                    영상<br class="d-block d-lg-none"> 추천 안하기
-                                </a>
-                            </div>
-                            <div class="col-3">
-                                <a href="javascript:;" class="hits-btn flex-column flex-lg-row">
-                                    <i class="icon-notRecomendChannel"></i>
-                                    채널<br class="d-block d-lg-none"> 추천 안하기
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+                <!-- 라디오 클릭시 테이블 색상 변화 -->
+                <script>
+                    $(document).ready(function () {
+                        $(".table-data input:radio").click(function(){
+                            if($(this).is(":checked")){
+                                $(".table-data tr").removeClass("selected-table");
+                                $(this).closest("tr").addClass("selected-table")
+                            } else {
+                            }
+                        });
+                    });
+                </script>
                 @@include('@@webRoot/_include/_pagination.html')
-
                 <!-- 컨텐츠 끝 -->
 
             </main>

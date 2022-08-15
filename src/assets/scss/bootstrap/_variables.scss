@@ -367,7 +367,7 @@ $table-color:                 $body-color !default;
 $table-bg:                    null !default;
 $table-accent-bg:             rgba($black, .05) !default;
 $table-hover-color:           $table-color !default;
-$table-hover-bg:              rgba($danger, .05) !default;
+$table-hover-bg:              rgba(255, 96, 96, 0.03)!default;
 $table-active-bg:             $table-hover-bg !default;
 
 $table-border-width:          $border-width !default;
