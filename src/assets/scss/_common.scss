@@ -519,11 +519,11 @@ textarea.form-control{resize: none;}
 	    -ms-user-select: none;
             user-select: none;
     .dropdown-value {
-        text-align: center;font-weight: 500;font-size: 14px;
+        text-align: center;font-weight: 500;font-size: 14px; line-height: 23px;
         height: 100%;position: absolute;left: 0;top: 0;bottom: 0;right: 0;padding: 11px 20px;transition: color 0.3s;
         &.filled{}
         &::before {
-            content: '';display: block;position: absolute;top: calc(50% - 2px);right: 0;width: 0;height: 0;border-style: solid;border-width: 7px 4px 0 4px;border-color: #141414 transparent transparent transparent;transition: all .2s .1s;
+            content: '';display: block;position: absolute;top: calc(50% - 4px);right: 0;width: 0;height: 0;border-style: solid;border-width: 7px 4px 0 4px;border-color: #141414 transparent transparent transparent;transition: all .2s .1s;
         }
     }
     .dropdown-box{
@@ -903,20 +903,22 @@ textarea.form-control{resize: none;}
     gap: 8px;
     @include media-breakpoint-down(md){
         width: 100%;
-        justify-content: space-between;
     }
 }
 .form-button{
+    transition: none;
     background-color: $white;
     padding: 0 12px;
     height: 29px;
     border-radius: 30px;
-    box-shadow: 0px 0px 8px rgba(20, 20, 20, 0.1);
+    box-shadow: 0px 0px 8px rgba(20, 20, 20, 0.1)!important;
     display: inline-flex;
     align-items: center;
+    font-size: 12px;
+    line-height: 1.2;
     &:hover{
         color:#FF0000;
-
+        background-color: $white;
     }
     &::before{
         content: '';

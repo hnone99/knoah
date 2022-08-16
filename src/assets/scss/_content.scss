@@ -908,7 +908,7 @@
     .dropdown {
         height: 100%;width: 120px;
         .dropdown-value {
-            border-bottom: 0;padding: 0 1.5rem 0 20px;line-height: 19px;text-align: left;font-size: 14px; border-right: 1px solid #8C8C8C;
+            border-bottom: 0;padding: 0 1.5rem 0 20px;line-height: 19px;font-size: 14px; border-right: 1px solid #8C8C8C;
             &::before { right: 10px;     top: calc(50% - 3px);}
         }
         .dropdown-list {
