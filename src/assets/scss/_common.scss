@@ -1085,3 +1085,9 @@ textarea.form-control{resize: none;}
         }
     }
 }
+
+.modal-open{
+    #header-block{
+        width: calc(100% - 12px);
+    }
+}
