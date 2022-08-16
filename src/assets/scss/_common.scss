@@ -1087,7 +1087,14 @@ textarea.form-control{resize: none;}
 }
 
 .modal-open{
+    padding-right: 12px!important;
     #header-block{
         width: calc(100% - 12px);
+    }
+    @include media-breakpoint-down(md){
+        padding-right: 0!important;
+        #header-block{
+            width:100%;
+        }
     }
 }

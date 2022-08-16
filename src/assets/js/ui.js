@@ -178,6 +178,7 @@ var Common = {
 			}, 0);
 		}).on('hidden.bs.modal', function () {
 			if ($('.modal:visible').length > 0) {
+				$(this).css('padding-right', "12px");
 				setTimeout(function() {
 					$(document.body).addClass('modal-open');
 				}, 0);
